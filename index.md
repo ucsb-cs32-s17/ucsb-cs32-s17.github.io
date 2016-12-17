@@ -1,5 +1,5 @@
 ---
-title: CS16, Fall 2016, zmatni
+
 ---
 
 # {{site.course}}, {{site.quarter}}
