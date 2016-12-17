@@ -1,5 +1,5 @@
 ---
-Title: CS 16, Winter 17 Mirza
+title: "CS 16, Winter 17 Mirza"
 ---
 
 # {{site.course}}, {{site.quarter}}
