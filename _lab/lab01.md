@@ -4,7 +4,7 @@ num: lab01
 ready: true
 desc: "Getting started with C++"
 assigned: 2017-01-09 08:00:00.00-8
-due: 2017-01-16 23:59:00.00-8
+due: 2017-01-13 23:59:00.00-8
 ---
 <h2>Introduction</h2>
 
