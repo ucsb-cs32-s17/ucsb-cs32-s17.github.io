@@ -1,4 +1,4 @@
-name: "CS 16 winter 2017"
+name: "CS 16 Winter 2017"
 github_url: https://github.com/ucsb-cs16-wi17/ucsb-cs16-wi17.github.io
 
 on_campus: http://proquest.safaribooksonline.com
@@ -15,7 +15,7 @@ cal_dates: >
   [
   {"label":"First day of classes", "date":"2017-01-09" },
   {"label":"Univ Holiday", "date":"2017-01-16" },
-  {"label":"Univ Holiday", "date":"2017-01-20" },
+  {"label":"Univ Holiday", "date":"2017-02-20" },
   {"label":"Last day of classes", "date":"2017-03-17" },			
   ]
 
