@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab03
-ready: true
+num: lab02
+ready: false
 desc: "Flow Control Assignment"
-assigned: 2016-10-10 08:00:00.00-7
-due: 2016-10-14 12:00:00.00-7
+assigned: 2017-01-20 8:00:00.00-8
+due: 2017-01-27 11:59:00.00-8
 ---
 
 <div markdown="1">
@@ -13,7 +13,7 @@ due: 2016-10-14 12:00:00.00-7
 <h2>Introduction</h2>
 The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit.
 
-This assignment is due on Friday, October 14th at 12:00 pm.
+
 
 <h2>Step 1: Getting Ready</h2>
 I hope I can safely assume that you have all gotten a CoE account yet...

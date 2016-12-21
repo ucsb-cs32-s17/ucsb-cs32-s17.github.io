@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab06
-ready: true
+num: lab05
+ready: false
 desc: "Using File I/O Data Streams & String Manipulation"
-assigned: 2016-10-31 08:00:00.00-7
-due: 2016-11-04 12:00:00.00-7
+assigned: 2017-02-10 08:00:00.00-8
+due: 2017-02-17 23:59:00.00-8
 ---
 <div markdown="1">
 

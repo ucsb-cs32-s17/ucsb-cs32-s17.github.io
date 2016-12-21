@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab04
-ready: true
+num: lab03
+ready: false
 desc: "Functions"
-assigned: 2016-10-17 08:00:00.00-7
-due: 2016-10-24 12:00:00.00-7
+assigned: 2017-01-27 08:00:00.00-8
+due: 2017-02-03 23:59:00.00-8
 ---
 <div markdown="1">
 

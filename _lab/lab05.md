@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab05
-ready: true
+num: lab04
+ready: false
 desc: "Void Functions and Command Line Arguments"
-assigned: 2016-10-24 08:00:00.00-7
-due: 2016-10-28 12:00:00.00-7
+assigned: 2017-02-03 8:00:00.00-8
+due: 2017-02-10 23:59:00.00-8
 ---
 
 <div markdown="1">

@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab07
-ready: true
+num: lab06
+ready: false
 desc: "Arrays"
-assigned: 2016-11-07 08:00:00.00-8
-due: 2016-11-14 08:00:00.00-8
+assigned: 2017-02-17 08:00:00.00-8
+due: 2017-02-24 23:59:00.00-8
 ---
 <div markdown="1">
 
@@ -13,7 +13,7 @@ due: 2016-11-14 08:00:00.00-8
 The assignment for this week will utilize concepts of arrays. 
 Some of the concepts needed to finish this lab, such as multidimensional arrays will be discussed further in the Tuesday, Nov. 8th lecture in class. 
 
-Again, the TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. This assignment is due on <b>Monday, November 14th at 8:00 AM</b>.
+Again, the TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. 
 
 <h3>Pair programming is <b>OPTIONAL</b> for this lab.</h3>
 

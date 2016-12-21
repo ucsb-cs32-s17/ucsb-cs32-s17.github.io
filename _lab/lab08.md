@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab08
-ready: true
+num: lab07
+ready: false
 desc: "Compiling Multiple Source Files in C++"
-assigned: 2016-11-14 08:00:00.00-8
-due: 2016-11-21 08:00:00.00-8
+assigned: 2017-02-24 08:00:00.00-8
+due: 2016-03-03 23:59:00.00-8
 ---
 <div markdown="1">
 

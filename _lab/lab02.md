@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab02
-ready: true
+num: lab01
+ready: false
 desc: "Input/Output and Simple Flow Assignment"
-assigned: 2016-10-03 08:00:00.00-7
-due: 2016-10-07 12:00:00.00-7
+assigned: 2017-01-13 8:00:00.00-8
+due: 2017-01-20 23:59:00.00-8
 ---
 
 <div markdown="1">
@@ -13,7 +13,7 @@ due: 2016-10-07 12:00:00.00-7
 <h2>Introduction</h2>
 The assignment for this week will utilize concepts of input and output and simple control flow that we covered in class (Chapter 2 in the book). You may utilize other concepts of programming as well, as you see fit.
 
-This assignment is due on Friday, October 7th at 12:00 pm.
+
 
 <h2>Step 1: Getting Ready</h2>
 If you have not gotten a CoE account yet, please do so as soon as possible!
