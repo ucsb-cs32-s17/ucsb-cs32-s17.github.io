@@ -6,34 +6,34 @@ desc: "Getting started with C++"
 assigned: 2017-01-09 08:00:00.00-8
 due: 2017-01-13 23:59:00.00-8
 ---
-<h2>Introduction</h2>
 
-<p>Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display.</p>
-<p>Also, please note (I'll only do this this one time, on your 1st lab) that your completed lab assignment must be turned in by this <b><i>FRIDAY at NOON</i></b>. In fact, all of your assignments will be given to you on your Monday labs and then be expected to be submitted by the coming Friday at noon.</p>
+# Introduction
 
-<p>For this first lab, you will do the following:</p>
-<ol>
-<li>Create a College of Engineering online computer account, if you don't have one already.</li>
-<li>Learn how to open a terminal on a lab or personal computer.</li>
-<li>Learn how to edit a text file used for writing programming code.</li>
-<li>Write an actual program in C++.</li>
-<li>Compile your program and see if it runs.</li>
-<li>Learn how to submit your program for grading.</li>
-</ol>
+Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display.
+
+For this first lab, you will do the following:
+
+* [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
+* [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
+* [Learn basic unix commands and create your lab01 directory.](#step3){: data-ajax="false"}
+* [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
+* [Write an actual program in C++.](#step5){: data-ajax="false"}
+* [Compile your program and see if it runs.](#step6){: data-ajax="false"}
+* [Submit your program for grading.](#step7){: data-ajax="false"}
+
+## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
+
+To log in to the machines in the Computer Science labs, or to connect remotely, you will need a **College of Engineering account**.
+
+At this point, please go to [THIS LINK](https://ucsb.box.com/s/px12flf8g41m8g0gq4n6zqbbc9phkfrs) and view the important presentation from Engineering Computing Infrastructure on the College of Engineering accounts and computer labs.
+
+You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
+
+If you are enrolled in <i>any</i> CoE course this quarter (including CS16), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.
 
 <hr>
-<h3>Step 1: Create an Engineering Account</h3>
 
-<p>To log in to the machines in the Computer Science labs, or to connect remotely, you will need a <b>College of Engineering account</b>.</p>
-
-<p>At this point, please go to <a href="https://ucsb.box.com/s/px12flf8g41m8g0gq4n6zqbbc9phkfrs" target="_blank">THIS LINK</a> and view the important presentation from Engineering Computing Infrastructure on the College of Engineering accounts and computer labs.</p>
-
-<p>You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.</p>
-
-<p>If you are enrolled in <i>any</i> CoE course this quarter (including CS16), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.</p> 
-
-<hr>
-<h3>Step 2: Open a Terminal</h3>
+## Step 2: Open a Terminal <a name="step2"></a>
 
 The first step in every assignment will be to open a <b>terminal window</b>, which will be the environment you use to write, compile, and run your programs.
 
@@ -46,140 +46,189 @@ The first step in every assignment will be to open a <b>terminal window</b>, whi
     (though `csil-48.cs.ucsb.edu`).   Please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
 
 If you are working on your laptop, whether Windows, Mac or Linux, the instructions below 
-will tell you how to connect to `csil.cs.ucsb.edu`.   For the first time you connect, that's fine.  However,
-please get in the habit of connecting, instead, to one of the following machines:
+will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect to that server, however in the future please connect to one of the following machines:
 
 * `csil-01.cs.ucsb.edu`
 * `csil-02.cs.ucsb.edu`, etc. 
 * etc.
 * through `csil-48.cs.ucsb.edu`
 
-You'll get much better performance on those individual machines, because they are much less heavily loaded and have
-newer hardware, as compared to `csil.cs.ucsb.edu`.
+You'll get much better performance on those individual machines, because they are much less heavily loaded and have newer hardware, as compared to `csil.cs.ucsb.edu`.
 
-* If you are working on your laptop and it is a Mac or Linux machine, go to [Step 2b](#step2b){: data-ajax="false"}.</p>
-* If you are working on your laptop and it is a Windows machine, go to [Step 2c](#step2c){: data-ajax="false"}.</p>
+* If you are working on your laptop and it is a Mac or Linux machine, go to [Step 2b](#step2b){: data-ajax="false"}.
+* If you are working on your laptop and it is a Windows machine, go to [Step 2c](#step2c){: data-ajax="false"}.
 
 
-<ol>
+### Step 2a: Opening a Terminal on a Phelps Lab Machine <a name="step2a"></a>
+<!--
 <h4><i><a name="step2a"></a>Step 2a: Opening a Terminal on a Phelps Lab Machine</i></h4>
-<p>
-<li>Log in to the machine using your account credentials (i.e. your username and password) created in Step 1.</li>
-<li>Find the <i>Activities</i> menu, which is in the top-left corner of the screen. Click on it to open the menu.</li>
-<li>Next, type "shell" in the search box. Then click the "Terminal" application which appears.</li>
-<li>You should now see a terminal window open. You can open more tabs or windows from the Terminal application's menu.</li>
-</p>
-</ol>
+-->
 
-<ol markdown="1">
-<h4><i>Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux</i></h4>
-<p>To get started on Mac OS X or Linux, you first need to open a terminal program. This involves slightly different steps on either OS.</p>
-<p>On Ubuntu (an example of a Linux OS):
+1. Log in to the machine using your CoE account credentials (i.e. your username and password) created in Step 1.
 
-<li>You will first want to find the search menu. It appears at the top of the Unity bar:</li>
+2. Find the <i>Activities</i> menu, which is in the top-left corner of the screen. Click on it to open the menu.
+
+3. Next, type "shell" in the search box. Then click the "Terminal" application which appears.
+
+4. You should now see a terminal window open. You can open more tabs or windows from the Terminal application's menu.
+
+### Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux <a name="step2b"></a>
+<!--
+<h4><i><a name="step2b"></a>Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux</i></h4>
+-->
+
+To get started on Mac OS X or Linux, you first need to open a terminal program. This involves slightly different steps on either OS.
+
+*On Ubuntu (an example of a Linux OS):*
+
+1. Find the search menu. It appears at the top of the Unity bar:
+
 <img src="ubuntu-menu.png" width="297" alt="Ubuntu Search Menu" />
 
-<li>Click on that icon to open the search menu. Then type "terminal" and click on the "Terminal" application which appears:</li>
-<img  src="ubuntu-search.png" width="357" alt="Ubuntu Terminal Application" />
-</p>
+2. Click on that icon to open the search menu. Then type "terminal" and click on the "Terminal" application which appears:
 
-<p>On Mac OS X:
-<li>Open the "Terminal" application. It is found inside the <em>Applications</em> folder of your main drive, inside the <em>Utilities</em> subfolder. The icon looks like this:</li>
+<img  src="ubuntu-search.png" width="357" alt="Ubuntu Terminal Application" />
+
+
+*On Mac OS X:*
+
+1. Open the "Terminal" application. It is found inside the <em>Applications</em> folder of your main drive, inside the <em>Utilities</em> subfolder. The icon looks like this:
+
 <img src="mac-terminal.png" width="79" alt="Mac OS X Terminal Icon" />
 
 You can also find it using Spotlight by typing "terminal" and pressing ENTER.
-</p>
 
-<p>Once you have a terminal window open on your machine, you next need to <b>connect to the CSIL server remotely</b>. <br>
-You will do this using a UNIX command (an internet protocol, really) called <em>SSH</em> (short for Secure Shell).</p>
 
-<p>Type the following command in your terminal, replacing <b>USERNAME</b> with <b>your CSIL username</b>:</p>
-<pre>$ ssh USERNAME@csil.cs.ucsb.edu</pre>
+Once you have a terminal window open on your machine, you next need to **connect to the CSIL server remotely**.
 
-<p>SSH will first ask you a question which looks like this:</p>
-<pre>The authenticity of host 'csil.cs.ucsb.edu (128.111.43.14)' can't be established.
+You will do this using a UNIX command (an internet protocol, really) called <em>SSH</em> (short for Secure Shell).
+
+Type the following command in your terminal, replacing <b>USERNAME</b> with <b>your CoE username</b>:
+
+```
+$ ssh USERNAME@csil.cs.ucsb.edu
+```
+
+SSH will first ask you a question which looks like this:
+
+```
+The authenticity of host 'csil.cs.ucsb.edu (128.111.43.14)' can't be established.
 RSA key fingerprint is 90:ab:6a:31:0b:81:62:25:9b:11:50:05:18:d3:1a:b5.
-Are you sure you want to continue connecting (yes/no)? </pre>
+Are you sure you want to continue connecting (yes/no)? 
 
-<p>Type <b>yes</b> and then ENTER to continue. It will next ask for your CSIL account password. When you type it in, nothing will show on the screen (not even dots). However what you type is still being sent and once you are finished with your password, you can press ENTER to login.</p>
+```
 
-<p><b>You should now be remotely connected to CSIL!</b> You can make sure by typing the following command (which will tell you what machine you are currently issuing commands to):</p>
-<pre>$ hostname</pre>
+Type <b>yes</b> and then ENTER to continue. It will next ask for your CoE account password. When you type it in, nothing will show on the screen (not even dots). However what you type is still being sent and once you are finished with your password, you can press ENTER to login.
 
-<p>This should show <b>csil.cs.ucsb.edu</b>. You can now do anything you could normally do in a terminal window in CSIL or the Phelps lab (except run graphical programs).</p>
+<b>You should now be remotely connected to CSIL!</b> You can make sure by typing the following command (which will tell you what machine you are currently issuing commands to):
 
-<h4><em>Extra Note: Graphical Forwarding</em></h4>
+```
+$ hostname
 
-<p>This is not required or necessary to use CSIL remotely, so if you are not interested, go ahead and skip this part.</p>
+```
 
-<p>If you have an X windows system installed you can get graphical applications running by <em>forwarding</em> X from CSIL to your machine. To do this, add the <b>-X</b> option to the SSH command like this:</p>
-<pre>$ ssh -X USERNAME@csil.cs.ucsb.edu</pre>
+This should show <b>csil.cs.ucsb.edu</b>. You can now do anything you could normally do in a terminal window in CSIL or the Phelps lab (except run graphical programs).
 
-<p>X windows is almost always installed on graphical Linux, and can be installed on Mac OS X as XQuartz (which can be found at <a href="http://xquartz.macosforge.org/landing/" target="_blank">http://xquartz.macosforge.org/landing/</a>).</p>
+## Extra Note: Graphical Forwarding
 
-</ol>
+This is not required or necessary to use CSIL remotely, so if you are not interested, go ahead and skip this part.
 
-<div style="margin-left: 3em;" markdown="1">
-<h4>Step 2c: Connecting to CSIL via SSH with PuTTY</h4>
+If you have an X windows system installed you can get graphical applications running by <em>forwarding</em> X from CSIL to your machine. To do this, add the <b>-X</b> option to the SSH command like this:
 
-<p>To connect remotely on Windows machines, we recommend using a program called <em>PuTTY</em>. This program is a well-known and widely-used SSH client for the Windows OS.</p>
+```
+$ ssh -X USERNAME@csil.cs.ucsb.edu
+```
 
-<p>First, download the program from <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a>. You only need the executable file <b>putty.exe</b>, but feel free to download any other programs that you want. The page includes portable versions and a version with an installer. <i>Always make sure to download PuTTY from this site</i>, so that you can make sure it is the correct program.</p>
+X windows is almost always installed on graphical Linux, and can be installed on Mac OS X as XQuartz (which can be found at <a href="http://xquartz.macosforge.org/landing/" target="_blank">http://xquartz.macosforge.org/landing/</a>).
 
-<p>Once downloaded, run PuTTY like you would open other programs. If you just download the <b>putty.exe</b> file, you can open it from your downloads folder directly. You can also move it to any other location on your machine and open it from there. If you used the installer, open PuTTY from the Start Menu.</p>
+### Step 2c: Connecting to CSIL via SSH on Windows with PuTTY <a name="step2c"></a>
 
-<p>When PuTTY opens, you should see a window that looks like this:</p>
+<!--
+<h4><i><a name="step2c"></a>Step 2c: Connecting to CSIL via SSH on Windows with PuTTY</i></h4>
+-->
+
+To connect remotely on Windows machines, we recommend using a program called <em>PuTTY</em>. This program is a well-known and widely-used SSH client for the Windows OS.
+
+First, download the program from <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a>. You only need the executable file <b>putty.exe</b>, but feel free to download any other programs that you want. The page includes portable versions and a version with an installer. <i>Always make sure to download PuTTY from this site</i>, so that you can make sure it is the correct program.
+
+Once downloaded, run PuTTY like you would open other programs. If you just download the <b>putty.exe</b> file, you can open it from your downloads folder directly. You can also move it to any other location on your machine and open it from there. If you used the installer, open PuTTY from the Start Menu.
+
+When PuTTY opens, you should see a window that looks like this:
+
 <img src="putty-empty.png" width="469" alt="Empty PuTTY window" />
 
-<p>Type <b>csil.cs.ucsb.edu</b> into the box labeled "Host Name (or IP address)". Leave the "Port" setting at 22 and leave the "SSH" button checked. The window should now look like this:</p>
+Type <b>csil.cs.ucsb.edu</b> into the box labeled "Host Name (or IP address)". Leave the "Port" setting at 22 and leave the "SSH" button checked. The window should now look like this:
+
 <img src="putty-full.png" width="472" alt="Completed PuTTY window" />
 
-<p>Then click on the "Open" button to connect. PuTTY will then show a prompt which looks like this:</p>
+Then click on the "Open" button to connect. PuTTY will then show a prompt which looks like this:
+
 <img  src="putty-hostkey.png" width="433" alt="PuTTY Host Key Prompt" />
 
-<p>Click "Yes" to accept and have PuTTY remember CSIL's key.</p>
+Click "Yes" to accept and have PuTTY remember CSIL's key.
 
-<p>Once a connection is made, CSIL will ask for both your username and then your password. Type in your CSIL username and password. The password will not be shown on the screen, but the characters you type are being used. This step will look something like this (with your username instead of "username"):</p>
+Once a connection is made, CSIL will ask for both your username and then your password. Type in your CSIL username and password. The password will not be shown on the screen, but the characters you type are being used. This step will look something like this (with your username instead of "username"):
+
 <img src="putty-login.png" width="677" alt="PuTTY Login Prompt" />
 
-<p>Once you have logged in successfully, you should be connected remotely to the CSIL server. Run the following command to make sure (this command shows the full host name of the machine you are logged in to):</p>
-<pre>$ hostname</pre>
+Once you have logged in successfully, you should be connected remotely to the CSIL server. Run the following command to make sure (this command shows the full host name of the machine you are logged in to):
 
-<p>This command should output <b>csil.cs.ucsb.edu</b>. You can now do anything in this terminal window that you could do on a CSIL machine or a Phelps lab machine, except run graphical applications.</p>
+```
+$ hostname
+```
+
+This command should output <b>csil.cs.ucsb.edu</b>. You can now do anything in this terminal window that you could do on a CSIL machine or a Phelps lab machine, except run graphical applications.
 
 If you want to run graphical applications, instead of using puTTY, you can use other programs, such as [MobaXterm](http://mobaxterm.mobatek.net/){: target="_blank"}.
 
-</div>
+
 
 
 <hr>
-<h3>Step 3: Create CS16 and Programming Assignment 01 Directories</h3>
 
-<p>Now that your environment is set up, you next will need to create a directory (a folder is also called <i>directory</i> in Linux) that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.</p>
+## Step 3: Create CS16 and Programming Assignment 01 Directories<a name="step3"></a>
 
-<p>To create your CS16 directory, use the <b>mkdir</b> command. Type the following in the terminal and press enter:</p>
-<pre>$ mkdir cs16</pre>
+Now that your environment is set up, you next will need to create a directory (a folder is also called <i>directory</i> in Linux) that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.
 
-<p>The <b>$</b> represents the terminal prompt; <i>you won't type this character</i>. Whenever you see it, that means that the following command is intended to be typed into the terminal window and run by pressing enter.</p>
+To create your CS16 directory, use the <b>mkdir</b> command. Type the following in the terminal and press enter:
 
-<p>You can see list of files and directories in the current directory with <b>ls</b> command. Type the following in the terminal and press enter:</p>
-<pre>$ ls</pre>
+```
+$ mkdir cs16
+```
 
-<p>You should be able to see the directory you just created i.e. <b>cs16</b> </p>
+The <b>$</b> represents the terminal prompt; <i>you won't type this character</i>. Whenever you see it, that means that the following command is intended to be typed into the terminal window and run by pressing enter.
 
-<p>Now move into that new CS16 directory with the <b>cd</b> command as follows:</p>
-<pre>$ cd cs16</pre>
+You can see list of files and directories in the current directory with <b>ls</b> command. Type the following in the terminal and press enter:
 
-<p>And create and move into a LAB 01 directory:</p>
-<pre>$ mkdir lab01
-$ cd lab01   </pre>
+```
+$ ls
+```
 
-<p>At any time, you can check what directory you are current in with the command <b>pwd</b>. It will output the full path of the current directory. For example, if you are inside your <b>lab01</b> directory, you might see:</p>
-<pre>/cs/student/yourcsilname/cs16/lab01</pre>
+You should be able to see the directory you just created i.e. **cs16** 
 
-<p>Knowing how to navigate a UNIX environment and issue UNIX commands is VERY valuable to computer scientists and engineers. To learn more UNIX commands, there are lot of cool Web resources and books on the topic. This is one website I found that's a good introductory page: 
+Now move into that new CS16 directory with the <b>cd</b> command as follows:
+
+```
+$ cd cs16
+```
+
+And create and move into a LAB 01 directory:
+
+```
+$ mkdir lab01
+$ cd lab01   
+```
+
+At any time, you can check what directory you are current in with the command **pwd**. It will output the full path of the current directory. For example, if you are inside your <b>lab01</b> directory, you might see:
+
+```
+/cs/student/yourcsilname/cs16/lab01
+```
+
+Knowing how to navigate a UNIX environment and issue UNIX commands is VERY valuable to computer scientists and engineers. To learn more UNIX commands, there are lot of cool Web resources and books on the topic. This is one website I found that's a good introductory page: [Useful unix commands](http://mally.stanford.edu/~sr/computing/basic-unix.html)
+<!--This link doesn't seem to work anymore
 <a href="https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html" target="_blank">https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html</a>.
-</p>
+-->
 
 <!--
 <h3>Step 4: Create a C++ File</h3>
@@ -190,47 +239,72 @@ $ cd lab01   </pre>
 <p><span class="code">hello.cpp</span> is now a completely empty file that you will use throughout the rest of the assignment to write your C++ code.</p> -->
 
 <hr>
-<h3>Step 3: Editing text files for programming</h3>
 
-<p>Let's take a little detour on how to best create and modify text files. These will carry all the code (regardless of computer language) that we want to assemble, compile, and execute.</p>
+## Step 4: Editing text files for programming <a name="step4"></a>
 
-<p>You are surely all familiar with Microsoft Word as a widely-used "word processor", but please DO <b>NOT</b> USE MS WORD TO WRITE PROGRAMS!!! :)<br>
-Instead, for programming, you have access to a very large number of excellent text editors - most of them are free to use! I will introduce you to just 4 of them below. If you already have a favorite editor and know how to use it well, then you don't have to change and use something else, just for this class.</p>
-<p>In fact, <i>AND PLEASE NOTE THIS</i>, no one editor is necessarily "better" than another. It is a matter of your preference. This is a great time for you to explore multiple options and then pick one. Once you pick an editor of choice, STICK WITH IT!<br>
-As you progress in your Computer Science education and, subsequently, your careers in CS, make sure you end up learning how to use more than one editor. You can still have a "favorite" that you excel at using, but at least have a working familiarity with others.</p>
+Let's take a little detour on how to best create and modify text files. These will carry all the code (regardless of computer language) that we want to assemble, compile, and execute.
 
-<ol>
-<li> <b>emacs</b> for UNIX-based OS</li>
-	<ol>
-	<p>emacs is a very popular editor that's available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).</p>
-	<p>To run emacs on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:<br>
-	<pre>$ emacs</pre></p>
-	<p>To edit a file (let's say it's called "filename"), you'd type:</p>
-	<pre>$ emacs <i>filename</i></pre></p>
+You are surely all familiar with Microsoft Word as a widely-used "word processor", but please DO <b>NOT</b> USE MS WORD TO WRITE PROGRAMS!!! :)<br>
+Instead, for programming, you have access to a very large number of excellent text editors - most of them are free to use! I will introduce you to just 4 of them below. If you already have a favorite editor and know how to use it well, then you don't have to change and use something else, just for this class.
 
-	<p>To learn how to use emacs, there is no substitute for PRACTICE!!! Of course, there are multiple online resources that you can look at (especially given emacs' popularity) and here are some of them:<br>
-	<li><a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a></li><br>
-	<li><a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a></li><br>
-	<li><a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner's guide to emacs</a></li></p>
-	</ol>
-<li> <b>vim</b> for UNIX-based OS</li>
-	<ol>
-	<p>vim (or sometimes called vi) is another popular editor that's also available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).</p>
-	<p>To run vim on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:<br>
-	<pre>$ vim</pre></p>
-	<p>To edit a file (let's say it's called "filename"), you'd type:</p>
-	<pre>$ vim <i>filename</i></pre></p>
-	<p>Again, to learn how to use vim, there is no substitute for PRACTICE!!! Again, there are multiple online resources that you can look at and here are some of them:<br>
-	<li><a href="http://www.vim.org/about.php" target="_blank">About vim</a></li><br>
-	<li><a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a></li><br>
-	<li><a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a></li></p>
-	</ol>
-<li> <b>Sublime Text 2</b> for Windows OS and MacOS X --- see <a href="https://www.sublimetext.com/" target="_blank">the product website</a> (it's a program that you'd have to download)</li>
-<li> <b>Notepad++</b> for Windows OS --- see <a href="https://notepad-plus-plus.org/" target="_blank">the product website</a> (it's a program that you'd have to download)</li>
-</ol>
+In fact, <i>AND PLEASE NOTE THIS</i>, no one editor is necessarily "better" than another. It is a matter of your preference. This is a great time for you to explore multiple options and then pick one. Once you pick an editor of choice, STICK WITH IT!
+
+
+As you progress in your Computer Science education and, subsequently, your careers in CS, make sure you end up learning how to use more than one editor. You can still have a "favorite" that you excel at using, but at least have a working familiarity with others.
+
+
+1. <b>emacs</b> for UNIX-based OS
+	
+	emacs is a very popular editor that's available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).
+
+	To run emacs on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:
+
+		
+		$ emacs
+		
+	
+	To edit a file (let's say it's called "filename"), you'd type:
+
+		$ emacs <filename>
+
+	To learn how to use emacs, there is no substitute for PRACTICE!!! Of course, there are multiple online resources that you can look at (especially given emacs' popularity) and here are some of them:
+
+	* <a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a>
+
+	* <a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a>
+
+	* <a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner's guide to emacs</a>
+	
+
+2. <b>vim</b> for UNIX-based OS
+	
+	vim (or sometimes called vi) is another popular editor that's also available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).
+
+	To run vim on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:
+
+		$ vim
+	
+	To edit a file (let's say it's called "filename"), you'd type:
+
+		$ vim <filename>
+
+	Again, to learn how to use vim, there is no substitute for PRACTICE!!! Again, there are multiple online resources that you can look at and here are some of them:
+
+	* <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
+
+	* <a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a>
+
+	* <a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a>
+	
+3. <b>Sublime Text 2</b> for Windows OS and MacOS X --- see <a href="https://www.sublimetext.com/" target="_blank">the product website</a> (it's a program that you'd have to download)
+
+4. <b>Notepad++</b> for Windows OS --- see <a href="https://notepad-plus-plus.org/" target="_blank">the product website</a> (it's a program that you'd have to download)
+
+
 
 <hr>
-<h3>Step 4: Create and edit a file containing a C++ program</h3>
+
+## Step 5: Create and edit a file containing a C++ program <a name="step5"></a>
 
 Now it's time to write the program! If you're comfortable with one of the reviewed text editors, then go ahead and use one. Otherwise, here are some [emacs hints](emacs_hints/) and some [vim hints](vim_hints/).
 
@@ -238,7 +312,7 @@ This assignment only needs you to write a program that prints out two lines on t
 
 ```
 Hello, world!
-CS16 Fall 2016.
+CS16 Winter 2017.
 ```
 
 Start with a "skeleton program" (or template) that contains the necessary structure but that does not do anything:
@@ -268,85 +342,96 @@ int main() {
 <p>You can adapt this line to achieve the objective of the assignment. <b>Remember that we need to print two lines, each with a newline at the end.</b> You can do this with one or two statements.</p>
 
 <hr>
-<h3>Step 5: Compile the Code</h3>
 
-<p>Now that the code is written, we need to <em>compile</em> it. This will be done using a special program called a <em>compiler</em>.</p>
+## Step 6: Compile the Code <a name="step6"></a>
 
-<p>Before moving on, <b>make sure you save your code</b> and close the text editor. The following step will be done in the terminal.</p>
+Now that the code is written, we need to <em>compile</em> it. This will be done using a special program called a <em>compiler</em>.
 
-<p>For C++ code we will use the <b>g++</b> compiler that's built-into many UNIX machines (it even works on most MacOS terminal programs). You can compile the <b>hello.cpp</b> file into an executable called <b>hello</b> with the following command:</p>
-<pre>$ g++ -o hello hello.cpp</pre>
+Before moving on, <b>make sure you save your code</b> and close the text editor. The following step will be done in the terminal.
 
-<p>This will compile your code and make an executable version of it. Specifically, it will tell the compiler to take the source code file <b>hello.cpp</b> and compile and link it to an executable called <b>hello</b>.</p>
+For C++ code we will use the <b>g++</b> compiler that's built-into many UNIX machines (it even works on most MacOS terminal programs). You can compile the <b>hello.cpp</b> file into an executable called <b>hello</b> with the following command:
 
-<p>If the compilation is successful, you won't see any output from the compiler, but if you issue a UNIX <b>ls</b> command, you should see a new file has appeared: one called <b>hello</b>. You can then use the following command to run your program:</p>
-<pre>$ ./hello</pre>
+	$ g++ -o hello hello.cpp
 
-<p>Which means "in the current directory, as represented by the <b>.</b> character, run the program <b>hello</b>". You should then see the program output the two expected lines.</p>
+This will compile your code and make an executable version of it. Specifically, it will tell the compiler to take the source code file <b>hello.cpp</b> and compile and link it to an executable called <b>hello</b>.
 
-<p>The other possibility is that the program may <b>not compile successfully</b>. What to do then?<br>
-If you run the <b>g++</b> command and are unsuccesful with your compilation, then you might see an output that looks like this:</p>
-<pre>hello.cpp: In function ‘int main()’:
-hello.cpp:10:1: error: expected ‘;’ before ‘}’ token
- }
- ^</pre>
+If the compilation is successful, you won't see any output from the compiler, but if you issue a UNIX <b>ls</b> command, you should see a new file has appeared: one called <b>hello</b>. You can then use the following command to run your program:
 
-<p>The compiler will try to give you hints on the line (in this case, it's complaining about line 10) where the error occurs, and also about what the error is (in this case a missing semicolon). You will also note that, in this case, an output executable file is not produced.</p>
+	$ ./hello
 
-<p>If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error (which happens more than sometimes), you can search online to see when the error occurs in general. Once you have fixed the error, run the compilation command again. De-bugging a program code is a necessary ritual in almost all programs written (even those written by expert coders). More on that in a later class.</p>
+Which means "in the current directory, as represented by the <b>.</b> character, run the program <b>hello</b>". You should then see the program output the two expected lines.
+
+The other possibility is that the program may <b>not compile successfully</b>. What to do then?<br>
+If you run the <b>g++</b> command and are unsuccesful with your compilation, then you might see an output that looks like this:
+
+	
+	hello.cpp: In function ‘int main()’:
+	hello.cpp:10:1: error: expected ‘;’ before ‘}’ token
+ 	}
+ 	
+ 		
+The compiler will try to give you hints on the line (in this case, it's complaining about line 10) where the error occurs, and also about what the error is (in this case a missing semicolon). You will also note that, in this case, an output executable file is not produced.
+
+If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error (which happens more than sometimes), you can search online to see when the error occurs in general. Once you have fixed the error, run the compilation command again. De-bugging a program code is a necessary ritual in almost all programs written (even those written by expert coders). More on that in a later class.
 
 <!--
 <p>You can find a list of common C++ errors and possible solutions at <a href="http://charlottehill.com/cpperrors.html">http://charlottehill.com/cpperrors.html</a>.</p>
 -->
 
 <hr>
-<h3>Step 6: Submit your program for grading</h3>
 
-<p>Once you are satisfied that your program is correct, then it's time to submit it.</p>
+## Step 7: Submit your program for grading <a name="step7"></a>
 
-<p><strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong></p>
+Once you are satisfied that your program is correct, then it's time to submit it.
 
-<p>In this course we will use the <a href="https://submit.cs.ucsb.edu/" target="_blank">submit.cs.ucsb.edu</a> system. You can make a submission from either the command line on any CS machine, or from a Web browser.</p>
+<strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
 
-<p>If you don't have a submit.cs account, you will first need to create one. This can be done at 
-<a href="https://submit.cs.ucsb.edu/form/user" target="_blank">https://submit.cs.ucsb.edu/form/user</a>.</p>
+In this course we will use the <a href="https://submit.cs.ucsb.edu/" target="_blank">submit.cs.ucsb.edu</a> system. You can make a submission from either the command line on any CS machine, or from a Web browser.
 
-<p>Once you have an account created, login at <a href="https://submit.cs.ucsb.edu/session" target="_blank">https://submit.cs.ucsb.edu/session</a>.</p>
+If you don't have a submit.cs account, you will first need to create one. This can be done at 
+<a href="https://submit.cs.ucsb.edu/form/user" target="_blank">https://submit.cs.ucsb.edu/form/user</a>.
 
-<p>Next, you need to join the CS16 course. Look for the "Join Class" link at the top of the page. It is in the top bar, as seen below:</p>
+Once you have an account created, login at <a href="https://submit.cs.ucsb.edu/session" target="_blank">https://submit.cs.ucsb.edu/session</a>.
+
+Next, you need to join the CS16 course. Look for the "Join Class" link at the top of the page. It is in the top bar, as seen below:
 <img src="submit-topbar.png" width="542" alt="submit.cs Top Bar" />
 
-<p>Once you see the list of all courses, click on the <b>"Join CS16_f16"</b> button.</p>
+Once you see the list of all courses, click on the <b>"Join CS16_w17"</b> button.
 
-<p>You should then see CS16 appear on your homepage when logging in to the submit.cs system. Click on the course now.</p>
+You should then see CS16 appear on your homepage when logging in to the submit.cs system. Click on the course now.
 
-<p>Now find "lab01" and click on the "Make Submission" button. It looks like this:</p>
+Now find "lab01" and click on the "Make Submission" button. It looks like this:
+
 <img src="make-submission-button.png" width="154" alt="Make Submission Button" />
 
-<p>This is the Web interface for submitting your code for the assignment. You can now upload your source file directly on this page. The browser will open a dialog box and you will need to navigate to the directory containing your <b>hello.cpp</b> file and select it.</p>
+This is the Web interface for submitting your code for the assignment. You can now upload your source file directly on this page. The browser will open a dialog box and you will need to navigate to the directory containing your <b>hello.cpp</b> file and select it.
 	
-<p>Once your file is uploaded, click "Submit 1 File":</p>
+Once your file is uploaded, click "Submit 1 File":
+
 <img src="submit-file-button.png" width="129" alt="Submit 1 File Button" />
 
-<p>Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after about a 1 minute delay.</p>
+Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after about a 1 minute delay.
 
-<p>You can <em>alternatively</em> submit your code from the command line (i.e. in the terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can also use this method when logged in remotely. To submit the the <b>hello.cpp</b> file to this assignment by running the command:</p>
-<pre>$ ~submit/submit -p 521 hello.cpp</pre>
+You can <em>alternatively</em> submit your code from the command line (i.e. in the terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can also use this method when logged in remotely. To submit the the <b>hello.cpp</b> file to this assignment by running the command:
 
-<p>The program will ask you to login <b>with your submit.cs username and password</b>. The password will not be printed to the terminal, but what you type will be used. It will also offer the option to save your credentials, so that you do not have login next time you submit. You may choose to do this or not. After the submission succeeds, you should see the program output something like:</p>
-<pre>Results will be available at: https://submit.cs.ucsb.edu/submission/xxxxx</pre>
+	$ ~submit/submit -p 521 hello.cpp
 
-<p>You can copy this URL and paste into a Web browser to reach the same submission result page as described above.</p>
+The program will ask you to login <b>with your submit.cs username and password</b>. The password will not be printed to the terminal, but what you type will be used. It will also offer the option to save your credentials, so that you do not have login next time you submit. You may choose to do this or not. After the submission succeeds, you should see the program output something like:
+
+	Results will be available at: https://submit.cs.ucsb.edu/submission/xxxxx
+
+You can copy this URL and paste into a Web browser to reach the same submission result page as described above.
 
 <hr>
-<h3>Step 7: Check Submission Results</h3>
 
-<p>After the 1 minute delay, the submit system will show your score and give you feedback on your submission. <em>Refresh the webpage after a minute to see this information.</em> This usually takes one of three forms:</p>
+## Step 8: Check Submission Results
+
+After the 1 minute delay, the submit system will show your score and give you feedback on your submission. <em>Refresh the webpage after a minute to see this information.</em> This usually takes one of three forms:
 
 <p>A correct submission with a score of 100. This means that your program passed all the tests for this assignment. Once you get to this point, you are finished with the assignment and will receive full credit. This case will look like this:</p>
 <img src="correct-submission.png" width="233" alt="Correct Submission." />
 
-<p>An incorrect submission with a score of 0 to 99. This means that your program failed 1 or more of the tests. For this assignment, the system will show both the expected output and the output your program generated side-by-side so that you can see what went wrong. You will need to fix your program, and then do Step 6 again to re-submit. This case will look like this:</p>
+<p>An incorrect submission with a score of 0 to 99. This means that your program failed 1 or more of the tests. For this assignment, the system will show both the expected output and the output your program generated side-by-side so that you can see what went wrong. You will need to fix your program, and then do Step 7 again to re-submit. This case will look like this:</p>
 <img src="incorrect-submission.png" width="706" alt="Incorrect Submission." />
 
 <p>Or a submission for which compilation failed. This means that your program caused compilation errors when the system tried to compile it. You will need to interpret the compiler output and fix the errors. The system will show you the compilation command that failed along with the full error message. This case will look like this:</p>
@@ -355,7 +440,8 @@ hello.cpp:10:1: error: expected ‘;’ before ‘}’ token
 <p>You may submit your program multiple times before the deadline. You should really only submit after local compilation does not produce any errors and runs as expected - that's the most efficient and preferred way to do things. The score of the last submission uploaded before the deadline will be used as your assignment grade.</p>
 
 <hr>
-<h3>Step 8: Done!</h3>
+
+## Step 9: Done!
 
 <p>Once your submission receives a score of 100/100, you are done with this assignment. Congratulations on completing your first C++ program!</p>
 
