@@ -1,91 +1,152 @@
 ---
 layout: lab
-num: lab04
+num: lab05
 ready: false
-desc: "Void Functions and Command Line Arguments"
-assigned: 2017-02-03 8:00:00.00-8
-due: 2017-02-10 23:59:00.00-8
+desc: "Binary convertor: File I/O Streams and String Manipulation"
+assigned: 2017-02-10 08:00:00.00-8
+due: 2017-02-17 23:59:00.00-8
 ---
-
 <div markdown="1">
 
-<h1>CS16: Programming Assignment 05</h1>
-<h2>Introduction</h2>
-The assignment for this week will utilize concepts of void functions and command line arguments. 
-This assignment is due on <b>Friday, October 28th at noon (12:00 pm)</b>
+<h2>Introduction -- Important: Read this!</h2>
+The assignment for this week will utilize concepts of file I/O data streams and string manipulation. Some of the concepts needed to finish this lab, such as the various string member functions and others items, will be discussed further in the Tuesday, Nov. 1st lecture in class. Additionally, this lab is a little more challenging than previous labs and you are required to use functions and, by necessity, you will have to test these functions as per the lectures we have had on the topic in class. Again, the TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it's not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. This assignment is due on <b>Friday, November 4th at noon (12:00 pm)</b>
 
 <h2>Step 1: Getting Ready</h2>
 Open a terminal window and log into the correct machine.
-Change into your CS 16 directory, create a lab05 directory and change into it.
+Change into your CS 16 directory, create a lab06 directory and change into it.
 Remember that at any time, you can check what directory you are currently in with the command <b>pwd</b>.
 
 <h2>Step 2: Create and Edit Your C++ Files</h2>
-This week, you will need to create <b>3 files called change.cpp, reverseArgs.cpp, and multiply.cpp</b>:
+This week, you will need to create <b>3 files called stddev.cpp, operators.cpp, and binconverter.cpp</b>:
 Each corresponds to one of the problems listed below, which make up this lab.
 
-This assignment consists of 3 problems, each of which is described below. The first and second are worth 40 points each and the third one is worth 30 points. Each should be solved in its own file and both must be submitted for full assignment credit. 
+This assignment consists of 3 problems, each of which is described below. The problem stddev.cpp is worth 20 points, binconverter.cpp and operators.cpp are worth 40 points each. Each should be solved in its own file and each must be submitted for full assignment credit. 
 
-NOTE: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
+Note: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
 
-<h3>CHANGE.CPP</h3>
-Write a program that tells what coins to give out for any amount of change from 1 cent to 99 cents. For example, if the amount is 86 cents, the output would be something like the following:
+---
 
-`86 cents can be given as 3 quarters, 1 dime, 1 penny.`
+<h3>STDDEV.CPP</h3>
+This program takes its inputs from a file that contains numbers. The program reads them in as type double. The program outputs to the screen the <i>standard deviation</i> of the numbers in the file. The file contains nothing but numbers of type double separated by blanks and/or line breaks. The standard deviation of a list of numbers x1, x2, x3, and so forth is defined as the <b><i>square root</i></b> of:
 
-Use coin denominations of 25 cents (quarters), 10 cents (dimes), and 1 cent (pennies). Do not use nickel and half-dollar coins. 
+((x1 – a)<sup>2</sup> + (x2 – a)<sup>2</sup> + (x3 – a)<sup>2</sup> + ...) / (n - 1)
 
-Your program should use the following function (among others):
+Where the number a is the average of the numbers x1, x2, x3, and so forth and the number n is the count of how many numbers there are.
 
-```cpp
-void compute_coins(int coin_value, int& num, int& amount_left);
-// Precondition: 0 < coin_value < 100; 0 <= amount_left < 100.
-// Postcondition: num has been set equal to the maximum number
-// of coins of denomination coin_value cents that can be obtained
-// from amount_left. Additionally, amount_left has been decreased
-// by the value of the coins, that is, decreased by
-// num * coin_value.
+Your program should take file name as input from the user. The answers should be given with 3 decimal points. Additionally, your program should define <b>at least one function</b>. If your program does NOT have at least one function, you will not get credit for this part of the assignment, even if your program passes submit.cs grading.
+
+A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines and each printed line has a newline at the end), with all manners of different numbers for inputs and the output:
+
+```
+Enter filename:
+nums.txt
+The standard deviation is 1.581
+```
+The accompanying input file in this example, could look like this (note the separation by one or more spaces):
+
+```
+6 7 8    9			10
 ```
 
-For example, suppose the value of the variable `amount_left` is 86. Then, after the following call: 
+or like this (note the separation by either spaces or newline characters):
 
-`compute_coins(25, number, amount_left);`
+```
+6 7
+8
+9
+10
+```
 
-the value of `number` will be 3 and the value of `amount_left` will be 11 (because if you take 3 quarters from 86 cents, that leaves 11 cents).
+---
 
-Include a loop that lets the user repeat this computation for new input values until the user says he or she wants to end the program by inputting a zero (see example below).
+<h3>OPERATORS.CPP</h3>
+Write a program will correct a C++ program that has errors in which operator, << or >>, it uses with cin and cout. The program replaces each (incorrect) occurrence of:
 
-Your program <i><b>must use</b></i> the `compute_coins` function declaration shown above. A program which does not will be awarded a score of zero, even if all tests pass.
+`cin <<`
 
-A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines and each printed line has a newline at the end), with all manners of different numbers for inputs and the output:
+with the corrected version
 
-<img src="change.png" width="700" alt="change program example" />
+`cin >>`
 
-Also note that the words have to match the numbers (so singulars for quarter, dime, and penny are expected as appropriate for the case). This can be trickier than it looks.
+and each (incorrect) occurrence of
 
+`cout >>`
 
-<h3>REVERSEARGS.CPP</h3>
-Write the program reverseArgs.cpp that takes command line input arguments and prints them back in reverse order.
-For example, if you ran the program as `./reverseArgs first_arg second_arg`, you would get an output back of `second_arg first_arg`.
+with the corrected version
 
-If you ran the program as `./reverseArgs I love gorgonzola cheese, but I hate toothpaste`, you would get an output back of `toothpaste hate I but cheese, gorgonzola love I`. 
+`cout <<`
 
-If you ran the program with double quotes, then the words within should act as one unit. For example: `./reverseArgs I would rather be at "UC Santa Barbara"` would output: `UC Santa Barbara at be rather would I`.
+Allow for the possibility that there may be any number of whitespace characters (one or more) between cin and << and between cout and >>. The replacement corrected version has only one blank between the cin or cout and the following operator. You should not correct other whitespace characters in the input file (such as those at the start of a line).
 
-A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines and each printed line has a newline at the end), with all manners of different numbers for inputs and the output:
+Your program should get the source filename as an input from the user. The corrected version should be output to a file called "corrected.txt" (it cannot be called anything else) and the output should also be displayed on the terminal. That is, the output of your program should be exactly same as the contents of the file "corrected.txt". 
 
-<img src="reverseArgs.png" width="700" alt="reverse program example" />
+Your program should define <b>at least one function</b> that is called and that manipulates the read line from the input file. If your program does NOT have at least this function, you will not get credit for this part of the assignment, even if your program passes submit.cs grading.
 
+You will need to use multiple <string> member functions to manipulate strings in this program. In addition, you will have to use the getline() function in the <string> library in order to read an entire line by ifstream. 
 
-<h3>MULTIPLY.CPP</h3>
-For the 3rd program, you will write a simple program that multiplies two numbers provided as command line arguments. When it is complete, the program should take exactly two command line arguments that are integers, multiply them together, and print their product on the standard output.
+A session should look like the following example (including whitespace and formatting):
 
-If the number of arguments is not exactly two (other than the program name itself), a "Usage" message is printed.
-Hint: you may want to use cerr instead of cout here.
+<div markdown="1">
+```
+Enter filename:
+original.txt
+#include <iostream>
 
-Here are some sample runs:
+using namespace std;
 
-<img src="multiply.png" width="700" alt="multiply program example" />
+int main(){
+      cout << "Hello!";
+        return 0;
+}
+```
+</div>
 
+The file "corrected.txt" consists of the above output (except first two lines).
+
+---
+
+<h3>BINCONVERTER.CPP</h3>
+Write a program that reads in an input file with one or more binary numbers separated by spaces or newline characters and outputs a conversion to decimal, hexadecimal, and octal numbers.
+
+Your program should take file name as input from the user. The binary numbers must be read in as strings. It is up to you to choose the variable types needed otherwise. Additionally, your program should define <b>at least one function</b> (likely, you'll end up with at least 3). If your program does NOT have at least one function, you will not get credit for this part of the assignment, even if your program passes submit.cs grading.
+
+You have to utilize the following devices in your program (required):
+
+```
+string.length()     returns the length of a string, i
+                    so if string = "code", string.length() = 4.
+string[n]           returns the nth character in the string (indexing starts at 0), 
+                    so string[0] = "c", string[1] = "o", etc...
+int(char c)         converts a character into its ASCII code,
+                    so if c = 'a', then int(c) = 97,
+                    and if c = 'c', the int(c) = 99, etc...
+to_string(int i)    converts an integer into a string. Function found in <string> library.
+                    Example, if i = 73, then to_string(i) = "73"
+```
+
+For example, given a file called `bin.txt`, which contains the following:
+
+<div markdown="1">
+```
+11011
+1111
+10111111
+10
+```
+</div>
+
+A session should then look like the following example, including whitespace (no whitespaces at the end of the lines) and formatting:
+
+<div markdown="1">
+```
+Enter filename:
+bin.txt
+The binary number 11011 equals 27 in decimal, 1B in hexadecimal, and 33 in octal
+The binary number 1111 equals 15 in decimal, F in hexadecimal, and 17 in octal
+The binary number 10111111 equals 191 in decimal, BF in hexadecimal, and 277 in octal
+The binary number 10 equals 2 in decimal, 2 in hexadecimal, and 2 in octal
+```
+</div>
 
 <h2>Step 3: Create a makefile and Compile the Codes with the make Command</h2>
 In order to learn another way to manage our source codes and their compilations, we will first create a makefile and put in the usual g++ commands in it. Afterwards, whenever we want to compile our programs, the Linux command is a lot shorter. The use of makefiles will reveal itself to be very useful the more complex our programs and CS projects become.
@@ -94,23 +155,23 @@ Using your text editor, create a new file called makefile and enter the followin
 
 <div markdown="1">
 ```
-all: change reverseArgs multiply
+all: stddev operators binconverter
 
-change:
-	change.cpp g++ -std=c++11 change.cpp -o change
+stddev:
+	g++ -std=c++11 stddev.cpp -o stddev
 
-reverseArgs:
-	g++ -std=c++11 reverseArgs.cpp -o reverseArgs
+operators:
+	g++ -std=c++11 operators.cpp -o operators
 
-multiply:
-	g++ -std=c++11 multiply.cpp -o multiply
+binconverter:
+	g++ -std=c++11 binconverter.cpp -o binconverter
 
 ```
 </div>
 
 Then from the Linux prompt, you can do one of two things: either issue separate compile commands for each project, like so:
 
-`$ make change`
+`$ make stddev`
 
 Or, you can issue one command that will compile all the projects mentioned in the makefile, like so:
 
@@ -118,7 +179,7 @@ Or, you can issue one command that will compile all the projects mentioned in th
 
 If the compilation is successful, you will not see any output from the compiler. You can then run your programs, for example:
 
-`$ ./change`
+`$ ./stddev`
 
 <b>If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error, you can search online to see when the error occurs in general.</b>
 
@@ -134,7 +195,7 @@ Once you submit, you should see a page detailing your submission. The system wil
 
 You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. To submit the the three source files to this assignment by running the command:
 
-`$ ~submit/submit -p 572 change.cpp reverseArgs.cpp multiply.cpp`
+`$ ~submit/submit -p 593 stddev.cpp operators.cpp binconverter.cpp`
 
 You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
 
