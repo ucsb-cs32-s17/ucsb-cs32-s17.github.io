@@ -1,451 +1,383 @@
 ---
 layout: lab
-num: lab00	
-ready: true
-desc: "Getting started with C++"
-assigned: 2017-01-10 08:00:00.00-8
-due: 2017-01-13 23:59:00.00-8
+num: lab01	
+ready: false
+desc: "Input/Output and Simple Flow Control"
+assigned: 2017-01-13 8:00:00.00-8
+due: 2017-01-20 23:59:00.00-8
 ---
 
-# Introduction
+# Goals for this lab
+By the time you have completed this lab, you should be able to:
 
-Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display.
+* Use for loops to count up and count down
+* Check command line argument for input filename, and open that input file for reading
+* Read every line of text in an input file and process it, using a while loop
+* Use if-else statements to select blocks of code
+* Count how many times a value occurs in a file
+* Use Unix commands to create directories, navigate to directories, list files, and copy files
+* Use the "make" command to compile simple stand-alone C++ programs (i.e. single source code file)
+* Run simple C++ programs both with and without a single command line parameter
 
-For this first lab, you will do the following:
+# Step by Step Instructions 
 
-* [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
-* [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
-* [Learn basic unix commands and create your lab01 directory.](#step3){: data-ajax="false"}
-* [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
-* [Write an actual program in C++.](#step5){: data-ajax="false"}
-* [Compile your program and see if it runs.](#step6){: data-ajax="false"}
-* [Submit your program for grading.](#step7){: data-ajax="false"}
+## Step 1: Log on to CSIL and bring up a terminal window. 
 
-## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
+Log onto the your account.  If your account is not working,  get the attention of a TA.  
 
-To log in to the machines in the Computer Science labs, or to connect remotely, you will need a **College of Engineering account**.
+As a reminder, that's the <strong>Application</strong> Menu, then <strong>System Tools</strong>, then <strong>Terminal Window</strong>.
 
-At this point, please go to [THIS LINK](https://ucsb.box.com/s/px12flf8g41m8g0gq4n6zqbbc9phkfrs) and view the important presentation from Engineering Computing Infrastructure on the College of Engineering accounts and computer labs.
+In the steps below, and in most future labs, you will create files on your own
+account.
+ 
+## Step 2: Create a ~/cs16/lab01 directory 
 
-You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
+In lab00,  we created your <code>~/cs16</code> directory, and the <code>~/cs16/lab00</code> directory.
 
-If you are enrolled in <i>any</i> CoE course this quarter (including CS16), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.
+In this lab, we'll create the <code>~/cs16/lab01</code> directory.
 
-<hr>
+You can do this with the following unix command:
 
-## Step 2: Open a Terminal <a name="step2"></a>
+<syntaxhighlight lang="bash">mkdir ~/cs16/lab01</syntaxhighlight>
 
-The first step in every assignment will be to open a <b>terminal window</b>, which will be the environment you use to write, compile, and run your programs.
+Then you can use a <code>cd</code> command to go directly into that directory:
 
+<syntaxhighlight lang="bash">cd ~/cs16/lab01</syntaxhighlight>
 
-* If you are working on a machine in the Phelps 3525
-    please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
-
-* If you are working on a machine in the Computer Science Instruction Lab (CSIL), you'll be working 
-    on one of the following machines: `csil-01.cs.ucsb.edu`, `csil-02.cs.ucsb.edu`, etc. 
-    (though `csil-48.cs.ucsb.edu`).   Please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
-
-If you are working on your laptop, whether Windows, Mac or Linux, the instructions below 
-will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect to that server, however in the future please connect to one of the following machines:
-
-* `csil-01.cs.ucsb.edu`
-* `csil-02.cs.ucsb.edu`, etc. 
-* etc.
-* through `csil-48.cs.ucsb.edu`
-
-You'll get much better performance on those individual machines, because they are much less heavily loaded and have newer hardware, as compared to `csil.cs.ucsb.edu`.
-
-* If you are working on your laptop and it is a Mac or Linux machine, go to [Step 2b](#step2b){: data-ajax="false"}.
-* If you are working on your laptop and it is a Windows machine, go to [Step 2c](#step2c){: data-ajax="false"}.
-
-
-### Step 2a: Opening a Terminal on a Phelps Lab Machine <a name="step2a"></a>
-<!--
-<h4><i><a name="step2a"></a>Step 2a: Opening a Terminal on a Phelps Lab Machine</i></h4>
--->
-
-1. Log in to the machine using your CoE account credentials (i.e. your username and password) created in Step 1.
-
-2. Find the <i>Activities</i> menu, which is in the top-left corner of the screen. Click on it to open the menu.
-
-3. Next, type "shell" in the search box. Then click the "Terminal" application which appears.
-
-4. You should now see a terminal window open. You can open more tabs or windows from the Terminal application's menu.
-
-### Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux <a name="step2b"></a>
-<!--
-<h4><i><a name="step2b"></a>Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux</i></h4>
--->
-
-To get started on Mac OS X or Linux, you first need to open a terminal program. This involves slightly different steps on either OS.
-
-*On Ubuntu (an example of a Linux OS):*
-
-1. Find the search menu. It appears at the top of the Unity bar:
-
-<img src="ubuntu-menu.png" width="297" alt="Ubuntu Search Menu" />
-
-2. Click on that icon to open the search menu. Then type "terminal" and click on the "Terminal" application which appears:
-
-<img  src="ubuntu-search.png" width="357" alt="Ubuntu Terminal Application" />
-
-
-*On Mac OS X:*
-
-1. Open the "Terminal" application. It is found inside the <em>Applications</em> folder of your main drive, inside the <em>Utilities</em> subfolder. The icon looks like this:
-
-<img src="mac-terminal.png" width="79" alt="Mac OS X Terminal Icon" />
-
-You can also find it using Spotlight by typing "terminal" and pressing ENTER.
-
-
-Once you have a terminal window open on your machine, you next need to **connect to the CSIL server remotely**.
-
-You will do this using a UNIX command (an internet protocol, really) called <em>SSH</em> (short for Secure Shell).
-
-Type the following command in your terminal, replacing <b>USERNAME</b> with <b>your CoE username</b>:
+You can then use the <code>pwd</code> command to make sure that you are in the proper
+spot. The result should look like this (except in place of /cs/faculty/dimirza, you'll see your own home directory listed, e.g. /cs/student/jsmith).
 
 ```
-$ ssh USERNAME@csil.cs.ucsb.edu
+-bash-4.2$ mkdir ~/cs16/lab01
+-bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ pwd
+/cs/faculty/dimirza/cs16/lab01
+-bash-4.2$
 ```
 
-SSH will first ask you a question which looks like this:
+
+In future weeks, we may simply say something like &quot;create a <code>~/cs16/lab02</code> directory and make it your current directory&quot;, without spelling out the Linux commands to do this.  You can always refer back to previous labs if you forget the details, but eventually you'll want to memorize some of the most useful commands such as <code>mkdir</code>, <code>cd</code>, <code>pwd</code> and <code>ls</code>.
+
+## Step 3: Copying some programs from my directory TBD - github instructions
+
+
+After doing this command, if you cd into ~/cs16/lab01 and use the ls command, you should see several .cpp files in your ~/cs16/lab01 directory&mdash;
 
 ```
-The authenticity of host 'csil.cs.ucsb.edu (128.111.43.14)' can't be established.
-RSA key fingerprint is 90:ab:6a:31:0b:81:62:25:9b:11:50:05:18:d3:1a:b5.
-Are you sure you want to continue connecting (yes/no)? 
-
+-bash-4.2$ ls
+animals01.txt  animals02.txt  countDucks.cpp  sample01.cpp
+-bash-4.2$ 
 ```
 
-Type <b>yes</b> and then ENTER to continue. It will next ask for your CoE account password. When you type it in, nothing will show on the screen (not even dots). However what you type is still being sent and once you are finished with your password, you can press ENTER to login.
 
-<b>You should now be remotely connected to CSIL!</b> You can make sure by typing the following command (which will tell you what machine you are currently issuing commands to):
+If so, you are ready to move on to the next step.
 
-```
-$ hostname
+If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance.
 
-```
+## Step 4: Compiling and running the first of these programs  
 
-This should show <b>csil.cs.ucsb.edu</b>. You can now do anything you could normally do in a terminal window in CSIL or the Phelps lab (except run graphical programs).
+The first program we are going to compile and run is one that demonstrates a for loop in C++.   
 
-## Extra Note: Graphical Forwarding
-
-This is not required or necessary to use CSIL remotely, so if you are not interested, go ahead and skip this part.
-
-If you have an X windows system installed you can get graphical applications running by <em>forwarding</em> X from CSIL to your machine. To do this, add the <b>-X</b> option to the SSH command like this:
+In your lab01 directory, you should have a program called sample01.cpp that we copied in at step 3.   Here's how you can put yourself in that directory (though you should already be there):
 
 ```
-$ ssh -X USERNAME@csil.cs.ucsb.edu
+-bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ pwd
+/cs/faculty/dimirza/cs16/lab01
+-bash-4.2$ 
 ```
 
-X windows is almost always installed on graphical Linux, and can be installed on Mac OS X as XQuartz (which can be found at <a href="http://xquartz.macosforge.org/landing/" target="_blank">http://xquartz.macosforge.org/landing/</a>).
-
-### Step 2c: Connecting to CSIL via SSH on Windows with PuTTY <a name="step2c"></a>
-
-<!--
-<h4><i><a name="step2c"></a>Step 2c: Connecting to CSIL via SSH on Windows with PuTTY</i></h4>
--->
-
-To connect remotely on Windows machines, we recommend using a program called <em>PuTTY</em>. This program is a well-known and widely-used SSH client for the Windows OS.
-
-First, download the program from <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a>. You only need the executable file <b>putty.exe</b>, but feel free to download any other programs that you want. The page includes portable versions and a version with an installer. <i>Always make sure to download PuTTY from this site</i>, so that you can make sure it is the correct program.
-
-Once downloaded, run PuTTY like you would open other programs. If you just download the <b>putty.exe</b> file, you can open it from your downloads folder directly. You can also move it to any other location on your machine and open it from there. If you used the installer, open PuTTY from the Start Menu.
-
-When PuTTY opens, you should see a window that looks like this:
-
-<img src="putty-empty.png" width="469" alt="Empty PuTTY window" />
-
-Type <b>csil.cs.ucsb.edu</b> into the box labeled "Host Name (or IP address)". Leave the "Port" setting at 22 and leave the "SSH" button checked. The window should now look like this:
-
-<img src="putty-full.png" width="472" alt="Completed PuTTY window" />
-
-Then click on the "Open" button to connect. PuTTY will then show a prompt which looks like this:
-
-<img  src="putty-hostkey.png" width="433" alt="PuTTY Host Key Prompt" />
-
-Click "Yes" to accept and have PuTTY remember CSIL's key.
-
-Once a connection is made, CSIL will ask for both your username and then your password. Type in your CSIL username and password. The password will not be shown on the screen, but the characters you type are being used. This step will look something like this (with your username instead of "username"):
-
-<img src="putty-login.png" width="677" alt="PuTTY Login Prompt" />
-
-Once you have logged in successfully, you should be connected remotely to the CSIL server. Run the following command to make sure (this command shows the full host name of the machine you are logged in to):
+Then you can list out your files with the <code>ls</code> command:
 
 ```
-$ hostname
+-bash-4.2$ ls
+animals01.txt  animals02.txt  countDucks.cpp  sample01.cpp
+-bash-4.2$ 
 ```
 
-This command should output <b>csil.cs.ucsb.edu</b>. You can now do anything in this terminal window that you could do on a CSIL machine or a Phelps lab machine, except run graphical applications.
-
-If you want to run graphical applications, instead of using puTTY, you can use other programs, such as [MobaXterm](http://mobaxterm.mobatek.net/){: target="_blank"}.
-
-
-
-
-<hr>
-
-## Step 3: Create CS16 and Programming Assignment 01 Directories<a name="step3"></a>
-
-Now that your environment is set up, you next will need to create a directory (a folder is also called <i>directory</i> in Linux) that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.
-
-To create your CS16 directory, use the <b>mkdir</b> command. Type the following in the terminal and press enter:
+Finally, use the Unix <code>cat</code> command to list the contents of the file sample01.cpp.   (The reason this command is called "cat" has nothing to do with the animal that goes "meow".  If you ask me in lecture and I'll tell you where the name comes from.)
 
 ```
-$ mkdir cs16
-```
-
-The <b>$</b> represents the terminal prompt; <i>you won't type this character</i>. Whenever you see it, that means that the following command is intended to be typed into the terminal window and run by pressing enter.
-
-You can see list of files and directories in the current directory with <b>ls</b> command. Type the following in the terminal and press enter:
-
-```
-$ ls
-```
-
-You should be able to see the directory you just created i.e. **cs16** 
-
-Now move into that new CS16 directory with the <b>cd</b> command as follows:
-
-```
-$ cd cs16
-```
-
-And create and move into a LAB 01 directory:
-
-```
-$ mkdir lab01
-$ cd lab01   
-```
-
-At any time, you can check what directory you are current in with the command **pwd**. It will output the full path of the current directory. For example, if you are inside your <b>lab01</b> directory, you might see:
-
-```
-/cs/student/yourcsilname/cs16/lab01
-```
-
-Knowing how to navigate a UNIX environment and issue UNIX commands is VERY valuable to computer scientists and engineers. To learn more UNIX commands, there are lot of cool Web resources and books on the topic. This is one website I found that's a good introductory page: [Useful unix commands](http://mally.stanford.edu/~sr/computing/basic-unix.html)
-<!--This link doesn't seem to work anymore
-<a href="https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html" target="_blank">https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html</a>.
--->
-
-<!--
-<h3>Step 4: Create a C++ File</h3>
-
-<p>Now that we have a directory to contain our work for the assignment, let's start writing our code. Create a file called <b>hello.cpp</b> with the <b>touch</b> command:</p>
-<pre>$ touch hello.cpp</pre>
-
-<p><span class="code">hello.cpp</span> is now a completely empty file that you will use throughout the rest of the assignment to write your C++ code.</p> -->
-
-<hr>
-
-## Step 4: Editing text files for programming <a name="step4"></a>
-
-Let's take a little detour on how to best create and modify text files. These will carry all the code (regardless of computer language) that we want to assemble, compile, and execute.
-
-You are surely all familiar with Microsoft Word as a widely-used "word processor", but please DO <b>NOT</b> USE MS WORD TO WRITE PROGRAMS!!! :)<br>
-Instead, for programming, you have access to a very large number of excellent text editors - most of them are free to use! I will introduce you to just 4 of them below. If you already have a favorite editor and know how to use it well, then you don't have to change and use something else, just for this class.
-
-In fact, <i>AND PLEASE NOTE THIS</i>, no one editor is necessarily "better" than another. It is a matter of your preference. This is a great time for you to explore multiple options and then pick one. Once you pick an editor of choice, STICK WITH IT!
-
-
-As you progress in your Computer Science education and, subsequently, your careers in CS, make sure you end up learning how to use more than one editor. You can still have a "favorite" that you excel at using, but at least have a working familiarity with others.
-
-
-1. <b>emacs</b> for UNIX-based OS
-	
-	emacs is a very popular editor that's available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).
-
-	To run emacs on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:
-
-		
-		$ emacs
-		
-	
-	To edit a file (let's say it's called "filename"), you'd type:
-
-		$ emacs <filename>
-
-	To learn how to use emacs, there is no substitute for PRACTICE!!! Of course, there are multiple online resources that you can look at (especially given emacs' popularity) and here are some of them:
-
-	* <a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a>
-
-	* <a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a>
-
-	* <a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner's guide to emacs</a>
-	
-
-2. <b>vim</b> for UNIX-based OS
-	
-	vim (or sometimes called vi) is another popular editor that's also available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).
-
-	To run vim on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:
-
-		$ vim
-	
-	To edit a file (let's say it's called "filename"), you'd type:
-
-		$ vim <filename>
-
-	Again, to learn how to use vim, there is no substitute for PRACTICE!!! Again, there are multiple online resources that you can look at and here are some of them:
-
-	* <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
-
-	* <a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a>
-
-	* <a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a>
-	
-3. <b>Sublime Text 2</b> for Windows OS and MacOS X --- see <a href="https://www.sublimetext.com/" target="_blank">the product website</a> (it's a program that you'd have to download)
-
-4. <b>Notepad++</b> for Windows OS --- see <a href="https://notepad-plus-plus.org/" target="_blank">the product website</a> (it's a program that you'd have to download)
-
-
-
-<hr>
-
-## Step 5: Create and edit a file containing a C++ program <a name="step5"></a>
-
-Now it's time to write the program! If you're comfortable with one of the reviewed text editors, then go ahead and use one. Otherwise, here are some [emacs hints](emacs_hints/) and some [vim hints](vim_hints/).
-
-This assignment only needs you to write a program that prints out two lines on the display, and nothing else. <b>The output should look exactly as follows</b> (no space before or after each line, except the 2 newlines):
-
-```
-Hello, world!
-CS16 Winter 2017.
-```
-
-Start with a "skeleton program" (or template) that contains the necessary structure but that does not do anything:
-
-```cpp
+-bash-4.2$ cat sample01.cpp
+// sample01.cpp
+// by D. Mirza for CS16 lab01, Winter 2017
 #include <iostream>
-
 using namespace std;
 
 int main() {
-    // Your printing code should go here
+    // Simple for loop that counts from 1 up to n
 
+    int n=5;
+
+    for (int i=1; i<=n; i++) {
+       cout << "i=" << i << endl;
+    }
+   
     return 0;
 }
+-bash-4.2$ 
 ```
-<p>Go ahead and type this in to the <b>hello.cpp</b> file. Alternatively, you can copy and paste it directly from this page.</p>
 
-<p>Next, you will need to replace the comment with code to print out the expected output. Comments in C++ are lines that start with <b>//</b> or text between <b>/*</b> and <b>*/</b>. The second type can span multiple lines.</p>
+Compile this with the command <code>make sample01</code> and run it with the command <code>./sample01</code>.  That looks like this:
 
-<p><em>Important note: For students familiar with Python, remember that lines starting with the <b>#</b> character are not comments in C++. Rather, they are important include lines that allow your program to use the input and output functionality. Make sure to copy those lines in your program as well. Only <b>//</b> or <b>/*</b> create comments in C++.</em></p>
+```
+-bash-4.2$ make sample01
+g++     sample01.cpp   -o sample01
+-bash-4.2$ ./sample01 
+i=1
+i=2
+i=3
+i=4
+i=5
+-bash-4.2$ 
+```
 
-<p>To print out text to the terminal, you can use the <b>cout</b> stream. To output something use the <b>&lt;&lt;</b> operator as shown below:</p>
-<pre>cout &lt;&lt; "This will be printed out to the terminal" &lt;&lt; endl;</pre>
 
-<p>The <b>endl</b> command will cause a newline (i.e. a carriage return) to be printed and the next print to go on the next line.</p>
+If you get that output, you are ready for the next step.
 
-<p>You can adapt this line to achieve the objective of the assignment. <b>Remember that we need to print two lines, each with a newline at the end.</b> You can do this with one or two statements.</p>
+## Step 5: Copy sample01.cpp to myProg01.cpp and make changes 
 
-<hr>
+Now we'll use the the Unix command <code>cp </code><em>oldfile newfile</em> which copies files, to copy from sample01.cpp to a new file called myProg01.cpp, as shown here:
 
-## Step 6: Compile the Code <a name="step6"></a>
+```
+-bash-4.2$ cp sample01.cpp myProg01.cpp
+-bash-4.2$ ls
+animals01.txt  countDucks.cpp  sample01
+animals02.txt  myProg01.cpp    sample01.cpp
+-bash-4.2$ 
+```
 
-Now that the code is written, we need to <em>compile</em> it. This will be done using a special program called a <em>compiler</em>.
+Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Open it up in a text editor (we suggest emacs, and our instructions will use emacs) and make the following changes:
 
-Before moving on, <b>make sure you save your code</b> and close the text editor. The following step will be done in the terminal.
+<ol>
+<li>Change the comment at the top of the file so that it says // myProg01.cpp</li>
+<li>Change the second line of the file, replacing my name with yours</li>
+<li>Change the for loop as follows:
+* Instead of initializing to 1, initialize to n
+* Instead of testing <code>i&lt;=n</code>, test whether <code>i&gt;0</code>
+* Instead of changing i by incrementing with <code>i++</code>, change it by decrementing with <code>i--</code>
+* Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newlne after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
+* Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement.  That line of code is <code>cout &lt;&lt; endl;</code>
+</li>
+</ol>
 
-For C++ code we will use the <b>g++</b> compiler that's built-into many UNIX machines (it even works on most MacOS terminal programs). You can compile the <b>hello.cpp</b> file into an executable called <b>hello</b> with the following command:
+As a reminder, you get out of emacs with CTRL/X followed by CTRL/C.  It will ask if you want to save changes; type y for yes.
 
-	$ g++ -o hello hello.cpp
+Compile and run myProg01.cpp with these changes.   The output should look like this:
 
-This will compile your code and make an executable version of it. Specifically, it will tell the compiler to take the source code file <b>hello.cpp</b> and compile and link it to an executable called <b>hello</b>.
+<pre>
+5 4 3 2 1
+</pre>
 
-If the compilation is successful, you won't see any output from the compiler, but if you issue a UNIX <b>ls</b> command, you should see a new file has appeared: one called <b>hello</b>. You can then use the following command to run your program:
+If it does, you are ready to move to the next step.   
 
-	$ ./hello
 
-Which means "in the current directory, as represented by the <b>.</b> character, run the program <b>hello</b>". You should then see the program output the two expected lines.
+Tip: *If you make an mistake that results in an "infinite loop", i.e. the window is just scrolling by without stopping, you can use CTRL/C (hold down Control and type C) to stop the program.*
 
-The other possibility is that the program may <b>not compile successfully</b>. What to do then?<br>
-If you run the <b>g++</b> command and are unsuccesful with your compilation, then you might see an output that looks like this:
+## Step 6: Reading from input files and counting ducks 
+The next files we are going to look at are not C++ code, but rather data files.
 
-	
-	hello.cpp: In function ‘int main()’:
-	hello.cpp:10:1: error: expected ‘;’ before ‘}’ token
- 	}
- 	
- 		
-The compiler will try to give you hints on the line (in this case, it's complaining about line 10) where the error occurs, and also about what the error is (in this case a missing semicolon). You will also note that, in this case, an output executable file is not produced.
+Use the "cat" command to look at the contents of animals01.txt and animals02.txt.  You should get results like these:
 
-If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error (which happens more than sometimes), you can search online to see when the error occurs in general. Once you have fixed the error, run the compilation command again. De-bugging a program code is a necessary ritual in almost all programs written (even those written by expert coders). More on that in a later class.
+```
+-bash-4.2$ cat animals01.txt 
+duck
+duck
+goose
+-bash-4.2$ cat animals02.txt
+duck
+duck
+goose
+duck
+duck
+cow
+duck
+duck
+dog
+-bash-4.2$ 
+```
 
-<!--
-<p>You can find a list of common C++ errors and possible solutions at <a href="http://charlottehill.com/cpperrors.html">http://charlottehill.com/cpperrors.html</a>.</p>
--->
+The next program we are going to look at will read input from files such as these.    It is called <code>countDucks.cpp</code> and it will simply count the number of ducks in each file.
 
-<hr>
+Before you look at the code, try compiling the program and running it, because this will help you understand what the program is trying to do.  Compile with:
 
-## Step 7: Submit your program for grading <a name="step7"></a>
+```
+-bash-4.2$ make countDucks
+g++     countDucks.cpp   -o countDucks
+-bash-4.2$ 
+```
 
-Once you are satisfied that your program is correct, then it's time to submit it.
+Then try running it with just <code>./countDucks</code>.  You'll see that you get a "Usage" message.  This is telling us that the program expects a "command line argument", which is the name of the file to read:
 
-<strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
+```
+-bash-4.2$ ./countDucks 
+Usage: ./countDucks inputFile
+-bash-4.2$ 
+```
 
-In this course we will use the <a href="https://submit.cs.ucsb.edu/" target="_blank">submit.cs.ucsb.edu</a> system. You can make a submission from either the command line on any CS machine, or from a Web browser.
+So run it again, the first time giving it animals01.txt as the filename, and the second time giving it animals02.txt as the filename:
 
-If you don't have a submit.cs account, you will first need to create one. This can be done at 
-<a href="https://submit.cs.ucsb.edu/form/user" target="_blank">https://submit.cs.ucsb.edu/form/user</a>.
+```
+-bash-4.2$ ./countDucks animals01.txt 
+There were 2 ducks in animals01.txt
+-bash-4.2$ ./countDucks animals02.txt 
+There were 6 ducks in animals02.txt
+-bash-4.2$ 
+```
 
-Once you have an account created, login at <a href="https://submit.cs.ucsb.edu/session" target="_blank">https://submit.cs.ucsb.edu/session</a>.
+This code for countDucks.cpp is longer than what will fit on a single screen, so instead of using the "cat" program to list it on our terminal, I suggest opening it up with emacs to look at it, with <code> emacs countDucks.cpp</code>, OR opening it with gvim <code> gvim countDucks.cpp</code>
 
-Next, you need to join the CS16 course. Look for the "Join Class" link at the top of the page. It is in the top bar, as seen below:
-<img src="submit-topbar.png" width="542" alt="submit.cs Top Bar" />
 
-Once you see the list of all courses, click on the <b>"Join CS16_w17"</b> button.
+Read through the code, especially the comments, and try to understand what each line of code is doing.  We'll explain more about this code in lecture, but for now at least get the big picture of how the code works.
 
-You should then see CS16 appear on your homepage when logging in to the submit.cs system. Click on the course now.
+Once you've done that, you are ready for the next step.
 
-Now find "lab01" and click on the "Make Submission" button. It looks like this:
+## Step 7: A more detailed counting program 
 
-<img src="make-submission-button.png" width="154" alt="Make Submission Button" />
+Your job is now to copy countDucks.cpp to a file myProg02.cpp and make some changes.
 
-This is the Web interface for submitting your code for the assignment. You can now upload your source file directly on this page. The browser will open a dialog box and you will need to navigate to the directory containing your <b>hello.cpp</b> file and select it.
-	
-Once your file is uploaded, click "Submit 1 File":
+First, let's stipulate that you may assume that everything in the input file is an animal, one per line&mdash;if someone adds "potato" or "bicycle" to the file, you can just assume that potato and bicycle are now to be considered types of animals.
 
-<img src="submit-file-button.png" width="129" alt="Submit 1 File Button" />
+* (1) Add a variable that will count ALL animals in the file.    Give it an appropriate name and initialize it to zero. 
+* (2) Add a variable that will count ALL animals in the file that are NOT ducks.   Give it an appropriate name and initialize it to zero. 
+* (3) Add code that will increment those counts when appropriate.  It may help to know that C++ has an else clause for an if that looks like this:
 
-Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after about a 1 minute delay.
+```
+   if (condition) {
+     // lines of code here are 
+     // executed when condition is true
+   } else {
+     // lines of code here are
+     // executed when condition is false
+   }
+``` 
 
-You can <em>alternatively</em> submit your code from the command line (i.e. in the terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can also use this method when logged in remotely. To submit the the <b>hello.cpp</b> file to this assignment by running the command:
+Note that it is NOT required for every if to have an else clause.
 
-	$ ~submit/submit -p 521 hello.cpp
+Also note that the braces <code>{ } </code> are:
+* OPTIONAL when there is a SINGLE statement inside a particular if or else block
+* REQUIRED when there is more than one statement inside a particular if or else block
 
-The program will ask you to login <b>with your submit.cs username and password</b>. The password will not be printed to the terminal, but what you type will be used. It will also offer the option to save your credentials, so that you do not have login next time you submit. You may choose to do this or not. After the submission succeeds, you should see the program output something like:
+After making these changes, one more thing: change the lines that give the output so they look like the ones shown below.
 
-	Results will be available at: https://submit.cs.ucsb.edu/submission/xxxxx
 
-You can copy this URL and paste into a Web browser to reach the same submission result page as described above.
+<pre>
+Report for animals01.txt:
+   Animal count:    3
+   Duck count:      2
+   Non duck count:  1
+</pre>
 
-<hr>
+<pre>
+Report for animals02.txt:
+   Animal count:    9
+   Duck count:      6
+   Non duck count:  3
+</pre>
 
-## Step 8: Check Submission Results
+It is IMPORTANT to be EXACT since the submit.cs system will compare your output with the expected output character-by-character.   The spacing MATTERS!   You can add extra spaces at the beginning and end of the string literals for <code>"   Animal count:   "</code>  and <code>"   Duck count:   "</code> so that the spacing comes out right and matches the expected output below.  I'm not going to tell you how many; you'll have to figure that out.
 
-After the 1 minute delay, the submit system will show your score and give you feedback on your submission. <em>Refresh the webpage after a minute to see this information.</em> This usually takes one of three forms:
+Note that we will also test your program on other input files, so you should too.  Use the cp command to copy animals02.txt to animals03.txt and add some ducks and some other animals.  Count by hand, and make sure that the count when you run your program matches what is expected.
 
-<p>A correct submission with a score of 100. This means that your program passed all the tests for this assignment. Once you get to this point, you are finished with the assignment and will receive full credit. This case will look like this:</p>
-<img src="correct-submission.png" width="233" alt="Correct Submission." />
+When you are satisfied that the count is correct and that format of the output is precise, you are ready to submit your code for grading.
 
-<p>An incorrect submission with a score of 0 to 99. This means that your program failed 1 or more of the tests. For this assignment, the system will show both the expected output and the output your program generated side-by-side so that you can see what went wrong. You will need to fix your program, and then do Step 7 again to re-submit. This case will look like this:</p>
-<img src="incorrect-submission.png" width="706" alt="Incorrect Submission." />
+Note that the submit.cs system may give you feedback on whether your code is correct or not.    You can use this feedback to resubmit as many times as you need up until the deadline for the assignment.  So if it doesn't work on the first try, don't panic&mdash;just fix your code.
 
-<p>Or a submission for which compilation failed. This means that your program caused compilation errors when the system tried to compile it. You will need to interpret the compiler output and fix the errors. The system will show you the compilation command that failed along with the full error message. This case will look like this:</p>
-<img src="compilation-failure.png" width="499" alt="Compilation Failure." />
 
-<p>You may submit your program multiple times before the deadline. You should really only submit after local compilation does not produce any errors and runs as expected - that's the most efficient and preferred way to do things. The score of the last submission uploaded before the deadline will be used as your assignment grade.</p>
+## Step 8: Turn in your code 
 
-<hr>
+Once you have joined the course, you should be able to submit your code by typing the sequence of commands shown below in a terminal window on CSIL:
 
-## Step 9: Done!
+* Navigate to your ~/cs16/lab01 directory, the one containing your code for this week's lab.
+<pre>
+-bash-4.2$ cd ~/cs16/lab01
+</pre>
 
-<p>Once your submission receives a score of 100/100, you are done with this assignment. Congratulations on completing your first C++ program!</p>
+* Use the <code>ls</code> command to list your files and to be sure that you have the myProg01.cpp and myProg02.cpp files in your directory.  It is ok if there are other files (countDucks.cpp, animals01.txt, etc.) along with the executables.  You only have to submit myProg01.cpp and myProg02.cpp.
 
-<p>If you are in the Phelps lab or in CSIL, <b>make sure to log out of the machine before you leave</b>. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.</p>
+```
+-bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ ls
+animals01.txt  countDucks.cpp  myProg02      sample01
+animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
+-bash-4.2$ 
+```
 
-<p>If you are logged in remotely, you can log out using the <b>exit</b> command in UNIX:</p>
-<pre>$ exit</pre>
+* Use the following command to turn in your files:
+<pre>
+-bash-4.2$ ~bboe/bin/submit -p 195 myProg01.cpp myProg02.cpp
+</pre>
+
+The number 195 is the "project number" specfic to CS16 W15 lab01 for Conrad's section.
+
+==== What a successful turnin looks like ====
+
+```
+-bash-4.2$ cd ~/cs16/lab01
+-bash-4.2$ pwd
+/cs/faculty/pconrad/cs16/lab01
+-bash-4.2$ ls
+animals01.txt  countDucks.cpp  myProg02      sample01
+animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
+-bash-4.2$ ~bboe/bin/submit -p 195 myProg01.cpp myProg02.cpp
+logged in as pconrad@cs.ucsb.edu
+Sending myProg01.cpp
+Sending myProg02.cpp
+Submission successful
+Results will be available at: https://submit.cs.ucsb.edu/submission/68832
+-bash-4.2$ 
+```
+
+Once you have done the submit, go to the link shown.  (Yours will have a different number from the one given above.)
+
+==== What you'll see on submit.cs if the submission was successful ====
+
+If you see the following, it means you passed all the tests.  This is 120 points of the 200 points for this lab.  
+
+The other 80 are for promptness and style, and they are explained in the final section of these instructions. 
+
+So, if you are seeing this green output, you are ready to scroll down to those and check over your code for those issues.  If you find any thing you want to change, you may resubmit as many times as needed up until the deadline.
+
+<div id="diff_table_div">
+<div class="row-fluid"><div class="pull-left well well-small"><h3 style="color:green">Passed Tests</h3><table border="1">
+  <tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr><tr><td>myProg01</td><td><p style="color:green;margin:0;padding:0;">myProg01</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals01.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals02.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">myProg02 empty command line</p></td><td>30</td></tr></table></div></div>
+
+</div>
+
+==== What you might see if there were errors ====
+
+If instead, you see someting like this, it means you didn't pass some tests:
+
+![error](/lab/lab01/submit.cs.error-50pct.png){:height="500px"}
+
+If you are seeing something like that, try to understand the feedback you are getting before asking questions.  Then if you are still stuck, ask a TA for help.  For example, the output above shows that the student forgot the "colon" (<code>:</code>) in the output.
+
+= Evaluation and Grading =
+
+To earn full credit for this lab:
+
+* (120 pts) You should have successfully submitted both myProg01.cpp and myProg02.cpp  via submit.cs and received a "green" indication that it passed all the tests for expected output.
+
+<div id="diff_table_div">
+<div class="row-fluid"><div class="pull-left well well-small"><h3 style="color:green">Passed Tests</h3><table border="1">
+  <tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr><tr><td>myProg01</td><td><p style="color:green;margin:0;padding:0;">myProg01</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals01.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">./myProg02 animals02.txt</p></td><td>30</td></tr><tr><td>myProg02</td><td><p style="color:green;margin:0;padding:0;">myProg02 empty command line</p></td><td>30</td></tr></table></div></div>
+
+</div>
+
+* (80 pts) Promptness and Style: For the 80 points for promptness and style, the following rubric applies:
+
+* Style: 
+1. Indentation is neat, consistent and follows good practice (see below)
+2. Variable name choice: variables should have sensible names.
+	More on indentation: Your code should be indented neatly.   Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way.    Follow the examples from lecture, the sample code, and from the textbook.   Note that emacs will automatically indent for you---ask Conrad to show you how in lecture!
+
+
+* Your submission should be on-time.
+1. If the submission comes AFTER TAs have finished grading the lab, you are subject to getting a zero.     
+2. In between the official deadline, and the time the TAs finish grading the lab, there is an "informal" grace period of indeterminate length.    If you submit during this time, you may lose 20 to 40 points for late submission, depending on how late the submission is.  
+3. Did I mention: if you miss the deadline, you are subject to getting a zero, especially if your submission comes after the TA is done grading all the OTHER submissions for that lab? Yes I did.  Now I've mentioned it twice.
+
+
+Note:
+*Regarding asking for "extensions": Extensions are granted only in TRUE emergencies (i.e. matters of life and death beyond the students control) and require PRIOR APPROVAL of the instructor AS SOON as the circumstances are known.   (Not weeks later "after the fact" approval.)  There must be documentation of some extra-ordinary circumstance beyond the students control (death/hospitalization of an immediate family member requiring emergency travel, hospitalization of student herself/himself), serious illness requiring medical intervention, etc.     Do not ask for extensions because of "heavy work load in my other courses", or other reasons that may  "feel" like an emergency to you, but are in fact, routine for all students.*
+
