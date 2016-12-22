@@ -2,14 +2,14 @@
 layout: lab
 num: lab02
 ready: false
-desc: "Crunching numbers: Nested loops and functions"
+desc: "Crunching numbers: Nested loops and functions, REPLACE WITH A LAB ON GDB"
 assigned: 2017-01-20 8:00:00.00-8
 due: 2017-01-27 11:59:00.00-8
 ---
 
 <div markdown="1">
 
-
+# Note: This lab may be replaced with a gdb lab
 ## Introduction
 The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit.
 
