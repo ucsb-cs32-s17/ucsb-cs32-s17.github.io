@@ -36,7 +36,7 @@ TA office hours is available on our class Google Calendar
 
 The tutors will help with conducting the labs and other instructional activities as part of a new pilot program.
 
-For lab, lecture and office hours please check the [Schedule's page](/info/schedule/)
+For lab, lecture and office hours please check the [course schedule](/info/schedule/)
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
 
