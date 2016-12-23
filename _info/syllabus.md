@@ -9,7 +9,6 @@ ready: true
 
 # Syllabus <a name="syllabus"></a>
 
-* [Course Staff](#staff)
 * [What this course is about](#about)
 * [Schedule](/info/schedule/)
 * [Resources](/info/resources/)
