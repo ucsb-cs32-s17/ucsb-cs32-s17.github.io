@@ -4,16 +4,13 @@ layout: default
 ready: true
 ---
 
-<div markdown="1">
-<a name="top"></a>
-
 # Syllabus <a name="syllabus"></a>
 
-* [What this course is about](#about)
-* [Schedule](/info/schedule/)
-* [Resources](/info/resources/)
+* [Course Staff](#staff){: data-ajax="false"}
+* [What this course is about](#about){: data-ajax="false"}
+* [Resources](#resources){: data-ajax="false"}
 * [Course Policies](/info/policies/)
-* [FAQs](/info/faq/)
+
 
 # Course Staff<a name="staff"></a>
 
@@ -39,8 +36,9 @@ TA office hours is available on our class Google Calendar
 
 The tutors will help with conducting the labs and other instructional activities as part of a new pilot program.
 
+For lab, lecture and office hours please check the [Schedule's page](/info/schedule/)
 
-<a href="#top">Back to top</a>
+[Back to Syllabus](#syllabus){: data-ajax="false"}
 
 # What this course is about <a name="about"></a>
 
@@ -189,7 +187,31 @@ However, I assure you that it is not unreasonable, given the goal of making you 
 The usual &quot;folklore&quot; rule of thumb is 8–12 hours per week for a normal college class. That means you should expect, at a minimum to put in 5–9 hours per week on this course, on top of the 3 hours 20 minutes you spend in lecture and lab each week. To put it another way, I really should be giving you between 2 and 4 hours of homework between every lecture.
 
 I probably won't succeed in giving you that much work to do, but I really should, because that's the only way you'll learn what this course is supposed to teach! So, I'll do my best :-) 
-
 </ul>
 
-<a href="#top">Back to top</a>
+[Back to Syllabus](#syllabus){: data-ajax="false"}
+
+# Resources <a name="resources"></a>
+
+## Required Resources
+
+* Textbook: Problem Solving with C++, Walter Savitch, Edition 9. Available for purchase at the UCSB book store
+
+* Peer Instruction : iClickers: The course lectures will follow a Peer Instruction format, a teaching model which places stronger emphasis on classroom discussion and student interaction. As part of this you will need to own an iClicker register it on the [Gauchospace](https://gauchospace.ucsb.edu/courses/course/view.php?id=1524)). Be sure to register your clicker by the end of the first week.
+
+## Exam Resources
+
+You can find examples of previous quarter's  exams at the following links.
+
+* http://www.cs.ucsb.edu/~pconrad/cs16/14F/exams/
+
+But BEWARE---offerings of CS16 may vary in terms of their exact pace, and placement of exams. So these exams are a guide to the style of my exams, but NOT necessarily for specific content.
+
+In addition, these exams from prior to F14 used the C programming language rather than C++, and went at a much slower pace, so treat them with even more skepticism.
+
+* http://www.cs.ucsb.edu/~pconrad/cs16/10S/exams/
+* http://www.cs.ucsb.edu/~pconrad/cs16/10W/exams/
+* http://www.cs.ucsb.edu/~pconrad/cs16/09F/exams/
+
+
+[Back to Syllabus](#syllabus){: data-ajax="false"}
