@@ -3,11 +3,13 @@ title: "Syllabus"
 layout: default
 ready: true
 ---
+
+<div markdown="1">
 <a name="top"></a>
 
 # Syllabus <a name="syllabus"></a>
 
-* [Course Staff](/info/staff/)
+* [Course Staff](#staff)
 * [What this course is about](#about)
 * [Schedule](/info/schedule/)
 * [Resources](/info/resources/)
@@ -38,7 +40,8 @@ TA office hours is available on our class Google Calendar
 
 The tutors will help with conducting the labs and other instructional activities as part of a new pilot program.
 
-<a href="#">Go to top</a>
+
+<a href="#top">Back to top</a>
 
 # What this course is about <a name="about"></a>
 
