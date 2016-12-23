@@ -188,7 +188,6 @@ So:
 
 # Frequently Asked Questions <a name="faq"></a>
 
-<h2 class="pagebreak">Other frequently asked questions</h2>
 <h3 ><em>Do we need to bring our textbook to lecture? To lab?</em></h3>
 <p> It is generally not necessary to bring the textbook to <em>lectures</em> for CS16. It may be helpful to bring the book to lab though, as it may be a useful reference for working on programming assignments.</p>
 <p>Though I say it is not necessary to bring your textbook to lecture, here are two specific cases, though, where it might be helpful:</p>
