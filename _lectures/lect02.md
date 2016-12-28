@@ -22,6 +22,6 @@ By the end of this lecture students should have everything they need to make sig
 * If else and while loops are DIFFERENT in C++ than in Python. We'll discuss.
 
 ## Test driven development
-* Explore the TDD paradigm with a coding example
-* Fizzbuzz in C++
+* Explore the TDD paradigm 
+* Coding example: Fizzbuzz in C++
 
