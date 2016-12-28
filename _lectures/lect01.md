@@ -14,7 +14,7 @@ annotatedready: false
 * How does it fit in the series: CS 24, CS 32 and CS 64
 * Collect background information about students
 * Peer instruction and group dynamics - students in CS 16 may have different levels of experience. The class will be structured to be inclusive and we need all students to cooperate by doing the reading and participating in class activities. Tutor introductions and their role. The point of labs and discussions. 
-* The modern digital computer - stored program model and the Von Newman Architecture, why are we talking about architecture?
+* The modern digital computer - stored program model and the Von Neumann Architecture, why are we talking about architecture?
 * Compiled program languages 
 
 ## C++ Basics
