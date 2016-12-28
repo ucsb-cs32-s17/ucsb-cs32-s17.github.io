@@ -1,6 +1,8 @@
 ---
 num: "lect12"
-desc: "Lecture #12 slides"
-ready: true
+desc: ""
+ready: false
 pdfurl: /lectures/CS16_Lecture12.pdf
+annotatedpdfurl: 
+annotatedready: false
 ---

@@ -1,8 +1,10 @@
 ---
 num: "lect01"
-desc: "Course Overview-"
+desc: "Course overview, stored program model, C++ and github intro"
 ready: false
 pdfurl: /lectures/CS16_Lecture1.pdf
+annotatedpdfurl: 
+annotatedready: false
 ---
 
 # Topics
