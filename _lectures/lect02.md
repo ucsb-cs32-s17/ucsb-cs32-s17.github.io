@@ -1,7 +1,7 @@
 ---
 num: "lect02"
-desc: "Lecture #2 slides"
-ready: true
+desc: "C++ variables, loops and conditionals, test driven development"
+ready: false
 pdfurl: /lectures/CS16_Lecture2.pdf
 ---
 
