@@ -22,7 +22,7 @@ annotatedready: false
 * Basic elements of a C++ program introduced via the "hello world" program
     * the main function
     * commenting your code
-    * standard input, output and standard error
+    * standard input, standard output and standard error
 * Compiling with g++
 * Running your program
 
