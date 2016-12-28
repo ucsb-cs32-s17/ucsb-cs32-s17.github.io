@@ -9,9 +9,12 @@ annotatedready: false
 
 # Topics
 
+By the end of this lecture students should have everything they need to make significant progress with the upcoming lab.
+
 ## C++ variables and programs in memory
 * Unlike Python, you MUST "declare" variables on first appearance in any C++ program. We'll discuss what this means.
 * The data type of a variable determines a number of things about how the variable is stored in memory
+* Scope and lifetime of variables
 * Layout of a C++ program in memory - text, data, bss, stack and heap, and connections with the stored program model
 
 ## C++ control flow
@@ -21,3 +24,4 @@ annotatedready: false
 ## Test driven development
 * Explore the TDD paradigm with a coding example
 * Fizzbuzz in C++
+

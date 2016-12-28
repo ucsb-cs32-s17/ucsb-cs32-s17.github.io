@@ -29,4 +29,4 @@ annotatedready: false
 ## Github Basics
 * Creating a repository on github
 * Adding a new file to the repository
-* A little more advanced - github command line: cloning a repo to a local machine, syncing repos with git add, commit and push
+* Gentle into to github command line: cloning a repo to a local machine, syncing repos with git add, commit and push
