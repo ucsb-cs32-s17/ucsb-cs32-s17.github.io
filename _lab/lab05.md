@@ -1,10 +1,10 @@
 ---
 layout: lab
-num: lab05
+num: lab06
 ready: false
 desc: "Binary convertor: File I/O Streams and String Manipulation"
-assigned: 2017-02-10 08:00:00.00-8
-due: 2017-02-17 23:59:00.00-8
+assigned: 2017-02-17 23:59:00.00-8
+due: 2017-02-24 23:59:00.00-8
 ---
 <div markdown="1">
 
