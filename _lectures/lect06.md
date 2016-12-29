@@ -1,6 +1,6 @@
 ---
 num: "lect06"
-desc: ""
+desc: "Debugging with GDB"
 ready: false
 pdfurl: /lectures/CS16_Lecture6.pdf
 annotatedpdfurl: 

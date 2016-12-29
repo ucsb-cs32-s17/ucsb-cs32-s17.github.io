@@ -1,8 +1,10 @@
 ---
 num: "lect05"
-desc: ""
+desc: "File I/O, seperate compilation and Makefiles"
 ready: false
 pdfurl: /lectures/CS16_Lecture5.pdf
 annotatedpdfurl: 
 annotatedready: false
 ---
+
+
