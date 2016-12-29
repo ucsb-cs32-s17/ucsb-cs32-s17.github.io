@@ -1,6 +1,6 @@
 ---
 num: "lect06"
-desc: "Makefiles contd., g++ compiler options, debugging with GDB"
+desc: "Seperate compilation with Makefiles, g++ compiler options, debugging with GDB"
 ready: false
 pdfurl: /lectures/CS16_Lecture6.pdf
 annotatedpdfurl: 

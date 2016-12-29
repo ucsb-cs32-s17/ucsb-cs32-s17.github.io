@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc: "Pointers, arrays and complex declarations"
+desc: "Pointers, arrays and complex declarations in C++"
 ready: false
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: 
@@ -19,9 +19,9 @@ annotatedready: false
 
 ## C++ arrays
 * C/C++ arrays are like lists in Python and Arrays in Java. We will discuss the differences between these.
-* Strings as char arrays
+* Strings: null terminated char arrays
 * How to create a list of names with arrays
-* Similarities and differences with pointers
+* Similarities and differences between arrays and pointers
 * Array pitfalls: out of bound array access
 
 

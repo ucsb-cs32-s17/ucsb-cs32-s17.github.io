@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "References, passing parameters to functions by value, address and reference, passing parameters to programs"
+desc: "Passing parameters to functions by value, address and reference, passing parameters to programs"
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 

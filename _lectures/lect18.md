@@ -1,6 +1,6 @@
 ---
 num: "lect18"
-desc: ""
+desc: "Final review"
 ready: false
 pdfurl: /lectures/CS16_Lecture18.pdf
 annotatedpdfurl: 
