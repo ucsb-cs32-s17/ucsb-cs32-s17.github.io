@@ -1,6 +1,6 @@
 ---
 layout: lab
-num: lab06
+num: lab05
 ready: false
 desc: "Binary convertor: File I/O Streams and String Manipulation"
 assigned: 2017-02-17 23:59:00.00-8
