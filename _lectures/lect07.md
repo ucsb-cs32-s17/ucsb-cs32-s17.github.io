@@ -1,6 +1,6 @@
 ---
 num: "lect07"
-desc: "Practice problems for Midterm 1"
+desc: "Midterm-1 Practice"
 ready: false
 pdfurl: /lectures/CS16_Lecture7.pdf
 annotatedpdfurl: 

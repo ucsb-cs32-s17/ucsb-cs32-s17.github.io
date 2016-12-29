@@ -6,3 +6,6 @@ pdfurl: /lectures/CS16_Lecture6.pdf
 annotatedpdfurl: 
 annotatedready: false
 ---
+
+# Topics
+## Examing programs with GDB
