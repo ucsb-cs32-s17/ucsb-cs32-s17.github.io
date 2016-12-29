@@ -2,217 +2,185 @@
 layout: lab
 num: lab05
 ready: false
-desc: "Binary convertor: File I/O Streams and String Manipulation"
-assigned: 2017-02-17 23:59:00.00-8
-due: 2017-02-24 23:59:00.00-8
+desc: "Fun with shapes: Pointers"
+assigned: 2017-02-10 08:00:00.00-8
+due: 2017-02-17 23:59:00.00-8
 ---
 <div markdown="1">
 
-<h2>Introduction -- Important: Read this!</h2>
-The assignment for this week will utilize concepts of file I/O data streams and string manipulation. Some of the concepts needed to finish this lab, such as the various string member functions and others items, will be discussed further in the Tuesday, Nov. 1st lecture in class. Additionally, this lab is a little more challenging than previous labs and you are required to use functions and, by necessity, you will have to test these functions as per the lectures we have had on the topic in class. Again, the TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it's not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. This assignment is due on <b>Friday, November 4th at noon (12:00 pm)</b>
+# Step by Step Instructions
 
-<h2>Step 1: Getting Ready</h2>
-Open a terminal window and log into the correct machine.
-Change into your CS 16 directory, create a lab06 directory and change into it.
-Remember that at any time, you can check what directory you are currently in with the command <b>pwd</b>.
+## Step 1: Getting Started 
 
-<h2>Step 2: Create and Edit Your C++ Files</h2>
-This week, you will need to create <b>3 files called stddev.cpp, operators.cpp, and binconverter.cpp</b>:
-Each corresponds to one of the problems listed below, which make up this lab.
+Pair programming is OPTIONAL for this lab.
 
-This assignment consists of 3 problems, each of which is described below. The problem stddev.cpp is worth 20 points, binconverter.cpp and operators.cpp are worth 40 points each. Each should be solved in its own file and each must be submitted for full assignment credit. 
 
-Note: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
+Note:
+'''If working in a pair:''' Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
 
----
+Also: '''don't share passwords'''. Instead, '''use scp or email to share files with each other at the end of each work session.'''  
 
-<h3>STDDEV.CPP</h3>
-This program takes its inputs from a file that contains numbers. The program reads them in as type double. The program outputs to the screen the <i>standard deviation</i> of the numbers in the file. The file contains nothing but numbers of type double separated by blanks and/or line breaks. The standard deviation of a list of numbers x1, x2, x3, and so forth is defined as the <b><i>square root</i></b> of:
+* For information on scp, see: [[Unix Commands: scp]]
+* Share your work with each other at the end of EVERY work session* 
+* That way, if your pair partner [http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219 gets hit by a bus] you can continue working without him/her&mdash;you aren't 'out of luck'.
 
-((x1 – a)<sup>2</sup> + (x2 – a)<sup>2</sup> + (x3 – a)<sup>2</sup> + ...) / (n - 1)
 
-Where the number a is the average of the numbers x1, x2, x3, and so forth and the number n is the count of how many numbers there are.
 
-Your program should take file name as input from the user. The answers should be given with 3 decimal points. Additionally, your program should define <b>at least one function</b>. If your program does NOT have at least one function, you will not get credit for this part of the assignment, even if your program passes submit.cs grading.
+## Step 2: Obtain the starter code
 
-A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines and each printed line has a newline at the end), with all manners of different numbers for inputs and the output:
+TBD
 
-```
-Enter filename:
-nums.txt
-The standard deviation is 1.581
-```
-The accompanying input file in this example, could look like this (note the separation by one or more spaces):
+## Step 3: Reviewing the Files and what your tasks are 
 
-```
-6 7 8    9			10
-```
+Here is a list of your tasks for this lab:
 
-or like this (note the separation by either spaces or newline characters):
+* Run ./distanceBetweenTest and see it fail
+* Edit the distanceBetween function in shapeFuncs.cpp to replace with correct code
+* Run ./distanceBetweenTest and see it pass
 
-```
-6 7
-8
-9
-10
-```
 
----
+* Run ./pointsAppoxEqualTest and see it pass
+* Look at the code and understand how it works; you'll need this understanding to get ./boxesApproxEqual to pass
 
-<h3>OPERATORS.CPP</h3>
-Write a program will correct a C++ program that has errors in which operator, << or >>, it uses with cin and cout. The program replaces each (incorrect) occurrence of:
 
-`cin <<`
+* Run ./initPointTest and see it fail
+* Edit the initPoint function in shapeFuncs.cpp to replace with correct code
+* Run ./initPointTest and see it pass
 
-with the corrected version
 
-`cin >>`
+* Run ./boxesApproxEqualTest and see it fail
+* Edit the boxesApproxEqual function in shapeFuncs.cpp to replace with correct code.  As you do, consider adding an approxEqual function that takes two double values into utility.h and utility.cpp, as this will make your coding job easier, and keep you code "DRYer". (DRY==Don't Repeat Yourself.)   Also, consider reusing the pointsApproxEqual function in your boxesApproxEqual solution.  Remember that the <code>&amp;&amp;</code> operator is the symbol for "logical and" in C++.
+* Run ./boxesApproxEqualTest and see it pass
 
-and each (incorrect) occurrence of
 
-`cout >>`
+* Run ./initBoxTest and see it fail
+* Edit the initBox function in shapeFuncs.cpp to replace with correct code.    As you do, remember that you use -> to access members of a struct through a pointer, but simply . to access members of a struct directly.  You may need both in your answer.
+* Run ./initBoxTest and see it pass
 
-with the corrected version
 
-`cout <<`
+* Run ./areaOfBoxTest and see it fail
+* Edit the areaOfBox function in shapeFuncs.cpp to replace with correct code.
+* Run ./areaOfBoxTest and see it pass
 
-Allow for the possibility that there may be any number of whitespace characters (one or more) between cin and << and between cout and >>. The replacement corrected version has only one blank between the cin or cout and the following operator. You should not correct other whitespace characters in the input file (such as those at the start of a line).
 
-Your program should get the source filename as an input from the user. The corrected version should be output to a file called "corrected.txt" (it cannot be called anything else) and the output should also be displayed on the terminal. That is, the output of your program should be exactly same as the contents of the file "corrected.txt". 
+* Run ./pointToStringTest and see it it pass
+* Copy pointToStringTest.cpp to boxToStringTest.cpp and make tests for the boxToString function.  Look in shapeFuncs.cpp at the boxToString function stub for an example of the format you need for boxToString's return values.  Make tests for different precisions, just like pointToString has.
+* Add code to the Makefile so that boxToString runs.  Just follow the model--adding code for boxToStringTest everywhere you see code for pointToStringTest
+* Run make
 
-Your program should define <b>at least one function</b> that is called and that manipulates the read line from the input file. If your program does NOT have at least this function, you will not get credit for this part of the assignment, even if your program passes submit.cs grading.
 
-You will need to use multiple <string> member functions to manipulate strings in this program. In addition, you will have to use the getline() function in the <string> library in order to read an entire line by ifstream. 
+* Run ./boxToStringTest and see the tests fail
+* Fix the definition of boxToString in shapeFuncs.cpp
+* See the test ./boxToStringTest pass
 
-A session should look like the following example (including whitespace and formatting):
+* YOU ARE READY TO CHECK YOUR WORK.
 
-<div markdown="1">
-```
-Enter filename:
-original.txt
-#include <iostream>
+## Step 4: Checking your work before submitting 
 
-using namespace std;
 
-int main(){
-      cout << "Hello!";
-        return 0;
-}
-```
-</div>
-
-The file "corrected.txt" consists of the above output (except first two lines).
-
----
-
-<h3>BINCONVERTER.CPP</h3>
-Write a program that reads in an input file with one or more binary numbers separated by spaces or newline characters and outputs a conversion to decimal, hexadecimal, and octal numbers.
-
-Your program should take file name as input from the user. The binary numbers must be read in as strings. It is up to you to choose the variable types needed otherwise. Additionally, your program should define <b>at least one function</b> (likely, you'll end up with at least 3). If your program does NOT have at least one function, you will not get credit for this part of the assignment, even if your program passes submit.cs grading.
-
-You have to utilize the following devices in your program (required):
+When you are finished, you should be able to type  <code>make clean</code> and then <code>make tests</code> and see the following output:
 
 ```
-string.length()     returns the length of a string, i
-                    so if string = "code", string.length() = 4.
-string[n]           returns the nth character in the string (indexing starts at 0), 
-                    so string[0] = "c", string[1] = "o", etc...
-int(char c)         converts a character into its ASCII code,
-                    so if c = 'a', then int(c) = 97,
-                    and if c = 'c', the int(c) = 99, etc...
-to_string(int i)    converts an integer into a string. Function found in <string> library.
-                    Example, if i = 73, then to_string(i) = "73"
+-bash-4.2$ make clean
+/bin/rm -f distanceBetweenTest initPointTest pointsApproxEqualTest boxesApproxEqualTest initBoxTest areaOfBoxTest pointToStringTest *.o
+-bash-4.2$ make tests
+g++ -Wall -Wno-uninitialized   -c -o distanceBetweenTest.o distanceBetweenTest.cpp
+g++ -Wall -Wno-uninitialized   -c -o tddFuncs.o tddFuncs.cpp
+g++ -Wall -Wno-uninitialized   -c -o utility.o utility.cpp
+g++ -Wall -Wno-uninitialized   -c -o shapeFuncs.o shapeFuncs.cpp
+g++ -Wall -Wno-uninitialized  distanceBetweenTest.o tddFuncs.o utility.o shapeFuncs.o -o distanceBetweenTest
+g++ -Wall -Wno-uninitialized   -c -o initPointTest.o initPointTest.cpp
+g++ -Wall -Wno-uninitialized  initPointTest.o tddFuncs.o utility.o shapeFuncs.o -o initPointTest
+g++ -Wall -Wno-uninitialized   -c -o pointsApproxEqualTest.o pointsApproxEqualTest.cpp
+g++ -Wall -Wno-uninitialized  pointsApproxEqualTest.o tddFuncs.o utility.o shapeFuncs.o -o pointsApproxEqualTest
+g++ -Wall -Wno-uninitialized   -c -o boxesApproxEqualTest.o boxesApproxEqualTest.cpp
+g++ -Wall -Wno-uninitialized  boxesApproxEqualTest.o tddFuncs.o utility.o shapeFuncs.o -o boxesApproxEqualTest
+g++ -Wall -Wno-uninitialized   -c -o initBoxTest.o initBoxTest.cpp
+g++ -Wall -Wno-uninitialized  initBoxTest.o tddFuncs.o utility.o shapeFuncs.o -o initBoxTest
+g++ -Wall -Wno-uninitialized   -c -o areaOfBoxTest.o areaOfBoxTest.cpp
+g++ -Wall -Wno-uninitialized  areaOfBoxTest.o tddFuncs.o utility.o shapeFuncs.o -o areaOfBoxTest
+g++ -Wall -Wno-uninitialized   -c -o pointToStringTest.o pointToStringTest.cpp
+g++ -Wall -Wno-uninitialized  pointToStringTest.o tddFuncs.o utility.o shapeFuncs.o -o pointToStringTest
+./distanceBetweenTest
+PASSED: distanceBetween(p1,p2)
+PASSED: distanceBetween(p2,p1)
+PASSED: distanceBetween(p3,p4)
+PASSED: distanceBetween(p4,p5)
+PASSED: distanceBetween(p5,p3)
+./initPointTest
+PASSED: pointsApproxEqual(p1,p1Expected)
+PASSED: pointsApproxEqual(p2,p2Expected)
+PASSED: pointsApproxEqual(p3,p3Expected)
+PASSED: pointsApproxEqual(p4,p4Expected)
+./pointsApproxEqualTest
+PASSED: pointsApproxEqual(p1,p1)
+PASSED: pointsApproxEqual(p1,p2)
+PASSED: assertFalse(pointsApproxEqual(p2,p1)
+./boxesApproxEqualTest
+PASSED: boxesApproxEqual(b0,b0)
+PASSED: boxesApproxEqual(b1,b0)
+PASSED: boxesApproxEqual(b0,b1)
+PASSED: boxesApproxEqual(b0,b2)
+PASSED: boxesApproxEqual(b0,b3)
+PASSED: boxesApproxEqual(b0,b4)
+PASSED: boxesApproxEqual(b5,b6)
+PASSED: boxesApproxEqual(b6,b5)
+./initBoxTest
+PASSED: boxesApproxEqual(b1,b1Expected)
+PASSED: boxesApproxEqual(b2,b2Expected)
+PASSED: boxesApproxEqual(b1,b2)
+./areaOfBoxTest
+PASSED: areaOfBox(r)
+PASSED: areaOfBox(s)
+PASSED: areaOfBox(t)
+PASSED: areaOfBox(u)
+./pointToStringTest
+PASSED: pointToString(p1)
+PASSED: pointToString(p2)
+PASSED: pointToString(p2,1)
+PASSED: pointToString(p2,4)
+PASSED: pointToString(p2,5)
+-bash-4.2$ 
 ```
 
-For example, given a file called `bin.txt`, which contains the following:
+Plus, some output at the end with the output of your boxToStringTest 
 
-<div markdown="1">
-```
-11011
-1111
-10111111
-10
-```
-</div>
 
-A session should then look like the following example, including whitespace (no whitespaces at the end of the lines) and formatting:
+At that point, you are ready to try submitting on the submit.cs system.
 
-<div markdown="1">
-```
-Enter filename:
-bin.txt
-The binary number 11011 equals 27 in decimal, 1B in hexadecimal, and 33 in octal
-The binary number 1111 equals 15 in decimal, F in hexadecimal, and 17 in octal
-The binary number 10111111 equals 191 in decimal, BF in hexadecimal, and 277 in octal
-The binary number 10 equals 2 in decimal, 2 in hexadecimal, and 2 in octal
-```
-</div>
+== Step 5: Submitting via submit.cs ==
 
-<h2>Step 3: Create a makefile and Compile the Codes with the make Command</h2>
-In order to learn another way to manage our source codes and their compilations, we will first create a makefile and put in the usual g++ commands in it. Afterwards, whenever we want to compile our programs, the Linux command is a lot shorter. The use of makefiles will reveal itself to be very useful the more complex our programs and CS projects become.
+The command to submit this weeks lab is this one:
 
-Using your text editor, create a new file called makefile and enter the following into it:
-
-<div markdown="1">
-```
-all: stddev operators binconverter
-
-stddev:
-	g++ -std=c++11 stddev.cpp -o stddev
-
-operators:
-	g++ -std=c++11 operators.cpp -o operators
-
-binconverter:
-	g++ -std=c++11 binconverter.cpp -o binconverter
+Here is the command to submit this week's labs:
 
 ```
-</div>
+~bboe/bin/submit -p 230 *.cpp *.h
+```
 
-Then from the Linux prompt, you can do one of two things: either issue separate compile commands for each project, like so:
+= Grading Rubric =
 
-`$ make stddev`
+Points from submit.cs automatic grading:
 
-Or, you can issue one command that will compile all the projects mentioned in the makefile, like so:
+<table border="1">
+<tr>
+<th>Test Group</th><th>Test Name</th><th>Value</th></tr>
+<tr><td>areaOfBoxTest</td><td><p style="color:green;margin:0;padding:0;">areaOfBoxTest</p></td><td>(30 pts)</td></tr>
+<tr><td>boxToStringTest</td><td><p style="color:green;margin:0;padding:0;">boxToStringTest (requires you to add a new file, so more points)</p></td><td>(60 pts)</td></tr>
+<tr><td>boxesApproxEqualTest</td><td><p style="color:green;margin:0;padding:0;">boxesApproxEqualTest</p></td><td>(30 pts)</td></tr><tr><td>distanceBetweenTest</td><td><p style="color:green;margin:0;padding:0;">expected output from distanceBetweenTest</p></td><td>(30 pts)</td></tr>
+<tr><td>initBoxTest</td><td><p style="color:green;margin:0;padding:0;">initBoxTest</p></td><td>(30 pts)</td></tr>
+<tr><td>initPointTest</td><td><p style="color:green;margin:0;padding:0;">initPointTest</p></td><td>(30 pts)</td></tr>
+<tr><td>pointToStringTest</td><td><p style="color:green;margin:0;padding:0;">pointToStringTest (should pass in base code, so no points assigned)</p></td><td>(0 pts)</td></tr>
+<tr><td>pointsApproxEqualTest</td><td><p style="color:green;margin:0;padding:0;">pointsApproxEqualTest output (should pass in base code, so no points)</p></td><td>(0 pts)</td></tr>
+</table>
 
-`$ make`
+Other points:
 
-If the compilation is successful, you will not see any output from the compiler. You can then run your programs, for example:
+* (30 pts) Submitting on time, per instructions
+* (60 pts) Code style, including but not limited to:
+** Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
+** Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
+** Variable names choices are reasonable
+** Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
+** Code is not unnecessarily or unreasonably complex when a simpler solution is available
 
-`$ ./stddev`
-
-<b>If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error, you can search online to see when the error occurs in general.</b>
-
-Remember to re-compile the relevant files after you make any changes to the C++ code.
-
-<h2>Step 4: Submit</h2>
-
-Once you are satisfied that your programs are correct, it is time to submit them. Login at [https://submit.cs.ucsb.edu](https://submit.cs.ucsb.edu), then navigate to “CS16_f16” and click on “lab05”. Then click “Make Submission”, and make your submission the same way as last week. Remember to submit all 3 of the .cpp files.
-
-Please remember that you must submit the programs to obtain any credit for the assignment; just completing the programs is not enough.
-
-Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after a 1 minute delay.
-
-You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. To submit the the three source files to this assignment by running the command:
-
-`$ ~submit/submit -p 593 stddev.cpp operators.cpp binconverter.cpp`
-
-You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
-
-<h2>Step 5: Check Submission Results</h2>
-
-After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
-
-You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
-
-<h2>Step 6: Done!</h2>
-
-Once your submission receives a score of 100/100, you are done with this assignment.
-
-If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
-
-If you are logged in remotely, you can log out using the exit command:
-
-`$ exit`
-
-</div>
