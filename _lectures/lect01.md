@@ -1,8 +1,8 @@
 ---
 num: "lect01"
-lecture_date: 2017-01-10 15:30:00.00-8:00
+lecture_date: 2017-01-10
 desc: "Course overview, stored program model, C++ and github intro"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1.pdf
 annotatedready: false

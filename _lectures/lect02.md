@@ -1,11 +1,11 @@
 ---
 num: "lect02"
-lecture_date: 2017-01-12 15:30:00.00-8:00
 desc: "C++ variables and data types, loops and conditionals, test driven development"
 ready: false
 pdfurl: 
 annotatedpdfurl: 
 annotatedready: false
+lecture_date: 2017-01-12 
 ---
 
 # Topics
