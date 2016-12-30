@@ -2,7 +2,7 @@
 layout: lab
 num: lab07
 ready: false
-desc: "Anagrams, palindromes and more: Vectors, Dynamic Arrays and Recursion"
+desc: "Anagrams, palindromes and histograms: Dynamic Arrays and Recursion"
 assigned: 2017-02-24 08:00:00.00-8
 due: 2017-03-03 23:59:59.00-8
 ---
@@ -17,7 +17,7 @@ The TAs and I will be looking for (and grading) programming stylizations, such a
 
 <h3>Pair programming is <b>REQUIRED</b> for this lab!!!</h3>
 **Your lab will not be graded if you are not paired-up with 1 other person**
-You **must** choose a partner for this lab before we go off on our Thanksgiving Break. Please consult with the instructor or the TAs if you have an issue with your paired arrangement. No changes will be allowed to your paired grouping after Monday, November 28th.
+
 
 Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. 
 
@@ -40,7 +40,7 @@ Share your work with each other at the end of EVERY work session. That way, if y
 5. Change into your CS 16 directory, create a lab09 directory and change into it.
 
 <h2>Step 2: Writing the Programs</h2>
-This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, palindrome.cpp, and split.cpp. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files.
+This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, and palindrome.cpp. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files.
 
 NOTE: IF AN ASSIGNMENT BELOW ASKS YOU TO IMPLEMENT A CERTAIN APPROACH (e.g. you must use vectors somewhere, or dynamic arrays somewhere else), YOU **MUST** FOLLOW THOSE INSTRUCTIONS VERY CAREFULLY!!!
 
@@ -48,43 +48,6 @@ Each corresponds to one of the problems listed below, which make up this lab. Ea
 
 Note: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
 
----
-<h3>SPLIT.CPP</h3>
-Given the following function header:
-
-`vector<string> split(string target, string delimiter);`
-
-implement the function *split* so that it returns a vector of the strings in target that are separated by the string delimiter.
-
-For example: **split("10,20,30", ",")** should return a vector with the strings "10", "20", and "30". Similarly, **split("do re mi fa so la ti do", " ")** should return a vector with the strings "do", "re", "mi", "fa", "so", "la", "ti", and "do".
-
-Write a program that inputs two strings and calls your function to split the first target string by the second delimiter string and prints the resulting vector all on line line with elements separated by commas.
-
-You **MUST** use the vector function defined above and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
-The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers in the output:
-
-```
-Enter string to split:
-10,20,30
-Enter delimiter string:
-,
-The substrings are: "10", "20", "30"
-```
-
-OR
-
-```
-Enter string to split:
-do re mi fa so la ti do
-Enter delimiter string:
- 
-The substrings are: "do", "re", "mi", "fa", "so", "la", "ti", "do"
-```
-
-Note: the fourth line in the second example has a single space character (it is not an empty line).
-
-The strings printed by the program should include a newline at the end.
 
 ---
 <h3>ANAGRAM.CPP</h3>

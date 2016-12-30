@@ -3,8 +3,8 @@ layout: lab
 num: lab08
 ready: false
 desc: "Linked lists and array lists"
-assigned: 2017-03-03 08:00:00.00-8
-due: 2017-03-10 23:59:59.00-8
+assigned: 2017-03-03 08:00:00.00-7
+due: 2017-03-10 23:59:59.00-7
 ---
 <div markdown="1">
 

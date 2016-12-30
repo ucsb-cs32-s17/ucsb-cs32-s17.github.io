@@ -84,6 +84,12 @@ defaults:
       type: info
     values:
       layout: info
+  - 
+    scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture
   -
     scope:
       path: "syllabus.md"

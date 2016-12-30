@@ -64,6 +64,10 @@ table * td {
     
 }
 
+.lecture_table * td{
+    padding:0.4em 1em 0.4em 1em;
+}
+
 .pagebreak {
     page-break-before: always;
     height: 0.5em;
