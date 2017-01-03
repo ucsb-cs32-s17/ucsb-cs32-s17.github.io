@@ -2,7 +2,7 @@
 layout: lab
 num: lab01
 ready: false
-desc: "Crunching numbers: Loops and functions"
+desc: "Crunching numbers: Loops and functions and getting prepared to use git command-line tools"
 assigned: 2017-01-13 8:00:00.00-8
 due: 2017-01-20 23:59:00.00-8
 ---

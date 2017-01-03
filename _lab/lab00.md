@@ -2,7 +2,7 @@
 layout: lab
 num: lab00	
 ready: false
-desc: "Getting started with C++ and github"
+desc: "Getting started with C++ and github's web interface"
 assigned: 2017-01-10 08:00:00.00-8
 due: 2017-01-13 23:59:00.00-8
 ---
@@ -13,7 +13,7 @@ Your first lab for this week is an introduction to programming on CSIL and in th
 
 For this first lab, you will do the following:
 
-* Step1: [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
+* Step 1: [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
 * Step 2: [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
 * Step 3: [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
 * Step 4: [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
@@ -397,6 +397,7 @@ If you don't have a submit.cs account, you will first need to create one. This c
 Once you have an account created, login at <a href="https://submit.cs.ucsb.edu/session" target="_blank">https://submit.cs.ucsb.edu/session</a>.
 
 Next, you need to join the CS16 course. Look for the "Join Class" link at the top of the page. It is in the top bar, as seen below:
+
 <img src="submit-topbar.png" width="542" alt="submit.cs Top Bar" />
 
 Once you see the list of all courses, click on the <b>"Join CS16_w17"</b> button.
