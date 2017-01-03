@@ -20,6 +20,8 @@ For this first lab, you will do the following:
 * [Write an actual program in C++.](#step5){: data-ajax="false"}
 * [Compile your program and see if it runs.](#step6){: data-ajax="false"}
 * [Submit your program for grading.](#step7){: data-ajax="false"}
+* [Check Submission Results](#step8){: data-ajax="false"}
+* [Create a github account and explore its web interface](#step9){: data-ajax="false"}
 
 ## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
 
@@ -380,6 +382,7 @@ If you encounter an error, use the compiler hints and examine the line in questi
 
 <hr>
 
+
 ## Step 7: Submit your program for grading <a name="step7"></a>
 
 Once you are satisfied that your program is correct, then it's time to submit it.
@@ -424,7 +427,7 @@ You can copy this URL and paste into a Web browser to reach the same submission 
 
 <hr>
 
-## Step 8: Check Submission Results
+## Step 8: Check Submission Results <a name="step8"></a>
 
 After the 1 minute delay, the submit system will show your score and give you feedback on your submission. <em>Refresh the webpage after a minute to see this information.</em> This usually takes one of three forms:
 
@@ -441,9 +444,47 @@ After the 1 minute delay, the submit system will show your score and give you fe
 
 <hr>
 
-## Step 9: Done!
 
-<p>Once your submission receives a score of 100/100, you are done with this assignment. Congratulations on completing your first C++ program!</p>
+## Step 9: Put your code on github <a name="step9"></a>
+
+If you have made it to this step, then you have successfully created a C++ program, tested it on a remote server (csil.cs.ucsb.edu) and made a successful submission. We would however like you to do one more step to get familiarized with git and github. Here is some motivation: When developing large programs, it is very useful to save working versions of your code that you could always revert to. Trying to do this manually often leads to total chaos!! That's why professional programmers use some kind of version control system (VCS). We will use a popular VCS called Git. With Git all versions of your code will be available to you and your collaborators (in this class your pair-programming partner) anytime, anywhere! 
+
+* Read this article to get an overview of git: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/)
+
+* To get started with git, you first need to create a github account. Sign up for a free account on [Github](https://github.com/). Use your official ucsb email, when signing up.
+
+* Note: Do this step while sitting together with your partner. When working on a new project, you start by creating a new repo on github. The concept of a repo was explained in the article that you just read. We would like you to create private repos. These are repos that are only visible to you, your pair-partner and the instructional staff. If you have a free github account, you can only create private repos within our class organization on github: ucsb-cs16-wi17. There are multiple ways to create a repo. For this assignment only, create your repo by clicking on the following link. You and your partner should take turns clicking on the link. Each of you will be prompted to either create a new team or join an existing team. Whoever clicks on the link first should create a new team. The other simply has to join the existing team. Use the following convention to name your team. If your name is John Smith and your partner's name is Lily Adams, your team name should be johns-lilya. Now take turns to click on the link below:
+
+[Click here to create your repo on github](https://classroom.github.com/group-assignment-invitations/b2b64569040e0717fbf1ce0a003928bd)
+
+Once you have created a team, you should see a link to your repo. Click  on it and github will create your repo and populate it with files provided by us. You will see the message "Preparing your repo" while this is being done.If this takes more than two minutes to finish importing files into your repo, press the cancel button. This should take you to a page that looks like this:
+
+
+![git-repo-pic](lab00/git-repo-pic_ink.jpg)
+
+ Your repo will automatically be named as: lab00-<your-team-name>.
+ Check to see if you have the files: README.txt and .gitignore in your repo. If you don't see these files, contact an instructor or ask for help on Piazza. To learn more about the .gitignore, read this article: [About .gitignore](https://ucsb-cs56-pconrad.github.io/topics/git_gitignore/)
+
+* You can now add code to your repo using either the github web interface or the git command-line tools available on the csil server. In this assignment we will only use the web interface and simply upload the hello.cpp file that you created on the csil server. We recommend that you be physically present on a lab machine where you have access to a web browser and a local copy of your hello.cpp program.
+
+On your web browser, navigate to your repo on github. In our running example, the link to the repo is: https://github.com/ucsb-cs16-wi17/lab00-johns-lilya. Click on the "Upload files" button as shown below. 
+
+![git-repo-pic](lab00/git-repo-pic_ink-upload.jpg)
+
+You should see the following screen:
+
+![git-repo-pic](lab00/upload-hello-cpp.png)
+
+Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file.
+
+Then press the green "Commit new files" button! Then navigate back to your repo and you should see the hello.cpp file listed in your repo. Click on the file to see your code. Want to have some fun? Upload a picture of yourself and another of your partner. Use your names as the file names! Continue to explore the web interface of your repo. For example try clicking on the "commits" link in your repo. What does that show you and what do you think it means?
+
+We will continue to explore git in the subsequent assignments.
+
+
+## Step 10: Done!
+
+<p>You can continue to make submission on submit.cs until your submission receives a score of 100/100. Once that happens and you have also successfully uploaded your code and picture to your github repo, you are done with this assignment. Congratulations on completing your first C++ program!</p>
 
 <p>If you are in the Phelps lab or in CSIL, <b>make sure to log out of the machine before you leave</b>. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.</p>
 
