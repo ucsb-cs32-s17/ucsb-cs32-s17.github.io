@@ -13,15 +13,15 @@ Your first lab for this week is an introduction to programming on CSIL and in th
 
 For this first lab, you will do the following:
 
-* Step 1: [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
-* Step 2: [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
-* Step 3: [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
-* Step 4: [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
-* Step 5: [Write an actual program in C++.](#step5){: data-ajax="false"}
-* Step 6: [Compile your program and see if it runs.](#step6){: data-ajax="false"}
-* Step 7: [Submit your program for grading.](#step7){: data-ajax="false"}
-* Step 8: [Check Submission Results](#step8){: data-ajax="false"}
-* Step 9: [Create a github account and explore its web interface](#step9){: data-ajax="false"}
+1. [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
+2. [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
+3. [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
+4. [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
+5. [Write an actual program in C++.](#step5){: data-ajax="false"}
+6. [Compile your program and see if it runs.](#step6){: data-ajax="false"}
+7. [Submit your program for grading.](#step7){: data-ajax="false"}
+8. [Check Submission Results](#step8){: data-ajax="false"}
+9. [Create a github account and explore its web interface](#step9){: data-ajax="false"}
 
 ## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
 
@@ -188,7 +188,7 @@ If you want to run graphical applications, instead of using puTTY, you can use o
 
 <hr>
 
-## Step 3: Create CS16 and Programming Assignment 01 Directories<a name="step3"></a>
+## Step 3: Create cs16 and lab00 directories<a name="step3"></a>
 
 Now that your environment is set up, you next will need to create a directory (a folder is also called <i>directory</i> in Linux) that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.
 
@@ -214,7 +214,7 @@ Now move into that new CS16 directory with the <b>cd</b> command as follows:
 $ cd cs16
 ```
 
-And create and move into a LAB 01 directory:
+And create and move into a lab00 directory:
 
 ```
 $ mkdir lab00
@@ -479,7 +479,7 @@ Congratulations on completing our first introduction to github. We will continue
 
 ## Step 10: Done!
 
-<p>You can continue to make submissions on submit.cs until your submission receives a score of 100/100. If you have a perfect score and  have also successfully uploaded your code and picture to your github repo, you are done with this assignment. Congratulations on completing your first C++ program!</p>
+<p>You can continue to make submissions on submit.cs until your submission receives a score of 100/100. If you have a perfect score and  have also successfully uploaded your code and picture to your github repo, you are done with this assignment. We will be grading the git part of this assignment manually on github. Congratulations on completing your first C++ program!</p>
 
 <p>If you are in the Phelps lab or in CSIL, <b>make sure to log out of the machine before you leave</b>. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.</p>
 

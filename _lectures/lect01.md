@@ -1,7 +1,7 @@
 ---
 num: "lect01"
 lecture_date: 2017-01-10
-desc: "Course overview, stored program model, C++ and github intro"
+desc: "Course overview, model of the computer hardware, C++ intro"
 ready: false
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1.pdf
@@ -27,7 +27,3 @@ annotatedready: false
 * Compiling with g++
 * Running your program
 
-## Github Basics
-* Creating a repository on github
-* Adding a new file to the repository
-* Gentle into to github command line: cloning a repo to a local machine, syncing repos with git add, commit and push

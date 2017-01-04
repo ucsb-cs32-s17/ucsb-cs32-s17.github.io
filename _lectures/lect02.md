@@ -1,6 +1,6 @@
 ---
 num: "lect02"
-desc: "C++ variables and data types, loops and conditionals, test driven development"
+desc: "C++ variables and data types, conditional statements (if else)"
 ready: false
 pdfurl: 
 annotatedpdfurl: 
@@ -16,9 +16,10 @@ By the end of this lecture students should have everything they need to make sig
 * Unlike Python, you MUST "declare" variables on first appearance in any C++ program. We'll discuss what this means.
 * The data type of a variable determines a number of things about how the variable is stored in memory
 * Scope and lifetime of variables
-* Layout of a C++ program in memory - text, data, bss, stack and heap, and connections with the stored program model
+* Our model of memory, units of memory
 
-## C++ control flow
+
+## C++ conditionals
 * For loops are DIFFERENT in C++ than in Python. We'll discuss.
 * If else and while loops are DIFFERENT in C++ than in Python. We'll discuss.
 
@@ -26,3 +27,7 @@ By the end of this lecture students should have everything they need to make sig
 * Explore the TDD paradigm 
 * Coding example: Fizzbuzz in C++
 
+## Github Basics
+* Creating a repository on github
+* Adding a new file to the repository
+* Gentle intro to github command line: cloning a repo to a local machine, syncing repos with git add, commit and push
