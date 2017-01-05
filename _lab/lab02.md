@@ -10,28 +10,20 @@ due: 2017-01-27 11:59:00.00-8
 <div markdown="1">
 
 ## Introduction
-The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit. To complete the lab follow these steps:
+The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit. To complete the lab follow these steps in order:
 
-1. [Creating your working directory](#step1){: data-ajax="false"}
-2. [Creating and cloning your repo](#step2){: data-ajax="false"}
-3. [Getting the starter code from a local directory into your local git directory](#step3){: data-ajax="false"}
-4. [Using the git command line tools to save the first version of your code](#step4){: data-ajax="false"}
-5. [Solving the problems for this lab](#step5){: data-ajax="false"}
-6. [Submit your code](#step6){: data-ajax="false"}
-7. [Check submission results](#step7){: data-ajax="false"}
-8. [Git one-time configurations and basic work flow](#step8){: data-ajax="false"}
+* [Creating and cloning your repo](#clonerepo){: data-ajax="false"}
+* [Getting the starter code from a local directory into your local git directory](#getstarter){: data-ajax="false"}
+* [Using the git command line tools to save the first version of your code](#firstcommit){: data-ajax="false"}
+* [Solving the problems for this lab](#programs){: data-ajax="false"}
+* [Submit your code](#submit){: data-ajax="false"}
+* [Check submission results](#checksubmission){: data-ajax="false"}
+* [Git one-time configurations and basic work flow](#done){: data-ajax="false"}
 
 
-## Step 1: Creating your working directory <a name="step1"></a>
-  
-* Log into a CSIL machine and open a terminal
-* Create a <code>~/cs16/lab02</code> directory and make it your current directory. Refer to lab01 for instructions if you don't know how to do this. Remember that at any time, you can check what directory you are currently in with the command <b>pwd</b>.
+## Step 1: Creating and cloning your repo  <a name="clonerepo"></a>
 
-In the previous lab you continued from this point to get the starter code. To do tis you copied the skeleton code from a folder on the CSIL server to your working directory. In this lab, we will take integrate github into our workflow by proceeding to create a git repo and cloning it into our working directory.
-
-## Step 2: Creating and cloning your repo  <a name="step2"></a>
-
-This lab assumes that you have completed the following steps from lab00 and lab01:
+Log into your CoE account on CSIL and open a terminal. This lab assumes that you have completed the following steps from lab00 and lab01:
 
 (1) Have a high-level understanding of what git and github are all about. If you need a refresher, read this article: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/). Refer lab00.
 
@@ -47,18 +39,18 @@ Read this article on [creating a github repo under an organization](https://ucsb
 
 * Adding your partner as a collaborator: Read this article on [adding your partner as a collaborator on your github repo](https://ucsb-cs56-pconrad.github.io/topics/github_add_collaborator/). Then follow the steps in the article to add your partner.
 
-* Cloning your repo to your lab02 directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/lab02/ directory. Suppose the git repo was named lab02_jgaucho, after you clone it, you should see the directory lab02_jgaucho appear under your ~/cs16/lab02/ directory. `cd` into your git repo directory.
+* Cloning your repo to your ~/cs16/ directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/ directory. Suppose the git repo was named lab02_jgaucho, after you clone it, you should see the directory lab02_jgaucho appear under your ~/cs16 directory. `cd` into your git repo directory.
 
 You are now ready to get the starter code.
 
-## Step 3: Getting the starter code from a local directory into your local git directory <a name="step4"></a>
+## Step 2: Getting the starter code from a local directory into your local git directory <a name="getstarter"></a>
 
 Copy the code from the instructor's account on the CSIL server into your local git directory (for example: lab02_jgaucho), by issuing the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab02/lab02_jgaucho/
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab02_jgaucho/
 
 
-After doing this command, if you cd into ~/cs16/lab02/lab02_jgaucho/ and use the ls command, you should two .cpp files and a README:
+After doing this command, if you cd into ~/cs16/lab02_jgaucho/ and use the ls command, you should two .cpp files and a README:
 
 ```
 -bash-4.2$ ls
@@ -68,7 +60,7 @@ min2.cpp  min3v1.cpp  min3v2.cpp README.md
 
 If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance. 
 
-## Step 4: Using the git command line tools to save the first version of your code <a name="step4"></a>
+## Step 3: Using the git command line tools to save the first version of your code <a name="firstcommit"></a>
 
 Its now time to use the git-command line tools to perform version control for the files in your git repo. Recall the information in the article [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/) that you read in the previous lab. Read it again if you need to. The four essential commands we will be using are:
 
@@ -88,7 +80,7 @@ Note 2: In this lab you copied the starter code from a local directory on CSIL t
 Congratulations on starting to code like a pro!
 
 
-## Step 5: Solving the problems for this lab<a name="step5"></a>
+## Step 4: Solving the problems for this lab<a name="programs"></a>
 
 
 This assignment consists of 3 problems, each of which is described below. The first one is worth 20 points each, and the last two are worth 40 points each. Each should be solved in its own file and all three must be submitted for full assignment credit. These exercises are inspired by the ones from the textbook (in Ch. 2 and Ch. 3) - but they are NOT the same, so follow the instructions on THIS sheet carefully. 
@@ -104,7 +96,7 @@ For all the subproblems given in this assignment you must compile your code freq
 
 ### Print a block
 
-In the git directory within your `lab02` directory open a file called `block.cpp` using your favorite editor. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
+In lab02 git directory (lab02_jgaucho) open a file called `block.cpp` using your favorite editor. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
 
 A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines), for all the different inputs and the output:
 
@@ -222,7 +214,7 @@ In addition, all approximated floating pointer numbers must be displayed to exac
 <hr>
 
 
-## Step 6: Submit your code<a name="step6"></a>
+## Step 5: Submit your code<a name="submit"></a>
 
 Once you are satisfied that your programs are correct, it is time to submit them. Login at [https://submit.cs.ucsb.edu](https://submit.cs.ucsb.edu), then navigate to “CS16_w17” and click on “lab02”. Then click “Make Submission”, and make your submission the same way as last week. Remember to submit all three .cpp files.
 
@@ -237,14 +229,14 @@ You can alternatively submit your code from the command line (terminal) on any C
 You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page. Once your submission receives a score of 100/100, you are done with most of this assignment. The next part continues our exploration of git.
 
 
-## Step 7: Check Submission Results<a name="step7"></a>
+## Step 6: Check Submission Results<a name="checksubmission"></a>
 
 After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
 
 You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
 
 
-## Step 8: Done!<a name="step8"></a>
+## Step 7: Done!<a name="done"></a>
 
 You are now done with this assignment!
 If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.

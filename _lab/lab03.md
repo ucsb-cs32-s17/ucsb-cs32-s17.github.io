@@ -2,7 +2,7 @@
 layout: lab
 num: lab03
 ready: false
-desc: "ASCII Art: Logical operators, REPLACE WITH LAB ON GDB"
+desc: "ASCII Art: Logical operators"
 assigned: 2017-01-27 08:00:00.00-8
 due: 2017-02-03 23:59:00.00-8
 ---
