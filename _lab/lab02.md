@@ -10,6 +10,7 @@ due: 2017-01-27 11:59:00.00-8
 <div markdown="1">
 
 ## Introduction
+
 The assignment for this week will utilize concepts of control flow that we covered in class. You may utilize other concepts of programming as well, as you see fit. To complete the lab follow these steps in order:
 
 * [Creating and cloning your repo](#clonerepo){: data-ajax="false"}
