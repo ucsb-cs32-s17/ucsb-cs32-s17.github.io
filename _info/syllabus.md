@@ -7,6 +7,7 @@ ready: true
 # Syllabus <a name="syllabus"></a>
 
 * [Course Staff](#staff){: data-ajax="false"}
+* [Schedule](#schedule){: data-ajax="false"}
 * [What this course is about](#about){: data-ajax="false"}
 * [Resources](#resources){: data-ajax="false"}
 * [Course Policies](/info/policies/)
@@ -36,7 +37,17 @@ TA office hours is available on our class Google Calendar
 
 The tutors will help with conducting the labs and other instructional activities as part of a new pilot program.
 
-For lab, lecture and office hours please check the [course schedule](/info/schedule/)
+
+[Back to Syllabus](#syllabus){: data-ajax="false"}
+
+# Schedule <a name="schedule"></a>
+
+* **Lecture**: Tue. and Thu. 3:30pm-4:45pm NH 1006, ATTENDANCE REQUIRED.
+* **Lab**:(50 minute discussion sections) Wednesdays starting at 4pm, 5pm, 6pm, 7pm PHELP 3525, ATTENDANCE REQUIRED.
+
+For lab, lecture and office hours please check the [course Google Calendar](/info/schedule/)
+For hw, lab and exam schedule, please check the [assignment calendar](/info/calendar/)
+
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
 
