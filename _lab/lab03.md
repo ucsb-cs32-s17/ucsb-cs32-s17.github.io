@@ -20,6 +20,9 @@ By the time you have completed this lab, you should be able to
 By now, we expect that you are comfortable with these basic skills from lab00, lab01, lab02, and lab03 so we will no longer describe them in as much detail as we did previously:
  
 * Using a text-editor (we suggest emacs) to create and/or edit C++ programs
+* Creating a git repo on github
+* Cloning your github to your local machine
+* Integrating git command-line tools into your workflow (*git add...*, *git commit..*, *git push ...*)
 * Compiling and running C++ programs
 * Using the computers in both the CSIL and the Phelps labs to do basic things:
     * Performing basic management of directories and files with Unix commands such as mkdir, cd, pwd, ls, cp, mv

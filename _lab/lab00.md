@@ -13,16 +13,16 @@ Your first lab for this week is an introduction to programming on CSIL and in th
 
 For this first lab, you will do the following:
 
-0. [Read and sign the academic integrity form](#step0){: data-ajax="false"}
-1. [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
-2. [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
-3. [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
-4. [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
-5. [Write an actual program in C++.](#step5){: data-ajax="false"}
-6. [Compile your program and see if it runs.](#step6){: data-ajax="false"}
-7. [Submit your program for grading.](#step7){: data-ajax="false"}
-8. [Check Submission Results](#step8){: data-ajax="false"}
-9. [Create a github account and explore its web interface](#step9){: data-ajax="false"}
+* [Read and sign the academic integrity form](#step0){: data-ajax="false"}
+* [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
+* [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
+* [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
+* [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
+* [Write an actual program in C++.](#step5){: data-ajax="false"}
+* [Compile your program and see if it runs.](#step6){: data-ajax="false"}
+* [Submit your program for grading.](#step7){: data-ajax="false"}
+* [Check Submission Results](#step8){: data-ajax="false"}
+* [Create a github account and explore its web interface](#step9){: data-ajax="false"}
 
 ## Step 0: Academic Integrity<a name="step0"></a>
 You must read and sign the following form to indicate that you understand what activities would count as a AI violation for CS 16. Students who do not adhere to these terms will be reported to the Office of Academic Integrity and will receive an 'F' in the course.

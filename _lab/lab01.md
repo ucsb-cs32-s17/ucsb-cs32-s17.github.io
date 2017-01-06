@@ -23,15 +23,15 @@ By the time you have completed this lab, you should be able to:
 
 # Step by Step Instructions 
 
-1. [Log on to CSIL and bring up a terminal window](#step1){: data-ajax="false"}
-2. [Create your working directory](#step2){: data-ajax="false"}
-3. [Getting the starter code from a local directory](#step3){: data-ajax="false"}
-4. [Compiling and running the first program for this assignment](#step4){: data-ajax="false"}
-5. [Copy sample01.cpp to myProg01.cpp and make changes](#step5){: data-ajax="false"}
-6. [Reading from input files and counting ducks](#step6){: data-ajax="false"}
-7. [A more detailed counting program](#step7){: data-ajax="false"}
-8. [Turn in your code ](#step8){: data-ajax="false"}
-9. [Preparing for lab02: Git one-time configurations and basic work flow](#gitonetime){: data-ajax="false"}
+* [Log on to CSIL and bring up a terminal window](#step1){: data-ajax="false"}
+* [Create your working directory](#step2){: data-ajax="false"}
+* [Getting the starter code from a local directory](#step3){: data-ajax="false"}
+* [Compiling and running the first program for this assignment](#step4){: data-ajax="false"}
+* [Copy sample01.cpp to myProg01.cpp and make changes](#step5){: data-ajax="false"}
+* [Reading from input files and counting ducks](#step6){: data-ajax="false"}
+* [A more detailed counting program](#step7){: data-ajax="false"}
+* [Turn in your code ](#step8){: data-ajax="false"}
+* [Preparing for lab02: Git one-time configurations and basic work flow](#gitonetime){: data-ajax="false"}
 
 ## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
 
