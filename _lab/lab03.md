@@ -111,19 +111,36 @@ starZ renders the letters Z, but requires a minimum width of 3.   It only takes 
 Decide if you are working alone, or working in a pair.  
 
 If you are working in a pair:
-* Go to submit.cs, navigate to CS16, F14, lab04, and create a team for you and your pair partner.   
+* Go to submit.cs, navigate to CS16, W17, lab03, and create a team for you and your pair partner.   
 * Decide on initial navigator and driver.
 * Driver, log on to driver's CSIL account.
-
-Log on to CSIL, bring up a terminal window, and create a ~/cs16/lab03 directory
+* Go to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard) and create a new repo following the naming conventions introduced in previous labs. Your repo name should be lab03_xxxx for this lab
+* Add your partner as a collaborator on the newly created git repo
+* Log on to CSIL, bring up a terminal window, and clone your repo in your ~/cs16/ directory following the instructions from previous labs
 
 ## Step 2: Getting the code
 
-TBD: Update the instructions to get the code from github
+Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_jgaucho issue the following command:
 
-If so, you are ready to move on to the next step.
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_jgaucho/
 
-If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance.
+
+After doing this command, if you cd into ~/cs16/lab03_jgaucho/ and use the ls command, you should see the following files:
+
+```
+-bash-4.2$ ls
+backslash.cpp  README.md  starC.cpp  starL.cpp  starT.cpp  starZ.cpp
+-bash-4.2$ 
+```
+
+Save the initial version of your code by typing out the following commands:
+
+```
+git add .
+git commit -m "Initial version"
+git push origin master
+```
+
 
 ## Step 3: Practicing with the starL program 
 

@@ -9,7 +9,7 @@ due: 2017-01-13 23:59:00.00-8
 
 # Introduction
 
-Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display.
+Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display. This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
 
 For this first lab, you will do the following:
 

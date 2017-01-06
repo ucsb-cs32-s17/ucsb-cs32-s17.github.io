@@ -46,12 +46,12 @@ You are now ready to get the starter code.
 
 ## Step 2: Getting the starter code from a local directory into your local git directory <a name="getstarter"></a>
 
-Copy the code from the instructor's account on the CSIL server into your local git directory (for example: lab02_jgaucho), by issuing the following command:
+Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab02_jgaucho issue the following command:
 
   cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab02_jgaucho/
 
 
-After doing this command, if you cd into ~/cs16/lab02_jgaucho/ and use the ls command, you should two .cpp files and a README:
+After doing this command, if you cd into ~/cs16/lab02_jgaucho/ and use the ls command, you should see two .cpp files and a README:
 
 ```
 -bash-4.2$ ls
