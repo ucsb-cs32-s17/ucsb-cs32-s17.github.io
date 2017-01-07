@@ -12,22 +12,27 @@ lecture_date: 2017-01-12
 
 By the end of this lecture students should have everything they need to make significant progress with the upcoming lab.
 
-## C++ variables and programs in memory
+## C++ variables 
 * Unlike Python, you MUST "declare" variables on first appearance in any C++ program. We'll discuss what this means.
-* The data type of a variable determines a number of things about how the variable is stored in memory
 * Scope and lifetime of variables
-* Our model of memory, units of memory
-
+* We will look at three specific datatypes: char, int and string
 
 ## C++ conditionals
-* For loops are DIFFERENT in C++ than in Python. We'll discuss.
-* If else and while loops are DIFFERENT in C++ than in Python. We'll discuss.
+* If else statements are DIFFERENT in C++ than in Python. We'll discuss.
+* For and while loops are DIFFERENT in C++ than in Python. We'll discuss.
 
-## Test driven development
-* Explore the TDD paradigm 
-* Coding example: Fizzbuzz in C++
+## Under the hood of program compilation
+* Ways to compile: g++ and make
+
+
+## File I/O basics
+* Examining text files using 1) an editor 2) cat command 3) hexdump 
+* Opening a file: open()
+* Reading a line from a file: getline()
+* Reading until the end of file is reached
+* Detecting failures
 
 ## Github Basics
 * Creating a repository on github
-* Adding a new file to the repository
+* Adding a new file to the repository using github's webinterface
 * Gentle intro to github command line: cloning a repo to a local machine, syncing repos with git add, commit and push

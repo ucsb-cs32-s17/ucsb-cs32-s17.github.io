@@ -111,6 +111,7 @@ starZ renders the letters Z, but requires a minimum width of 3.   It only takes 
 Decide if you are working alone, or working in a pair.  
 
 If you are working in a pair:
+
 * Go to submit.cs, navigate to CS16, W17, lab03, and create a team for you and your pair partner.   
 * Decide on initial navigator and driver.
 * Driver, log on to driver's CSIL account.
