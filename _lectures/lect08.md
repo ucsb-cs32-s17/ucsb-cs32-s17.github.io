@@ -1,6 +1,6 @@
 ---
 num: "lect08"
-desc: "Pointers, arrays and complex declarations in C++"
+desc: "Pointers, references, arrays and complex declarations in C++"
 ready: false
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: 
@@ -11,13 +11,10 @@ lecture_date: 2017-02-07
 # Topics
 
 
-## C++ Pointers
-* Review model of computer memory
-* Pointer declaration - difference/similarities with declaring basic types
-* Accessing variables "indirectly" via pointers
-* The address and indirection operators: "&" and "*"
-* Pointer arithmetic
-* Pointer pitfalls
+## C++ References
+* Creating aliases with references
+* Differences between references and pointers
+* Constant pointers and references, when and why to use them
 
 ## C++ arrays
 * C/C++ arrays are like lists in Python and Arrays in Java. We will discuss the differences between these.

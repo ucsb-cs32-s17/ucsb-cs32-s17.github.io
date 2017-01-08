@@ -1,7 +1,7 @@
 ---
 num: "lect01"
 lecture_date: 2017-01-10
-desc: "Course overview, hardware/software abstractions"
+desc: "Abstractions in computer systems, ingredients of a simple C++ program"
 ready: false
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1.pdf
@@ -20,7 +20,7 @@ annotatedready: false
 * The hardware/software interface
 
 ## C++ Basics 
-* Our most primitive abstraction in software is the function
+* Our most primitive abstraction in software is the function (also known as a procedural abstraction)
 * C++ functions are different from Python functions
 * Basic elements of a C++ program introduced via the "hello world" program
     * the main function

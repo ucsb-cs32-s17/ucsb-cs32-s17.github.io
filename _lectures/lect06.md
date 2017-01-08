@@ -1,6 +1,6 @@
 ---
 num: "lect06"
-desc: "Seperate compilation with Makefiles, g++ compiler options"
+desc: "Pointers"
 ready: false
 pdfurl: /lectures/CS16_Lecture6.pdf
 annotatedpdfurl: 
@@ -10,8 +10,13 @@ lecture_date: 2017-01-26
 
 # Topics
 
-## More on g++
-* Compiling with debugging flags
-* Compiling to assembler code
+## C++ Pointers 
+* Review model of computer memory
+* Pointer declaration - difference/similarities with declaring basic types
+* Accessing variables "indirectly" via pointers
+* The address and indirection operators: "&" and "*"
+* Pointer arithmetic
+* Pointer pitfalls
 
-## Examing programs with GDB
+
+
