@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "How are programs translated into a form that a computer can execute?"
+desc: "How are programs translated to a form understandable by a computer?"
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 

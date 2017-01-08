@@ -26,6 +26,7 @@ annotatedready: false
     * the main function
     * commenting your code
     * standard input, standard output and standard error
+    * namepsaces and include directives
 * Compiling with g++
 * Running your program
 * Commenting your code

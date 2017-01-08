@@ -1,6 +1,6 @@
 ---
 num: "lect02"
-desc: "C++ variables and data types, input and output and simple flow control"
+desc: "C++ variables and data types, input-output and simple flow control"
 ready: false
 pdfurl: 
 annotatedpdfurl: 
