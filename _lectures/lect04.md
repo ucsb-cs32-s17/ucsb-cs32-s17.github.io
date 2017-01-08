@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "Do hardware circuits understand English? Under the hood of program compilation, storage and execution"
+desc: "How are programs stored on a computer? How are programs compiled into forms that allows executing them on a computer?"
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 
