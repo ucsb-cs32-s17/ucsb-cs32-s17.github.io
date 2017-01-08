@@ -10,16 +10,16 @@ annotatedready: false
 
 # Topics
 
-## Course Overview
+## Course overview
 * What is CS 16 all about?
-* How does it fit in the series: CS 24, CS 32 and CS 64
+* How does it fit with other CS courses in this series?
 * Peer instruction and group dynamics - students in CS 16 may have different levels of experience. The class will be structured to be inclusive and we need all students to cooperate by doing the reading and participating in class activities. Tutor introductions and their role. 
 
 ## Hardware abstractions
 * The modern digital computer - stored program model and the Von Neumann architecture, why are we talking about architecture?
 * The hardware/software interface
 
-## C++ Basics 
+## C++ basics 
 * Our most primitive abstraction in software is the function (also known as a procedural abstraction)
 * C++ functions are different from Python functions
 * Basic elements of a C++ program introduced via the "hello world" program

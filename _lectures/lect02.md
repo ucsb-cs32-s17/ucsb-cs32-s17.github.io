@@ -29,7 +29,7 @@ By the end of this lecture students should have everything they need to make sig
 * Reading until the end of file is reached
 * Detecting failures
 
-## Github Basics
+## Github basics
 * Creating a repository on github
 * Adding a new file to the repository using github's webinterface
 * Gentle intro to github command line: cloning a repo to a local machine, syncing repos with git add, commit and push
