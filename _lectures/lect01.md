@@ -20,7 +20,7 @@ annotatedready: false
 * The hardware/software interface
 
 ## C++ basics 
-* Our most primitive abstraction in software is the function (also known as a procedural abstraction)
+* Basic abstraction in software: functions
 * C++ functions are different from Python functions
 * Basic elements of a C++ program introduced via the "hello world" program
     * the main function
