@@ -45,7 +45,7 @@ The first step in every assignment will be to open a <b>terminal window</b>, whi
 
 
 * If you are working on a machine in the Phelps 3525
-    please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
+    please see [Step 2b](#step2b){: data-ajax="false"} for further instructions.
 
 * If you are working on a machine in the Computer Science Instruction Lab (CSIL), you'll be working 
     on one of the following machines: `csil-01.cs.ucsb.edu`, `csil-02.cs.ucsb.edu`, etc. 
