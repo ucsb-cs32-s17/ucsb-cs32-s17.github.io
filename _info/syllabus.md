@@ -8,16 +8,17 @@ ready: true
 
 * [Course Staff](#staff){: data-ajax="false"}
 * [Schedule](#schedule){: data-ajax="false"}
-* [What this course is about](#about){: data-ajax="false"}
 * [Resources](#resources){: data-ajax="false"}
-* [Course Policies](/info/policies/)
+* [What this course is about](#about){: data-ajax="false"}
+* [Course Policies](#policies)
+* [Graded components](#moreabout){: data-ajax="false"}
 
 
 # Course Staff<a name="staff"></a>
 
 ## Course instructor: Diba Mirza 
 * email: dimirza@cs.ucsb.edu	
-* Office hours: Tu, Thu 5:00pm- 6:00pm, Harold Frank Hall 1155
+* Office hours: Mon, Wed: 10am - 11am, Tue: 5:00pm- 6:00pm, Harold Frank Hall 1155
 * Homepage: [https://www.cs.ucsb.edu/~dimirza/](https://www.cs.ucsb.edu/~dimirza/)
  
 ## Teaching Assistants
@@ -47,6 +48,32 @@ The tutors will help with conducting the labs and other instructional activities
 
 For lab, lecture and office hours please check the [course Google Calendar](/info/schedule/)
 For hw, lab and exam schedule, please check the [assignment calendar](/info/calendar/)
+
+# Resources <a name="resources"></a>
+
+## Required Resources
+
+* Textbook: Problem Solving with C++, Walter Savitch, Edition 9. Available for purchase at the UCSB book store
+
+* Peer Instruction : iClickers: The course lectures will follow a Peer Instruction format, a teaching model which places stronger emphasis on classroom discussion and student interaction. As part of this you will need to own an iClicker register it on the [Gauchospace](https://gauchospace.ucsb.edu/courses/course/view.php?id=1524)). Be sure to register your clicker by the end of the first week.
+
+## Exam Resources
+
+You can find examples of previous quarter's  exams at the following links.
+
+* http://www.cs.ucsb.edu/~pconrad/cs16/14F/exams/
+
+But BEWARE---offerings of CS16 may vary in terms of their exact pace, and placement of exams. So these exams are a guide to the style of my exams, but NOT necessarily for specific content.
+
+In addition, these exams from prior to F14 used the C programming language rather than C++, and went at a much slower pace, so treat them with even more skepticism.
+
+* http://www.cs.ucsb.edu/~pconrad/cs16/10S/exams/
+* http://www.cs.ucsb.edu/~pconrad/cs16/10W/exams/
+* http://www.cs.ucsb.edu/~pconrad/cs16/09F/exams/
+
+
+[Back to Syllabus](#syllabus){: data-ajax="false"}
+
 
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
@@ -151,7 +178,26 @@ be comfortable with all of the following:</p>
 <p>The same is true of programming. Programming is not a series of facts to be memorized—you cannot &quot;cram&quot; for a computer science exam. You must practice, practice, practice.</p>
 
 
-## How this course works
+## Course policies <a name="policies"></a>
+
+## Grade breakup by evaluation component
+* Lecture and section partcipation: 1%
+* Homeworks/Quizzes: 9%
+* Lab assignments: 40% 
+* Midterm Exams (2 at 15% each): 30%
+* Final Examination : 20%
+
+Less than 75% iClicker response ≡ missing a class/section
+
+<p>Quizzes may occur at anytime, announced or unannounced. Missed quizzes may not be made up.<br />
+Thus <strong>attendance is required</strong>, and <strong>reading the assigned readings is required.</strong></p>
+
+For more on course policies, see [course policies](/info/policies)
+
+[Back to Syllabus](#syllabus){: data-ajax="false"}
+
+
+# More about this course <a name="moreabout"></a>
 
 <p>There are five components to this course, each of which has a special job to do:</p>
 <ul>
@@ -199,30 +245,5 @@ The usual &quot;folklore&quot; rule of thumb is 8–12 hours per week for a norm
 
 I probably won't succeed in giving you that much work to do, but I really should, because that's the only way you'll learn what this course is supposed to teach! So, I'll do my best :-) 
 </ul>
-
-[Back to Syllabus](#syllabus){: data-ajax="false"}
-
-# Resources <a name="resources"></a>
-
-## Required Resources
-
-* Textbook: Problem Solving with C++, Walter Savitch, Edition 9. Available for purchase at the UCSB book store
-
-* Peer Instruction : iClickers: The course lectures will follow a Peer Instruction format, a teaching model which places stronger emphasis on classroom discussion and student interaction. As part of this you will need to own an iClicker register it on the [Gauchospace](https://gauchospace.ucsb.edu/courses/course/view.php?id=1524)). Be sure to register your clicker by the end of the first week.
-
-## Exam Resources
-
-You can find examples of previous quarter's  exams at the following links.
-
-* http://www.cs.ucsb.edu/~pconrad/cs16/14F/exams/
-
-But BEWARE---offerings of CS16 may vary in terms of their exact pace, and placement of exams. So these exams are a guide to the style of my exams, but NOT necessarily for specific content.
-
-In addition, these exams from prior to F14 used the C programming language rather than C++, and went at a much slower pace, so treat them with even more skepticism.
-
-* http://www.cs.ucsb.edu/~pconrad/cs16/10S/exams/
-* http://www.cs.ucsb.edu/~pconrad/cs16/10W/exams/
-* http://www.cs.ucsb.edu/~pconrad/cs16/09F/exams/
-
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
