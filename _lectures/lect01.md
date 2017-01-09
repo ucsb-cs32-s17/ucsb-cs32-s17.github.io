@@ -1,8 +1,8 @@
 ---
 num: "lect01"
 lecture_date: 2017-01-10
-desc: "Abstractions in computer systems, ingredients of a simple C++ program"
-ready: false
+desc: "Course overview, a gentle intro to C++ and git"
+ready: true
 pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1.pdf
 annotatedready: false
@@ -13,11 +13,10 @@ annotatedready: false
 ## Course overview
 * What is CS 16 all about?
 * How does it fit with other CS courses in this series?
-* Peer instruction and group dynamics - students in CS 16 may have different levels of experience. The class will be structured to be inclusive and we need all students to cooperate by doing the reading and participating in class activities. Tutor introductions and their role. 
+* Peer instruction and group dynamics - students in CS 16 may have different levels of experience. The class will be structured to be inclusive and we need all students to cooperate by doing the reading and participating in class activities.
+* We are running a new pilot program where undergraduate tutors will be assisting with instructional activities - we will introduce our tutors, be sure to reach out to them in labs and sections 
 
-## Hardware abstractions
-* The modern digital computer - stored program model and the Von Neumann architecture, why are we talking about architecture?
-* The hardware/software interface
+
 
 ## C++ basics 
 * Basic abstraction in software: functions

@@ -10,6 +10,10 @@ lecture_date: 2017-01-19
 
 # Topics
  
+## Hardware abstractions
+* The modern digital computer - stored program model and the Von Neumann architecture, why are we talking about architecture?
+* The hardware/software interface
+ 
 ## Under the hood of program compilation and execution
 * From high-level programs to machine code
 * A peek into assembly code

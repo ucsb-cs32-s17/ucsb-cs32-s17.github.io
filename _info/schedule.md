@@ -13,6 +13,6 @@ See the complete schedule on our Google Calendar
 
 <p> The Google calendar below specifies the schedule for the lectures, open lab hours and office hours. Please check for updates to the calendar on a daily basis </p>
 
-<iframe src="{{site.google_calendar_embed_height_600px}}" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=a27efvh0puu3stlmn7lh1v1vtc%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 [Back to Syllabus](/info/syllabus/)
