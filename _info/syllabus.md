@@ -212,7 +212,7 @@ For more on course policies, see [course policies](/info/policies)
     Because I realize that sometimes each student must miss a class due to unavoidable circumstances, or illness, each student is permitted <strong>one</strong> &quot;personal day/sick day&quot; (one per quarter) where you may make up a missed homework assignment (without penalty) by coming in person during the instructor or TAs office hours.   See details elsewhere on this syllabus.
     <br />
   </li>
-  <li><strong>(3) Programming Assignments (Labs)</strong>—Programming assignments (also called labs) are given once or twice a week, and are typically started in the Tuesday lab sessions, and finished on your own time outside of lab. These will typically involve pair programming, which is described later in this syllabus.<br />
+  <li><strong>(3) Programming Assignments (Labs)</strong>—Programming assignments (also called labs) are given once or twice a week, and are typically started in the Wednesday lab sessions, and finished on your own time outside of lab. These will typically involve pair programming, which is described later in this syllabus.<br />
     <br />
   </li>
   <li><strong>(4) Lectures</strong>—Learning is something that you do as a student, not something that is &quot;done to you&quot; by a teacher. Therefore most of the learning you will do in this course takes place when you are actively involved in doing something challenging, i.e. during the homework assignments, and labs. Most of the information you will need to do those assignments will come from the reading. <br />
