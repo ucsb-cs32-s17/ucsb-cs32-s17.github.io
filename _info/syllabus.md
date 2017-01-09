@@ -181,9 +181,9 @@ be comfortable with all of the following:</p>
 ## Course policies <a name="policies"></a>
 
 ## Grade breakup by evaluation component
-* Lecture and section partcipation: 1%
-* Homeworks/Quizzes: 9%
-* Lab assignments: 40% 
+* Lecture and section partcipation: 2%
+* Homeworks/Quizzes: 13%
+* Lab assignments: 35% 
 * Midterm Exams (2 at 15% each): 30%
 * Final Examination : 20%
 
