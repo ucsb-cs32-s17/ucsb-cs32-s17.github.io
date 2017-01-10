@@ -2,7 +2,9 @@
 title: "CS 16: Problem Solving with Computers -I , Winter 17 Mirza"
 ---
 
-# {{site.course}}, {{site.quarter}}
+# CS 16: Problem Solving with Computers -I , Winter 17 
+
+<!--{{site.course}}, {{site.quarter}}-->
 
 
 <div id="info" data-role="collapsible" data-collapsed="false">
