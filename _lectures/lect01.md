@@ -12,7 +12,6 @@ annotatedready: false
 
 ## Course overview
 * What is CS 16 all about?
-* How does it fit with other CS courses in this series?
 * Peer instruction and group dynamics - students in CS 16 may have different levels of experience. The class will be structured to be inclusive and we need all students to cooperate by doing the reading and participating in class activities.
 * We are running a new pilot program where undergraduate tutors will be assisting with instructional activities - we will introduce our tutors, be sure to reach out to them in labs and sections 
 
