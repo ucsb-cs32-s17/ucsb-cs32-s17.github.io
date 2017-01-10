@@ -25,7 +25,6 @@ For this first lab, you will do the following:
 * [Create a github account and explore its web interface](#step9){: data-ajax="false"}
 
 ## Step 0: Academic Integrity (AI)<a name="step0"></a>
-You must read and sign the following form to indicate that you understand what activities that would count as a AI violation for CS 16. Students who do not adhere to these terms will be reported to the Office of Academic Integrity and will receive an 'F' in the course:
 
 [Sign this form to indicate you understand the AI policies for CS 16](https://docs.google.com/forms/d/e/1FAIpQLSfHAPcJuULAJH-FtDlJ-FeLiERWvXPuvou1U7w2xdzwSjQHBA/viewform)
 
