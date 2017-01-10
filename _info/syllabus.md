@@ -211,7 +211,9 @@ You must also read the this document with detailed [course policies](/info/polic
     <br /> 
     Because I realize that sometimes each student must miss a class due to unavoidable circumstances, or illness, each student is permitted <strong>one</strong> &quot;personal day/sick day&quot; (one per quarter) where you may make up a missed homework assignment (without penalty) by coming in person during the instructor or TAs office hours.   See details elsewhere on this syllabus.
     <br />
+     <br />
   </li>
+
   <li><strong>(3) Programming Assignments (Labs)</strong>—Programming assignments (also called labs) are given once a week, and are typically started in the Wednesday lab sessions, and finished on your own time outside of lab. You must however, read the assignment and attempt the parts that you do with little assistant as soon as the assignment is released. The assumption is that you at the very least read the assignment before section. Labs will typically involve pair programming, which is described later in this syllabus.<br />
     <br />
   </li>

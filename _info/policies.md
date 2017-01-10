@@ -138,8 +138,6 @@ You may NOT:
 
 ## Exceptions
 
-== Missing in-class activities ==
-
 <p>If you miss a class, you miss the opportunity for the points on that in-class assignment, or homework that was due. Period. </p>
 <p>There is no makeup, except for:</p>
 <ul>
@@ -149,7 +147,8 @@ You may NOT:
 <p>To make up an assignment from a &quot;sick-day/personal-day&quot;, you must within one week of the absence, or 24 hours before the final exam, which ever is earlier, come to office hours (this cannot be done in lab). You may only do this ONCE per quarter.</p>
 <p>In rare cases, if there is a documented family emergency, documented extended illness, documented required court appearance, or other situation beyond the students' control (with documentation) the instructor may grant additional make up days entirely at the instructor's discretion—but this is <strong>not</strong> a guarantee or a right.</p>
 
-h2 class="pagebreak">About pair programming</h2>
+## About pair programming
+
 <p>Most of the programming work in this course will be done using a style of programming known as &quot;pair programming&quot;. This is where two people (in rare cases, three) work together at the same terminal to solve a programming problem.</p>
 <p>It is similar, in some ways, to having a &quot;lab partner&quot; in a Biology, Chemistry or Physics course.</p>
 <p>For the assignments where pair programming is used, it is required, not optional. Here's why:<br />
@@ -168,13 +167,13 @@ h2 class="pagebreak">About pair programming</h2>
   <li>Most students find it helpful and enjoyable—UCSB CS students from 2009-2010 that were surveyed about their pair programming experiences overwhelmingly reported positive results.</li>
   <li>There is also evidence in the scientific literature that it improves student learning, and helps you get better grades.</li>
   </ul>
-<p>To learn more about pair programming, watch the following video (it takes less than 10 minutes).<br />
+<p>To learn more about pair programming, watch the following video (it takes less than 10 minutes): <br /></p>
  
 [http://bit.ly/pair-programming-video](http://bit.ly/pair-programming-video)
 
 
 
-== Late Lab Policy ==
+## Late Lab Policy 
 
 The policy is simple, and is based on the idea that the primary purpose of the deadlines is to allow the TA manage his/her workload. The number of labs in this course requires that he/she not have to do "context switching" between grading different labs. All labs must be graded in one sitting, or he/she just won't be able to keep up with the workload.
 So:
@@ -184,7 +183,7 @@ So:
 * There is NO GUARANTEE that late labs will be graded at all. The TA will simply start work at some point after the deadline, and grade until he/she is finished. At that time, he/she will "close the books" on that particular lab, and any work not submitted at that time will NOT be considered.
 
 
-# Frequently Asked Questions <a name="faq"></a>
+## Frequently Asked Questions <a name="faq"></a>
 
 <h3 ><em>Do we need to bring our textbook to lecture? To lab?</em></h3>
 <p> It is generally not necessary to bring the textbook to <em>lectures</em> for CS16. It may be helpful to bring the book to lab though, as it may be a useful reference for working on programming assignments.</p>
@@ -207,7 +206,8 @@ So:
 <p>This isn't an absolute prohibition. If the Linux machines are having software or hardware problems, or there is a problem with your account—these things happen rarely, but they do happen sometimes—then, sure, go ahead and use the laptop during lab. But otherwise, please stick with the machines provided.</p>
 <h3>Do we need to download anything to our laptops or computers at home/in the dorm?</h3>
 <p>If you are using Windows, you definitely will want to download two programs: PuTTY and XMing OR MobaXterm and Xming. I recommend the latter combination. These programs allow you to access the Linux environment on the CoE computers from your Windows machine. (Mac and Linux users usually have tools to do that already installed as part of the operating system called &quot;ssh&quot; and &quot;X11&quot;.)</p>
-<h2>Disclaimer</h2>
+
+## Disclaimer
 <p>The course policies have been provided as accurately as possible, but are subject to change at the instructor's discretion, within the bounds of UC policy.</p>
 
 [Back to Syllabus](/info/syllabus/)
