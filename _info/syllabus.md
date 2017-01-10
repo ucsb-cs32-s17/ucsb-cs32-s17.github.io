@@ -6,6 +6,9 @@ ready: true
 
 # Syllabus <a name="syllabus"></a>
 
+This document and others linked within it should be your PRIMARY source for understanding the expectations of this course. Be sure to read it *carefully*.
+You must contact the instructor for clarification if you receive information from any another source that is in contradiction to what is provided below.
+
 * [Course Staff](#staff){: data-ajax="false"}
 * [Schedule](#schedule){: data-ajax="false"}
 * [Resources](#resources){: data-ajax="false"}
@@ -24,11 +27,11 @@ ready: true
 ## Teaching Assistants
 * Lin Chai: linchai@cs.ucsb.edu
 * Harshitha Murthy: harshitha@umail.ucsb.edu
-* Daria Rudneva: 	drudneva@umail.ucsb.edu
+* Daria Rudneva: drudneva@umail.ucsb.edu
 
-TA office hours is available on our class Google Calendar
+TA office hours are available on our [course Google Calendar](/info/schedule/)
 
-## Undergraduate tutors 
+## Undergraduate Tutors 
 * Angela Yung
 * Barbara Korycki	
 * Jimmy	Le	
@@ -36,7 +39,7 @@ TA office hours is available on our class Google Calendar
 * Sean Shelton	
 * Steven Fields	
 
-The tutors will help with conducting the labs and other instructional activities as part of a new pilot program.
+The tutors will help with the labs and other instructional activities as part of a new pilot program.
 
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
@@ -44,7 +47,7 @@ The tutors will help with conducting the labs and other instructional activities
 # Schedule <a name="schedule"></a>
 
 * **Lecture**: Tue. and Thu. 3:30pm-4:45pm NH 1006, ATTENDANCE REQUIRED.
-* **Lab**:(50 minute discussion sections) Wednesdays starting at 4pm, 5pm, 6pm, 7pm PHELP 3525, ATTENDANCE REQUIRED.
+* **Lab**:(50 minute discussion sections) Wednesdays starting at 4pm, 5pm, 6pm, 7pm PHELPS 3525, ATTENDANCE REQUIRED.
 
 For lab, lecture and office hours please check the [course Google Calendar](/info/schedule/)
 For hw, lab and exam schedule, please check the [assignment calendar](/info/calendar/)
@@ -70,9 +73,6 @@ In addition, these exams from prior to F14 used the C programming language rathe
 * http://www.cs.ucsb.edu/~pconrad/cs16/10S/exams/
 * http://www.cs.ucsb.edu/~pconrad/cs16/10W/exams/
 * http://www.cs.ucsb.edu/~pconrad/cs16/09F/exams/
-
-
-[Back to Syllabus](#syllabus){: data-ajax="false"}
 
 
 
@@ -171,7 +171,7 @@ be comfortable with all of the following:</p>
 <p><strong>The swimming/guitar/painting analogy</strong></p>
 <p>You cannot learn to swim, play guitar, or paint from a textbook or a lecture. You can only:</p>
 <ul>
-  <li> learn  to swim by spending many hours in the pool, </li>
+  <li> learn to swim by spending many hours in the pool, </li>
   <li>learn to play guitar by spending many hours playing the instrument</li>
   <li>learn to paint by spending many hours putting brush to canvas.</li>
 </ul>
@@ -187,21 +187,21 @@ be comfortable with all of the following:</p>
 * Midterm Exams (2 at 15% each): 30%
 * Final Examination : 20%
 
-Less than 75% iClicker response ≡ missing a class/section
+Less than 75% iClicker response ≡ missing a lecture
 
 <p>Quizzes may occur at anytime, announced or unannounced. Missed quizzes may not be made up.<br />
 Thus <strong>attendance is required</strong>, and <strong>reading the assigned readings is required.</strong></p>
 
-For more on course policies, see [course policies](/info/policies)
+You must also read the this document with detailed [course policies](/info/policies)
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
 
 
-# More about this course <a name="moreabout"></a>
+# Graded components <a name="moreabout"></a>
 
 <p>There are five components to this course, each of which has a special job to do:</p>
 <ul>
-  <li><strong>(1) Reading</strong>—Between each class, you'll have reading to do in the textbook. There is too much information you need to learn in this course for you to get all of it in lecture, so the readings are essential. The reading assignments for the next class can be found on the homework assignments handed out during each class period.<br />
+  <li><strong>(1) Reading</strong>—Between each class, you'll have reading to do in the textbook. There is too much information you need to learn in this course for you to get all of it in lecture, so the readings are essential. The reading assignments for the next class can be found in each homeowrk assignment.<br />
     <br />
   </li>
   <li><strong>(2) Homework</strong>—In almost every class, you'll be given a homework assignment that is due in the following class. (The exception is the class period immediately before an exam, where no homework will be given.) <br />
@@ -212,7 +212,7 @@ For more on course policies, see [course policies](/info/policies)
     Because I realize that sometimes each student must miss a class due to unavoidable circumstances, or illness, each student is permitted <strong>one</strong> &quot;personal day/sick day&quot; (one per quarter) where you may make up a missed homework assignment (without penalty) by coming in person during the instructor or TAs office hours.   See details elsewhere on this syllabus.
     <br />
   </li>
-  <li><strong>(3) Programming Assignments (Labs)</strong>—Programming assignments (also called labs) are given once or twice a week, and are typically started in the Wednesday lab sessions, and finished on your own time outside of lab. These will typically involve pair programming, which is described later in this syllabus.<br />
+  <li><strong>(3) Programming Assignments (Labs)</strong>—Programming assignments (also called labs) are given once a week, and are typically started in the Wednesday lab sessions, and finished on your own time outside of lab. You must however, read the assignment and attempt the parts that you do with little assistant as soon as the assignment is released. The assumption is that you at the very least read the assignment before section. Labs will typically involve pair programming, which is described later in this syllabus.<br />
     <br />
   </li>
   <li><strong>(4) Lectures</strong>—Learning is something that you do as a student, not something that is &quot;done to you&quot; by a teacher. Therefore most of the learning you will do in this course takes place when you are actively involved in doing something challenging, i.e. during the homework assignments, and labs. Most of the information you will need to do those assignments will come from the reading. <br />
@@ -241,9 +241,8 @@ The workload in this course may feel heavy. It may even feel unreasonable compar
 
 However, I assure you that it is not unreasonable, given the goal of making you an skilled beginning programmer. Programming is a skill, and the only way to get good at it is lots and lots of practice, which takes lots and lots of time.
 
-The usual &quot;folklore&quot; rule of thumb is 8–12 hours per week for a normal college class. That means you should expect, at a minimum to put in 5–9 hours per week on this course, on top of the 3 hours 20 minutes you spend in lecture and lab each week. To put it another way, I really should be giving you between 2 and 4 hours of homework between every lecture.
-
-I probably won't succeed in giving you that much work to do, but I really should, because that's the only way you'll learn what this course is supposed to teach! So, I'll do my best :-) 
+The usual &quot;folklore&quot; rule of thumb is 8–12 hours per week for a normal college class. That means you should expect, at a minimum to put in 5–9 hours per week on this course, on top of the 3 hours 20 minutes you spend in lecture and lab each week. 
+ 
 </ul>
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
