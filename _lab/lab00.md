@@ -46,7 +46,7 @@ The first step in every assignment will be to open a <b>terminal window</b>, whi
 
 
 * If you are working on a machine in the Phelps 3525
-    please see [Step 2b](#step2b){: data-ajax="false"} for further instructions.
+    please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
 
 * If you are working on a machine in the Computer Science Instruction Lab (CSIL), you'll be working 
     on one of the following machines: `csil-01.cs.ucsb.edu`, `csil-02.cs.ucsb.edu`, etc. 
@@ -66,7 +66,7 @@ You'll get much better performance on those individual machines, because they ar
 * If you are working on your laptop and it is a Windows machine, go to [Step 2c](#step2c){: data-ajax="false"}.
 
 
-### Step 2a: Opening a Terminal on a Phelps Lab Machine <a name="step2a"></a>
+### Step 2a: Opening a Terminal on a Phelps or CSIL Lab Machine <a name="step2a"></a>
 <!--
 <h4><i><a name="step2a"></a>Step 2a: Opening a Terminal on a Phelps Lab Machine</i></h4>
 -->
