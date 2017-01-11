@@ -8,7 +8,7 @@ annotatedpdfurl: /lectures/CS16_Lecture1_ann.pdf
 annotatedready: true 
 ---
 # Code from lecture
-https://github.com/ucsb-cs16-wi17/lecture-01-10
+[https://github.com/ucsb-cs16-wi17/lecture-01-10](https://github.com/ucsb-cs16-wi17/lecture-01-10)
 
 # Topics
 
