@@ -4,8 +4,8 @@ lecture_date: 2017-01-10
 desc: "Course overview, a gentle intro to C++"
 ready: true
 pdfurl: /lectures/CS16_Lecture1.pdf
-annotatedpdfurl: /lectures/CS16_Lecture1.pdf
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture1_ann.pdf
+annotatedready: true 
 ---
 
 # Topics
