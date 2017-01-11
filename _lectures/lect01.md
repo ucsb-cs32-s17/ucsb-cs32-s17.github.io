@@ -7,6 +7,8 @@ pdfurl: /lectures/CS16_Lecture1.pdf
 annotatedpdfurl: /lectures/CS16_Lecture1_ann.pdf
 annotatedready: true 
 ---
+# Code from lecture
+https://github.com/ucsb-cs16-wi17/lecture-01-10
 
 # Topics
 
@@ -23,12 +25,11 @@ annotatedready: true
 * Basic elements of a C++ program introduced via the "hello world" program
     * the main function
     * commenting your code
-    * standard input, standard output and standard error
+    * standard input, standard output and standard error with cin, cout, cerr
     * namepsaces and include directives
 * Compiling with g++
 * Running your program
 * Commenting your code
-* Standard output, input and error with cout, cin and cerr
 
 If time permits....
 
