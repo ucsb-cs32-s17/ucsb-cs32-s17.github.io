@@ -14,6 +14,5 @@ lecture_date: 2017-01-17
 * Representing characters: ASCII
 * Tools to examine data in files: hexdump
 * The data type of a variable determines its representation in memory AND the number of bits used to store each variable
-* gdb intro
 * passing parameters to main - complete intro to lab01 code
 

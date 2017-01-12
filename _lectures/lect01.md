@@ -31,9 +31,6 @@ annotatedready: true
 * Running your program
 * Commenting your code
 
-If time permits....
 
-## Github intro
-* What is github? How and why we plan to use it in this class
-* What is a git repo?
-* Creating a github repo and using github's web interface to store your first program
+
+
