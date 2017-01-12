@@ -1,6 +1,6 @@
 ---
 num: "lect02"
-desc: "C++ variables and data types, and simple flow control"
+desc: "C++ variables, data types and simple flow control"
 ready: true
 pdfurl:  /lectures/CS16_Lecture2.pdf
 annotatedpdfurl: 
@@ -9,8 +9,6 @@ lecture_date: 2017-01-12
 ---
 
 # Topics
-
-By the end of this lecture students should have everything they need to make significant progress with the upcoming lab.
 
 ## Github intro
 * What is github? How and why we plan to use it in this class
