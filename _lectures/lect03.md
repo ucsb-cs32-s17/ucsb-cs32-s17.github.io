@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc: "How is data stored on a computer?How to work with data in files"
+desc: "How is data stored on a computer? How to read/write data in files"
 ready: false
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: 
