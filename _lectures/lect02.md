@@ -1,8 +1,8 @@
 ---
 num: "lect02"
-desc: "C++ variables and data types, input-output and simple flow control"
-ready: false
-pdfurl: 
+desc: "C++ variables and data types, and simple flow control"
+ready: true
+pdfurl:  /lectures/CS16_Lecture2.pdf
 annotatedpdfurl: 
 annotatedready: false
 lecture_date: 2017-01-12 
@@ -28,12 +28,7 @@ By the end of this lecture students should have everything they need to make sig
 * If else statements are DIFFERENT in C++ than in Python. We'll discuss.
 * For and while loops are DIFFERENT in C++ than in Python. We'll discuss.
 
-## File I/O basics
-* Examining text files using 1) an editor 2) cat command 3) hexdump 
-* Opening a file: open()
-* Reading a line from a file: getline()
-* Reading until the end of file is reached
-* Detecting failures
+
 
 
 
