@@ -36,9 +36,9 @@ By the time you have completed this lab, you should be able to:
 ## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
 
 I hope I can safely assume that you have all gotten a CoE account.
-Log onto the your account.  If your account is not working,  get the attention of a TA.
+Log onto the your account.  If your account is not working,  get the attention of the instructor.
 
-As a reminder, that's the <strong>Application</strong> Menu, then <strong>System Tools</strong>, then <strong>Terminal Window</strong>.
+As a reminder to get to the terminal go to <strong>Application</strong> Menu, then <strong>System Tools</strong>, then <strong>Terminal Window</strong>.
 
 In the steps below, and in most future labs, you will create files on your own
 account.
@@ -86,7 +86,7 @@ animals01.txt  animals02.txt  countDucks.cpp  sample01.cpp
 -bash-4.2$ 
 ```
 
-If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance. 
+If you don't see those files, work with your pair partner to go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask for assistance. 
 
 If so, you are ready to move on to the next step. 
 
@@ -94,7 +94,7 @@ If so, you are ready to move on to the next step.
 
 The first program we are going to compile and run is one that demonstrates a for loop in C++.   
 
-In your lab01 directory, you should have a program called sample01.cpp that we copied in at previous step.   Here's how you can put yourself in that directory (though you should already be there):
+In your lab01 directory, you should have a program called sample01.cpp that we copied in the previous step.   Here's how you can put yourself in that directory (though you should already be there):
 
 ```
 -bash-4.2$ cd ~/cs16/lab01/
@@ -163,17 +163,18 @@ animals02.txt  myProg01.cpp    sample01.cpp
 -bash-4.2$ 
 ```
 
-Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Open it up in a text editor (we suggest emacs, and our instructions will use emacs) and make the following changes:
+Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Open it up in a text editor and make the following changes:
 
 <ol>
 <li>Change the comment at the top of the file so that it says // myProg01.cpp</li>
-<li>Change the second line of the file, replacing my name with yours</li>
+<li>Change the second line of the file to be of the format "Author: your name"</li>
 <li>Change the for loop as follows:
+
 * Instead of initializing to 1, initialize to n
 * Instead of testing <code>i&lt;=n</code>, test whether <code>i&gt;0</code>
 * Instead of changing i by incrementing with <code>i++</code>, change it by decrementing with <code>i--</code>
 * Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newlne after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
-* Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement.  That line of code is <code>cout &lt;&lt; endl;</code>
+* Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement. 
 </li>
 </ol>
 
