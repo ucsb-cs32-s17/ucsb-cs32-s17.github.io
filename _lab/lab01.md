@@ -70,7 +70,7 @@ spot. The result should look like this (except in place of /cs/faculty/dimirza, 
 
 In future weeks, we may simply say something like &quot;create a <code>~/cs16/lab01</code> directory and make it your current directory&quot;, without spelling out the Linux commands to do this.  You can always refer back to previous labs if you forget the details, but eventually you'll want to memorize some of the most useful commands such as <code>mkdir</code>, <code>cd</code>, <code>pwd</code> and <code>ls</code>.
 
-## Step 3: Getting the starter code from a local directory <a name="step4"></a>
+## Step 3: Getting the starter code from a local directory <a name="step3"></a>
 
 
 Copy the code from the instructor's account on the CSIL server using the following command:
