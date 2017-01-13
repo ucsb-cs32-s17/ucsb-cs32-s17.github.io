@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01
-ready: false
+ready: true
 desc: "Counting ducks: Simple I/O and flow control, github command-line setup"
 assigned: 2017-01-13 15:30:00.00-8
 due: 2017-01-20 23:59:00.00-8
@@ -425,8 +425,18 @@ We will see the complete workflow with the git command-line tools in the next as
 
 3. Copy all your code from your ~/cs16/lab01/ directory to your local git repo directory. You can do this using the following command, replacing jgaucho with your github username:
 
-      cp ~/cs16/lab01/* ~/cs16/lab01_jgaucho/
+```
+cp ~/cs16/lab01/* ~/cs16/lab01_jgaucho/
+```
 
 4. `cd` into your github lab01 directory (lab01_jgaucho). Compile and run your code. 
 
-5. Then follow the instructions from the "git basic work flow" article to push your local changes to github. Be sure to use the *git add*, *git commit* and *git push* commands in that sequence as described by the article. Once you are done, open a web browser and navigate to your lab01 repo. You should see your code in github!
+5. Then follow the instructions from the "git basic work flow" article to push your local changes to github. Be sure to use the *git add*, *git commit* and *git push* commands in that sequence as described by the article. Please make sure you read the article. The commands that you have to run are essentially the following:
+
+```
+git add .
+git commit -m "Code for lab01"
+git push origin master
+```
+
+Once you are done, open a web browser and navigate to your lab01 repo. You should see your code in github!
