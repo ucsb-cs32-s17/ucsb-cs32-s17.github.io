@@ -33,11 +33,14 @@ By the time you have completed this lab, you should be able to:
 * [Turn in your code ](#step8){: data-ajax="false"}
 * [Preparing for lab02: Git one-time configurations and basic work flow](#gitonetime){: data-ajax="false"}
 
-## Step 1: Pair up, log on to CSIL and bring up a terminal window. <a name="step1"></a>
+## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
+
+*Note: This assignment MUST be done individually. This is a correction to what was announced in lecture*
 
 I hope I can safely assume that you have all gotten a CoE account.
-Log onto the your account.  If your account is not working,  get the attention of the instructor.
+ If your account is not working,  get the attention of the instructor.
 
+Log into your account to make sure it works. 
 As a reminder to get to the terminal go to <strong>Application</strong> Menu, then <strong>System Tools</strong>, then <strong>Terminal Window</strong>.
 
 In the steps below, and in most future labs, you will create files on your own
@@ -149,7 +152,8 @@ i=5
 ```
 
 
-If you get that output, you are ready for the next step.
+If you get that output, you are ready for the next step. 
+
 
 ## Step 5: Copy sample01.cpp to myProg01.cpp and make changes <a name="step5"></a>
 
@@ -188,7 +192,6 @@ You are now ready to move to the next step.
 
 
 Tip: *If you make a mistake that results in an "infinite loop", i.e. the window is just scrolling by without stopping, you can use CTRL/C (hold down Control and type C) to stop the program.*
-
 
 
 ## Step 6: Reading from input files and counting ducks <a name="step6"></a>
@@ -242,7 +245,7 @@ There were 6 ducks in animals02.txt
 -bash-4.2$ 
 ```
 
-This code for countDucks.cpp is longer than what will fit on a single screen, so instead of using the "cat" program to list it on our terminal, I suggest opening it up with emacs to look at it, with <code> emacs countDucks.cpp</code>, OR opening it with gvim <code> gvim countDucks.cpp</code>
+This code for countDucks.cpp is longer than what will fit on a single screen, so instead of using the "cat" program to list it on our terminal, I suggest opening it up in a editor to look at it.  To open with emacs, this would be <code> emacs countDucks.cpp</code>. To open with gvim type: <code> gvim countDucks.cpp</code>
 
 
 Read through the code, especially the comments, and try to understand what each line of code is doing.  We'll explain more about this code in lecture, but for now at least get the big picture of how the code works.
@@ -323,38 +326,33 @@ animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
 
 * Use the following command to turn in your files:
 <pre>
--bash-4.2$ ~bboe/bin/submit -p 195 myProg01.cpp myProg02.cpp
+-bash-4.2$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
 </pre>
 
-The number 195 is the "project number" specfic to CS16 W15 lab01 for Conrad's section.
+The number 195 is the "project number" specfic to CS16 W17 lab01 for our class section.
 
-==== What a successful turnin looks like ====
+### What a successful turnin looks like 
 
 ```
--bash-4.2$ cd ~/cs16/lab01
--bash-4.2$ pwd
-/cs/faculty/pconrad/cs16/lab01
--bash-4.2$ ls
-animals01.txt  countDucks.cpp  myProg02      sample01
-animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
--bash-4.2$ ~bboe/bin/submit -p 195 myProg01.cpp myProg02.cpp
-logged in as pconrad@cs.ucsb.edu
+[dimirza@csil-02 lab01]$ pwd
+/cs/faculty/dimirza/cs16/lab01
+[dimirza@csil-02 lab01]$ ls
+animals01.txt  countDucks      myProg01      myProg02      README.md
+animals02.txt  countDucks.cpp  myProg01.cpp  myProg02.cpp  sample01.cpp
+[dimirza@csil-02 lab01]$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
+logged in as dimirza@cs.ucsb.edu
 Sending myProg01.cpp
 Sending myProg02.cpp
 Submission successful
-Results will be available at: https://submit.cs.ucsb.edu/submission/68832
--bash-4.2$ 
+Results will be available at: https://submit.cs.ucsb.edu/submission/226377
+[dimirza@csil-02 lab01]$
 ```
 
 Once you have done the submit, go to the link shown.  (Yours will have a different number from the one given above.)
 
-==== What you'll see on submit.cs if the submission was successful ====
+### What you'll see on submit.cs if the submission was successful 
 
-If you see the following, it means you passed all the tests.  This is 120 points of the 200 points for this lab.  
-
-The other 80 are for promptness and style, and they are explained in the final section of these instructions. 
-
-So, if you are seeing this green output, you are ready to scroll down to those and check over your code for those issues.  If you find any thing you want to change, you may resubmit as many times as needed up until the deadline.
+If you see the following, it means you passed all the tests.  A successful submission will get 120 points. If you find any thing you want to change, you may resubmit as many times as needed up until the deadline.
 
 <div id="diff_table_div">
 <div class="row-fluid"><div class="pull-left well well-small"><h3 style="color:green">Passed Tests</h3><table border="1">
@@ -362,19 +360,17 @@ So, if you are seeing this green output, you are ready to scroll down to those a
 
 </div>
 
-==== What you might see if there were errors ====
+### What you might see if there were errors 
 
 If instead, you see someting like this, it means you didn't pass some tests:
 
 ![error](/lab/lab01/submit.cs.error-50pct.png){:height="500px"}
 
-If you are seeing something like that, try to understand the feedback you are getting before asking questions.  Then if you are still stuck, ask a TA for help.  For example, the output above shows that the student forgot the "colon" (<code>:</code>) in the output.
+If you are seeing something like that, try to understand the feedback you are getting before asking questions.  Then if you are still stuck, ask for help.  For example, the output above shows that the student forgot the "colon" (<code>:</code>) in the output.
 
 = Evaluation and Grading =
 
-To earn full credit for this lab:
-
-* (120 pts) You should have successfully submitted both myProg01.cpp and myProg02.cpp  via submit.cs and received a "green" indication that it passed all the tests for expected output.
+To earn full credit for this lab (120 pts) you should have successfully submitted both myProg01.cpp and myProg02.cpp  via submit.cs and received a "green" indication that it passed all the tests for expected output.
 
 <div id="diff_table_div">
 <div class="row-fluid"><div class="pull-left well well-small"><h3 style="color:green">Passed Tests</h3><table border="1">
@@ -382,18 +378,16 @@ To earn full credit for this lab:
 
 </div>
 
-* (80 pts) Promptness and Style: For the 80 points for promptness and style, the following rubric applies:
 
-* Style: 
+
+* You must check that you have followed these style guidelines: 
+
 1. Indentation is neat, consistent and follows good practice (see below)
 2. Variable name choice: variables should have sensible names.
-	More on indentation: Your code should be indented neatly.   Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way.    Follow the examples from lecture, the sample code, and from the textbook.   Note that emacs will automatically indent for you---ask Conrad to show you how in lecture!
+	More on indentation: Your code should be indented neatly.  Code that is inside braces should be indented, and code that is at the same "level" of nesting inside braces should be indented in a consistent way.    Follow the examples from lecture, the sample code, and from the textbook.   
 
 
-* Your submission should be on-time.
-1. If the submission comes AFTER TAs have finished grading the lab, you are subject to getting a zero.     
-2. In between the official deadline, and the time the TAs finish grading the lab, there is an "informal" grace period of indeterminate length.    If you submit during this time, you may lose 20 to 40 points for late submission, depending on how late the submission is.  
-3. Did I mention: if you miss the deadline, you are subject to getting a zero, especially if your submission comes after the TA is done grading all the OTHER submissions for that lab? Yes I did.  Now I've mentioned it twice.
+* Your submission should be on-time. If you miss the deadline, you are subject to getting a zero
 
 
 Note:
@@ -401,12 +395,13 @@ Note:
 
 
 
-
 ## Preparing for lab02: Git one-time configurations and basic work flow <a name="gitonetime"></a>
 
-In the last assignment we used github's web interface. In this section we will learn about github's command-line tools which allow you to perform version control in a terminal. Software developers almost always prefer to use github's command line tools for version control instead of the web interface. The reason is that using the command-line tools you can (1) use your favorite editor to develop your code (2) compile and test your code, while also performing version control. 
+In the last assignment we used github's web interface. In this section we will learn about github's command-line tools which allow you to perform version control in a terminal. Software developers almost always prefer to use github's command line tools for version control instead of the web interface. The reason is that with the command-line tools you can (1) use your favorite editor to write your code, instead of github's simple web-based editor (2) compile and test your code, while also performing version control. 
 
-You will use the git command-line tools in the next assignment. In preparation for that we ask that you complete a few simple one-time configurations as part of this assignment and read some useful articles. Log into your CoE account and navigate to your cs16 directory. Then do the following steps:
+We will see the complete workflow with the git command-line tools in the next assignment. In preparation for that we ask that you complete a few simple one-time configurations as part of this assignment and read some useful articles.
+
+ Log into your CoE account and navigate to your cs16 directory. Then do the following steps:
 
 * Step 1: Generate a private/public key pair and upload your public key to github. To do this refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/)
 
@@ -422,10 +417,16 @@ You will use the git command-line tools in the next assignment. In preparation f
 
 *Optional Exercise* 
 
-* Make sure you are in your cs16 directory on a CSIL server. You may have to go back to the articles you just read to complete these steps. 
+* Make sure you are in your cs16 directory on a CSIL server. You may have to go back to the articles you just read to complete these steps.
 
-1. At the command prompt try cloning the repo that you created in lab00 using the ssh address of your repo.  The ssh address can be obtained by navigating to your repo on github in a web-browser, and clicking on the green "Clone or download" button. In our lab00 example the ssh address was: `git@github.com:ucsb-cs16-wi17/lab00-johns-lilya.git`, yours should be something similar. Cloning the repo will create a directory called `lab00-johns-lilya` that contains all our lab00 code. The directory created after cloning your repo should be something similar as well. 
+1. Open a browser and navigate to our class organization on github, available at this link: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). As shown in lecture, and in lab00, create a PRIVATE repo, with a readme and a .gitignore in our class organization. If your github username is jgaucho, your repo should be called: lab01_jgaucho
 
-2. `cd` into the directory that was created in the previous step. Open hello.cpp in a editor and make the following minor changes: (1) Add a comment to hello.cpp that says "This program has been modified using git command-line tools". (2) Change the message printed by your hello program to something else. 
+2. Open a terminal on your machine and naviagte to your cs16 directory. At the command prompt try cloning the repo that you just using the ssh address of your repo.  The ssh address can be obtained by navigating to your repo on github in a web-browser, and clicking on the green "Clone or download" button. If your repo name is 'lab00-jgaucho', the ssh address should be: `git@github.com:ucsb-cs16-wi17/lab01_jgaucho`, yours should be something similar. Cloning the repo will create a directory called `lab01_jgaucho` that contains only a README and a .gitignore. 
 
-3. Compile your hello.cpp program and run it to make sure there are no errors. Then follow the instructions from the "git basic work flow" article to push your local changes to github. Be sure to use the *git add*, *git commit* and *git push* commands in that sequence as described by the article. Once you are done, open a web browser and navigate to your lab00 repo. You should see your latest changes reflected on github! If you are confused at any point, seek our help. 
+3. Copy all your code from your ~/cs16/lab01/ directory to your local git repo directory. You can do this using the following command, replacing jgaucho with your github username:
+
+      cp ~/cs16/lab01/* ~/cs16/lab01_jgaucho/
+
+4. `cd` into your github lab01 directory (lab01_jgaucho). Compile and run your code. 
+
+5. Then follow the instructions from the "git basic work flow" article to push your local changes to github. Be sure to use the *git add*, *git commit* and *git push* commands in that sequence as described by the article. Once you are done, open a web browser and navigate to your lab01 repo. You should see your code in github!
