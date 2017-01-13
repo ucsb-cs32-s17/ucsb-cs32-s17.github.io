@@ -21,7 +21,7 @@ You must contact the instructor for clarification if you receive information fro
 
 ## Course instructor: Diba Mirza 
 * email: dimirza@cs.ucsb.edu	
-* Office hours: Mon, Wed: 10am - 11am, Tue: 5:00pm- 6:00pm, Harold Frank Hall 1155
+* Office hours: Tues, Thurs: 9am - 11am, Harold Frank Hall 1155
 * Homepage: [https://www.cs.ucsb.edu/~dimirza/](https://www.cs.ucsb.edu/~dimirza/)
  
 ## Teaching Assistants

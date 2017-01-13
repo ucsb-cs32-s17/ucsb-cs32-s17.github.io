@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01
-ready: false
+ready: true
 desc: "Counting ducks: Simple I/O and flow control, github command-line setup"
 assigned: 2017-01-13 15:30:00.00-8
 due: 2017-01-20 23:59:00.00-8
