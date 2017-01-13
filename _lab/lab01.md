@@ -165,7 +165,6 @@ animals02.txt  myProg01.cpp    sample01.cpp
 
 Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Open it up in a text editor and make the following changes:
 
-
 1. Change the comment at the top of the file so that it says // myProg01.cpp
 2. Change the second line of the file to be of the format "Author: your name"
 
@@ -177,12 +176,10 @@ Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Op
   * Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newlne after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
   * Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement. 
 
+*Note: As a reminder, you get out of vim or gvim with ESC:x or ESC:wq . You can get out of emacs with CTRL/X followed by CTRL/C.  It will ask if you want to save changes; type y for yes.*
 
-As a reminder, you get out of emacs with CTRL/X followed by CTRL/C.  It will ask if you want to save changes; type y for yes.
 
-You get out of vim or gvim with ESC:x or ESC:wq
-
-Compile and run myProg01.cpp with these changes.   The output should look like this:
+4. Compile and run myProg01.cpp with these changes. The output should look like this:
 
 <pre>
 5 4 3 2 1
