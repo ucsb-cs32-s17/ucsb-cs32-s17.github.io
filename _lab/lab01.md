@@ -33,7 +33,7 @@ By the time you have completed this lab, you should be able to:
 * [Turn in your code ](#step8){: data-ajax="false"}
 * [Preparing for lab02: Git one-time configurations and basic work flow](#gitonetime){: data-ajax="false"}
 
-## Step 1: Log on to CSIL and bring up a terminal window. <a name="step1"></a>
+## Step 1: Pair up, log on to CSIL and bring up a terminal window. <a name="step1"></a>
 
 I hope I can safely assume that you have all gotten a CoE account.
 Log onto the your account.  If your account is not working,  get the attention of the instructor.
@@ -167,21 +167,21 @@ Now you have a new file called myProg01.cpp that is a copy of sample01.cpp.   Op
 
 1. Change the comment at the top of the file so that it says // myProg01.cpp
 2. Change the second line of the file to be of the format "Author: your name"
+3. Change the comment within the code to "Simple that counts down from n to 1"
 
-3. Change the for loop as follows:
+4. Change the for loop as follows:
 
   * Instead of initializing to 1, initialize to n
   * Instead of testing <code>i&lt;=n</code>, test whether <code>i&gt;0</code>
   * Instead of changing i by incrementing with <code>i++</code>, change it by decrementing with <code>i--</code>
-  * Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newlne after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
+  * Remove the printing of "i=" each time.  Instead just print the number.  And Instead of printing a newline after each number, just print one space.  We do that by changing <code>cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt; endl;</code> to <code> cout &lt;&lt; i &lt;&lt; " ";</code>
   * Add a line that prints a newline at the very end, just after the for loop is over, but BEFORE the <code>return 0;</code> statement. *Note: As a reminder, you get out of vim or gvim with ESC:x or ESC:wq . You can get out of emacs with CTRL/X followed by CTRL/C.  It will ask if you want to save changes; type y for yes.*
 
-4. Compile and run myProg01.cpp with these changes. The output should look like this:
+Compile and run myProg01.cpp with these changes. The output should look like this:
 
 <pre>
 5 4 3 2 1
 </pre>
-
 
 
 You are now ready to move to the next step.   
@@ -194,7 +194,7 @@ Tip: *If you make a mistake that results in an "infinite loop", i.e. the window 
 ## Step 6: Reading from input files and counting ducks <a name="step6"></a>
 The next files we are going to look at are not C++ code, but rather data files.
 
-Use the "cat" command to look at the contents of animals01.txt and animals02.txt.  You should get results like these:
+Use the "cat" command to look at the contents of animals01.txt and animals02.txt. You should get results like these:
 
 ```
 -bash-4.2$ cat animals01.txt 
@@ -255,9 +255,9 @@ Your job is now to copy countDucks.cpp to a file myProg02.cpp and make some chan
 
 First, let's stipulate that you may assume that everything in the input file is an animal, one per line&mdash;if someone adds "potato" or "bicycle" to the file, you can just assume that potato and bicycle are now to be considered types of animals.
 
-* (1) Add a variable that will count ALL animals in the file.    Give it an appropriate name and initialize it to zero. 
-* (2) Add a variable that will count ALL animals in the file that are NOT ducks.   Give it an appropriate name and initialize it to zero. 
-* (3) Add code that will increment those counts when appropriate.  It may help to know that C++ has an else clause for an if that looks like this:
+1. Add a variable that will count ALL animals in the file.    Give it an appropriate name and initialize it to zero. 
+2. Add a variable that will count ALL animals in the file that are NOT ducks.   Give it an appropriate name and initialize it to zero. 
+3. Add code that will increment those counts when appropriate.  It may help to know that C++ has an else clause for an if that looks like this:
 
 ```
    if (condition) {
@@ -272,6 +272,7 @@ First, let's stipulate that you may assume that everything in the input file is 
 Note that it is NOT required for every if to have an else clause.
 
 Also note that the braces <code>{ } </code> are:
+
 * OPTIONAL when there is a SINGLE statement inside a particular if or else block
 * REQUIRED when there is more than one statement inside a particular if or else block
 
