@@ -329,7 +329,7 @@ animals02.txt  myProg01.cpp    myProg02.cpp  sample01.cpp
 -bash-4.2$ ~submit/submit -p 627 myProg01.cpp myProg02.cpp
 </pre>
 
-The number 195 is the "project number" specfic to CS16 W17 lab01 for our class section.
+The number 627 is the "project number" specfic to CS16 W17 lab01 for our class section.
 
 ### What a successful turnin looks like 
 
