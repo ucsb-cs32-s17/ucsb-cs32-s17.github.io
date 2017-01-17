@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: ""How is data stored on a computer? How are programs translated to a form understandable by a computer?"
+desc: "How is data stored on a computer? How are programs translated to a form understandable by a computer?"
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 
