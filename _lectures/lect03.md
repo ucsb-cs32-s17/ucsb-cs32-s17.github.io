@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc:  More loops, File I/O"
+desc:  "More loops, File I/O"
 ready: false
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: 
