@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc:  "More loops, file I/O, passing parameters to main"
+desc:  "More loops, file I/O, passing parameters to a C++ program"
 ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: 
@@ -26,5 +26,5 @@ lecture_date: 2017-01-17
 * Detecting failures
 * Printing error messages to standard error
 
-## Passing parameters to main()
+## Passing parameters to programs/main()
 
