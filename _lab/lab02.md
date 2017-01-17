@@ -24,7 +24,11 @@ The assignment for this week will utilize concepts of control flow that we cover
 
 ## Step 1: Creating and cloning your repo  <a name="clonerepo"></a>
 
-You are not expected to finish the entire lab in one sitting. Please don't rush through it and read all instructions carefully. We encourage you to work in pairs for this lab. Please sit with your pair partner on the same terminal. Decide who will be the 'driver' and who will be the 'navigator'. Log into your CoE account on CSIL and open a terminal. This lab assumes that you have completed the following steps from lab00 and lab01:
+You are not expected to finish the entire lab in one sitting. Please don't rush through it and read all instructions carefully. We encourage you to work in pairs for this lab. Please sit with your pair partner on the same terminal. Decide who will be the 'driver' and who will be the 'navigator'. If you don't know what those terms mean, be sure to see the following video on pair programming:
+
+[http://bit.ly/pair-programming-video](http://bit.ly/pair-programming-video)
+
+Log into your CoE account on CSIL and open a terminal. This lab assumes that you have completed the following steps from lab00 and lab01:
 
 (1) Have a high-level understanding of what git and github are all about. If you need a refresher, read this article: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/). Refer lab00.
 
@@ -34,22 +38,24 @@ You are not expected to finish the entire lab in one sitting. Please don't rush 
 
 (4) Read the articles on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/), [cloning your first repo](https://ucsb-cs56-pconrad.github.io/topics/git_cloning_your_first_repo/) and [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/). Refer lab01. We will now put the concepts from all the articles that you have read so far into practice. You may need to refer back to these articles to complete the following steps.
 
-* Creating a new git repo: Open a browser and navigate to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). Then go ahead and create a PRIVATE repo containing only a README.md and a .gitignore. To do this click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article. If you are working with a partner, only one of you needs to create the repo. Make sure you follow the right naming convention for your repo. If your github username is jgaucho and your partner's is alily, you should name your repo lab02_alily_jgaucho. Notice that the github usernames are listed in alphabetical order. Also make sure your repo is PRIVATE, so that you code cannot be viewed by your classmates.
+* Creating a new git repo: Open a browser and navigate to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). Then go ahead and create a PRIVATE repo containing only a README.md and a .gitignore. To do this click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article. If you are working with a partner, only one of you needs to create the repo. 
+
+**Make sure you follow the right naming convention for your repo. If your github username is jgaucho and your partner's is alily, you should name your repo lab02_alily_jgaucho. Notice that the github usernames are listed in alphabetical order. Also make sure your repo is PRIVATE, so that you code cannot be viewed by your classmates.**
 
 * Adding your partner as a collaborator: Read this article on [adding your partner as a collaborator on your github repo](https://ucsb-cs56-pconrad.github.io/topics/github_add_collaborator/). Then follow the steps in the article to add your partner.
 
-* Cloning your repo to your ~/cs16/ directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/ directory. Suppose the git repo was named lab02_jgaucho, after you clone it, you should see the directory lab02_jgaucho appear under your ~/cs16 directory. `cd` into your git repo directory.
+* Cloning your repo to your ~/cs16/ directory on CSIL: Recall this article that you read in lab01 about [cloning your repo](https://ucsb-cs16.github.io/topics/git_cloning_your_first_repo/). Read it again if you need to. Then, clone the repo that you just created in your ~/cs16/ directory. Suppose the git repo was named lab02_alily_jgaucho, after you clone it, you should see the directory llab02_alily_jgaucho appear under your ~/cs16 directory. `cd` into your git repo directory.
 
 You are now ready to get the starter code.
 
 ## Step 2: Getting the starter code from a local directory into your local git directory <a name="getstarter"></a>
 
-Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab02_jgaucho issue the following command:
+Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab02_alily_jgaucho issue the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab02_jgaucho/
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/llab02_alily_jgaucho/
 
 
-After doing this command, if you cd into ~/cs16/lab02_jgaucho/ and use the ls command, you should see three .cpp files and a README:
+After doing this command, if you cd into ~/cs16/lab02_alily_jgaucho/ and use the ls command, you should see three .cpp files and a README:
 
 ```
 -bash-4.2$ ls
@@ -95,7 +101,7 @@ For all the subproblems given in this assignment you must compile your code freq
 
 ### Print a block
 
-In lab02 git directory (lab02_jgaucho) open a file called `block.cpp` using the same editor you used for the previous labs. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
+In lab02 git directory (e.g. lab02_alily_jgaucho) open a file called `block.cpp` using the same editor you used for the previous labs. In that file, write a program that takes an input from a user for the number of rows and number of columns and prints out a block of characters that is based on these 2 parameters. The program should keep asking the user for input, and printing out the result, until the user enters zero for each of the input parameters.
 
 A session should look <b><i>exactly</i></b> like the following example (including whitespace and formatting - note that there is no whitespace at the end of each of these lines), for all the different inputs and the output:
 
@@ -144,7 +150,12 @@ Continue to the next part of the assignment. As you add new files and modify cod
 
 ### Calculate the minimum of 4 numbers
 
-In this part of the lab you will write a program that compares 4 input numbers and prints out the smallest one. You should base the program on the example programs provided to you that compare fewer inputs. Start by examining the given examples, also described below:
+In this part of the lab you will write a program that compares 4 input numbers and prints out the smallest one. 
+
+**You should not use the *min()* function in C++ algorithm library or any other outside function that performs the minimum operation for you. Instead, you should base the program on the example programs provided to you that compare fewer inputs.** 
+
+
+Start by examining the given examples, also described below:
 
 <b>min2.cpp</b>
 
@@ -183,7 +194,7 @@ Run your executable with different inputs to test it out.
 
 ### Calculate the approximate value of PI
 
-Write a C++ program that approximates the value of the constant π, based on the Leibniz formula for π. The formula is given below:
+Write a C++ program that approximates the value of the constant π. Once again you should not resort to using predefind constants and functions for π, that are provided by C++ standard libraries. Instead you should compute the value of π based on the Leibniz formula for π. The formula is given below:
 
 ```
  1 – 1/3 + 1/5 – 1/7 + 1/9 ...  = pi/4
@@ -205,7 +216,16 @@ The program should print a string of text to the terminal before getting each pi
 
 Note that each string printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
 
-In addition, all approximated floating pointer numbers must be displayed to exactly three  digits after the decimal point. 
+In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
+
+```
+cout.setf(ios::fixed); 	   // Display in fixed point notation. For example, display 1e-1 as 0.1 
+cout.setf(ios::showpoint); // Always display the decimal point.
+
+cout.precision(2);         // Set the number of digits to display after the decimal point
+```
+
+
 
 <hr>
 
