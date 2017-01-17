@@ -221,7 +221,6 @@ In addition, all approximated floating pointer numbers must be displayed to exac
 ```
 cout.setf(ios::fixed); 	   // Display in fixed point notation. For example, display 1e-1 as 0.1 
 cout.setf(ios::showpoint); // Always display the decimal point.
-
 cout.precision(2);         // Set the number of digits to display after the decimal point
 ```
 
