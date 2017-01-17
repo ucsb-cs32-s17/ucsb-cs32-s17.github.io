@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc:  "More loops, File I/O"
+desc:  "More loops, file I/O, passing parameters to main"
 ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
 annotatedpdfurl: 
@@ -10,10 +10,12 @@ lecture_date: 2017-01-17
 
 # Topics
 
-## More control flow
+## More control flow and boolean expressions
 * Nested and multi-way if-else 
-* For loops 
+* For loops
+* Nested loops (self-learn)  
 * We will practice both these concepts by playing and coding a game called "Fizzbuzz" in class
+
 
 
 ## File I/O basics
@@ -24,5 +26,5 @@ lecture_date: 2017-01-17
 * Detecting failures
 * Printing error messages to standard error
 
-
+## Passing parameters to main()
 
