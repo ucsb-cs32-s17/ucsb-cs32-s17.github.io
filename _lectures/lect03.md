@@ -1,30 +1,26 @@
 ---
 num: "lect03"
-desc:  "More loops, file I/O, passing parameters to a C++ program"
+desc:  "More control flow, passing parameters to C++ programs"
 ready: true
 pdfurl: /lectures/CS16_Lecture3.pdf
-annotatedpdfurl: 
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture3_ann.pdf 
+annotatedready: true
 lecture_date: 2017-01-17
 ---
 
-# Topics
 
-## More control flow and boolean expressions
+# Code from lecture
+[https://github.com/ucsb-cs16-wi17/lecture-01-17](https://github.com/ucsb-cs16-wi17/lecture-01-17)
+
+# Topics
 * Nested and multi-way if-else 
-* For loops
+* For, while and do-while loops - Discussion on when to use each
 * Nested loops (self-learn)  
+* Passing parameters to programs/main()
 * We will practice both these concepts by playing and coding a game called "Fizzbuzz" in class
 
 
 
-## File I/O basics
-* Examining text files using 1) an editor 2) cat command 
-* Opening a file: open()
-* Reading a line from a file: getline()
-* Reading until the end of file is reached
-* Detecting failures
-* Printing error messages to standard error
 
-## Passing parameters to programs/main()
+
 

@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: "How is data stored on a computer? "
+desc: "File IO "
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 
@@ -9,13 +9,17 @@ lecture_date: 2017-01-19
 ---
 
 # Topics
+
+
+## File I/O basics
+* Examining text files using 1) an editor 2) cat command 
+* Opening a file: open()
+* Reading a line from a file: getline()
+* Reading until the end of file is reached
+* Detecting failures
+* Printing error messages to standard error
  
-## Data and number representation 
-* binary, hex, decimal 
-* Representing characters: ASCII
-* Tools to examine data in files: hexdump
-* The data type of a variable determines its representation in memory AND the number of bits used to store each variable
-* passing parameters to main 
+
 
 
  
