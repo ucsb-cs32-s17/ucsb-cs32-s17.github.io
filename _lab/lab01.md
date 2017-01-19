@@ -78,8 +78,9 @@ In future weeks, we may simply say something like &quot;create a <code>~/cs16/la
 
 Copy the code from the instructor's account on the CSIL server using the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab01-startercode/* ~/cs16/lab01/
-
+```
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab01-startercode/*  ~/cs16/lab01/
+```
 
 After doing this command, if you cd into ~/cs16/lab01/ and use the ls command, you should see several .cpp files:
 
