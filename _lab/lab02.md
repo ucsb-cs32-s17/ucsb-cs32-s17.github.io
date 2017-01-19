@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab02	
-ready: false
+ready: true
 desc: "Crunching numbers: Loops and functions, integrating github into your workflow  "
 assigned: 2017-01-20 15:30:00.00-8
 due: 2017-01-27 23:59:00.00-8
