@@ -407,10 +407,11 @@ We will see the complete workflow with the git command-line tools in the next as
 
 * Step 2: Set up your global user.name and user.email values. To do this type in the following commands, but change the name Alex Triton to your own real world first and last name. If you prefer, for privacy reasons, you may use your first name and last initial. Also, change the email address atriton@cs.ucsb.edu to your own @ucsb.edu email address.
 
-    
-    git config --global user.name "Alex Triton"
+```
+   git config --global user.name "Alex Triton"
 
-    git config --global user.email "atriton@cs.ucsb.edu"
+   git config --global user.email "atriton@cs.ucsb.edu"
+```
     
 
 * Read this article on [cloning your first repo](https://ucsb-cs56-pconrad.github.io/topics/git_cloning_your_first_repo/) and another article on [git basic workflow](https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/). In the next assignment we will use this information to delve into the command-line tools. However, if you would like to continue exploring, try the following optional exercise.
