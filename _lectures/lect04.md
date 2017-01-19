@@ -4,7 +4,7 @@ desc: "File IO "
 ready: false
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 
-annotatedready: false
+annotatedready: true
 lecture_date: 2017-01-19 
 ---
 
@@ -17,7 +17,7 @@ lecture_date: 2017-01-19
 * Reading a line from a file: getline()
 * Reading until the end of file is reached
 * Detecting failures
-* Printing error messages to standard error
+* Printing error messages to standard error with cerr
  
 
 
