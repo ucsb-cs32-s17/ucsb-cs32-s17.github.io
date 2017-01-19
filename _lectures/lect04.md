@@ -1,10 +1,10 @@
 ---
 num: "lect04"
 desc: "File IO "
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture4.pdf
 annotatedpdfurl: 
-annotatedready: true
+annotatedready: false
 lecture_date: 2017-01-19 
 ---
 
