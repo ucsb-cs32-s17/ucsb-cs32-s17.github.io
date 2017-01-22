@@ -8,6 +8,9 @@ annotatedready: true
 lecture_date: 2017-01-19 
 ---
 
+# Code from lecture
+[https://github.com/ucsb-cs16-wi17/lecture-01-19](https://github.com/ucsb-cs16-wi17/lecture-01-19)
+
 # Topics
 
 
