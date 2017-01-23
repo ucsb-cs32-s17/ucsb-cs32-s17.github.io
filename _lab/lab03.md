@@ -185,16 +185,14 @@ Either way, for now, concentrate only on the test failures that pertain to starT
 Some rules to keep in mind for the starT function:
 
 * EVERY line of your T should have exactly the same number of characters, and should end in a newline&mdash;remember to pad out each line with spaces.
-
 * Return a string that represents the letter T with the correct width and height, but only if height &gt;=2, and width is an odd number &gt;=3
-
 * if the height and width values are not valid, return an empty string
 
 Hints: recall that:
 
 * the % operator can be used to test where a number is odd or even
-* the &amp;&amp; operator means &quot;and&quot;
-* the || operator means &quot;or&quot;
+* the &amp;&amp; operator means "and"
+* the || operator means "or"
 * the opposite of &gt;= is &lt;, not &lt;=
 
 Also, for starT.cpp:
