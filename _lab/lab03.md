@@ -293,6 +293,8 @@ You MUST make one final submission that includes ALL of your files.  For getting
 
 If there are parts you can't figure out, be sure to submit all of your files anyway to maximize the number of points you receive based on the parts that '''are''' working.
 
+Make sure you do a final *git add ..*, *git commit ...* and *git push ..* to make sure the latest version of your code is available on github.
+
 # Evaluation and Grading 
  
 Mechanics:
