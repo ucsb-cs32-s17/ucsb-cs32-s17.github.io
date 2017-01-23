@@ -120,13 +120,13 @@ If you are working in a pair:
 
 ## Step 2: Getting the code
 
-Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_jgaucho_alily issue the following command:
+Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_alily_jgaucho issue the following command:
 
 ```
-cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_jgaucho_alily/
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_alily_jgaucho/
 ```
 
-After executing this command, if you cd into ~/cs16/lab03_jgaucho_alily/ and use the ls command, you should see the following files:
+After executing this command, if you cd into ~/cs16/lab03_alily_jgaucho/ and use the ls command, you should see the following files:
 
 ```
 -bash-4.2$ ls
@@ -164,6 +164,7 @@ Look over the code and try to understand how it works.  When you feel ready, mov
 Your job now is to start edit the starT.cpp program, which has a function inside of it that is a "stub".  That function does NOT produce the correct output---it always just returns the string "stub".   You need to replace that code with a proper implementation of starT.  You can use the implementation of starL in the starL.cpp file as a model.
 
 Refer back to the description of starT earlier in this lab.   You can also run the program with arguments of -1 -1 to run the internal tests and see whether your implementation is correct.
+
 
 When you think you have a correct implementation, try submitting to the submit.cs system.  You can submit just your starT.cpp program to see how far along you've gotten:
 
@@ -204,6 +205,15 @@ Usage: ./starT width height
 
 * If the height and width are both -1, then invoke the internal tests.  Don't change those.  If you do, then you may lose points.
 
+
+Save the new version of your code with the starT implementation by typing out the following commands:
+
+```
+git add starT.cpp
+git commit -m "Implemented starT()"
+git push origin master
+```
+
 ## Step 5: Writing the starC program 
 
 Next, write the starC program.   Follow the same basic procedure as for the starT.cpp program.
@@ -231,6 +241,16 @@ If you submit starC.cpp together with your starT.cpp program, your submit comman
 Note that failures for <code>starZ.cpp</code> may still show up, but we need not be concerned about those yet.  
 
 Concentrate only on the test failures that pertain to starC.cpp and starT.cpp and try to address any problems you encounter.  Once all of those pass, move on to the starZ.cpp program:
+
+Save the new version of your code with the starT and starC implementation by typing out the following commands:
+
+```
+git add starC.cpp
+git commit -m "Implemented starC()"
+git push origin master
+```
+
+
 
 ## Step 6: Writing the starZ program 
 
