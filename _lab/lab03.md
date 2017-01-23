@@ -198,7 +198,9 @@ Also, for starT.cpp:
 
 * If there are not exactly two command line args after the program name (one for width and one for height), print a usage message: 
 
-<code>Usage: ./starT width height</code>
+```
+Usage: ./starT width height
+```
 
 * If the height and width are both -1, then invoke the internal tests.  Don't change those.  If you do, then you may lose points.
 
@@ -211,16 +213,17 @@ To get started, look at the table near the top of this lab that shows correct ou
 Note that you'll need to add some code to the main, but this time the rules are different.   The minimum width is 2, and the minimum height is 3&mdash;everything else returns a null string (except for the values -1 for width and -1 for height&mdash;when passed in combination, the tests should be run.)
 
 When:
+
 * You can run your code with: <code>./starC -1 -1</code> and all the tests pass
 * You can run your code on values such as <code>./starC 4 5</code> and <code>./starC 5 4 </code> and see the same output as what is shown in the table, AND
-* When typing in a command line that doesn't have exactly two arguments after </code>./starC</code> produces the correct error message
+* When typing in a command line that doesn't have exactly two arguments after <code>./starC</code> produces the correct error message
 
 then, you are ready to try testing your code on the submit system.
 
 If you submit starC.cpp together with your starT.cpp program, your submit command will look like this:
 
 ```
-~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
+~submit/submit -p 635 starC.cpp starT.cpp 
 ```
 
 (The order of the files doesn't matter&mdash;list starT.cpp first, or starC.cpp first, aand either way, the result is the same.)
@@ -233,9 +236,10 @@ Concentrate only on the test failures that pertain to starC.cpp and starT.cpp an
 
 For the starZ.cpp program, we have these rules:
 
-* Take only one command line parameter: the width. The height will automatically be set equal to the width.</li>
+* Take only one command line parameter: the width. The height will automatically be set equal to the width.
 
 The starZ function follows these rules:
+
 * return a string that draws  the letter Z with the correct width and height, but only if width &gt;=3 
 * return an empty string if the value passed in for width is not valid, print nothing at all.
 
