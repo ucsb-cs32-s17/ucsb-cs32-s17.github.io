@@ -192,7 +192,7 @@ Hints: recall that:
 
 * the % operator can be used to test where a number is odd or even
 * the &amp;&amp; operator means "and"
-* the || operator means "or"
+* the <code>||</code> operator means "or"
 * the opposite of &gt;= is &lt;, not &lt;=
 
 Also, for starT.cpp:
