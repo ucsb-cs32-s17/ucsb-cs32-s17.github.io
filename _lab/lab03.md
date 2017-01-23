@@ -123,8 +123,9 @@ If you are working in a pair:
 
 Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_jgaucho_alily issue the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_jgaucho_alily/
-
+```
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_jgaucho_alily/
+```
 
 After executing this command, if you cd into ~/cs16/lab03_jgaucho_alily/ and use the ls command, you should see the following files:
 
