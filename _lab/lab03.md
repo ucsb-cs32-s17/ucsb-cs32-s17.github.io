@@ -12,7 +12,6 @@ due: 2017-02-03 23:59:00.00-8
 By the time you have completed this lab, you should be able to
 
 * Use if/else and for loops to print various kinds of shapes with &quot;ASCII Art&quot;
-
 * Show that you understand how to work through the basic process of test-driven development in C++
  
 ## Skills Needed 
@@ -190,8 +189,8 @@ Some rules to keep in mind for the starT function:
 
 Hints: recall that:
 
-* the % operator can be used to test where a number is odd or even
-* the &amp;&amp; operator means "and"
+* the <code>%</code> operator can be used to test where a number is odd or even
+* the <code>&&</code> operator means "and"
 * the <code>||</code> operator means "or"
 * the opposite of &gt;= is &lt;, not &lt;=
 
