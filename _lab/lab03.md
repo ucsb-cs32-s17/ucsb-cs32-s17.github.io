@@ -220,7 +220,7 @@ then, you are ready to try testing your code on the submit system.
 If you submit starC.cpp together with your starT.cpp program, your submit command will look like this:
 
 ```
-~bboe/bin/submit -p 223 starT.cpp starC.cpp
+~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
 ```
 
 (The order of the files doesn't matter&mdash;list starT.cpp first, or starC.cpp first, aand either way, the result is the same.)
@@ -277,7 +277,7 @@ And, if there is not exactly one parameter, there should be an appropriate "usag
 When you have a version that can pass its internal tests, try submitting it along with your starT.cpp and starC.cpp to the submit.cs system.  
 
 ```
-~bboe/bin/submit -p 223 starC.cpp starT.cpp starZ.cpp
+~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
 ```
 
 If there are errors reported, fix them.    
@@ -287,8 +287,7 @@ When you have a clean build, you are nearly done with this lab.   I say "nearly"
 Note:
 You MUST make one final submission that includes ALL of your files.  For getting incremental feedback while working on the lab, it is fine to submit one at a time, but for GRADING purposes, your LAST submission (in time) must be a complete submission of EVERYTHING.   In the ideal case (for you), that submission is completely b"green", i.e. all test cases pass, and you have a perfect score (at least from the standpoint of the points you are awarded for passing the test cases.)
 
-If there are parts you can't figure out, be sure to submit all of your files anyway to maximize the number of points you receive based on the parts that '''are''' working.}}
-{{TipEnd}}
+If there are parts you can't figure out, be sure to submit all of your files anyway to maximize the number of points you receive based on the parts that '''are''' working.
 
 # Evaluation and Grading 
  
@@ -297,7 +296,7 @@ Mechanics:
 * (30 pts) submitting starT.cpp, starC.cpp and starZ.cpp to the submit system (10 points each)
 * (30 pts) submission is on time and follows instructions 
 * (30 pts) starT.cpp, starC.cpp and starZ.c files submitted  have good header comments 
-** First line is comment with &quot;cs16 lab04&quot; and date, and your name, and if applicable, that of your pair partner(s)</li>
+
 
 Correctness
 
