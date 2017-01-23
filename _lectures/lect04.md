@@ -13,7 +13,6 @@ lecture_date: 2017-01-19
 
 # Topics
 
-
 ## File I/O basics
 * Examining text files using 1) an editor 2) cat command 
 * Opening a file: open()

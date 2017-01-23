@@ -19,7 +19,7 @@ By the time you have completed this lab, you should be able to
 
 By now, we expect that you are comfortable with these basic skills from lab00, lab01, lab02, and lab03 so we will no longer describe them in as much detail as we did previously:
  
-* Using a text-editor (we suggest emacs) to create and/or edit C++ programs
+* Using a text-editor to create and/or edit C++ programs
 * Creating a git repo on github
 * Cloning your github to your local machine
 * Integrating git command-line tools into your workflow (*git add...*, *git commit..*, *git push ...*)
@@ -80,7 +80,7 @@ The rule is that the L should have height at least 2, and width at least 2, othe
 So, this is a fairly easy function to write. This will do the job, and is provided for you as an example of how functions like this should be written.
 
 
-To test whether this function works, we can write a simple main that takes the command line arguments, converts them to integers with atoi, 
+To test whether this function works, we can write a simple main that takes the command line arguments, converts them to integers with stoi, 
 and then passes those to the function:
 
 ## What you'll be doing 
@@ -115,18 +115,18 @@ If you are working in a pair:
 * Go to submit.cs, navigate to CS16, W17, lab03, and create a team for you and your pair partner.   
 * Decide on initial navigator and driver.
 * Driver, log on to driver's CSIL account.
-* Go to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard) and create a new repo following the naming conventions introduced in previous labs. Your repo name should be lab03_xxxx for this lab
+* Go to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard) and create a new repo following the naming conventions introduced in previous labs. 
 * Add your partner as a collaborator on the newly created git repo
 * Log on to CSIL, bring up a terminal window, and clone your repo in your ~/cs16/ directory following the instructions from previous labs
 
 ## Step 2: Getting the code
 
-Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_jgaucho issue the following command:
+Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_jgaucho_alily issue the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_jgaucho/
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_jgaucho_alily/
 
 
-After doing this command, if you cd into ~/cs16/lab03_jgaucho/ and use the ls command, you should see the following files:
+After executing this command, if you cd into ~/cs16/lab03_jgaucho_alily/ and use the ls command, you should see the following files:
 
 ```
 -bash-4.2$ ls
@@ -155,9 +155,7 @@ First compile the starL.cpp file that you have in this week's directory, and run
  ./starL -1 -1
 </pre>
 
-With the command line parameters -1 -1, the program runs a set of tests on itself to make sure that the function starL inside the program is functioning correctly.  So, you should be able to get some feedback on whether your code is correct before you even send it to the submit program.  
-
-* Note: In [[F14:Lectures:10.20]], we looked at code that runs its tests when you pass -t or --test as the command line argument.  That code used strcmp to compare a C-string value to argv[1], but we aren't going to deal with that in this lab&mdash;we'll save C-string and the messiness of strcmp for a later lab, after we've had a chance to read about C-strings in the textbook.   We'll just use atoi to convert the argv[1] and argv[2] to integer values, and compare against -1.
+With the command line parameters -1 -1, the program runs a set of tests on itself to make sure that the function starL inside the program is functioning correctly.  So, you should be able to get some feedback on whether your code is correct before you even send it to the submit program.  The code uses stoi to convert the argv[1] and argv[2] to integer values, and compare against -1.
 
 Look over the code and try to understand how it works.  When you feel ready, move on to the next step, and try tackling the starT.cpp, starC.cpp and starZ.cpp programs.
 
@@ -170,7 +168,7 @@ Refer back to the description of starT earlier in this lab.   You can also run t
 When you think you have a correct implementation, try submitting to the submit.cs system.  You can submit just your starT.cpp program to see how far along you've gotten:
 
 ```
-~bboe/bin/submit -p 223 starT.cpp
+~submit/submit -p 635 starT.cpp 
 ```
 
 Note that this will show failures for <code>starC.cpp</code> and <code>starZ.cpp</code>, which are files that you'll be working on at a later step.
@@ -178,7 +176,7 @@ Note that this will show failures for <code>starC.cpp</code> and <code>starZ.cpp
 You could also just submit the "stubs" for those&mdash;though those will fail some or all of the tests:
 
 ```
-~bboe/bin/submit -p 223 starC.cpp starT.cpp starZ.cpp
+~submit/submit -p 635 starC.cpp starT.cpp starZ.cpp
 ```
 
 Either way, for now, concentrate only on the test failures that pertain to starT.cpp and try to address any problems you encounter.  If you fix these NOW before moving on to starC.cpp and/or starZ.cpp, you will likely have better success, because what you learn from fixing your mistakes will help you get those other parts solved more quickly and easily.
@@ -186,17 +184,24 @@ Either way, for now, concentrate only on the test failures that pertain to starT
 Some rules to keep in mind for the starT function:
 
 * EVERY line of your T should have exactly the same number of characters, and should end in a newline&mdash;remember to pad out each line with spaces.
+
 * Return a string that represents the letter T with the correct width and height, but only if height &gt;=2, and width is an odd number &gt;=3
+
 * if the height and width values are not valid, return an empty string
 
 Hints: recall that:
+
 * the % operator can be used to test where a number is odd or even
 * the &amp;&amp; operator means &quot;and&quot;
 * the || operator means &quot;or&quot;
 * the opposite of &gt;= is &lt;, not &lt;=
 
 Also, for starT.cpp:
-* If there are not exactly two command line args after the program name (one for width and one for height), print a usage message: <code>Usage: ./starT width height</code>
+
+* If there are not exactly two command line args after the program name (one for width and one for height), print a usage message: 
+
+<code>Usage: ./starT width height</code>
+
 * If the height and width are both -1, then invoke the internal tests.  Don't change those.  If you do, then you may lose points.
 
 ## Step 5: Writing the starC program 
