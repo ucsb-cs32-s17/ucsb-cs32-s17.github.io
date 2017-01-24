@@ -13,8 +13,8 @@ lecture_date: 2017-01-24
 
 ## How to evaluate C++ expressions
 
-* Operator Precedence
-* Operator Associativity
+* Operator precedence
+* Operator associativity
 * Order of evaluation
 
 ## Data and number representation 
