@@ -33,6 +33,16 @@ annotatedready: true
 * Running your program
 * Commenting your code
 
+## C++ variables and datatypes
+* Unlike Python, you MUST "declare" variables on first appearance in any C++ program. We'll discuss what this means.
+* Scope and lifetime of variables
+* Uninitialized variables in C++
+* We will look at three specific datatypes: char, int and string
+
+## Simple flow control structures
+* If else statements are DIFFERENT in C++ than in Python. We'll discuss.
+* For and while loops are DIFFERENT in C++ than in Python. We'll discuss.
+
 
 
 
