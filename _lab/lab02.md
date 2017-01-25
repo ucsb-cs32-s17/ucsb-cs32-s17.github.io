@@ -213,25 +213,31 @@ The program takes an input from the user for the value of n, which determines th
 The program should print a string of text to the terminal before getting each piece of input from the user. A session should look like the following example (including whitespace and formatting), showing the expected output for different inputs:
 
 ```
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 0
-The approximate value of pi using 1 term is :4.000
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 3
-The approximate value of pi using 4 terms is :2.895
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 10
-The approximate value of pi using 11 terms is :3.232
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 50
-The approximate value of pi using 51 terms is :3.161
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 100
-The approximate value of pi using 101 terms is :3.151
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 250
-The approximate value of pi using 251 terms is :3.146
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 1000
-The approximate value of pi using 1001 terms is :3.143
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 2000
-The approximate value of pi using 2001 terms is :3.142
-Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): -1
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+0
+The approximate value of pi using 1 term is: 4.000
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+3
+The approximate value of pi using 4 terms is: 2.895
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+9
+The approximate value of pi using 10 terms is: 3.042
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+49
+The approximate value of pi using 50 terms is: 3.122
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+99
+The approximate value of pi using 100 terms is: 3.132
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+999
+The approximate value of pi using 1000 terms is: 3.141
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+9999
+The approximate value of pi using 10000 terms is: 3.141
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
+-1
 ```
-
+Be sure to have a newline after each "Enter the value..." prompt and no other white spaces.
 
 In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
 
