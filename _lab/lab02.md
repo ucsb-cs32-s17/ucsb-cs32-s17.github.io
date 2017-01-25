@@ -52,7 +52,7 @@ You are now ready to get the starter code.
 
 Copy the code from the instructor's account on the CSIL server into your local git directory. If your local git directory is lab02_alily_jgaucho issue the following command:
 
-  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/llab02_alily_jgaucho/
+  cp /cs/faculty/dimirza/cs16-wi17/labs/lab02-startercode/* ~/cs16/lab02_alily_jgaucho/
 
 
 After doing this command, if you cd into ~/cs16/lab02_alily_jgaucho/ and use the ls command, you should see three .cpp files and a README:
@@ -208,7 +208,7 @@ pi = 4 · [ 1 – 1/3 + 1/5 – 1/7 + 1/9 ... + (–1 ^ n)/(2n + 1) ]
 
 The Leibniz formula works well for high values of n.
 
-The program takes an input from the user for the value of n, which determines the number of terms in the approximation of the value of pi. The program then outputs the approximated value of pi as calculated by the Leibniz formula. You must also include a loop that allows the user to repeat this calculation for new values of `n` until the user says she or he wants to end the program by issuing an input of -1 (or any other negative number). You may assume that the user always inputs an integer. 
+The program takes an input from the user for the value of n, which determines the number of terms in the approximation of the value of pi. The program then outputs the approximated value of pi as calculated by the Leibniz formula. You must also include a loop that allows the user to repeat this calculation for new values of 'n' until the user says she or he wants to end the program by issuing an input of -1 (or any other negative number). You may assume that the user always inputs an integer. 
 
 The program should print a string of text to the terminal before getting each piece of input from the user. A session should look like the following example (including whitespace and formatting), showing the expected output for different inputs:
 
@@ -238,6 +238,8 @@ Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit):
 -1
 ```
 Be sure to have a newline after each "Enter the value..." prompt and no other white spaces.
+
+Here is a link that gives the approximated values of pi for up to 1000 terms: [http://www.eveandersson.com/pi/gregory-leibniz](http://www.eveandersson.com/pi/gregory-leibniz)
 
 In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
 
