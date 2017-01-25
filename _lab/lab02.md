@@ -208,20 +208,37 @@ pi = 4 · [ 1 – 1/3 + 1/5 – 1/7 + 1/9 ... + (–1 ^ n)/(2n + 1) ]
 
 The Leibniz formula works well for high values of n.
 
-The program takes an input from the user for the value of n, which determines the number of terms in the approximation of the value of pi. The program then outputs that calculation. You must also include a loop that allows the user to repeat this calculation for new values of `n` until the user says she or he wants to end the program by issuing an input of 0.
+The program takes an input from the user for the value of n, which determines the number of terms in the approximation of the value of pi. The program then outputs the approximated value of pi as calculated by the Leibniz formula. You must also include a loop that allows the user to repeat this calculation for new values of `n` until the user says she or he wants to end the program by issuing an input of -1 (or any other negative number). You may assume that the user always inputs an integer. 
 
 The program should print a string of text to the terminal before getting each piece of input from the user. A session should look like the following example (including whitespace and formatting), showing the expected output for different inputs:
 
-<img src="pi.png" width="700" alt="pi program example" />
+```
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 0
+The approximate value of pi using 1 term is :4.000
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 3
+The approximate value of pi using 4 terms is :2.895
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 10
+The approximate value of pi using 11 terms is :3.232
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 50
+The approximate value of pi using 51 terms is :3.161
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 100
+The approximate value of pi using 101 terms is :3.151
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 250
+The approximate value of pi using 251 terms is :3.146
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 1000
+The approximate value of pi using 1001 terms is :3.143
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): 2000
+The approximate value of pi using 2001 terms is :3.142
+Enter the value of the parameter 'n' in the Leibniz formula (or -1 to quit): -1
+```
 
-Note that each string printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
 
 In addition, all approximated floating pointer numbers must be displayed to exactly three digits after the decimal point. To do this you should use set the precision for displaying floating point numbers. This is done as follows:
 
 ```
 cout.setf(ios::fixed); 	   // Display in fixed point notation. For example, display 1e-1 as 0.1 
 cout.setf(ios::showpoint); // Always display the decimal point.
-cout.precision(2);         // Set the number of digits to display after the decimal point
+cout.precision(3);         // Set the number of digits to display after the decimal point to 3
 ```
 
 
