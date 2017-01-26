@@ -1,7 +1,7 @@
 ---
 num: "lect06"
-desc: "How are programs translated to a form understandable by a computer? Separate compilation with Makefiles"
-ready: false
+desc: "Data representation (contd), test driven development"
+ready: true
 pdfurl: /lectures/CS16_Lecture6.pdf
 annotatedpdfurl: 
 annotatedready: false
@@ -9,24 +9,17 @@ lecture_date: 2017-01-26
 ---
 
 # Topics
-## Under the hood of program compilation and execution
-* From high-level programs to machine code
-* A peek into assembly code
-* Making it real: Getting the compiler to show assembly code
-* Creating object files and linking programs with g++
-* Makefiles
+
+## Data represnentations contd.
+
+* Conversion between different representations
+* Key ideas: bits can represent ANYTHING. With n bits we can represent at most 2^N things
+* Apply above rule to represent characters (ASCII), unicode, colors ....
+* What is signed vs unsigned integer representation
+* Signed representation used by moderm computers: two's complement
+* The data type of a variable determines its representation in memory AND the number of bits used to store each variable
 
 
-
-## Layout of C++ programs in memory
-* First order model of memory
-* Program layout: text, data, bss, stack and heap
-* Connections with the stored program model
-
-## Under the hood of function calls
-* Function calls use the run-time stack, we'll see how and why that's important
-* Review of pass by value
-* Passing parameters to functions by value
 
 
 

@@ -19,10 +19,9 @@ lecture_date: 2017-01-24
 
 ## Data and number representation 
 
-* binary, hex, decimal 
-* Conversion between different representations
-* Representing characters: ASCII
-* The data type of a variable determines its representation in memory AND the number of bits used to store each variable
+* Positional encoding: binary, hex, decimal 
+* Internal vs. external representation
+
  
 
 
