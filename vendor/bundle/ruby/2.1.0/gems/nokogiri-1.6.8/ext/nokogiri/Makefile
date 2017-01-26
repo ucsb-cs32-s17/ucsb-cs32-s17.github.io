@@ -13,7 +13,7 @@ ECHO = $(ECHO1:0=@echo)
 srcdir = .
 topdir = /Users/diba/.rvm/rubies/ruby-2.1.7/include/ruby-2.1.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/diba/.rvm/rubies/ruby-2.1.7/include/ruby-2.1.0/x86_64-darwin14.0
+arch_hdrdir = /Users/diba/.rvm/rubies/ruby-2.1.7/include/ruby-2.1.0/x86_64-darwin16.0
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/Users/diba/.rvm/rubies/ruby-2.1.7
@@ -30,8 +30,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20161219-24448-kcc0tl
-sitelibdir = $(DESTDIR)./.gem.20161219-24448-kcc0tl
+sitearchdir = $(DESTDIR)./.gem.20170126-4389-gmbq8g
+sitelibdir = $(DESTDIR)./.gem.20170126-4389-gmbq8g
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -53,7 +53,7 @@ oldincludedir = $(DESTDIR)/usr/include
 includedir = $(prefix)/include
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
-sysconfdir = $(DESTDIR)/etc
+sysconfdir = $(prefix)/etc
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -64,9 +64,9 @@ archdir = $(rubyarchdir)
 
 CC = gcc
 CXX = g++
-LIBRUBY = $(LIBRUBY_A)
+LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
-LIBRUBYARG_SHARED = 
+LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static -framework CoreFoundation
 empty =
 OUTFLAG = -o $(empty)
@@ -78,14 +78,14 @@ optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wshorten-64-to-32 -Wimplicit-function-declaration -Wdivision-by-zero -Wextra-tokens
 CCDLFLAGS = -fno-common
-CFLAGS   = $(CCDLFLAGS) -O3 -I/Users/haven/.sm/pkg/active/include -fPIC -mmacosx-version-min=10.7 -pipe  -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
+CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe  -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxslt/1.1.29/include -I/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4/include/libxml2 -I/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4/include/libxml2 -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+CPPFLAGS = -DHAVE_ICONV_H -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxslt/1.1.29/include -I/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4/include/libxml2 -I/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4/include/libxml2  -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -L/Users/haven/.sm/pkg/active/lib -fPIC -Bstatic -lz -fstack-protector -L/usr/local/lib
-dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
-ARCH_FLAG =  -arch x86_64
+ldflags  = -L. -fstack-protector -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib 
+dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  
+ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle
 LDSHAREDXX = $(CXX) -dynamic -bundle
@@ -93,13 +93,13 @@ AR = ar
 EXEEXT = 
 
 RUBY_INSTALL_NAME = ruby
-RUBY_SO_NAME = ruby
+RUBY_SO_NAME = ruby.2.1.0
 RUBYW_INSTALL_NAME = 
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
-arch = x86_64-darwin14.0
+arch = x86_64-darwin16.0
 sitearch = $(arch)
 ruby_version = 2.1.0
 ruby = $(bindir)/ruby
@@ -109,8 +109,8 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/ruby.h $(hdrdir)/ruby/defines.h $
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir -p
-MAKEDIRS = mkdir -p
-INSTALL = /usr/bin/install
+MAKEDIRS = /usr/local/opt/coreutils/bin/gmkdir -p
+INSTALL = /usr/local/opt/coreutils/bin/ginstall -c
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -120,8 +120,8 @@ TOUCH = exit >
 
 preload = 
 
-libpath = . $(libdir) /Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4/lib /Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxslt/1.1.29/lib
-LIBPATH =  -L. -L$(libdir) -L/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4/lib -L/Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxslt/1.1.29/lib
+libpath = . $(libdir) /Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4/lib /Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxslt/1.1.29/lib /usr/local/opt/libyaml/lib /usr/local/opt/readline/lib /usr/local/opt/libksba/lib /usr/local/opt/openssl/lib
+LIBPATH =  -L. -L$(libdir) -L/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4/lib -L/Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxslt/1.1.29/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -132,7 +132,7 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
-LIBS =  /Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxslt/1.1.29/lib/libexslt.a -lm -liconv -lpthread -lz /Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4/lib/libxml2.a /Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxslt/1.1.29/lib/libxslt.a -lm -liconv -lpthread -lz /Users/diba/git/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin14.5.0/libxml2/2.9.4/lib/libxml2.a -llzma -lpthread -ldl -lobjc  
+LIBS = $(LIBRUBYARG_SHARED) /Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxslt/1.1.29/lib/libexslt.a -lm -liconv -lpthread -lz /Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4/lib/libxml2.a /Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxslt/1.1.29/lib/libxslt.a -lm -liconv -lpthread -lz /Users/diba/github/ucsb-cs16-wi17.github.io/vendor/bundle/ruby/2.1.0/gems/nokogiri-1.6.8/ports/x86_64-apple-darwin16.0.0/libxml2/2.9.4/lib/libxml2.a -llzma -lpthread -ldl -lobjc  
 ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
 SRCS = $(ORIG_SRCS) 
 OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o
