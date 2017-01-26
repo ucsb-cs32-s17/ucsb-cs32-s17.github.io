@@ -27,7 +27,6 @@ lecture_date: 2017-02-07
 ## Complex declarions in C++
 * Right left rule
 
-## Operator precedence and associativity
-* Boolean expressions are different in C++ than Python. We will see how.
+
 
 
