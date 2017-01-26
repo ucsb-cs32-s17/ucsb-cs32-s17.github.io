@@ -20,6 +20,7 @@ lecture_date: 2017-01-19
 * Reading until the end of file is reached
 * Detecting failures
 * Printing error messages to standard error with cerr
+* When do we use exit() and why?
  
 
 
