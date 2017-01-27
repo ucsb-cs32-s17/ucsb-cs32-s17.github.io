@@ -123,11 +123,14 @@ If you are working in a pair:
 To copy the code from the instructor's account on the CSIL server into your local git directory.
 
 First, Move to the local git directory:
+
 ```
 cd local_git_directory
 (Example: cd lab03_alily_jgaucho) 
 ```
+
 Then, Copy the code to the local git directory:
+
 ```
 cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* .
 ```
@@ -152,9 +155,11 @@ git push origin master
 ## Step 3: Practicing with the starL program 
 
 First compile(-std=c++11 ) the starL.cpp file that you have in this week’s directory uding the command:
+
 ```
 g++ -std=c++11 -o starL starL.cpp
 ```
+
 Run the program with a few command line parameters. You’ll notice something special happens when you pass in the command line parameters -1 -1.
 
 <pre>
