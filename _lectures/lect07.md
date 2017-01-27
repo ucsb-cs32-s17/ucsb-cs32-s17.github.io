@@ -1,6 +1,6 @@
 ---
 num: "lect07"
-desc: "Seperate compilation, pointers"
+desc: "Test driven development, Seperate compilation, pointers"
 ready: false
 pdfurl: /lectures/CS16_Lecture7.pdf
 annotatedpdfurl: 

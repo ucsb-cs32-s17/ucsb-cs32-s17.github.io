@@ -1,10 +1,10 @@
 ---
 num: "lect06"
-desc: "Data representation (contd), test driven development"
+desc: "Data representation (contd)"
 ready: true
 pdfurl: /lectures/CS16_Lecture6.pdf
-annotatedpdfurl: 
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture6_ann.pdf
+annotatedready: true
 lecture_date: 2017-01-26 
 ---
 
