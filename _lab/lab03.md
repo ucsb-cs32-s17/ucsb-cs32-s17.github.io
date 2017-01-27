@@ -71,7 +71,7 @@ The function will have the following <em>function prototype:</em>
 
 The following table shows various calls to this function, along with what the string returned looks like when printed using <code> cout << starL(w,h); </code>
 
-The rule is that the L should have height at least 2, and width at least 2, otherwise the result is an empty string, and printing an empty string results in no output.
+The rule is that the L should have width at least 2, and height at least 2, otherwise the result is an empty string, and printing an empty string results in no output.
 
 ![starL](/lab/lab03/starL.png){:height="400px"}
 
@@ -92,7 +92,7 @@ What you'll be doing in this lab is writing three similar functions: startT, sta
 
 *Sample values returned from starC*
 
-starC renders the letters C, but requires a minimum height of 3, and a minimum width of 2.  Otherwise it returns an empty string.
+starC renders the letters C, but requires a minimum width of 3, and a minimum height of 2.  Otherwise it returns an empty string.
 
 ![starC](/lab/lab03/starC.png){:height="400px"}
 
@@ -120,13 +120,19 @@ If you are working in a pair:
 
 ## Step 2: Getting the code
 
-Copy the code from the instructor's account on the CSIL server into your local git directory. If your for local git directory is lab03_alily_jgaucho issue the following command:
+To copy the code from the instructor's account on the CSIL server into your local git directory.
 
+First, Move to the local git directory:
 ```
-cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* ~/cs16/lab03_alily_jgaucho/
+cd local_git_directory
+(Example: cd lab03_alily_jgaucho) 
+```
+Then, Copy the code to the local git directory:
+```
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* .
 ```
 
-After executing this command, if you cd into ~/cs16/lab03_alily_jgaucho/ and use the ls command, you should see the following files:
+After executing this command in your local git directory ( ~/cs16/lab03_alily_jgaucho/) . If you use the ls command, you should see the following files:
 
 ```
 -bash-4.2$ ls
@@ -145,7 +151,11 @@ git push origin master
 
 ## Step 3: Practicing with the starL program 
 
-First compile the starL.cpp file that you have in this week's directory, and run it with a few command line parameters.  You'll notice something special happens when you pass in the command line parameters -1 -1.
+First compile(-std=c++11 ) the starL.cpp file that you have in this week’s directory uding the command:
+```
+g++ -std=c++11 -o starL starL.cpp
+```
+Run the program with a few command line parameters. You’ll notice something special happens when you pass in the command line parameters -1 -1.
 
 <pre>
  ./starL 3 4
