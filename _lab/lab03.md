@@ -1,9 +1,9 @@
 ---
 layout: lab
 num: lab03
-ready: false
+ready: true
 desc: "ASCII Art: Logical operators"
-assigned: 2017-01-27 15:30:00.00-8
+assigned: 2017-01-28 21:30:00.00-8
 due: 2017-02-03 23:59:00.00-8
 ---
 
@@ -13,8 +13,18 @@ By the time you have completed this lab, you should be able to
 
 * Use if/else and for loops to print various kinds of shapes with &quot;ASCII Art&quot;
 * Show that you understand how to work through the basic process of test-driven development in C++
- 
-## Skills Needed 
+
+Below are the links to different sections of the lab:
+* [Skills Needed ](#skills){: data-ajax="false"}
+* [Ascii Art](#asciiart){: data-ajax="false"}
+* [An example for you to follow: starL](#starL){: data-ajax="false"}
+* [What you'll be doing](#yourgoal){: data-ajax="false"}
+* [Step by Step Instructions](#stepbystep){: data-ajax="false"}
+* [Evaluation and grading](#eval){: data-ajax="false"}
+
+
+
+## Skills Needed <a name="skills"></a>
 
 By now, we expect that you are comfortable with these basic skills from lab00, lab01, lab02, and lab03 so we will no longer describe them in as much detail as we did previously:
  
@@ -27,7 +37,7 @@ By now, we expect that you are comfortable with these basic skills from lab00, l
     * Performing basic management of directories and files with Unix commands such as mkdir, cd, pwd, ls, cp, mv
     * Submitting assignments in this class with the submit.cs system, and checking your results
 
-## What we'll be doing in this lab: ASCII Art 
+## What we'll be doing in this lab: ASCII Art <a name="asciiart"></a>
 
 There was a time when laser printers either hadn't been invented yet, or were not yet widely available. Thus, the only kind of printer most folks had access to was something called a &quot;line printer&quot;, which printed only from left to right, top to bottom, and could only print the kinds of characters you find on a typewriter keyboard.
 
@@ -55,7 +65,7 @@ For now, we'll be keeping things much simpler: we are going to do some very simp
 
 The first few exercises will be very simple, but they get progressively more challenging.
 
-## An example for you to follow: starL 
+## An example for you to follow: starL  <a name="starL"></a>
 
 As an example, we will write a C++ function that returns a C++ string that when printed to cout,  makes the shape of prints the letter L with stars, at any width or height, provided both width and height are &gt;= 2
 
@@ -82,7 +92,7 @@ So, this is a fairly easy function to write. This will do the job, and is provid
 To test whether this function works, we can write a simple main that takes the command line arguments, converts them to integers with stoi, 
 and then passes those to the function:
 
-## What you'll be doing 
+## What you'll be doing <a name="yourgoal"></a>
 
 What you'll be doing in this lab is writing three similar functions: startT, starC and starZ.  
 
@@ -103,7 +113,7 @@ starZ renders the letters Z, but requires a minimum width of 3.   It only takes 
 
 ![starZ](/lab/lab03/starZ.png){:height="400px"}
 
-# Step by Step Instructions 
+# Step by Step Instructions <a name="stepbystep"></a>
 
 ## Step 1: Getting Started 
 
@@ -154,7 +164,7 @@ git push origin master
 
 ## Step 3: Practicing with the starL program 
 
-First compile(-std=c++11 ) the starL.cpp file that you have in this week’s directory uding the command:
+First compile the starL.cpp file that you have in this week’s directory with the option (-std=c++11 ) as per the following command:
 
 ```
 g++ -std=c++11 -o starL starL.cpp
@@ -178,7 +188,13 @@ Look over the code and try to understand how it works.  When you feel ready, mov
 
 Your job now is to start edit the starT.cpp program, which has a function inside of it that is a "stub".  That function does NOT produce the correct output---it always just returns the string "stub".   You need to replace that code with a proper implementation of starT.  You can use the implementation of starL in the starL.cpp file as a model.
 
-Refer back to the description of starT earlier in this lab.   You can also run the program with arguments of -1 -1 to run the internal tests and see whether your implementation is correct.
+Compile your starT.cpp to the execuatable star. Suppose we want your program to draw a T with width 3 and height 2, we will run your starT executable as follows:
+
+```
+$./starT 3 2
+```
+
+In general the parameters to the startT program are width, followed by height. You should take this into consideration when writing your main function. To write the starT() function refer back to the description of starT earlier in this lab.   You can also run the program with arguments of -1 -1 to run the internal tests and see whether your implementation is correct.
 
 
 When you think you have a correct implementation, try submitting to the submit.cs system.  You can submit just your starT.cpp program to see how far along you've gotten:
@@ -330,19 +346,25 @@ If there are parts you can't figure out, be sure to submit all of your files any
 
 Make sure you do a final *git add ..*, *git commit ...* and *git push ..* to make sure the latest version of your code is available on github.
 
-# Evaluation and Grading 
+# Evaluation and Grading <a name="eval"></a>
  
 Mechanics:
 
 * (30 pts) submitting starT.cpp, starC.cpp and starZ.cpp to the submit system (10 points each)
 * (30 pts) submission is on time and follows instructions 
-* (30 pts) starT.cpp, starC.cpp and starZ.c files submitted  have good header comments 
+* (30 pts) starT.cpp, starC.cpp and starZ.cpp files submitted  have good header comments 
 
 
 Correctness
 
 * (150 pts) 15 tests, ten points each, executed by submit.cs system
 
-Style:
+Style: Style points will be provided based on your github submission, so make sure you have one
 
-* (30 pts) All three programs have good programming style, including proper use of indentation, reasonable choices for variable names, readable code, reasonable use of whitespace, and other good programming practices.
+* (10 pts) Correct creation of the lab02 github repo in our class organization following the naming conventions provided in the lab.
+
+* (30 pts) All three programs have good programming style, including proper use of indentation, reasonable choices for variable names, readable code, reasonable use of whitespace, and other good programming practices. You must have good header comments as illustrated in the coding examples done in class. First line should be the name of your file, followed by date of creation, author and a brief description of the program. You must use curly braces in the body of all control structures (if-else, for and while) even if they contain a single statement. You should not mix tabs and spaces when indenting your code
+
+Refer back to the feedback provided by the teaching staff on your lab02 code on github.
+
+
