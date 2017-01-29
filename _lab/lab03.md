@@ -15,6 +15,7 @@ By the time you have completed this lab, you should be able to
 * Show that you understand how to work through the basic process of test-driven development in C++
 
 Below are the links to different sections of the lab:
+
 * [Skills Needed ](#skills){: data-ajax="false"}
 * [Ascii Art](#asciiart){: data-ajax="false"}
 * [An example for you to follow: starL](#starL){: data-ajax="false"}
