@@ -11,42 +11,42 @@ due: 2017-02-10 23:59:00.00-8
 <h1>CS16: Programming Assignment 04</h1>
 <h2>Introduction -- Important: Read this!</h2>
 
-The TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. This assignment is due on <b>Monday, November 21st at 8:00 AM</b>.
+The TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. 
 
-<h3>Pair programming is <b>OPTIONAL</b> for this lab.</h3>
+<h3>Pair programming </h3>
 
 If working in a pair: Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. 
 We realize it is not possible to equally split time in every lab perfectly, but it is worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
 
-Also: DO NOT share passwords. Instead, use scp or email to share files with each other at the end of each work session.
-For information on scp, see lecture notes from lecture #12.
 
 **PLEASE MAKE SURE YOU TRADE CONTACT INFORMATION WITH YOUR LAB PARTNER! This means emails, phone numbers, online chat handles, or whatever is necessary to continue working together when you are working remotely (like, say, if one of you goes home for the weekend).**
 
-Share your work with each other at the end of EVERY work session. That way, if your pair partner gets hit by a bus (or a rusty Ferrari, or a flying fish, or wins the lottery and quits UCSB, or ... you get the idea) you can continue working without him/her. :)
+Be sure to commit and push or work to github at the end of EVERY work session. That way, if your pair partner bails on you, you can continue working without him/her. :)
 
 <h2>Step 1: Getting Ready</h2>
 1. Decide if you are working alone, or working in a pair.
 
 2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
 
-3. Decide on initial navigator and driver.
+3. Go to github and create a git repo for lab04 following the naming convention specified in previous labs (this step carries style points, see our feedback on lab02). If you are working with a pertner only one of you needs to do this step.
 
-4. Driver, log on to your CSIL account.
+4. If you created the github repo and you are working with a partner, add him or her as a collborator on the repo
 
-5. Open a terminal window and log into the correct machine.
+5. Decide on initial navigator and driver.
 
-6. Change into your CS 16 directory, create a lab08 directory and change into it.
+6. Driver, log on to your CSIL account.
+
+7. Open a terminal window and log into the correct machine.
+
+8. Change into your CS 16 directory, clone your github repo and change into it.
 
 <h2>Step 2: Getting the starter code</h2>
-TBD: Update instructions to get code on github
-
 
 
 <h2>Step 3: Reviewing Separate Compilation</h2>
 The files in your directory this week use separate compilation, that is each program is not necessarily taking all of its code from a single .cpp source file.
 
-In Lecture, we will introduce the idea of separate compilation (on Tuesday), where your C++ program may be divided among multiple source files.
+In Lecture, we will introduce the idea of separate compilation, where your C++ program may be divided among multiple source files.
 
 The following web page explains more about separate compilation, dividing your program up among multiple C++ and .h files, and using a Makefile.
 
@@ -61,7 +61,7 @@ Your first step is very simple to describe, but somewhat challenging. The challe
 To get started, do the following steps:
 
 <b>Step 4a: make clean</b>
-In your ~/cs16/lab08 directory, type <b>ls</b> and make note of the different files therein: some are .cpp types, some are .o (short for "object file"), some are .h (short for "header file"), and others do not have extensions (they are binary executables). Now, type <b>make clean</b>. This command cleans out any .o files and executables from your directory
+In your working directory, type <b>ls</b> and make note of the different files therein: some are .cpp types, some are .o (short for "object file"), some are .h (short for "header file"), and others do not have extensions (they are binary executables). Now, type <b>make clean</b>. This command cleans out any .o files and executables from your directory
 
 That should look like this:
 
