@@ -37,7 +37,7 @@ Be sure to commit and push or work to github at the end of EVERY work session. T
 
 7. Open a terminal window and log into the correct machine.
 
-8. Change into your CS 16 directory, clone your github repo and change into it.
+8. Change into your CS 16 directory
 
 <h2>Step 2: Getting the starter code</h2>
 
