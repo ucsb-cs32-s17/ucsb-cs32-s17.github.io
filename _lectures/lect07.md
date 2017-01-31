@@ -1,7 +1,7 @@
 ---
 num: "lect07"
 desc: "Test driven development, Seperate compilation, pointers"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture7.pdf
 annotatedpdfurl: 
 annotatedready: false
