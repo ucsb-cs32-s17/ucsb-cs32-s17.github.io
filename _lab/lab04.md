@@ -11,12 +11,11 @@ due: 2017-02-10 23:59:00.00-8
 <h1>CS16: Programming Assignment 04</h1>
 <h2>Introduction -- Important: Read this!</h2>
 
-The TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. 
+The TAs and I will be looking for (and grading) your programming style, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein <b>carefully</b>. 
 
 <h3>Pair programming </h3>
 
-If working in a pair: Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. 
-We realize it is not possible to equally split time in every lab perfectly, but it is worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
+If working in a pair: Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. We realize it is not possible to equally split time in every lab perfectly, but it is worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
 
 
 **PLEASE MAKE SURE YOU TRADE CONTACT INFORMATION WITH YOUR LAB PARTNER! This means emails, phone numbers, online chat handles, or whatever is necessary to continue working together when you are working remotely (like, say, if one of you goes home for the weekend).**
@@ -28,9 +27,9 @@ Be sure to commit and push or work to github at the end of EVERY work session. T
 
 2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
 
-3. Go to github and create a git repo for lab04 following the naming convention specified in previous labs (this step carries style points, see our feedback on lab02). If you are working with a pertner only one of you needs to do this step.
+3. Go to github and create a git repo for lab04 following the naming convention specified in previous labs (this step carries style points, see our feedback on lab02 to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
 
-4. If you created the github repo and you are working with a partner, add him or her as a collborator on the repo
+4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
 
 5. Decide on initial navigator and driver.
 
@@ -42,6 +41,29 @@ Be sure to commit and push or work to github at the end of EVERY work session. T
 
 <h2>Step 2: Getting the starter code</h2>
 
+Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+Copy the starter code by running the following command
+
+```
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab04-startercode/* ./
+```
+
+Typing the list (ls) command should show you the following files in your current directory
+
+```
+[dimirza@csil-03 lab04-startercode]$ ls
+arrayBoundsDemo.cpp    maxOfArray.cpp           sumOfArray.cpp
+arrayFuncs.h           maxOfArrayErrorTest.cpp  sumOfArrayTest.cpp
+arrayToString.cpp      maxOfArrayTest.cpp       tddFuncs.cpp
+arrayToStringTest.cpp  minOfArray.cpp           tddFuncs.h
+countEvens.cpp         minOfArrayErrorTest.cpp  utility.cpp
+countEvensTest.cpp     minOfArrayTest.cpp       utility.h
+countPrimes.cpp        README.md                utilityTest
+countPrimesTest.cpp    sumOdds.cpp              utilityTest.cpp
+Makefile               sumOddsTest.cpp
+[dimirza@csil-03 lab04-startercode]$
+
+```
 
 <h2>Step 3: Reviewing Separate Compilation</h2>
 The files in your directory this week use separate compilation, that is each program is not necessarily taking all of its code from a single .cpp source file.
@@ -50,9 +72,7 @@ In Lecture, we will introduce the idea of separate compilation, where your C++ p
 
 The following web page explains more about separate compilation, dividing your program up among multiple C++ and .h files, and using a Makefile.
 
-I strongly encourage you to read over it briefly before you go on to review the information there, as well as your notes from the separate compilation lecture, if you took any.
-
-[Separate Compilation and Makefiles](https://foo.cs.ucsb.edu/16wiki/index.php/C%2B%2B:_Separate_Compilation_and_Makefiles)
+I strongly encourage you to read over it briefly before you proceed with the lab: [Separate Compilation and Makefiles](https://foo.cs.ucsb.edu/16wiki/index.php/C%2B%2B:_Separate_Compilation_and_Makefiles)
 
 <h2>Step 4: Writing isOdd(), isEven() and isPrime()</h2>
 
