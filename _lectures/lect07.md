@@ -1,37 +1,36 @@
 ---
 num: "lect07"
-desc: "Test driven development, Seperate compilation, pointers"
+desc: "Test driven development, more on functions and nested loops"
 ready: true
 pdfurl: /lectures/CS16_Lecture7.pdf
-annotatedpdfurl: 
+annotatedpdfurl: /lectures/CS16_Lecture7_ann.pdf
 annotatedready: false
 lecture_date: 2017-01-31
 ---
 
-## Under the hood of program compilation and execution
-* From high-level programs to machine code
-* A peek into assembly code
-* Making it real: Getting the compiler to show assembly code
-* Creating object files and linking programs with g++
-* Makefiles
+# Code from lecture
+[https://github.com/ucsb-cs16-wi17/lecture-01-31](https://github.com/ucsb-cs16-wi17/lecture-01-31)
 
+We will learn the following concepts by looking at the specific problem of drawing a house with a triangular roof and rectangular body!
 
+# Topics
+## Top-down design approach
 
-## Layout of C++ programs in memory
-* First order model of memory
-* Program layout: text, data, bss, stack and heap
-* Connections with the stored program model
+* Breaking down the problem 
+* Code design: figuring out what functions you need to implement and the inputs and outputs for each function. This gives us the function declarations!
+* Unit testing
+* Integrating code (roof+body=house)
+* Black box testing  (test your entire program with different inputs)
 
-## Under the hood of function calls
-* Function calls use the run-time stack, we'll see how and why that's important
-* Review of pass by value
-* Passing parameters to functions by value
+## Test driven development
 
+* Think about test cases before you even start coding
+* Start with function stubs
+* Write the simplest test case and make your code pass that case
+* Write another test case, expect your code to fail, see it fail, then add code to pass that test case (and the previous one).
+* With every new test case, we have to make sure that all our previous tests still pass - this is a great way to make sure that things that were working before are not broken by new code!
 
-## C++ Pointers 
-* Review model of computer memory
-* Pointer declaration - difference/similarities with declaring basic types
-* Accessing variables "indirectly" via pointers
-* The address and indirection operators: "&" and "*"
-* Pointer arithmetic
-* Pointer pitfalls
+## Designing nested loops (see example of drawing the roof)
+* When do we need a loop?
+* When do we need a nestes loop?
+
