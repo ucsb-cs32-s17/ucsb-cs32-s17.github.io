@@ -14,6 +14,7 @@ lecture_date: 2017-01-31
 We will learn the following concepts by looking at the specific problem of drawing a house with a triangular roof and rectangular body!
 
 # Topics
+
 ## Top-down design approach
 
 * Breaking down the problem 
@@ -24,7 +25,7 @@ We will learn the following concepts by looking at the specific problem of drawi
 
 ## Test driven development
 
-* Think about test cases before you even start coding
+* Write test code and actual code side by side- so your implementation is always tested
 * Start with function stubs
 * Write the simplest test case and make your code pass that case
 * Write another test case, expect your code to fail, see it fail, then add code to pass that test case (and the previous one).
