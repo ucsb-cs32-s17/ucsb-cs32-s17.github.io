@@ -140,7 +140,7 @@ cd local_git_directory
 (Example: cd lab03_alily_jgaucho) 
 ```
 
-Then, Copy the code to the local git directory:
+Then, Copy the code to the local git directory: (Don't forget the period (.) in the end)
 
 ```
 cp /cs/faculty/dimirza/cs16-wi17/labs/lab03-startercode/* .
@@ -362,7 +362,7 @@ Correctness
 
 Style: Style points will be provided based on your github submission, so make sure you have one
 
-* (10 pts) Correct creation of the lab02 github repo in our class organization following the naming conventions provided in the lab.
+* (10 pts) Correct creation of the lab03 github repo in our class organization following the naming conventions provided in the lab.
 
 * (30 pts) All three programs have good programming style, including proper use of indentation, reasonable choices for variable names, readable code, reasonable use of whitespace, and other good programming practices. You must have good header comments as illustrated in the coding examples done in class. First line should be the name of your file, followed by date of creation, author and a brief description of the program. You must use curly braces in the body of all control structures (if-else, for and while) even if they contain a single statement. You should not mix tabs and spaces when indenting your code
 
