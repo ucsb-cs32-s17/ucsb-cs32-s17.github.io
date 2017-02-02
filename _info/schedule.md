@@ -1,6 +1,6 @@
 ---
 title: Schedule - Lecture, lab, office hours
-desc: "Lecture, open labs, office hours"
+desc: "Lecture, open labs, office hours, TA office location"
 layout: default
 ---
 
