@@ -103,7 +103,7 @@ What you'll be doing in this lab is writing three similar functions: startT, sta
 
 *Sample values returned from starC*
 
-starC renders the letters C, but requires a minimum width of 3, and a minimum height of 2.  Otherwise it returns an empty string.
+starC renders the letters C, but requires a minimum width of 2, and a minimum height of 3.  Otherwise it returns an empty string.
 
 ![starC](/lab/lab03/starC.png){:height="400px"}
 
