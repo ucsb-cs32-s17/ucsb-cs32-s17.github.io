@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab04
-ready: false
+ready: true
 desc: "Odds and primes: Fun with arrays and makefiles"
 assigned: 2017-02-03 15:30:00.00-8
 due: 2017-02-10 23:59:00.00-8
@@ -65,14 +65,18 @@ Makefile               sumOddsTest.cpp
 
 ```
 
+Push the initial version of the code on github before making any changes by typing the following commands
+
+```
+git add .
+git commit -m "Initial version"
+git push origin master
+```
+
 <h2>Step 3: Reviewing Separate Compilation</h2>
 The files in your directory this week use separate compilation, that is each program is not necessarily taking all of its code from a single .cpp source file.
 
-In Lecture, we will introduce the idea of separate compilation, where your C++ program may be divided among multiple source files.
-
-The following web page explains more about separate compilation, dividing your program up among multiple C++ and .h files, and using a Makefile.
-
-I strongly encourage you to read over it briefly before you proceed with the lab: [Separate Compilation and Makefiles](https://foo.cs.ucsb.edu/16wiki/index.php/C%2B%2B:_Separate_Compilation_and_Makefiles)
+In Lecture, we will introduce the idea of separate compilation, where your C++ program may be divided among multiple source files. The following web page explains more about separate compilation, dividing your program up among multiple C++ and .h files, and using a Makefile. I strongly encourage you to read over it briefly before you proceed with the lab: [Separate Compilation and Makefiles](https://foo.cs.ucsb.edu/16wiki/index.php/C%2B%2B:_Separate_Compilation_and_Makefiles)
 
 <h2>Step 4: Writing isOdd(), isEven() and isPrime()</h2>
 
@@ -149,13 +153,23 @@ PASSED: isPrime(1)
 <b>Step 4d: Repeat: edit, compile, run ,until all tests pass</b>
 Now do these steps, repeatedly, until all tests pass:
 
-edit utility.cpp (e.g. emacs utility.cpp, or vim utility.cpp)
+edit utility.cpp (e.g. emacs utility.cpp, or gvim utility.cpp)
 make utilityTest
 run utilityTest (e.g. ./utilityTest)
 
-This is the starting point, because for other files you will be editing later, you will NEED functions isOdd, isEven and isPrime. Once you get them working, you will be able to call them in other files and KNOW that they work properly. You will not have to repeat the function definition.
+Submit working versions of your code on github using the commands:
 
-When all the tests for `utlityTest` pass, move on to the next step.
+```
+git add *.cpp *.h
+git commit -m "implemented utility function - nameof function()"
+git push origin master
+```
+
+You must only proceed with the rest of the lab once you have implemented all the utility functions and pass the provided test cases. This is because for other files that you will be editing later, you will NEED functions isOdd, isEven and isPrime. Once you get them working, you will be able to call them in other files and KNOW that they work properly. You will not have to repeat the function definition.
+
+When all the tests for `utlityTest` pass, do a final push to github and move on to the next step.
+
+If you are working with a pair partner, this is a good time to switch roles.
 
 <h2>Step 5: Reviewing the rest of the files and what your tasks are</h2>
 
@@ -323,6 +337,8 @@ For this lab, since there are a lot of files to upload to submit.cs, your best c
 
 You can then copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
 
+Push your code to github. We will use your github submission to give you points for coding style.
+
 <h2>Grading Rubric</h2>
 Points from automated submit.cs. system tests
 
@@ -338,20 +354,20 @@ Points from automated submit.cs. system tests
 |sumOfArray|sumOfArrayTest|30 pts
 |utilityTest|utilityTest|50 pts
 
-<b>Points assigned by TAs manually</b>
+<b>Points assigned manually for coding style</b>
 
-(40 pts) Style:
-Good choice of variable names, code indented in ways that are consistent, and in line with good C++ practice. Where applicable, common code is factored out into functions (added to utility.h and utility.cpp as needed). 
+(50 pts) Style:
+Good choice of variable names, code indented in ways that are consistent, and in line with good C++ practice. Where applicable, common code is factored out into functions (added to utility.h and utility.cpp as needed). Please see the feedback on lab02 for a detailed rubric on coding style.
 
 This last point may or may not arise, but if it does, utility.h and utility.cpp is a place where functions needed in multiple files can be put—prototypes in utility.h and function definitions in utility.cpp.
 
-(30 pts) Following instructions and submitting on time.
 
-You will note that the submit.cs score is worth 230 points and the manual grading is worth 70 points, making the total points for this lab equal to 300. The grade will ultimately normalized to be out of 100 points. This lab is worth exactly the same as all the other labs done so far (i.e. the 300 points here are equivalent to 100 points in other labs).
+
+You will note that the submit.cs score is worth 230 points and the manual grading is worth 50 points, making the total points for this lab equal to 280. The grade will ultimately normalized to be out of 100 points. This lab is worth exactly the same as all the other labs done so far (i.e. the 300 points here are equivalent to 100 points in other labs).
 
 <h2>Step 9: Done!</h2>
 
-Once your submission receives a score of 230/230, you are done with this assignment. Remember that we will check your code for appropriate comments, formatting, and the use of required code, as stated earlier.
+Once your submission receives a score of 230/230, you are done with this assignment. Remember that we will check your code for appropriate comments, formatting, and the use of required code, as stated earlier, based on your github submission
 
 If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
 
