@@ -1,6 +1,6 @@
 ---
 num: "lect08"
-desc: "Arrays and separate compilation with makefiles "
+desc: "Visualizing program dynamics, arrays and separate compilation with makefiles "
 ready: true
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: 
