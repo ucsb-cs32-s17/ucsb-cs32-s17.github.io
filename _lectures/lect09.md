@@ -1,6 +1,6 @@
 ---
 num: "lect09"
-desc: "More on pointers, complex declarations in C++, mechanics of function calls (stack), passing parameters to functions by value, address and reference"
+desc: "Pointers, complex declarations in C++, mechanics of function calls (stack), passing parameters to functions by value, address and reference"
 ready: false
 pdfurl: /lectures/CS16_Lecture9.pdf
 annotatedpdfurl: 
