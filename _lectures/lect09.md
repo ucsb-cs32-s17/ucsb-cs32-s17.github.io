@@ -10,7 +10,10 @@ lecture_date: 2017-02-09
 
 # Topics
 
-# More on pointers
+## Complex declarions in C++
+* Right left rule
+
+## More on pointers
 * Pointer arithmetic
 * Pointer pitfalls
 
