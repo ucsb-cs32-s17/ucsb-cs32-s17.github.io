@@ -1,7 +1,7 @@
 ---
 num: "lect08"
-desc: "Arrays, pointers and separate compilation with makefiles "
-ready: false
+desc: "Visualizing program dynamics, arrays and separate compilation with makefiles "
+ready: true
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: 
 annotatedready: false
@@ -20,6 +20,12 @@ This lecture and many of the coming lectures require that we understand how our 
 * Array pitfalls: out of bound array access
 
 
+
+## Under the hood of program compilation and execution
+* From high-level programs to machine code
+* Creating object files and linking programs with g++
+* Makefiles
+
 ## C++ Pointers 
 
 * Pointer declaration - difference/similarities with declaring basic types
@@ -27,14 +33,7 @@ This lecture and many of the coming lectures require that we understand how our 
 * The address and indirection operators: "&" and "*"
 
 
-## Under the hood of program compilation and execution
-* From high-level programs to machine code
-* Creating object files and linking programs with g++
-* Makefiles
 
-
-## Complex declarions in C++
-* Right left rule
 
 
 
