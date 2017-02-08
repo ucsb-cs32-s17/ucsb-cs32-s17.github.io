@@ -13,9 +13,13 @@ lecture_date: 2017-02-09
 ## Complex declarions in C++
 * Right left rule
 
-## More on pointers
+## Pointers
+* Pointer declaration - difference/similarities with declaring basic types
+* Accessing variables "indirectly" via pointers
+* The address and indirection operators: "&" and "*"
 * Pointer arithmetic
 * Pointer pitfalls
+* Pointers and arrays
 
 ## Layout of C++ programs in memory
 * First order model of memory
