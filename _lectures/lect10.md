@@ -13,5 +13,6 @@ lecture_date:  2017-02-14
 * Different ways of accessing member variables of a structs
 * Pointers to structs, why and when to use them?
 * Creating arrays of structs
-* Revisit pointer arithmetic
+* Pointer arithmetic
+* Pointer pitfalls
 
