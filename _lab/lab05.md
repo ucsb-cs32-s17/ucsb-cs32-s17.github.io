@@ -8,70 +8,114 @@ due: 2017-02-17 23:59:00.00-8
 ---
 <div markdown="1">
 
+# Goals of this lab
+
+The goal of this lab is to demonstrate how we can abstract "things" in the world (such as geometric objects) into program contructs. We also hope that you will get a lot more practice with using pointers, passing pointers to functions and using pointers along with structs. You will continue to use the TDD process to develope high quality and well-tested code in a systematic manner. Lastly we would like you to delve deep and have fun! When you run into problems with your code, remember to use the skills we have been learing in class, such as code tracing and drawing pointer diagrams to understand the dynamics of your program and how it is interacting with memory (for now the run-time stack).
+
+
 # Step by Step Instructions
 
-## Step 1: Getting Started 
+## Step 1: Getting Ready
 
-Pair programming is OPTIONAL for this lab.
+1. Decide if you are working alone, or working in a pair.
 
+2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
 
-Note:
-'''If working in a pair:''' Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
+3. Go to github and create a git repo for this lab following the naming convention specified in previous labs (this step carries style points, see our feedback on previous labs to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
 
-Also: '''don't share passwords'''. Instead, '''use scp or email to share files with each other at the end of each work session.'''  
+4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
 
-* For information on scp, see: [[Unix Commands: scp]]
-* Share your work with each other at the end of EVERY work session* 
-* That way, if your pair partner [http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219 gets hit by a bus] you can continue working without him/her&mdash;you aren't 'out of luck'.
+5. Decide on initial navigator and driver.
 
+6. Driver, log on to your CSIL account.
+
+7. Open a terminal window and log into the correct machine.
+
+8. Change into your CS 16 directory
+
+Remember to push your work to github at the end of EVERY work session. That way, both partners always have access to the latest version of the code even if the code is being developed on one partner's CoE account.
 
 
 ## Step 2: Obtain the starter code
 
-TBD
+Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+Copy the starter code by running the following command
+
+```
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab05-startercode/* ./
+```
+
+Typing the list (ls) command should show you the following files in your current directory
+
+```
+[dimirza@csil-03 lab05-startercode]$ ls
+areaOfBoxTest.cpp         initBoxTest.cpp            pointToStringTest.cpp  shapeFuncs.h  utility.cpp
+areaOfBoxTest.cpp~        initPointTest.cpp          README.md              shapes.h      utility.h
+boxesApproxEqualTest.cpp  Makefile                   #shapeFuncs.cpp#       tddFuncs.cpp
+distanceBetweenTest.cpp   pointsApproxEqualTest.cpp  shapeFuncs.cpp         tddFuncs.h
+[dimirza@csil-03 lab05-startercode]$ 
+```
+
 
 ## Step 3: Reviewing the Files and what your tasks are 
 
+
+Here is a brief description of each of the files and expected implementation. Note that the .h/.cpp files with the same name are a pair. All the function declarations should be placed in the .h files. The definition of the functions that contains your implementation should go in the corresponding .cpp file
+
+* utility.h/cpp : Modify to implement any of your own functions that you will need to solve the problems of this lab
+* tddFuncs.h/cpp : Functions that you may use to test your code
+* shapes.h : Contains the declaration of two structs: Point and Box. These data structures will be used in other files e.g. shapeFunc.h/cpp 
+* shapeFuncs.h/cpp : Functions to compute metrics on geometric constructs such as points and boxes (see shapes.h)
+* *Test.cpp: Each of the files that end in Test.cpp contain code to test a particular function in shapeFuncs.cpp. For example distanceBetweenTest.cpp contains test code to test your implementation of the distanceBetween() function in shapeFuncs.cpp. Note that each Test.cpp file tests contains a main function, which means that each test file along with its dependent code is meant to be compiled into a separate executable. The provided Makefile makes sure that this is infact the case. The rationale behind this approach is that each function in shapeFuncs.cpp can be developed and tested independently as much as possible.
+
 Here is a list of your tasks for this lab:
 
-* Run ./distanceBetweenTest and see it fail
-* Edit the distanceBetween function in shapeFuncs.cpp to replace with correct code
-* Run ./distanceBetweenTest and see it pass
+* Run make and see the given code being compiled.
+* Run ./distanceBetweenTest and see it fail.
+* Edit the distanceBetween function in shapeFuncs.cpp to replace with correct code.
+* Run ./distanceBetweenTest and see it pass.
+* Commit and push your code to github. 
 
 
-* Run ./pointsAppoxEqualTest and see it pass
-* Look at the code and understand how it works; you'll need this understanding to get ./boxesApproxEqual to pass
+* Run ./pointsApproxEqualTest and see it pass.
+* Look at the code in pointsApproxEqualTest.cpp and shapeFuncs.cpp and understand how it works; Notice how the pointsApproxEqual() function uses the distanceBetween() function that you just wrote and tested, rather than writing new code within pointsApproxEqual() that repeats the logic of distanceBetween(). The takeaway here is that you want to keep your code as DRY as possible (DRY==Don't Repeat Yourself). You also want to only reuse code that has already been tested. You'll need to understand pointsApproxEqual() to get ./boxesApproxEqual to pass.
 
 
-* Run ./initPointTest and see it fail
-* Edit the initPoint function in shapeFuncs.cpp to replace with correct code
-* Run ./initPointTest and see it pass
+* Run ./initPointTest and see it fail.
+* Looking at the test code in initPointTest.cpp figure out what the initPoint function is supposed to do and add preconditions and postconditions as comments to the start of that function. See page 275 of the book for more information on writing pre and post conditions.
+* Edit the initPoint function in shapeFuncs.cpp to replace the stub with correct code.
+* Run ./initPointTest and see it pass.
+* Now reason about why your code works. Do this by drawing a pointer diagram that shows the state of memory right before the initPoint function returns when it is called for the very first time by the test code. Your pointer diagram should show the value of member variables x and y of the struct object 'p1' in initPointTest.cpp as well as the relationship between 'p1' and the formal parameter 'p' of the function initPoint. You should also show the formal parameters xVal and yVal in memory and indicate whether or not they are colocated in memory with any other variables (such as x and y). Make the drawing on a piece of paper or as ascii art in a text file and upload it to your gitrepo with the filename: pointer-diagram-initPoint. The diagram will be graded manually by us.
 
-
-* Run ./boxesApproxEqualTest and see it fail
-* Edit the boxesApproxEqual function in shapeFuncs.cpp to replace with correct code.  As you do, consider adding an approxEqual function that takes two double values into utility.h and utility.cpp, as this will make your coding job easier, and keep you code "DRYer". (DRY==Don't Repeat Yourself.)   Also, consider reusing the pointsApproxEqual function in your boxesApproxEqual solution.  Remember that the <code>&amp;&amp;</code> operator is the symbol for "logical and" in C++.
-* Run ./boxesApproxEqualTest and see it pass
-
+* Run ./boxesApproxEqualTest and see it fail.
+* Edit the boxesApproxEqual function in shapeFuncs.cpp to replace the stub with correct code.  As you do, consider adding an approxEqual function that takes two double values into utility.h and utility.cpp, as this will make your coding job easier, and keep you code "DRYer".  Also, consider reusing the pointsApproxEqual function in your boxesApproxEqual solution.  Remember that the <code>&amp;&amp;</code> operator is the symbol for "logical and" in C++.
+* Run ./boxesApproxEqualTest and see it pass.
+* Reason about why your code worked, draw a diagram to show the relationship between the formal and actual parameters. You don't need to submit the diagram but you may be asked to draw such a diagram on an exam! 
+* Commit and push your code to github. This may be a good time to switch partners if you haven't done so already.
 
 * Run ./initBoxTest and see it fail
 * Edit the initBox function in shapeFuncs.cpp to replace with correct code.    As you do, remember that you use -> to access members of a struct through a pointer, but simply . to access members of a struct directly.  You may need both in your answer.
 * Run ./initBoxTest and see it pass
+* Commit and push your code to github.
 
 
 * Run ./areaOfBoxTest and see it fail
 * Edit the areaOfBox function in shapeFuncs.cpp to replace with correct code.
 * Run ./areaOfBoxTest and see it pass
+* Commit and push your code to github.
 
 
 * Run ./pointToStringTest and see it it pass
 * Copy pointToStringTest.cpp to boxToStringTest.cpp and make tests for the boxToString function.  Look in shapeFuncs.cpp at the boxToString function stub for an example of the format you need for boxToString's return values.  Make tests for different precisions, just like pointToString has.
 * Add code to the Makefile so that boxToString runs.  Just follow the model--adding code for boxToStringTest everywhere you see code for pointToStringTest
 * Run make
+* Commit and push your code to github.
 
 
 * Run ./boxToStringTest and see the tests fail
 * Fix the definition of boxToString in shapeFuncs.cpp
 * See the test ./boxToStringTest pass
+* Commit and push your code to github.
 
 * YOU ARE READY TO CHECK YOUR WORK.
 
@@ -148,17 +192,18 @@ Plus, some output at the end with the output of your boxToStringTest
 
 At that point, you are ready to try submitting on the submit.cs system.
 
-== Step 5: Submitting via submit.cs ==
+## Step 5: Submitting via submit.cs
 
-The command to submit this weeks lab is this one:
 
 Here is the command to submit this week's labs:
 
 ```
-~bboe/bin/submit -p 230 *.cpp *.h
+~submit/submit -p 644 *.cpp *.h
 ```
 
-= Grading Rubric =
+Commit and push the latest version of your code on github
+
+**Grading Rubric**
 
 Points from submit.cs automatic grading:
 
@@ -176,11 +221,11 @@ Points from submit.cs automatic grading:
 
 Other points:
 
-* (30 pts) Submitting on time, per instructions
+* (30 pts) Pointer diagram submitted to your repo on github
 * (60 pts) Code style, including but not limited to:
-** Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
-** Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
-** Variable names choices are reasonable
-** Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
-** Code is not unnecessarily or unreasonably complex when a simpler solution is available
+	* Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
+	* Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
+	* Variable names choices are reasonable
+	* Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
+	* Code is not unnecessarily or unreasonably complex when a simpler solution is available
 

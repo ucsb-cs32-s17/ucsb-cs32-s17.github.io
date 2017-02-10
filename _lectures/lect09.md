@@ -1,24 +1,19 @@
 ---
 num: "lect09"
-desc: "Pointers, complex declarations in C++, mechanics of function calls (stack), passing parameters to functions by value, address and reference"
-ready: false
+desc: "Pointers, complex declarations in C++, mechanics of function calls (stack), passing parameters to functions by value and address"
+ready: true
 pdfurl: /lectures/CS16_Lecture9.pdf
-annotatedpdfurl: 
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture9_ann.pdf
+annotatedready: true
 lecture_date: 2017-02-09 
 ---
 
 # Topics
-
-## Complex declarions in C++
-* Right left rule
-
+[https://github.com/ucsb-cs16-wi17/lecture-02-09](https://github.com/ucsb-cs16-wi17/lecture-02-09)
 ## Pointers
 * Pointer declaration - difference/similarities with declaring basic types
 * Accessing variables "indirectly" via pointers
 * The address and indirection operators: "&" and "*"
-* Pointer arithmetic
-* Pointer pitfalls
 * Pointers and arrays
 
 ## Layout of C++ programs in memory
@@ -31,6 +26,8 @@ lecture_date: 2017-02-09
 * Review of pass by value
 * Passing parameters to functions by value 
 
+## Complex declarions in C++
+* Right left rule
 
 ## C++ References
 * Creating aliases with references
