@@ -10,6 +10,7 @@ lecture_date: 2017-02-09
 
 # Topics
 [https://github.com/ucsb-cs16-wi17/lecture-02-09](https://github.com/ucsb-cs16-wi17/lecture-02-09)
+
 ## Pointers
 * Pointer declaration - difference/similarities with declaring basic types
 * Accessing variables "indirectly" via pointers
