@@ -10,7 +10,7 @@ due: 2017-02-17 23:59:00.00-8
 
 # Goals of this lab
 
-The goal of this lab is to demonstrate how we can abstract "things" in the world (such as geometric objects) into program contructs. We also hope that you will get a lot more practice with using pointers, passing pointers to functions and using pointers along with structs. You will continue to use the TDD process to develope high quality and well-tested code in a systematic manner. Lastly we would like you to delve deep and have fun! When you run into problems with your code, remember to use the skills we have been learing in class, such as code tracing and drawing pointer diagrams to understand the dynamics of your program and how it is interacting with memory (for now the run-time stack).
+The goal of this lab is to demonstrate how we can abstract "things" in the world (such as geometric objects) into program contructs. We also hope that you will get a lot more practice with using pointers, passing pointers to functions and using pointers along with structs. You will continue to use the TDD process to develop high quality and well-tested code in a systematic manner. Lastly, we would like you to delve deep and have fun! When you run into problems with your code, remember to use the skills we have been learning in class, such as code tracing and drawing pointer diagrams, to understand the dynamics of your program and how it is interacting with memory (for now the run-time stack).
 
 
 # Step by Step Instructions
@@ -64,7 +64,7 @@ Here is a brief description of each of the files and expected implementation. No
 
 * utility.h/cpp : Modify to implement any of your own functions that you will need to solve the problems of this lab
 * tddFuncs.h/cpp : Functions that you may use to test your code
-* shapes.h : Contains the declaration of two structs: Point and Box. These data structures will be used in other files e.g. shapeFunc.h/cpp 
+* shapes.h : Contains the declaration of two structs: Point and Box. These data structures will be used in other files e.g. shapeFuncs.h/cpp 
 * shapeFuncs.h/cpp : Functions to compute metrics on geometric constructs such as points and boxes (see shapes.h)
 * *Test.cpp: Each of the files that end in Test.cpp contain code to test a particular function in shapeFuncs.cpp. For example distanceBetweenTest.cpp contains test code to test your implementation of the distanceBetween() function in shapeFuncs.cpp. Note that each Test.cpp file tests contains a main function, which means that each test file along with its dependent code is meant to be compiled into a separate executable. The provided Makefile makes sure that this is infact the case. The rationale behind this approach is that each function in shapeFuncs.cpp can be developed and tested independently as much as possible.
 
