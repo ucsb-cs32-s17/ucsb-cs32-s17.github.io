@@ -1,6 +1,6 @@
 ---
 num: "lect10"
-desc: "Pointers, structs and arrays of structs"
+desc: "Pointers and structs, references, call by reference, complex declarations in C++, Makefiles"
 ready: false
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: 
@@ -9,10 +9,33 @@ lecture_date:  2017-02-14
 ---
 
 # Topics
+
+## Pointers and structs
 * Declaring structs
 * Different ways of accessing member variables of a structs
 * Pointers to structs, why and when to use them?
-* Creating arrays of structs
-* Pointer arithmetic
 * Pointer pitfalls
+
+
+## C++ References
+* Creating aliases with references
+* Differences between references and pointers
+* Constant pointers and references, when and why to use them
+
+
+## Mechanics of function calls with specific attention to call by reference
+* Program layout: text, data, bss, stack and heap
+* References as function formal arguments
+* More on the run-time stack
+
+## Separate compilation with Makefiles
+* The C++ prepocessor and purpose of header files
+* Object files
+* The link process
+
+
+## Complex declarions in C++
+* Right left rule
+
+
 
