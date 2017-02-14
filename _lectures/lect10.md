@@ -1,7 +1,7 @@
 ---
 num: "lect10"
 desc: "Pointers and structs, references, call by reference, complex declarations in C++, Makefiles"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture10.pdf
 annotatedpdfurl: 
 annotatedready: false
