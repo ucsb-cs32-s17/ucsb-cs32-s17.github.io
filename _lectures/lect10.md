@@ -3,8 +3,8 @@ num: "lect10"
 desc: "Pointers and structs, references, call by reference, complex declarations in C++, Makefiles"
 ready: true
 pdfurl: /lectures/CS16_Lecture10.pdf
-annotatedpdfurl: 
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture10_ann.pdf
+annotatedready: true
 lecture_date:  2017-02-14 
 ---
 
