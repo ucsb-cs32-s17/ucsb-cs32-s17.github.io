@@ -1,6 +1,6 @@
 ---
 num: "lect11"
-desc: "Makefiles, Arrays of structs"
+desc: "Makefiles, Arrays of structs, Complex declarations in C++"
 ready: true
 pdfurl: /lectures/CS16_Lecture11.pdf
 annotatedpdfurl: 
@@ -13,3 +13,4 @@ lecture_date:  2017-02-16
 * Passing structs to functions by value, by reference and by address
 * Creating arrays of structs
 * Passing arrays of structs to functions
+* Complex declarations in C++
