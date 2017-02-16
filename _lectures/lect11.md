@@ -1,6 +1,6 @@
 ---
 num: "lect11"
-desc: "Makefiles, Arrays of structs, Dynamic memory allocation- memory leaks, dangling pointers, segfaults"
+desc: "Makefiles, Arrays of structs"
 ready: true
 pdfurl: /lectures/CS16_Lecture11.pdf
 annotatedpdfurl: 
@@ -9,9 +9,7 @@ lecture_date:  2017-02-16
 ---
 
 #Topics
-
+* Steps in compilation and automating compilation with Makefiles
+* Passing structs to functions by value, by reference and by address
 * Creating arrays of structs
-* Pointer arithmetic
-* A first look at dynamic memory allocation
-* The hows and whys of creating data on the stack vs. heap
-* Creating pointers, arrays and structs using dynamic memory allocation
+* Passing arrays of structs to functions
