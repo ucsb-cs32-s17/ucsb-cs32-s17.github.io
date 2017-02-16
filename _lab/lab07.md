@@ -2,247 +2,401 @@
 layout: lab
 num: lab07
 ready: false
-desc: "Anagrams, palindromes and histograms: Dynamic Arrays and Recursion"
-assigned: 2017-02-24 15:30:00.00-8
-due: 2017-03-03 23:59:59.00-8
----
-<div markdown="1">
-
-
-<h2>Introduction -- Important: Read this!</h2>
-This lab will have you do programming exercises with vectors, dynamic arrays, and recursive functions. We will more fully discuss recursive functions in class in lecture on Tuesday.
-
-
-The TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein **CAREFULLY!!!**. This assignment is due on <b>Friday, December 2nd at 11:59 PM</b>.
-
-<h3>Pair programming is <b>REQUIRED</b> for this lab!!!</h3>
-**Your lab will not be graded if you are not paired-up with 1 other person**
-
-
-Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. 
-
-DO NOT share passwords. Instead, use scp or email to share files with each other at the end of each work session.
-For information on scp, see lecture notes from lecture #12.
-
-**PLEASE MAKE SURE YOU TRADE CONTACT INFORMATION WITH YOUR LAB PARTNER! This means emails, phone numbers, online chat handles, or whatever is necessary to continue working together when you are working remotely (like, say, if one of you goes home for the weekend).**
-
-Share your work with each other at the end of EVERY work session. That way, if your pair partner gets hit by a bus (or a rusty Ferrari, or a flying fish, or wins the lottery and quits UCSB, or ... you get the idea) you can continue working without him/her. :)
-
-<h2>Step 1: Getting Ready</h2>
-1. Go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
-
-2. Decide on initial navigator and driver.
-
-3. Driver, log on to your CSIL account.
-
-4. Open a terminal window and log into the correct machine.
-
-5. Change into your CS 16 directory, create a lab09 directory and change into it.
-
-<h2>Step 2: Writing the Programs</h2>
-This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, and palindrome.cpp. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files.
-
-NOTE: IF AN ASSIGNMENT BELOW ASKS YOU TO IMPLEMENT A CERTAIN APPROACH (e.g. you must use vectors somewhere, or dynamic arrays somewhere else), YOU **MUST** FOLLOW THOSE INSTRUCTIONS VERY CAREFULLY!!!
-
-Each corresponds to one of the problems listed below, which make up this lab. Each of the 5 programs is worth 30 points. Each should be solved in its own file and each must be submitted for full assignment credit. 
-
-Note: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
-
-
----
-<h3>ANAGRAM.CPP</h3>
-Write a function that determines if two strings are anagrams. 
-The function should not be case sensitive and should disregard any punctuation or spaces. Two strings are anagrams if the letters can be rearranged to form each other. For example, “Eleven plus two” is an anagram of “Twelve plus one”. Each string contains one “v”, three “e’s”, two “l’s”, etc. You may use either the string class or a C-style string. Either way, you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
-Write a program that inputs two strings and calls your function to determine whether or not the strings are anagrams and prints the result.
-
-The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers and numbers of asterisks in the output:
-
-```
-Enter first string:
-Eleven plus two
-Enter second string:
-Twelve plus three
-The strings are not anagrams.
-```
-
-OR
-
-```
-Enter first string:
-Rats and Mice
-Enter second string:
-in cat's dream
-The strings are anagrams.
-```
-
-The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
-
----
-<h3>HISTOGRAM.CPP</h3>
-Write a program that outputs a histogram of student grades for an assignment. First, the program will input the number of grades and create a dynamic array to store the grades. Then, the program should input each student's grade as an integer and store the grade in the dynamic array.
-
-The program should then scan through the array and compute the histogram. In computing the histogram, the minimum value of a grade is 0 but your program should determine the maximum value entered by the user. Use a dynamic array to store the histogram. Output the histogram to the console.
-
-For example, if the input is:
-
-Enter number of grades:
-6
-Enter grades (each on a new line):
-20
-30
-4
-20
-30
-30
-Then the output histogram should be:
-
- 4 *
-20 **
-30 ***
-
-You must delete all memory allocated to dynamic arrays before the program ends.
-
-You **MUST** use dynamic arrays to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
-The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers and numbers of asterisks in the output:
-
-```
-Enter number of grades:
-6
-Enter grades (each on a new line):
-20
-30
-4
-20
-30
-30
-Histogram:
- 4 *
- 20 **
- 30 ***
-```
-
-OR
-
-```
-Enter number of grades:
-7
-Enter grades (each on a new line):
-1
-1
-100
-100
-100
-99
-50
-Histogram:
-  1 **
- 50 *
- 99 *
-100 ***
-```
-
-The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
-
-The scores should be right-justified with width 3 (there should be two spaces before a one-digit number, and one space before a two-digit number). So you can assume that the "grades" inputted will not be composed of more than 3 digits. Hint for formatting: remember setw.
-
----
-<h3>PALINDROME.CPP</h3>
-Write a recursive function that returns true if an input string is a palindrome and false if it is not. You can do this by checking if the first character equals the last character, and if so, make a recursive call with the input string minus the first and last characters. You will have to define a suitable stopping condition.
-
-Then write a program that takes in a string as user input, then calls the above function and outputs the result. Input string may have characters and numbers. Ignore case when comparing two chracters.
-
-The program should print a string of text to the terminal before getting the inputs from the user. A session should look like one of the following examples (including whitespace and formatting):
-
-```
-Enter string:
-redivide
-"redivide" is not a palindrome.
-```
-
-OR
-
-```
-Enter string:
-detartrated
-"detartrated" is a palindrome.
-```
-
-The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
-You **MUST** use a recursive function to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
----
-<h3>CHOOSE.CPP</h3>
-The formula for computing the number of ways of choosing r different things from a set of n things is the following:
-
-*C(n, r) = n! / (r! · (n – r)!)*
-
-The factorial function n! is defined by
-
-*n! = n · (n – 1) · (n – 2) · ... · 1*
-
-Discover a recursive version of this formula and write a recursive function that computes the value of the formula. Using this recursive function, write a function which computes the formula for number of ways to choose r different things from a set of n things.
-
-Then write a program that takes r and n as user input, then calls the above functions and outputs the result.
-
-Hint: some of the intermediate values (such as 16!) are too large to fit in a variable of int type. Consider using a type which can store larger numbers such as long (or even unsigned long, since our numbers are all positive in this problem).
-
-The program should print a string of text to the terminal before getting each line of input from the user. A session should look like the following example (including whitespace and formatting), with possibly different numbers in the output:
-
-```
-Enter r (number of things to choose):
-3
-Enter n (the number of things to choose from):
-6
-There are 20 ways to choose 3 things from a set of 6 things.
-```
-
-The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line). Also take care of singular and plural words in the sentence (1 way, 2 things etc.)
-
-You **MUST** use a recursive function to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
+desc: "Advanced arrays and linked lists"
+assigned: 2017-03-06 15:30:00.00-7
+due: 2017-03-13 23:59:59.00-7
 ---
 
-<h2>Step 3: Create a File for "make" & Compile the Codes with the make Command</h2>
+# Step by Step Instructions
 
-Copy the file provided to you at this URL. This file contains an almost finished file that helps you run "make":
-<http://www.cs.ucsb.edu/~zmatni/cs16/lab09/Lab9_file>
+## Step 1: Getting Started 
 
-Using your text editor, fill in the missing parts of the file (you will also have to rename it appropriately - see lecture notes on "make", or go back to the previous lab for quick hints).
+Pair programming is OPTIONAL for this lab.
 
-<h2>Step 4: Submit</h2>
+Note:
+'''If working in a pair:''' Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
 
-Once you are satisfied that your programs are correct, it is time to submit them. Login at [https://submit.cs.ucsb.edu](https://submit.cs.ucsb.edu), then navigate to “CS16_f16” and click on “lab09”. Then click “Make Submission”, and make your submission the same way as last week. Remember to submit all of the .cpp files.
+Also: '''don't share passwords'''. Instead, '''use scp or email to share files with each other at the end of each work session.'''  
 
-Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after a 1 minute delay.
-
-You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. To submit the the five source files (make sure they are the only 5 .cpp files)  to this assignment by running the command:
-
-`~submit/submit -p 605 *.cpp`
-
-You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
-
-<h2>Step 5: Check Submission Results</h2>
-
-After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
-
-You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
-
-<b>Points assigned by TAs manually</b>
-(50 pts) Style:
-Good choice of variable names, code indented in ways that are consistent, and in line with good C++ practice. Where applicable, common code is factored out into functions.
-
-You will note that the submit.cs score is worth 150 points and the manual grading is worth 50 points, making the total points for this lab equal to 200. This lab is worth exactly TWO (2) LABS.
+* For information on scp, see: [[Unix Commands: scp]]
+* Share your work with each other at the end of EVERY work session* 
+* That way, if your pair partner [http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219 gets hit by a bus] you can continue working without him/her&mdash;you aren't 'out of luck'.
 
 
-<h2>Step 6: Done!</h2>
-Remember that we will check your code for appropriate comments, formatting, and the use of required code, as stated earlier.
 
-If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
 
-If you are logged in remotely, you can log out using the exit command:
+## Step 2: Obtaining the starter code
 
-`$ exit`
 
-</div>
+
+
+## Step 3: Reviewing the Files and what your tasks are 
+
+Here is a list of your tasks for this lab:
+
+=== Step 3a: Familiarize yourself with the big picture ===
+
+Type "make tests" and you will see some tests pass, but some fail.
+
+You are finished when all the tests pass.
+
+There are only two files that you need to edit this week, and both are based on functions that you worked with in previous labs.
+
+* <code>moreArrayFuncs.cpp</code> contains more functions that deal with arrays.  These are in addition to the arrayFuncs.cpp that you worked with before.
+
+* <code>moreLinkedListFuncs.cpp</code> contains more functions that deal with linked lists.  These are in addition to the linkedListFuncs.cpp that you worked with before in lab08.
+
+=== Step 3b: Work on the array functions first ===
+
+Even if you only get these working, this will be an important step in terms of partial credit for this lab.  So concentrate on these first.
+
+There are four files that run tests cases for the functions in moreArrayFuncs.cpp.  These are shown in the following table.  In each case, you should work on one file at a time.  For example, your first step is:
+
+* type <code>make mafTest1</code> to compile and link mafTest1.cpp
+* type <code>./mafTest1</code> to run the program that tests <code>indexOfMax</code> and <code>indexOfMin</code> from moreArrayFuncs.cpp
+* edit the code in the file moreArrayFuncs.cpp so that <code>indexOfMax</code> and <code>indexOfMin</code> are correct.
+* repeat the steps above until the tests in mafTest1.cpp pass.
+
+Then do the same for the other lines in this table, i.e.. tests mafTest2.cpp through mafTest4.cpp
+
+|file| command to compile|command to run| what it tests
+|--- |---|---|---
+| mafTest1.cpp| make mafTest1| ./mafTest1| <code>indexOfMax</code> and <code>indexOfMin</code> from moreArrayFuncs.cpp
+| mafTest2.cpp| make mafTest2| ./mafTest2| <code>largestValue</code> and <code>smallestValue</code> from moreArrayFuncs.cpp
+| mafTest3.cpp| make mafTest3| ./mafTest3| <code>sum</code>  from moreArrayFuncs.cpp
+| mafTest4.cpp| make mafTest4| ./mafTest4| <code>copyElements</code>, <code>copyOddOnly</code> (*see tip box below), and <code>multiplyPairwise</code> from moreArrayFuncs.cpp
+
+
+Then, submit your code to submit.cs and see if the tests for the array functions are at least passing on submit.cs.   The command for that is listed in step 4 of the lab.
+
+When your array tests pass, you can move on to the linked list part.    Or, you can go ahead and move on, and wait to ask for help from a TA.
+
+=== Step 3c: COPY A FILE FROM YOUR COMPLETED lab08 ===
+
+The next step is crucial.  You need a function from your completed lab08 in order for your lab09 to work.
+
+That function is in the file linkedListFuncs.cpp.  Note that in your lab09 directory, those functinons are only stubs, but THESE ARE THE SAME FUNCTIONS YOU WROTE IN lab08.
+
+So, you need to use a Unix command to copy the file linkedListFuncs.cpp from your ~/cs16/lab08 directory to your ~/cs16/lab09 directory.
+
+I am NOT going to tell you what that command is.  By now, you should know.  And if you don't, you should be able to look it up.  Also I may ask you about this on the final exam.
+
+Once you've copied that over, you are ready for the next step.
+
+=== Step 3d: Work on the linked list functions next ===
+
+Working on the linked list functions below is one of the most important things you can do to prepare for the final exam.
+
+There are five files that run tests cases for the functions in moreLinkedListFuncs.cpp. 
+
+Proceed as you did for the four mafTest1.cpp through mafTest4.cpp files.
+
+
+|file| command to compile|command to run| what it tests
+|--- |---|---|---
+| mllfTest1.cpp| make mllfTest1| ./mllfTest1|<code>pointerToMax</code> from moreLinkedListFuncs.cpp
+| mllfTest2.cpp| make mllfTest2| ./mllfTest2| <code>pointerToMin</code> from moreLinkedListFuncs.cpp
+| mllfTest3.cpp| make mllfTest3| ./mllfTest3| <code>largestValue</code>  from moreLinkedListFuncs.cpp
+| mllfTest4.cpp| make mllfTest4| ./mllfTest4| <code>smallestValue</code>  from moreLinkedListFuncs.cpp
+| mllfTest5.cpp| make mllfTest5| ./mllfTest5| <code>sum</code>  from moreLinkedListFuncs.cpp
+
+
+## Step 4: Checking your work before submitting 
+
+When you are finished, you should be able to type  <code>make clean</code> and then <code>make tests</code> and see the following output:
+
+
+```
+-bash-4.2$ make clean
+/bin/rm -f mafTest1 mafTest2 mafTest3 mafTest4 addIntToEndOfListTest mllfTest1 mllfTest2 mllfTest3 mllfTest4 mllfTest5 *.o
+-bash-4.2$ make tests
+clang++ -Wall -Wno-uninitialized   -c -o mafTest1.o mafTest1.cpp
+clang++ -Wall -Wno-uninitialized   -c -o linkedListFuncs.o linkedListFuncs.cpp
+clang++ -Wall -Wno-uninitialized   -c -o moreArrayFuncs.o moreArrayFuncs.cpp
+clang++ -Wall -Wno-uninitialized   -c -o moreLinkedListFuncs.o moreLinkedListFuncs.cpp
+clang++ -Wall -Wno-uninitialized   -c -o tddFuncs.o tddFuncs.cpp
+clang++ -Wall -Wno-uninitialized  mafTest1.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mafTest1
+clang++ -Wall -Wno-uninitialized   -c -o mafTest2.o mafTest2.cpp
+clang++ -Wall -Wno-uninitialized  mafTest2.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mafTest2
+clang++ -Wall -Wno-uninitialized   -c -o mafTest3.o mafTest3.cpp
+clang++ -Wall -Wno-uninitialized  mafTest3.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mafTest3
+clang++ -Wall -Wno-uninitialized   -c -o mafTest4.o mafTest4.cpp
+clang++ -Wall -Wno-uninitialized  mafTest4.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mafTest4
+clang++ -Wall -Wno-uninitialized   -c -o addIntToEndOfListTest.o addIntToEndOfListTest.cpp
+clang++ -Wall -Wno-uninitialized  addIntToEndOfListTest.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o addIntToEndOfListTest
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest1.o mllfTest1.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest1.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest1
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest2.o mllfTest2.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest2.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest2
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest3.o mllfTest3.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest3.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest3
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest4.o mllfTest4.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest4.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest4
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest5.o mllfTest5.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest5.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest5
+./mafTest1
+PASSED: arrayToString(fiveThrees,5)
+PASSED: arrayToString(zeros,3)
+PASSED: arrayToString(empty,0)
+PASSED: arrayToString(primes,5)
+PASSED: arrayToString(primes,10)
+PASSED: arrayToString(meaning,1)
+PASSED: arrayToString(mix1,10)
+PASSED: arrayToString(mix2,10)
+PASSED: arrayToString(descending,5)
+PASSED: indexOfMax(fiveThrees,5)
+PASSED: indexOfMax(zeros,3)
+PASSED: indexOfMax(primes,1)
+PASSED: indexOfMax(primes,5)
+PASSED: indexOfMax(primes,10)
+PASSED: indexOfMax(meaning,1)
+PASSED: indexOfMax(mix1,10)
+PASSED: indexOfMax(mix2,10)
+PASSED: indexOfMax(mix1,3)
+PASSED: indexOfMax(mix2,3)
+PASSED: indexOfMax(mix2,1)
+PASSED: indexOfMax(mix2,5)
+PASSED: indexOfMin(fiveThrees,5)
+PASSED: indexOfMin(zeros,3)
+PASSED: indexOfMin(primes,5)
+PASSED: indexOfMin(primes,10)
+PASSED: indexOfMin(meaning,1)
+PASSED: indexOfMin(mix1,10)
+PASSED: indexOfMin(mix2,10)
+PASSED: indexOfMin(mix1,3)
+PASSED: indexOfMin(mix2,3)
+PASSED: indexOfMin(descending,5)
+PASSED: indexOfMin(descending,1)
+./mafTest2
+PASSED: largestValue(fiveThrees,5)
+PASSED: largestValue(zeros,3)
+PASSED: largestValue(primes,5)
+PASSED: largestValue(primes,10)
+PASSED: largestValue(meaning,1)
+PASSED: largestValue(mix1,10)
+PASSED: largestValue(mix2,10)
+PASSED: largestValue(mix1,3)
+PASSED: largestValue(mix2,3)
+PASSED: largestValue(descending,5)
+PASSED: largestValue(descending,1)
+PASSED: smallestValue(fiveThrees,5)
+PASSED: smallestValue(zeros,3)
+PASSED: smallestValue(primes,5)
+PASSED: smallestValue(primes,10)
+PASSED: smallestValue(meaning,1)
+PASSED: smallestValue(mix1,10)
+PASSED: smallestValue(mix2,10)
+PASSED: smallestValue(mix1,3)
+PASSED: smallestValue(mix2,3)
+PASSED: smallestValue(descending,5)
+PASSED: smallestValue(descending,1)
+./mafTest3
+PASSED: arrayToString(fiveThrees,5)
+PASSED: arrayToString(zeros,3)
+PASSED: arrayToString(empty,0)
+PASSED: arrayToString(primes,5)
+PASSED: arrayToString(primes,10)
+PASSED: arrayToString(meaning,1)
+PASSED: arrayToString(mix1,10)
+PASSED: arrayToString(mix2,10)
+PASSED: arrayToString(descending,5)
+PASSED: sum(fiveThrees,5)
+PASSED: sum(zeros,3)
+PASSED: sum(primes,5)
+PASSED: sum(primes,10)
+PASSED: sum(meaning,1)
+PASSED: sum(mix1,10)
+PASSED: sum(mix2,10)
+PASSED: sum(mix1,3)
+PASSED: sum(mix2,3)
+PASSED: sum(descending,5)
+PASSED: sum(descending,1)
+./mafTest4
+PASSED: arrayToString(fiveThrees,5)
+PASSED: arrayToString(zeros,3)
+PASSED: arrayToString(empty,0)
+PASSED: arrayToString(primes,5)
+PASSED: arrayToString(primes,10)
+PASSED: arrayToString(meaning,1)
+PASSED: arrayToString(mix1,10)
+PASSED: arrayToString(mix2,10)
+PASSED: arrayToString(descending,5)
+PASSED: arrayToString(primes,10)
+PASSED: arrayToString(mix1,10)
+PASSED: arrayToString(mix1,10)
+PASSED: arrayToString(mix2,10)
+PASSED: arrayToString(mix1,10)
+PASSED: arrayToString(mix2,10)
+PASSED: arrayToString(descending,5)
+PASSED: copyOddOnly(a,descending,5)
+PASSED: arrayToString(descending,5)
+PASSED: arrayToString(a,3)
+PASSED: copyOddOnly(a,mix2,10)
+PASSED: arrayToString(mix2,10)
+PASSED: arrayToString(a,5)
+PASSED: arrayToString(fiveThrees,5)
+PASSED: arrayToString(zeros,3)
+PASSED: arrayToString(primes,5)
+PASSED: arrayToString(descending,5)
+PASSED: arrayToString(fiveThrees,5)
+PASSED: arrayToString(descending,5)
+PASSED: arrayToString(a,5)
+PASSED: arrayToString(primes,5)
+PASSED: arrayToString(descending,5)
+PASSED: arrayToString(a,4)
+PASSED: arrayToString(primes,7)
+PASSED: arrayToString(a,7)
+./addIntToEndOfListTest
+PASSED: linkedListToString(list)
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 25
+PASSED: list after adding 25
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 31
+PASSED: list after adding 31
+PASSED: list->head->data == NULL
+PASSED: list->tail->data == NULL)
+PASSED: linkedListToString(emptyList)
+PASSED: 
+PASSED: list->head->data == 7
+PASSED: 
+PASSED: list->tail->data == 7)
+PASSED: list after adding 7
+PASSED: list != NULL
+PASSED: list->head == list->tail
+PASSED: list after adding -6
+PASSED: 
+PASSED: list->head->data == 7
+PASSED: 
+PASSED: list->tail->data == -6)
+./mllfTest1
+PASSED: linkedListToString(list)
+Testing pointerToMax
+PASSED: p!=NULL
+PASSED: p->data==61
+PASSED: p->next==NULL
+PASSED: p==list->tail
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 25
+PASSED: p!=NULL
+PASSED: p->data==61
+PASSED: p->next->data==25
+PASSED: p->next==list->tail
+PASSED: list after adding 25
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 99
+PASSED: list after adding 99
+PASSED: p!=NULL
+PASSED: p->data==99
+PASSED: p->next==NULL
+PASSED: p==list->tail
+./mllfTest2
+PASSED: linkedListToString(list)
+Testing pointerToMin
+PASSED: p!=NULL
+PASSED: p->data==42
+PASSED: p==list->head
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 25
+PASSED: p!=NULL
+PASSED: p->data==25
+PASSED: p->next==NULL
+PASSED: p==list->tail
+PASSED: list after adding 25
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 99
+PASSED: list after adding 99
+PASSED: p!=NULL
+PASSED: p->data==25
+PASSED: p->next==list->tail
+./mllfTest3
+PASSED: linkedListToString(list)
+Testing pointerToMax
+PASSED: p!=NULL
+PASSED: largestValue(list)
+PASSED: p!=NULL
+PASSED: largestValue(list)
+PASSED: list after adding 25
+PASSED: list after adding 99
+PASSED: p!=NULL
+PASSED: largestValue(list)
+./mllfTest4
+PASSED: linkedListToString(list)
+Testing pointerToMin
+PASSED: p!=NULL
+PASSED: p->data==42
+PASSED: p==list->head
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 25
+PASSED: p!=NULL
+PASSED: p->data==25
+PASSED: p->next==NULL
+PASSED: p==list->tail
+PASSED: list after adding 25
+PASSED: list->head->data == 42
+PASSED: list->tail->data == 99
+PASSED: list after adding 99
+PASSED: p!=NULL
+PASSED: p->data==25
+PASSED: p->next==list->tail
+./mllfTest5
+PASSED: sum(&emptyList)
+PASSED: linkedListToString(list)
+PASSED: sum(list)
+PASSED: list after adding 25
+PASSED: sum(list)
+-bash-4.2$ 
+```
+
+At that point, you are ready to try submitting on the submit.cs system.
+
+=== An important word about academic honesty and the submit.cs system ===
+
+We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on submit.cs now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
+
+To be very clear, code like this will pass on submit.cs, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
+
+I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of "academic dishonesty".  Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties.    If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.
+
+## Step 5: Submitting via submit.cs 
+
+The command to submit this weeks lab is this one:
+
+Here is the command to submit this week's labs:
+
+```
+~bboe/bin/submit -p 245 *.cpp *.h
+```
+
+# Grading Rubric 
+
+Some of the points will be awarded based on submit.cs automatic grading. Other points will be assigned after visual code inspection by TAs.
+
+== Submit.cs system automatic points ==
+
+<table border="1">
+<tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr>
+<tr><td>mafTest1</td><td><p style="color:green;margin:0;padding:0;">mafTest1</p></td><td>(20 pts)</td></tr>
+<tr><td>mafTest2</td><td><p style="color:green;margin:0;padding:0;">./mafTest2</p></td><td>(20 pts)</td></tr>
+<tr><td>mafTest3</td><td><p style="color:green;margin:0;padding:0;">./mafTest3</p></td><td>(20 pts)</td></tr>
+<tr><td>mafTest4</td><td><p style="color:green;margin:0;padding:0;">./mafTest4</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest1</td><td><p style="color:green;margin:0;padding:0;">./mllfTest1</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest2</td><td><p style="color:green;margin:0;padding:0;">./mllfTest2</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest3</td><td><p style="color:green;margin:0;padding:0;">./mllfTest3</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest4</td><td><p style="color:green;margin:0;padding:0;">./mllfTest4</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest5</td><td><p style="color:green;margin:0;padding:0;">./mllfTest5</p></td><td>(20 pts)</td></tr>
+</table>
+
+== Code inspection human-assigned points ==
+
+* (30 pts) Submitting on time, per instructions
+* (90 pts) Code style, including but not limited to:
+1. Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
+2. Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
+3. Variable names choices are reasonable
+4. Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
+5. Code is not unnecessarily or unreasonably complex when a simpler solution is available
+
+
+
+

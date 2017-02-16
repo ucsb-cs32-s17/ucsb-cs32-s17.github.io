@@ -2,152 +2,247 @@
 layout: lab
 num: lab08
 ready: false
-desc: "Linked lists and array lists"
-assigned: 2017-03-03 15:30:00.00-7
-due: 2017-03-10 23:59:59.00-7
+desc: "Anagrams, palindromes and histograms: Dynamic Arrays and Recursion"
+assigned: 2017-03-13 15:30:00.00-7
+due: 2017-03-20 23:59:00.00-7
 ---
 <div markdown="1">
 
 
-# Step by Step Instructions 
-
-## Step 1: Getting Started 
-
-Pair programming is OPTIONAL for this lab.
-
-'''If working in a pair:''' Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
-
-Also: '''don't share passwords'''. Instead, '''use scp or email to share files with each other at the end of each work session.'''  
-
-* For information on scp, see: [[Unix Commands: scp]]
-* Share your work with each other at the end of EVERY work session* 
-* That way, if your pair partner [gets hit by a bus!](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219) you can continue working without him/her&mdash;you aren't 'out of luck'.
+<h2>Introduction -- Important: Read this!</h2>
+This lab will have you do programming exercises with vectors, dynamic arrays, and recursive functions. We will more fully discuss recursive functions in class in lecture on Tuesday.
 
 
-## Step 2: Obtaining the code
+The TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein **CAREFULLY!!!**. This assignment is due on <b>Friday, December 2nd at 11:59 PM</b>.
 
-Add instructions on getting the starter code from github
+<h3>Pair programming is <b>REQUIRED</b> for this lab!!!</h3>
+**Your lab will not be graded if you are not paired-up with 1 other person**
 
-## Step 3: Reviewing the Files and what your tasks are 
 
-Here is a list of your tasks for this lab:
+Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. 
 
-* Run "make tests"
+DO NOT share passwords. Instead, use scp or email to share files with each other at the end of each work session.
+For information on scp, see lecture notes from lecture #12.
 
-1. You wil see that  and see the tests for arrayToString and linkedListToString pass. 
-2. But notice that tests for addIntToEndOfListtest and addIntToStartOfListTest are failing.
+**PLEASE MAKE SURE YOU TRADE CONTACT INFORMATION WITH YOUR LAB PARTNER! This means emails, phone numbers, online chat handles, or whatever is necessary to continue working together when you are working remotely (like, say, if one of you goes home for the weekend).**
 
-Your job is to write the code for addIntToEndOfList and addIntToStartOfList.  Both are in linkedListFuncs.cpp
+Share your work with each other at the end of EVERY work session. That way, if your pair partner gets hit by a bus (or a rusty Ferrari, or a flying fish, or wins the lottery and quits UCSB, or ... you get the idea) you can continue working without him/her. :)
 
-This is your only job.  And there are clues in the file to help you.
+<h2>Step 1: Getting Ready</h2>
+1. Go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
 
-When the test cases pass, you are done.
+2. Decide on initial navigator and driver.
 
-* Run "make tests" and see the correct output.
-* Try submitting to submit.cs to see if your output is correct.
-* YOU ARE READY TO CHECK YOUR WORK.
+3. Driver, log on to your CSIL account.
 
-## Step 4: Checking your work before submitting 
+4. Open a terminal window and log into the correct machine.
 
-When you are finished, you should be able to type  <code>make clean</code> and then <code>make tests</code> and see the following output:
+5. Change into your CS 16 directory, create a lab09 directory and change into it.
 
-```
--bash-4.2$ make clean
-/bin/rm -f arrayToStringTest arrayToLinkedListTest addIntToEndOfListTest addIntToStartOfListTest  *.o
--bash-4.2$ make tests
-clang++ -Wall -Wno-uninitialized   -c -o arrayToStringTest.o arrayToStringTest.cpp
-clang++ -Wall -Wno-uninitialized   -c -o linkedListFuncs.o linkedListFuncs.cpp
-clang++ -Wall -Wno-uninitialized   -c -o tddFuncs.o tddFuncs.cpp
-clang++ -Wall -Wno-uninitialized  arrayToStringTest.o linkedListFuncs.o tddFuncs.o -o arrayToStringTest
-clang++ -Wall -Wno-uninitialized   -c -o arrayToLinkedListTest.o arrayToLinkedListTest.cpp
-clang++ -Wall -Wno-uninitialized  arrayToLinkedListTest.o linkedListFuncs.o tddFuncs.o -o arrayToLinkedListTest
-clang++ -Wall -Wno-uninitialized   -c -o addIntToEndOfListTest.o addIntToEndOfListTest.cpp
-clang++ -Wall -Wno-uninitialized  addIntToEndOfListTest.o linkedListFuncs.o tddFuncs.o -o addIntToEndOfListTest
-clang++ -Wall -Wno-uninitialized   -c -o addIntToStartOfListTest.o addIntToStartOfListTest.cpp
-clang++ -Wall -Wno-uninitialized  addIntToStartOfListTest.o linkedListFuncs.o tddFuncs.o -o addIntToStartOfListTest
-./arrayToStringTest
-PASSED: arrayToString(fiveThrees,5)
-PASSED: arrayToString(zeros,3)
-PASSED: arrayToString(empty,0)
-PASSED: arrayToString(primes,10)
-PASSED: arrayToString(meaning,1)
-PASSED: arrayToString(mix,10)
-./arrayToLinkedListTest
-PASSED: linkedListToString(list)
-PASSED: linkedListToString(emptyList)
-PASSED: linkedListToString(singletonList)
-./addIntToEndOfListTest
-PASSED: linkedListToString(list)
-PASSED: list->head->data == 42
-PASSED: list->tail->data == 25
-PASSED: list after adding 25
-PASSED: list->head->data == 42
-PASSED: list->tail->data == 31
-PASSED: list after adding 31
-PASSED: list->head->data == NULL
-PASSED: list->tail->data == NULL)
-PASSED: linkedListToString(emptyList)
-PASSED: 
-PASSED: list->head->data == 7
-PASSED: 
-PASSED: list->tail->data == 7)
-PASSED: list after adding 7
-PASSED: list != NULL
-PASSED: list->head == list->tail
-PASSED: list after adding -6
-PASSED: 
-PASSED: list->head->data == 7
-PASSED: 
-PASSED: list->tail->data == -6)
-./addIntToStartOfListTest
-PASSED: linkedListToString(list)
-PASSED: list after adding 25
-PASSED: list after adding 31
-PASSED: linkedListToString(emptyList)
-PASSED: list after adding 7
-PASSED: list after adding -6
--bash-4.2$ 
-```
+<h2>Step 2: Writing the Programs</h2>
+This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, and palindrome.cpp. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files.
 
-At that point, you are ready to try submitting on the submit.cs system.
+NOTE: IF AN ASSIGNMENT BELOW ASKS YOU TO IMPLEMENT A CERTAIN APPROACH (e.g. you must use vectors somewhere, or dynamic arrays somewhere else), YOU **MUST** FOLLOW THOSE INSTRUCTIONS VERY CAREFULLY!!!
 
-=== An important word about academic honesty and the submit.cs system ===
+Each corresponds to one of the problems listed below, which make up this lab. Each of the 5 programs is worth 30 points. Each should be solved in its own file and each must be submitted for full assignment credit. 
 
-We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on submit.cs now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
+Note: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
 
-To be very clear, code like this will pass on submit.cs, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
 
-I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of "academic dishonesty".  Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties.    If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.
+---
+<h3>ANAGRAM.CPP</h3>
+Write a function that determines if two strings are anagrams. 
+The function should not be case sensitive and should disregard any punctuation or spaces. Two strings are anagrams if the letters can be rearranged to form each other. For example, “Eleven plus two” is an anagram of “Twelve plus one”. Each string contains one “v”, three “e’s”, two “l’s”, etc. You may use either the string class or a C-style string. Either way, you may **not** use built-in C++ functions that we have NOT discussed in lecture.
 
-## Step 5: Submitting via submit.cs 
+Write a program that inputs two strings and calls your function to determine whether or not the strings are anagrams and prints the result.
 
-The command to submit this weeks lab is this one:
-
-Here is the command to submit this week's labs:
+The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers and numbers of asterisks in the output:
 
 ```
-~bboe/bin/submit -p  232 *.cpp *.h
+Enter first string:
+Eleven plus two
+Enter second string:
+Twelve plus three
+The strings are not anagrams.
 ```
 
-= Grading Rubric =
+OR
 
-Points from submit.cs automatic grading:
+```
+Enter first string:
+Rats and Mice
+Enter second string:
+in cat's dream
+The strings are anagrams.
+```
+
+The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
+
+---
+<h3>HISTOGRAM.CPP</h3>
+Write a program that outputs a histogram of student grades for an assignment. First, the program will input the number of grades and create a dynamic array to store the grades. Then, the program should input each student's grade as an integer and store the grade in the dynamic array.
+
+The program should then scan through the array and compute the histogram. In computing the histogram, the minimum value of a grade is 0 but your program should determine the maximum value entered by the user. Use a dynamic array to store the histogram. Output the histogram to the console.
+
+For example, if the input is:
+
+Enter number of grades:
+6
+Enter grades (each on a new line):
+20
+30
+4
+20
+30
+30
+Then the output histogram should be:
+
+ 4 *
+20 **
+30 ***
+
+You must delete all memory allocated to dynamic arrays before the program ends.
+
+You **MUST** use dynamic arrays to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
+
+The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers and numbers of asterisks in the output:
+
+```
+Enter number of grades:
+6
+Enter grades (each on a new line):
+20
+30
+4
+20
+30
+30
+Histogram:
+ 4 *
+ 20 **
+ 30 ***
+```
+
+OR
+
+```
+Enter number of grades:
+7
+Enter grades (each on a new line):
+1
+1
+100
+100
+100
+99
+50
+Histogram:
+  1 **
+ 50 *
+ 99 *
+100 ***
+```
+
+The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
+
+The scores should be right-justified with width 3 (there should be two spaces before a one-digit number, and one space before a two-digit number). So you can assume that the "grades" inputted will not be composed of more than 3 digits. Hint for formatting: remember setw.
+
+---
+<h3>PALINDROME.CPP</h3>
+Write a recursive function that returns true if an input string is a palindrome and false if it is not. You can do this by checking if the first character equals the last character, and if so, make a recursive call with the input string minus the first and last characters. You will have to define a suitable stopping condition.
+
+Then write a program that takes in a string as user input, then calls the above function and outputs the result. Input string may have characters and numbers. Ignore case when comparing two chracters.
+
+The program should print a string of text to the terminal before getting the inputs from the user. A session should look like one of the following examples (including whitespace and formatting):
+
+```
+Enter string:
+redivide
+"redivide" is not a palindrome.
+```
+
+OR
+
+```
+Enter string:
+detartrated
+"detartrated" is a palindrome.
+```
+
+The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
+You **MUST** use a recursive function to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
+
+---
+<h3>CHOOSE.CPP</h3>
+The formula for computing the number of ways of choosing r different things from a set of n things is the following:
+
+*C(n, r) = n! / (r! · (n – r)!)*
+
+The factorial function n! is defined by
+
+*n! = n · (n – 1) · (n – 2) · ... · 1*
+
+Discover a recursive version of this formula and write a recursive function that computes the value of the formula. Using this recursive function, write a function which computes the formula for number of ways to choose r different things from a set of n things.
+
+Then write a program that takes r and n as user input, then calls the above functions and outputs the result.
+
+Hint: some of the intermediate values (such as 16!) are too large to fit in a variable of int type. Consider using a type which can store larger numbers such as long (or even unsigned long, since our numbers are all positive in this problem).
+
+The program should print a string of text to the terminal before getting each line of input from the user. A session should look like the following example (including whitespace and formatting), with possibly different numbers in the output:
+
+```
+Enter r (number of things to choose):
+3
+Enter n (the number of things to choose from):
+6
+There are 20 ways to choose 3 things from a set of 6 things.
+```
+
+The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line). Also take care of singular and plural words in the sentence (1 way, 2 things etc.)
+
+You **MUST** use a recursive function to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
+
+---
+
+<h2>Step 3: Create a File for "make" & Compile the Codes with the make Command</h2>
+
+Copy the file provided to you at this URL. This file contains an almost finished file that helps you run "make":
+<http://www.cs.ucsb.edu/~zmatni/cs16/lab09/Lab9_file>
+
+Using your text editor, fill in the missing parts of the file (you will also have to rename it appropriately - see lecture notes on "make", or go back to the previous lab for quick hints).
+
+<h2>Step 4: Submit</h2>
+
+Once you are satisfied that your programs are correct, it is time to submit them. Login at [https://submit.cs.ucsb.edu](https://submit.cs.ucsb.edu), then navigate to “CS16_f16” and click on “lab09”. Then click “Make Submission”, and make your submission the same way as last week. Remember to submit all of the .cpp files.
+
+Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after a 1 minute delay.
+
+You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. To submit the the five source files (make sure they are the only 5 .cpp files)  to this assignment by running the command:
+
+`~submit/submit -p 605 *.cpp`
+
+You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
+
+<h2>Step 5: Check Submission Results</h2>
+
+After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
+
+You may submit this lab multiple times. You should submit only after local compilation does not produce any errors and runs as expected. The score of the last submission uploaded before the deadline will be used as your assignment grade.
+
+<b>Points assigned by TAs manually</b>
+(50 pts) Style:
+Good choice of variable names, code indented in ways that are consistent, and in line with good C++ practice. Where applicable, common code is factored out into functions.
+
+You will note that the submit.cs score is worth 150 points and the manual grading is worth 50 points, making the total points for this lab equal to 200. This lab is worth exactly TWO (2) LABS.
 
 
+<h2>Step 6: Done!</h2>
+Remember that we will check your code for appropriate comments, formatting, and the use of required code, as stated earlier.
 
-<table border="1">
-  <tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr>
-<tr><td>addIntToEndOfListTest</td><td><p style="color:green;margin:0;padding:0;">addIntToEndOfListTest</p></td><td>(50 pts)</td></tr>
-<tr><td>addIntToStartOfListTest</td><td><p style="color:green;margin:0;padding:0;">addIntToStartOfListTest</p></td><td>(50 pts)</td></tr>
-<tr><td>arrayToLinkedListTest</td><td><p style="color:green;margin:0;padding:0;">arrayToLinkedListTest</p></td><td>(0 pts)</td></tr><tr><td>arrayToStringTest</td><td><p style="color:green;margin:0;padding:0;">arrayToStringTest</p></td><td>(0 pts)</td></tr></table>
+If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
 
-## Other points:
+If you are logged in remotely, you can log out using the exit command:
 
-* (30 pts) Submitting on time, per instructions
-* (70 pts) Code style, including but not limited to:
-1. Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
-2. Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
-3. Variable names choices are reasonable
-** Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
-** Code is not unnecessarily or unreasonably complex when a simpler solution is available
+`$ exit`
 
+</div>
