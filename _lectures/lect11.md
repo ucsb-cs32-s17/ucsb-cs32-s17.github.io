@@ -1,7 +1,7 @@
 ---
 num: "lect11"
 desc: "Makefiles, Arrays of structs, Dynamic memory allocation- memory leaks, dangling pointers, segfaults"
-ready: false
+ready: true
 pdfurl: /lectures/CS16_Lecture11.pdf
 annotatedpdfurl: 
 annotatedready: false
