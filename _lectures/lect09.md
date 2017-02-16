@@ -9,6 +9,8 @@ lecture_date: 2017-02-09
 ---
 
 # Topics
+
+## Code from lecture
 [https://github.com/ucsb-cs16-wi17/lecture-02-09](https://github.com/ucsb-cs16-wi17/lecture-02-09)
 
 ## Pointers
