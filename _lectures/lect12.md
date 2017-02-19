@@ -1,6 +1,6 @@
 ---
 num: "lect12"
-desc: ", Dynamic memory allocation- memory leaks, dangling pointers, segfaults, Linked Lists"
+desc: "Dynamic memory allocation- memory leaks, dangling pointers, segfaults, Linked Lists"
 ready: false
 pdfurl: /lectures/CS16_Lecture12.pdf
 annotatedpdfurl: 
