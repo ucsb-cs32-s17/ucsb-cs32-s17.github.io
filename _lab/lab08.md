@@ -9,52 +9,42 @@ due: 2017-03-20 23:59:00.00-7
 <div markdown="1">
 
 
-<h2>Introduction -- Important: Read this!</h2>
-This lab will have you do programming exercises with vectors, dynamic arrays, and recursive functions. We will more fully discuss recursive functions in class in lecture on Tuesday.
+# Goals of this lab
+This lab will have you do programming exercises with dynamic arrays, recursive functions, and Makefiles. You will also get more practice writing programs from scratch with no skeleton code.
 
 
-The TAs and I will be looking for (and grading) programming stylizations, such as proper use of comments, tab indentation, good variable names, and overall block and function designs. So, it is not enough for your lab to pass submit.cs! Please read the instructions herein **CAREFULLY!!!**. This assignment is due on <b>Friday, December 2nd at 11:59 PM</b>.
+# Step 1: Getting Started 
 
-<h3>Pair programming is <b>REQUIRED</b> for this lab!!!</h3>
-**Your lab will not be graded if you are not paired-up with 1 other person**
+1. Decide if you are working alone, or working in a pair. Pair programming is OPTIONAL for this lab.
+
+2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner.  Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. 
+
+3. Go to github and create a git repo for this lab following the naming convention specified in previous labs (this step carries style points, see our feedback on previous labs to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
+
+4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
+
+5. Decide on initial navigator and driver.
+
+6. Driver, log on to your CSIL account.
+
+7. Open a terminal window and log into the correct machine.
+
+8. Change into your CS 16 directory
+
+9. Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+
+Note: Remember to push your work to github at the end of EVERY work session. That way, both partners always have access to the latest version of the code even if the code is being developed on one partner's CoE account.
 
 
-Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the assignment. 
-
-DO NOT share passwords. Instead, use scp or email to share files with each other at the end of each work session.
-For information on scp, see lecture notes from lecture #12.
-
-**PLEASE MAKE SURE YOU TRADE CONTACT INFORMATION WITH YOUR LAB PARTNER! This means emails, phone numbers, online chat handles, or whatever is necessary to continue working together when you are working remotely (like, say, if one of you goes home for the weekend).**
-
-Share your work with each other at the end of EVERY work session. That way, if your pair partner gets hit by a bus (or a rusty Ferrari, or a flying fish, or wins the lottery and quits UCSB, or ... you get the idea) you can continue working without him/her. :)
-
-<h2>Step 1: Getting Ready</h2>
-1. Go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions.
-
-2. Decide on initial navigator and driver.
-
-3. Driver, log on to your CSIL account.
-
-4. Open a terminal window and log into the correct machine.
-
-5. Change into your CS 16 directory, create a lab09 directory and change into it.
-
-<h2>Step 2: Writing the Programs</h2>
-This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, and palindrome.cpp. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files.
+# Step 2: Writing the programs
+This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, and palindrome.cpp. Each of the 5 programs is worth 30 points. Each should be solved in its own file and each must be submitted for full assignment credit. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files for style. 
 
 NOTE: IF AN ASSIGNMENT BELOW ASKS YOU TO IMPLEMENT A CERTAIN APPROACH (e.g. you must use vectors somewhere, or dynamic arrays somewhere else), YOU **MUST** FOLLOW THOSE INSTRUCTIONS VERY CAREFULLY!!!
 
-Each corresponds to one of the problems listed below, which make up this lab. Each of the 5 programs is worth 30 points. Each should be solved in its own file and each must be submitted for full assignment credit. 
+## Program to find if two strings are anagrams
+In your github directory open a file named anagram.cpp (all lowercase). In that file write a function called isAnagram that takes two strings as arguments and returns a boolean true if the two strings are anagrams, otherwise it returns false. The function should not be case sensitive and should disregard any punctuation or spaces. Two strings are anagrams if the letters can be rearranged to form each other. For example, “Eleven plus two” is an anagram of “Twelve plus one”. Each string contains one “v”, three “e’s”, two “l’s”, etc. You may use either the string class or a C-style string. Either way, you may **not** use built-in C++ functions that we have NOT discussed in lecture.
 
-Note: All these submissions will be checked by the automatic system on submit.cs AND by the instructor and TAs for further evaluation. Details below.
-
-
----
-<h3>ANAGRAM.CPP</h3>
-Write a function that determines if two strings are anagrams. 
-The function should not be case sensitive and should disregard any punctuation or spaces. Two strings are anagrams if the letters can be rearranged to form each other. For example, “Eleven plus two” is an anagram of “Twelve plus one”. Each string contains one “v”, three “e’s”, two “l’s”, etc. You may use either the string class or a C-style string. Either way, you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
-Write a program that inputs two strings and calls your function to determine whether or not the strings are anagrams and prints the result.
+In the same file, write a program that inputs two strings and calls your function to determine whether or not the strings are anagrams and prints the result.
 
 The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers and numbers of asterisks in the output:
 
@@ -78,9 +68,12 @@ The strings are anagrams.
 
 The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
 
+
+
 ---
-<h3>HISTOGRAM.CPP</h3>
-Write a program that outputs a histogram of student grades for an assignment. First, the program will input the number of grades and create a dynamic array to store the grades. Then, the program should input each student's grade as an integer and store the grade in the dynamic array.
+
+## Program to output histogram of student grades
+In your github directory open a file named histogram.cpp. Write a program that outputs a histogram of student grades for an assignment. First, the program will input the number of grades and create a dynamic array to store the grades. Then, the program should input each student's grade as an integer and store the grade in the dynamic array.
 
 The program should then scan through the array and compute the histogram. In computing the histogram, the minimum value of a grade is 0 but your program should determine the maximum value entered by the user. Use a dynamic array to store the histogram. Output the histogram to the console.
 
@@ -148,8 +141,8 @@ The strings printed by the program should include a newline at the end, but no o
 The scores should be right-justified with width 3 (there should be two spaces before a one-digit number, and one space before a two-digit number). So you can assume that the "grades" inputted will not be composed of more than 3 digits. Hint for formatting: remember setw.
 
 ---
-<h3>PALINDROME.CPP</h3>
-Write a recursive function that returns true if an input string is a palindrome and false if it is not. You can do this by checking if the first character equals the last character, and if so, make a recursive call with the input string minus the first and last characters. You will have to define a suitable stopping condition.
+## Program to check if an input string is a palindrome
+Open a file named palindrome.cpp. Write a recursive function that returns true if an input string is a palindrome and false if it is not. You can do this by checking if the first character equals the last character, and if so, make a recursive call with the input string minus the first and last characters. You will have to define a suitable stopping condition.
 
 Then write a program that takes in a string as user input, then calls the above function and outputs the result. Input string may have characters and numbers. Ignore case when comparing two chracters.
 
@@ -173,8 +166,8 @@ The strings printed by the program should include a newline at the end, but no o
 You **MUST** use a recursive function to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
 
 ---
-<h3>CHOOSE.CPP</h3>
-The formula for computing the number of ways of choosing r different things from a set of n things is the following:
+## Program to determine the possible number of combinations
+Open a file named choose.cpp. Write a program to determine the number of ways to choose 'r' different things from a set of 'n' things. The formula for determining this is the following:
 
 *C(n, r) = n! / (r! · (n – r)!)*
 
@@ -204,26 +197,22 @@ You **MUST** use a recursive function to build this program and you may **not** 
 
 ---
 
-<h2>Step 3: Create a File for "make" & Compile the Codes with the make Command</h2>
+## Step 3: Create a Makefile to compile all the code you have written with the make command
 
 Copy the file provided to you at this URL. This file contains an almost finished file that helps you run "make":
 <http://www.cs.ucsb.edu/~zmatni/cs16/lab09/Lab9_file>
 
-Using your text editor, fill in the missing parts of the file (you will also have to rename it appropriately - see lecture notes on "make", or go back to the previous lab for quick hints).
 
-<h2>Step 4: Submit</h2>
 
-Once you are satisfied that your programs are correct, it is time to submit them. Login at [https://submit.cs.ucsb.edu](https://submit.cs.ucsb.edu), then navigate to “CS16_f16” and click on “lab09”. Then click “Make Submission”, and make your submission the same way as last week. Remember to submit all of the .cpp files.
+## Step 4: Submit
 
-Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after a 1 minute delay.
+Push all your code to github. Then submit your code on submit.cs
+Here is the command to submit this week's labs:
 
-You can alternatively submit your code from the command line (terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can use this method when logged in remotely. To submit the the five source files (make sure they are the only 5 .cpp files)  to this assignment by running the command:
+```
+~submit/submit -p 649 *.cpp *.h
 
-`~submit/submit -p 605 *.cpp`
-
-You can copy the URL shown in the output of the above and paste into a web browser to reach the submission result page.
-
-<h2>Step 5: Check Submission Results</h2>
+## Step 5: Check your submission results
 
 After the 1 minute delay, the submit system will show your score and give you feedback on your submission. Refresh the webpage after a minute to see this information.
 
@@ -236,7 +225,7 @@ Good choice of variable names, code indented in ways that are consistent, and in
 You will note that the submit.cs score is worth 150 points and the manual grading is worth 50 points, making the total points for this lab equal to 200. This lab is worth exactly TWO (2) LABS.
 
 
-<h2>Step 6: Done!</h2>
+## Step 6: Done!
 Remember that we will check your code for appropriate comments, formatting, and the use of required code, as stated earlier.
 
 If you are in the Phelps lab or in CSIL, make sure to log out of the machine before you leave. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.
@@ -244,5 +233,6 @@ If you are in the Phelps lab or in CSIL, make sure to log out of the machine bef
 If you are logged in remotely, you can log out using the exit command:
 
 `$ exit`
+
 
 </div>

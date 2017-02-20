@@ -386,7 +386,6 @@ At that point, you are ready to try submitting on the submit.cs system.
 
 ## Step 5: Submitting via submit.cs 
 
-The command to submit this weeks lab is this one:
 
 Here is the command to submit this week's labs:
 
