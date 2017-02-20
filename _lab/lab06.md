@@ -1,45 +1,105 @@
 ---
 layout: lab
 num: lab06
-ready: false
+ready: true
 desc: "Linked lists and array lists"
 assigned: 2017-02-20 15:30:00.00-8
 due: 2017-02-27 23:59:00.00-8
 ---
 
+# Goals of this lab
+
+The goal of this lab is two fold: dynamic memory management on the heap and implementing linked lists. The relationship between the two is that dynamic memory management is almost always used in the implementation of linked lists.
+
+*Dynamic memory management on the heap*: Managing data on the heap using new and delete is fundamentally different from that on the stack. The heap and stack two different areas in program memory,  The stack is used to automatically manage the allocate and deallocation of memory for local variables. Specifically memory is allocated for local variables when a function is called and deallocated when the function returns. On the other hand data on the heap is allocated and deallocated at the will of the programmer. So, when should you use the heap instead of the stack? When you want your data to persists in memory beyond the execution time of a single function.  
+
+*Linked lists* : Linked lists were covered in class. They are list arrays lists in that they store a list of data elements. However unlike arrays, the elements of a linked list are not placed in contiguous memory locations. By the end of this lab you should be able to have a working knowledge of how to implement linked lists, test your implementation and contrast them with an array based implementation.
+
+
 # Step by Step Instructions 
 
 ## Step 1: Getting Started 
 
-Pair programming is OPTIONAL for this lab.
+1. Decide if you are working alone, or working in a pair. Pair programming is OPTIONAL for this lab.
 
-'''If working in a pair:''' Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
+2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner. Do this by clicking on the blue "Join Groups" button, then follow directions. Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
 
-Also: '''don't share passwords'''. Instead, '''use scp or email to share files with each other at the end of each work session.'''  
+3. Go to github and create a git repo for this lab following the naming convention specified in previous labs (this step carries style points, see our feedback on previous labs to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
 
-* For information on scp, see: [[Unix Commands: scp]]
-* Share your work with each other at the end of EVERY work session* 
-* That way, if your pair partner [gets hit by a bus!](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219) you can continue working without him/her&mdash;you aren't 'out of luck'.
+4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
+
+5. Decide on initial navigator and driver.
+
+6. Driver, log on to your CSIL account.
+
+7. Open a terminal window and log into the correct machine.
+
+8. Change into your CS 16 directory
+
+Note: Remember to push your work to github at the end of EVERY work session. That way, both partners always have access to the latest version of the code even if the code is being developed on one partner's CoE account.
 
 
-## Step 2: Obtaining the code
+## Step 2: Obtain the starter code
 
-Add instructions on getting the starter code from github
+Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+Copy the starter code by running the following command
 
-## Step 3: Reviewing the Files and what your tasks are 
+```
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab06-startercode/* ./
+```
+
+Typing the list (ls) command should show you the following files in your current directory
+
+```
+[dimirza@csil-03 lab06-startercode]$ ls
+addIntToEndOfListTest.cpp    arrayToStringTest.cpp  Makefile
+addIntToStartOfListTest.cpp  linkedListFuncs.cpp    tddFuncs.cpp
+arrayFuncs.h                 linkedListFuncs.h      tddFuncs.h
+arrayToLinkedListTest.cpp    linkedList.h
+[dimirza@csil-03 lab06-startercode]$
+
+```
+
+
+## Step 3: Reviewing the files and what your tasks are 
 
 Here is a list of your tasks for this lab:
 
 * Run "make tests"
 
-1. You wil see that  and see the tests for arrayToString and linkedListToString pass. 
-2. But notice that tests for addIntToEndOfListtest and addIntToStartOfListTest are failing.
+1. You will see that  and see the tests for arrayToString and linkedListToString pass. 
+2. But notice that tests for addIntToEndOfListTest and addIntToStartOfListTest are failing.
 
-Your job is to write the code for addIntToEndOfList and addIntToStartOfList.  Both are in linkedListFuncs.cpp
+Your job is to understand all of the skeleton code that is provided to you and then write the code for addIntToEndOfList and addIntToStartOfList.  Both are in linkedListFuncs.cpp. There are clues in the file to help you.
 
-This is your only job.  And there are clues in the file to help you.
+As in the previous lab you are required to draw pointer diagrams for the code that you have written and upload the diagrams to your github repo.
+Draw diagrams to show the evolution of objects in memory as the following code is executed for YOUR implementation of 'addIntToStartOfList' and 'addIntToEndOfList. You must trace through every line of code that is executed as a result of the given code.
+In your diagrams you must clearly indicate which objects are created in the stack and which on the heap.  
 
-When the test cases pass, you are done.
+```
+int empty[0]={};
+LinkedList *emptyList = arrayToLinkedList(empty,0);
+addIntToStartOfList(list,7);
+addIntToStartOfList(list,8);
+freeLinkedList(emptyList);
+
+```
+Save your diagram for the above code in a file named "StartOfListPointerDiagram". Your file can be an image file or a pdf
+
+Draw a new diagram for the code given below which is executed independent of the above code.
+
+```
+int empty[0]={};
+LinkedList *emptyList = arrayToLinkedList(empty,0);
+addIntToEndOfList(list,7);
+addIntToEndOfList(list,8);
+freeLinkedList(emptyList);
+```
+Save your diagram for the above code in a file named "EndOfListPointerDiagram". Your file can be an image file or a pdf
+
+Upload both diagrams to your github repo.
+
+When the test cases pass, AND you have successfully uploaded your pointer diagrams to github, you are done.
 
 * Run "make tests" and see the correct output.
 * Try submitting to submit.cs to see if your output is correct.
@@ -82,8 +142,8 @@ PASSED: list after adding 25
 PASSED: list->head->data == 42
 PASSED: list->tail->data == 31
 PASSED: list after adding 31
-PASSED: list->head->data == NULL
-PASSED: list->tail->data == NULL)
+PASSED: list->head == NULL
+PASSED: list->tail == NULL)
 PASSED: linkedListToString(emptyList)
 PASSED: 
 PASSED: list->head->data == 7
@@ -119,18 +179,15 @@ I would hope this would be obvious, but I have to say it so that there is no amb
 
 ## Step 5: Submitting via submit.cs 
 
-The command to submit this weeks lab is this one:
-
 Here is the command to submit this week's labs:
 
 ```
-~bboe/bin/submit -p  232 *.cpp *.h
+~submit/submit -p 648 *.cpp *.h
 ```
 
 = Grading Rubric =
 
 Points from submit.cs automatic grading:
-
 
 
 <table border="1">
@@ -141,8 +198,8 @@ Points from submit.cs automatic grading:
 
 ## Other points:
 
-* (30 pts) Submitting on time, per instructions
-* (70 pts) Code style, including but not limited to:
+* (50 pts) Pointer diagrams 
+* (50 pts) Code style, including but not limited to:
 1. Code can be easily understood by humans familiar with C++ (including both the author(s) of the code, and non-authors of the code.)
 2. Code is neatly indented and formatted, following standard code indentation practices for C++ as illustrated in either the textbook, or example code given in lectures and labs
 3. Variable names choices are reasonable
