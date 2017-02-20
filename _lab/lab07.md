@@ -10,7 +10,7 @@ due: 2017-03-13 23:59:59.00-7
 
 # Goals of this lab
 
-The goal of this lab is get more practice with arrays, linked lists and dynamic memory allocation. Continue to practice code tracing using pointer diagrams, and to reason about your code. We would also like you to practice debugging your code. Please DO NOT ask the staff to debug your code. They have been specifically instructed not to do that. Instead, ask them specific questions that help you clarify concepts.
+The goal of this lab is get more practice with iterating through arrays and linked lists. Continue to practice code tracing to reason about your code. We request that you DO NOT ask the staff to debug your code. They have been specifically instructed not to debug for you, rather to guide in the process.  
 
 # Step by Step Instructions 
 
@@ -383,13 +383,6 @@ PASSED: sum(list)
 
 At that point, you are ready to try submitting on the submit.cs system.
 
-=== An important word about academic honesty and the submit.cs system ===
-
-We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on submit.cs now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
-
-To be very clear, code like this will pass on submit.cs, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
-
-I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of "academic dishonesty".  Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties.    If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.
 
 ## Step 5: Submitting via submit.cs 
 
@@ -398,14 +391,14 @@ The command to submit this weeks lab is this one:
 Here is the command to submit this week's labs:
 
 ```
-~bboe/bin/submit -p 245 *.cpp *.h
+~submit/submit -p 649 *.cpp *.h
 ```
 
 # Grading Rubric 
 
 Some of the points will be awarded based on submit.cs automatic grading. Other points will be assigned after visual code inspection by TAs.
 
-== Submit.cs system automatic points ==
+## Submit.cs system automatic points 
 
 <table border="1">
 <tr><th>Test Group</th><th>Test Name</th><th>Value</th></tr>
@@ -420,7 +413,7 @@ Some of the points will be awarded based on submit.cs automatic grading. Other p
 <tr><td>mllfTest5</td><td><p style="color:green;margin:0;padding:0;">./mllfTest5</p></td><td>(20 pts)</td></tr>
 </table>
 
-== Code inspection human-assigned points ==
+## Code inspection human-assigned points 
 
 * (30 pts) Submitting on time, per instructions
 * (90 pts) Code style, including but not limited to:
@@ -429,6 +422,14 @@ Some of the points will be awarded based on submit.cs automatic grading. Other p
 3. Variable names choices are reasonable
 4. Code is reasonably "DRY" (as in "don't repeat yourself")&mdash;where appropriate, common code is factored out into functions
 5. Code is not unnecessarily or unreasonably complex when a simpler solution is available
+
+## An important word about academic honesty and the submit.cs system 
+
+We will test your code against other data files too&mdash;not just these.  So while you might be able to pass the tests on submit.cs now by just doing a hard-coded "cout" of the expected output, that will NOT receive credit.    
+
+To be very clear, code like this will pass on submit.cs, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the system", i.e. to get the tests to pass without really solving the problem.
+
+I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of "academic dishonesty".  Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties.    If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.
 
 
 
