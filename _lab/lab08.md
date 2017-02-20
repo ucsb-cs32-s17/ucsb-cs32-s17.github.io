@@ -2,7 +2,7 @@
 layout: lab
 num: lab08
 ready: false
-desc: "Anagrams, palindromes and histograms: Dynamic Arrays and Recursion"
+desc: "Anagrams, palindromes and histograms: Dynamic arrays and recursion"
 assigned: 2017-03-13 15:30:00.00-7
 due: 2017-03-20 23:59:00.00-7
 ---
