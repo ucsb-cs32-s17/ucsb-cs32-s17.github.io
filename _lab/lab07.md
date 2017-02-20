@@ -7,27 +7,59 @@ assigned: 2017-03-06 15:30:00.00-7
 due: 2017-03-13 23:59:59.00-7
 ---
 
-# Step by Step Instructions
+
+# Goals of this lab
+
+The goal of this lab is two fold: dynamic memory management on the heap and implementing linked lists. The relationship between the two is that dynamic memory management is almost always used in the implementation of linked lists.
+
+# Step by Step Instructions 
 
 ## Step 1: Getting Started 
 
-Pair programming is OPTIONAL for this lab.
+1. Decide if you are working alone, or working in a pair. Pair programming is OPTIONAL for this lab.
 
-Note:
-'''If working in a pair:''' Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. But you should probably know the long-term goal too: each partner should participate in both roles in approximately equal parts over the course of the quarter. We realize it is not possible to equally split time in every lab, but it's worth trying, and it is possible to make up for unequal splits in future labs. We trust you will try to meet this goal. Thanks!
+2. If you are working as a pair, go to submit.cs, navigate to this lab page and create a team for you and your pair partner.  Choose who will be the first driver and who will start as navigator, and then remember to switch (at least once) during the lab. 
 
-Also: '''don't share passwords'''. Instead, '''use scp or email to share files with each other at the end of each work session.'''  
+3. Go to github and create a git repo for this lab following the naming convention specified in previous labs (this step carries style points, see our feedback on previous labs to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
 
-* For information on scp, see: [[Unix Commands: scp]]
-* Share your work with each other at the end of EVERY work session* 
-* That way, if your pair partner [http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219 gets hit by a bus] you can continue working without him/her&mdash;you aren't 'out of luck'.
+4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
 
+5. Decide on initial navigator and driver.
+
+6. Driver, log on to your CSIL account.
+
+7. Open a terminal window and log into the correct machine.
+
+8. Change into your CS 16 directory
+
+Note: Remember to push your work to github at the end of EVERY work session. That way, both partners always have access to the latest version of the code even if the code is being developed on one partner's CoE account.
 
 
 
 ## Step 2: Obtaining the starter code
 
+Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+Copy the starter code by running the following command
 
+```
+cp /cs/faculty/dimirza/cs16-wi17/labs/lab07-startercode/* ./
+```
+
+Typing the list (ls) command should show you the following files in your current directory
+
+```
+[dimirza@csil-03 lab07-startercode]$ ls
+addIntToEndOfListTest.cpp  mafTest4.cpp        moreArrayFuncs.h
+arrayFuncs.h               Makefile            moreLinkedListFuncs.cpp
+linkedListFuncs.cpp        mllfTest1.cpp       moreLinkedListFuncs.h
+linkedListFuncs.h          mllfTest2.cpp       README.md
+linkedList.h               mllfTest3.cpp       tddFuncs.cpp
+mafTest1.cpp               mllfTest4.cpp       tddFuncs.h
+mafTest2.cpp               mllfTest5.cpp
+mafTest3.cpp               moreArrayFuncs.cpp
+[dimirza@csil-03 lab07-startercode]$
+
+```
 
 
 ## Step 3: Reviewing the Files and what your tasks are 
@@ -42,20 +74,21 @@ You are finished when all the tests pass.
 
 There are only two files that you need to edit this week, and both are based on functions that you worked with in previous labs.
 
-* <code>moreArrayFuncs.cpp</code> contains more functions that deal with arrays.  These are in addition to the arrayFuncs.cpp that you worked with before.
+* <code>moreArrayFuncs.cpp</code> contains more functions that deal with arrays.  These are in addition to the arrayFuncs.cpp that you worked with before in lab04.
 
-* <code>moreLinkedListFuncs.cpp</code> contains more functions that deal with linked lists.  These are in addition to the linkedListFuncs.cpp that you worked with before in lab08.
+* <code>moreLinkedListFuncs.cpp</code> contains more functions that deal with linked lists.  These are in addition to the linkedListFuncs.cpp that you worked with before in lab06.
 
 === Step 3b: Work on the array functions first ===
 
 Even if you only get these working, this will be an important step in terms of partial credit for this lab.  So concentrate on these first.
 
-There are four files that run tests cases for the functions in moreArrayFuncs.cpp.  These are shown in the following table.  In each case, you should work on one file at a time.  For example, your first step is:
+There are four files that run test cases for the functions in moreArrayFuncs.cpp.  These are shown in the following table.  In each case, you should work on one file at a time.  For example, your first step is:
 
 * type <code>make mafTest1</code> to compile and link mafTest1.cpp
 * type <code>./mafTest1</code> to run the program that tests <code>indexOfMax</code> and <code>indexOfMin</code> from moreArrayFuncs.cpp
 * edit the code in the file moreArrayFuncs.cpp so that <code>indexOfMax</code> and <code>indexOfMin</code> are correct.
 * repeat the steps above until the tests in mafTest1.cpp pass.
+* Make sure to push your code to github as you make progress on each part.
 
 Then do the same for the other lines in this table, i.e.. tests mafTest2.cpp through mafTest4.cpp
 
