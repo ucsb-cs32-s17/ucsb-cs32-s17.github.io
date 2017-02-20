@@ -10,7 +10,7 @@ due: 2017-03-13 23:59:59.00-7
 
 # Goals of this lab
 
-The goal of this lab is two fold: dynamic memory management on the heap and implementing linked lists. The relationship between the two is that dynamic memory management is almost always used in the implementation of linked lists.
+The goal of this lab is get more practice with arrays, linked lists and dynamic memory allocation. Continue to practice code tracing using pointer diagrams, and to reason about your code. We would also like you to practice debugging your code. Please DO NOT ask the staff to debug your code. They have been specifically instructed not to do that. Instead, ask them specific questions that help you clarify concepts.
 
 # Step by Step Instructions 
 
@@ -66,7 +66,7 @@ mafTest3.cpp               moreArrayFuncs.cpp
 
 Here is a list of your tasks for this lab:
 
-=== Step 3a: Familiarize yourself with the big picture ===
+### Step 3a: Familiarize yourself with the big picture 
 
 Type "make tests" and you will see some tests pass, but some fail.
 
@@ -78,7 +78,7 @@ There are only two files that you need to edit this week, and both are based on 
 
 * <code>moreLinkedListFuncs.cpp</code> contains more functions that deal with linked lists.  These are in addition to the linkedListFuncs.cpp that you worked with before in lab06.
 
-=== Step 3b: Work on the array functions first ===
+### Step 3b: Work on the array functions first 
 
 Even if you only get these working, this will be an important step in terms of partial credit for this lab.  So concentrate on these first.
 
@@ -104,19 +104,19 @@ Then, submit your code to submit.cs and see if the tests for the array functions
 
 When your array tests pass, you can move on to the linked list part.    Or, you can go ahead and move on, and wait to ask for help from a TA.
 
-=== Step 3c: COPY A FILE FROM YOUR COMPLETED lab08 ===
+### Step 3c: COPY A FILE FROM YOUR COMPLETED lab06
 
-The next step is crucial.  You need a function from your completed lab08 in order for your lab09 to work.
+The next step is crucial.  You need a function from your completed lab06 in order for your lab07 to work.
 
-That function is in the file linkedListFuncs.cpp.  Note that in your lab09 directory, those functinons are only stubs, but THESE ARE THE SAME FUNCTIONS YOU WROTE IN lab08.
+That function is in the file linkedListFuncs.cpp.  Note that in your lab07 directory, those functions are only stubs, but THESE ARE THE SAME FUNCTIONS YOU WROTE IN lab06.
 
-So, you need to use a Unix command to copy the file linkedListFuncs.cpp from your ~/cs16/lab08 directory to your ~/cs16/lab09 directory.
+So, you need to use a Unix command to copy the file linkedListFuncs.cpp from your lab06 github directory to your lab07 github directory.
 
 I am NOT going to tell you what that command is.  By now, you should know.  And if you don't, you should be able to look it up.  Also I may ask you about this on the final exam.
 
-Once you've copied that over, you are ready for the next step.
+Once you've copied that over, push your code to github. Now you are ready for the next step.
 
-=== Step 3d: Work on the linked list functions next ===
+### Step 3d: Work on the linked list functions next 
 
 Working on the linked list functions below is one of the most important things you can do to prepare for the final exam.
 
