@@ -1,6 +1,6 @@
 ---
 num: "lect11"
-desc: "Makefiles, Arrays of structs 
+desc: "Makefiles, Arrays of structs"
 ready: true
 pdfurl: /lectures/CS16_Lecture11.pdf
 annotatedpdfurl: 
