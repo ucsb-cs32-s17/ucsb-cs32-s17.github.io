@@ -8,4 +8,4 @@ annotatedready: false
 lecture_date: 2017-02-28 
 ---
 
-Practics for midterm 2
+Practice for midterm 2
