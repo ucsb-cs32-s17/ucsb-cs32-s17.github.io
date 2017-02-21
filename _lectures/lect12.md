@@ -1,6 +1,6 @@
 ---
 num: "lect12"
-desc: "Dynamic memory allocation- Linked Lists"
+desc: "Dynamic memory allocation- Linked Lists, Complex declarations in C++"
 ready: false
 pdfurl: /lectures/CS16_Lecture12.pdf
 annotatedpdfurl: 
