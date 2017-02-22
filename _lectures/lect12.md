@@ -3,8 +3,8 @@ num: "lect12"
 desc: "Dynamic memory allocation- Linked Lists, Complex declarations in C++"
 ready: true
 pdfurl: /lectures/CS16_Lecture12.pdf
-annotatedpdfurl: 
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture12_ann.pdf
+annotatedready: true
 lecture_date: 2017-02-21 
 ---
 
