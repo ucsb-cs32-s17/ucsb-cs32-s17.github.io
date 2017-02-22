@@ -8,6 +8,9 @@ annotatedready: true
 lecture_date: 2017-02-21 
 ---
 
+## Code from lecture
+[https://github.com/ucsb-cs16-wi17/lecture-02-21](https://github.com/ucsb-cs16-wi17/lecture-02-21)
+
 # Topics
 
 * A first look at dynamic memory allocation
