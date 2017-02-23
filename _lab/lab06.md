@@ -79,8 +79,8 @@ In your diagrams you must clearly indicate which objects are created in the stac
 ```
 int empty[0]={};
 LinkedList *emptyList = arrayToLinkedList(empty,0);
-addIntToStartOfList(list,7);
-addIntToStartOfList(list,8);
+addIntToStartOfList(emptyList,7);
+addIntToStartOfList(emptyList,8);
 freeLinkedList(emptyList);
 
 ```
@@ -91,8 +91,8 @@ Draw a new diagram for the code given below which is executed independent of the
 ```
 int empty[0]={};
 LinkedList *emptyList = arrayToLinkedList(empty,0);
-addIntToEndOfList(list,7);
-addIntToEndOfList(list,8);
+addIntToEndOfList(emptyList,7);
+addIntToEndOfList(emptyList,8);
 freeLinkedList(emptyList);
 ```
 Save your diagram for the above code in a file named "EndOfListPointerDiagram". Your file can be an image file or a pdf
