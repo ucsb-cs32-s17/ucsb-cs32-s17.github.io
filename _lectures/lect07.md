@@ -33,5 +33,5 @@ We will learn the following concepts by looking at the specific problem of drawi
 
 ## Designing nested loops (see example of drawing the roof)
 * When do we need a loop?
-* When do we need a nestes loop?
+* When do we need a nested loop?
 
