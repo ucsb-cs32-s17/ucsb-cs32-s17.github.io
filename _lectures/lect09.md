@@ -1,6 +1,6 @@
 ---
 num: "lect09"
-desc: "Pointers, mechanics of function calls (stack), passing parameters to functions by value and address"
+desc: "Passing parameters to functions by value and address, passing arrays to functions"
 ready: true
 pdfurl: /lectures/CS16_Lecture9.pdf
 annotatedpdfurl: /lectures/CS16_Lecture9_ann.pdf

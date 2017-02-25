@@ -1,6 +1,6 @@
 ---
 num: "lect08"
-desc: "Visualizing program dynamics, arrays and makefile basics "
+desc: "Arrays, visualizing program dynamics, and makefile basics "
 ready: true
 pdfurl: /lectures/CS16_Lecture8.pdf
 annotatedpdfurl: /lectures/CS16_Lecture8_ann.pdf
