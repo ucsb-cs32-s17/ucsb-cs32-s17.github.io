@@ -135,6 +135,8 @@ Proceed as you did for the four mafTest1.cpp through mafTest4.cpp files.
 
 To be noticed, current output of mllfTest6 and mllfTest7 are INCORRECT. You should to implement functions (deleteNodeInteratively, deleteNodeRecursivelyHelper; insertNode) in moreLinkedListFuncs.cpp to make them work correctly!
 
+There are two input files named "mllfTest6.input" and "mllfTest7.input" as examples. Try to understand the meaning of the driver code in mllfTest6.cpp and mllfTest7.cpp and what kind of format for the input they require. We may have different test cases from the example input, so don't try to hard code it!
+
 ## Step 4: Checking your work before submitting 
 
 When you are finished, you should be able to type  <code>make clean</code> and then <code>make tests</code> and see the following output:
