@@ -399,7 +399,7 @@ null
 null
 -bash-4.2$ 
 ```
-TO BE NOTICED, THE EXAMPLE OUTPUT OF make tests FOR mllfTest6 AND mllfTest7 MAYE NOT BE CORRECT IN ACCORDING TO DIFFERENT INPUT.
+TO BE NOTICED, THE EXAMPLE OUTPUT OF make tests FOR mllfTest6 AND mllfTest7 MAY NOT BE CORRECT IN ACCORDING TO DIFFERENT INPUT.
 
 At that point, you are ready to try submitting on the submit.cs system.
 
