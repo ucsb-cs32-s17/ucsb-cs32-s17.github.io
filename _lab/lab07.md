@@ -49,14 +49,12 @@ Typing the list (ls) command should show you the following files in your current
 
 ```
 [dimirza@csil-03 lab07-startercode]$ ls
-addIntToEndOfListTest.cpp  mafTest4.cpp        moreArrayFuncs.h
-arrayFuncs.h               Makefile            moreLinkedListFuncs.cpp
-linkedListFuncs.cpp        mllfTest1.cpp       moreLinkedListFuncs.h
-linkedListFuncs.h          mllfTest2.cpp       README.md
-linkedList.h               mllfTest3.cpp       tddFuncs.cpp
-mafTest1.cpp               mllfTest4.cpp       tddFuncs.h
-mafTest2.cpp               mllfTest5.cpp
-mafTest3.cpp               moreArrayFuncs.cpp
+addIntToEndOfListTest.cpp  mafTest2.cpp   mllfTest3.cpp    mllfTest7.input          tddFuncs.cpp
+arrayFuncs.h               mafTest3.cpp   mllfTest4.cpp    moreArrayFuncs.cpp       tddFuncs.h
+linkedListFuncs.cpp        mafTest4.cpp   mllfTest5.cpp    moreArrayFuncs.h
+linkedListFuncs.h          Makefile       mllfTest6.cpp    moreLinkedListFuncs.cpp
+linkedList.h               mllfTest1.cpp  mllfTest6.input  moreLinkedListFuncs.h
+mafTest1.cpp               mllfTest2.cpp  mllfTest7.cpp    README.md
 [dimirza@csil-03 lab07-startercode]$
 
 ```
@@ -120,7 +118,7 @@ Once you've copied that over, push your code to github. Now you are ready for th
 
 Working on the linked list functions below is one of the most important things you can do to prepare for the final exam.
 
-There are five files that run tests cases for the functions in moreLinkedListFuncs.cpp. 
+There are seven files that run tests cases for the functions in moreLinkedListFuncs.cpp. 
 
 Proceed as you did for the four mafTest1.cpp through mafTest4.cpp files.
 
@@ -132,7 +130,10 @@ Proceed as you did for the four mafTest1.cpp through mafTest4.cpp files.
 | mllfTest3.cpp| make mllfTest3| ./mllfTest3| <code>largestValue</code>  from moreLinkedListFuncs.cpp
 | mllfTest4.cpp| make mllfTest4| ./mllfTest4| <code>smallestValue</code>  from moreLinkedListFuncs.cpp
 | mllfTest5.cpp| make mllfTest5| ./mllfTest5| <code>sum</code>  from moreLinkedListFuncs.cpp
+| mllfTest6.cpp| make mllfTest6| ./mllfTest6| <code>deleteNodeInteratively; deleteNodeRecursively</code>  from moreLinkedListFuncs.cpp
+| mllfTest7.cpp| make mllfTest5| ./mllfTest5| <code>insertNode</code>  from moreLinkedListFuncs.cpp
 
+To be noticed, current output of mllfTest6 and mllfTest7 are INCORRECT. You should to implement functions (deleteNodeInteratively, deleteNodeRecursivelyHelper; insertNode) in moreLinkedListFuncs.cpp to make them work correctly!
 
 ## Step 4: Checking your work before submitting 
 
@@ -141,7 +142,7 @@ When you are finished, you should be able to type  <code>make clean</code> and t
 
 ```
 -bash-4.2$ make clean
-/bin/rm -f mafTest1 mafTest2 mafTest3 mafTest4 addIntToEndOfListTest mllfTest1 mllfTest2 mllfTest3 mllfTest4 mllfTest5 *.o
+/bin/rm -f mafTest1 mafTest2 mafTest3 mafTest4 addIntToEndOfListTest mllfTest1 mllfTest2 mllfTest3 mllfTest4 mllfTest5 mllfTest6 mllfTest7 *.o
 -bash-4.2$ make tests
 clang++ -Wall -Wno-uninitialized   -c -o mafTest1.o mafTest1.cpp
 clang++ -Wall -Wno-uninitialized   -c -o linkedListFuncs.o linkedListFuncs.cpp
@@ -167,6 +168,10 @@ clang++ -Wall -Wno-uninitialized   -c -o mllfTest4.o mllfTest4.cpp
 clang++ -Wall -Wno-uninitialized  mllfTest4.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest4
 clang++ -Wall -Wno-uninitialized   -c -o mllfTest5.o mllfTest5.cpp
 clang++ -Wall -Wno-uninitialized  mllfTest5.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest5
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest6.o mllfTest6.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest6.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest6
+clang++ -Wall -Wno-uninitialized   -c -o mllfTest7.o mllfTest7.cpp
+clang++ -Wall -Wno-uninitialized  mllfTest7.o linkedListFuncs.o moreArrayFuncs.o moreLinkedListFuncs.o tddFuncs.o -o mllfTest7
 ./mafTest1
 PASSED: arrayToString(fiveThrees,5)
 PASSED: arrayToString(zeros,3)
@@ -378,8 +383,23 @@ PASSED: linkedListToString(list)
 PASSED: sum(list)
 PASSED: list after adding 25
 PASSED: sum(list)
+./mllfTest6
+[42]->[32]->[43]->[42]->[32]->null
+[42]->[32]->[43]->[42]->[32]->null
+[42]->[32]->[43]->[42]->[32]->null
+[42]->[32]->[43]->[42]->[32]->null
+[42]->[32]->[43]->[42]->[32]->null
+./mllfTest7
+null
+null
+null
+null
+null
+null
+null
 -bash-4.2$ 
 ```
+TO BE NOTICED, THE EXAMPLE OUTPUT OF make tests FOR mllfTest6 AND mllfTest7 MAYE NOT BE CORRECT IN ACCORDING TO DIFFERENT INPUT.
 
 At that point, you are ready to try submitting on the submit.cs system.
 
@@ -410,6 +430,8 @@ Some of the points will be awarded based on submit.cs automatic grading. Other p
 <tr><td>mllfTest3</td><td><p style="color:green;margin:0;padding:0;">./mllfTest3</p></td><td>(20 pts)</td></tr>
 <tr><td>mllfTest4</td><td><p style="color:green;margin:0;padding:0;">./mllfTest4</p></td><td>(20 pts)</td></tr>
 <tr><td>mllfTest5</td><td><p style="color:green;margin:0;padding:0;">./mllfTest5</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest6</td><td><p style="color:green;margin:0;padding:0;">./mllfTest6</p></td><td>(20 pts)</td></tr>
+<tr><td>mllfTest7</td><td><p style="color:green;margin:0;padding:0;">./mllfTest7</p></td><td>(20 pts)</td></tr>
 </table>
 
 ## Code inspection human-assigned points 
