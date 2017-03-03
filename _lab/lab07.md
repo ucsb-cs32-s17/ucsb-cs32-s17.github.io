@@ -131,7 +131,7 @@ Proceed as you did for the four mafTest1.cpp through mafTest4.cpp files.
 | mllfTest4.cpp| make mllfTest4| ./mllfTest4| <code>smallestValue</code>  from moreLinkedListFuncs.cpp
 | mllfTest5.cpp| make mllfTest5| ./mllfTest5| <code>sum</code>  from moreLinkedListFuncs.cpp
 | mllfTest6.cpp| make mllfTest6| ./mllfTest6| <code>deleteNodeInteratively; deleteNodeRecursively</code>  from moreLinkedListFuncs.cpp
-| mllfTest7.cpp| make mllfTest5| ./mllfTest5| <code>insertNode</code>  from moreLinkedListFuncs.cpp
+| mllfTest7.cpp| make mllfTest5| ./mllfTest7| <code>insertNode</code>  from moreLinkedListFuncs.cpp
 
 To be noticed, current output of mllfTest6 and mllfTest7 are INCORRECT. You should to implement functions (deleteNodeInteratively, deleteNodeRecursivelyHelper; insertNode) in moreLinkedListFuncs.cpp to make them work correctly!
 
