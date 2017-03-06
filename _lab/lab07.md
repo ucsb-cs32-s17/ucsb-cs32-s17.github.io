@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab07
-ready: false
+ready: true
 desc: "Advanced arrays and linked lists"
 assigned: 2017-03-06 15:30:00.00-7
 due: 2017-03-13 23:59:59.00-7
@@ -10,9 +10,9 @@ due: 2017-03-13 23:59:59.00-7
 
 # Goals of this lab
 
-The goal of this lab is get more practice with iterating through arrays and linked lists. Continue to practice code tracing to reason about your code. We request that you DO NOT ask the staff to debug your code. They have been specifically instructed not to debug for you, rather to guide in the process.  
+The goal of this lab is get more practice with iterating through arrays and linked lists, and applying recursion to solving problems. Continue to practice code tracing to reason about your code. We request that you DO NOT ask the staff to debug your code. They have been specifically instructed not to debug for you, rather to guide in the process. 
 
-# Step by Step Instructions 
+# Step by Step Instructions: PLEASE READ CAREFULLY!
 
 ## Step 1: Getting Started 
 
@@ -49,18 +49,20 @@ Typing the list (ls) command should show you the following files in your current
 
 ```
 [dimirza@csil-03 lab07-startercode]$ ls
-addIntToEndOfListTest.cpp  mafTest2.cpp   mllfTest3.cpp    mllfTest7.input          tddFuncs.cpp
-arrayFuncs.h               mafTest3.cpp   mllfTest4.cpp    moreArrayFuncs.cpp       tddFuncs.h
-linkedListFuncs.cpp        mafTest4.cpp   mllfTest5.cpp    moreArrayFuncs.h
-linkedListFuncs.h          Makefile       mllfTest6.cpp    moreLinkedListFuncs.cpp
-linkedList.h               mllfTest1.cpp  mllfTest6.input  moreLinkedListFuncs.h
-mafTest1.cpp               mllfTest2.cpp  mllfTest7.cpp    README.md
+addIntToEndOfListTest.cpp  mafTest4.cpp   mllfTest7.cpp
+arrayFuncs.h               Makefile       moreArrayFuncs.cpp
+linkedListFuncs.cpp        mllfTest1.cpp  moreArrayFuncs.h
+linkedListFuncs.h          mllfTest2.cpp  moreLinkedListFuncs.cpp
+linkedList.h               mllfTest3.cpp  moreLinkedListFuncs.h
+mafTest1.cpp               mllfTest4.cpp  README.md
+mafTest2.cpp               mllfTest5.cpp  tddFuncs.cpp
+mafTest3.cpp               mllfTest6.cpp  tddFuncs.h
 [dimirza@csil-03 lab07-startercode]$
 
 ```
 
 
-## Step 3: Reviewing the Files and what your tasks are 
+## Step 3: Reviewing the files and what your tasks are 
 
 Here is a list of your tasks for this lab:
 
@@ -131,11 +133,9 @@ Proceed as you did for the four mafTest1.cpp through mafTest4.cpp files.
 | mllfTest4.cpp| make mllfTest4| ./mllfTest4| <code>smallestValue</code>  from moreLinkedListFuncs.cpp
 | mllfTest5.cpp| make mllfTest5| ./mllfTest5| <code>sum</code>  from moreLinkedListFuncs.cpp
 | mllfTest6.cpp| make mllfTest6| ./mllfTest6| <code>deleteNodeInteratively; deleteNodeRecursively</code>  from moreLinkedListFuncs.cpp
-| mllfTest7.cpp| make mllfTest7| ./mllfTest7| <code>insertNode</code>  from moreLinkedListFuncs.cpp
+| mllfTest7.cpp| make mllfTest7| ./mllfTest7| <code>insertNodeToSortedList</code>  from moreLinkedListFuncs.cpp
 
-To be noticed, current output of mllfTest6 and mllfTest7 are INCORRECT. You should to implement functions (deleteNodeInteratively, deleteNodeRecursivelyHelper; insertNode) in moreLinkedListFuncs.cpp to make them work correctly!
-
-There are two input files named "mllfTest6.input" and "mllfTest7.input" as examples. Try to understand the meaning of the driver code in mllfTest6.cpp and mllfTest7.cpp and what kind of format for the input they require. We may have different test cases from the example input, so don't try to hard code it!
+Note: current output of mllfTest6 and mllfTest7 are INCORRECT. You should first write your own test code and implement the functions (deleteNodeIteratively, deleteNodeRecursivelyHelper; insertNodeToSortedList) in moreLinkedListFuncs.cpp to make them work correctly! We will test your code using our own test cases, so don't try to hard code it!
 
 ## Step 4: Checking your work before submitting 
 
@@ -386,22 +386,10 @@ PASSED: sum(list)
 PASSED: list after adding 25
 PASSED: sum(list)
 ./mllfTest6
-[42]->[32]->[43]->[42]->[32]->null
-[42]->[32]->[43]->[42]->[32]->null
-[42]->[32]->[43]->[42]->[32]->null
-[42]->[32]->[43]->[42]->[32]->null
-[42]->[32]->[43]->[42]->[32]->null
 ./mllfTest7
-null
-null
-null
-null
-null
-null
-null
 -bash-4.2$ 
 ```
-TO BE NOTICED, THE EXAMPLE OUTPUT OF make tests FOR mllfTest6 AND mllfTest7 MAY NOT BE CORRECT IN ACCORDING TO DIFFERENT INPUT.
+Note: You must write your own test code in mllfTest6.cpp and mllfTest7.cpp and make sure you pass those tests
 
 At that point, you are ready to try submitting on the submit.cs system.
 
