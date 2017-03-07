@@ -8,5 +8,6 @@ annotatedready: false
 lecture_date: 2017-03-07 
 
 ---
-
+# Code from lecture
+[https://github.com/ucsb-cs16-wi17/lecture-03-07](https://github.com/ucsb-cs16-wi17/lecture-03-07)
 This will be the lecture post midterm 2.
