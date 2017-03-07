@@ -10,4 +10,13 @@ lecture_date: 2017-03-07
 ---
 # Code from lecture
 [https://github.com/ucsb-cs16-wi17/lecture-03-07](https://github.com/ucsb-cs16-wi17/lecture-03-07)
-This will be the lecture post midterm 2.
+
+This is the lecture post midterm 2.
+
+# Topics
+* Thinking recursively about problems on sequences
+* Recursion vs. iteration via examples: printing elements of an array in order and in reverse order, printing elements of a linked-list in order and in reverse order
+* Is recursive better than iterative?
+* Problems that have a naturally recursive solution
+* Under the hood of recursive functions (special focus on how recursive functions use the stack)
+* Helper functions
