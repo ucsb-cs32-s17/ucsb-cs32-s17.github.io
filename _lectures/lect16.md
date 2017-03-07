@@ -1,6 +1,6 @@
 ---
 num: "lect16"
-desc: "Strings (Diba on travel, watch videos by Michelle Craig - no lecture)"
+desc: "Strings (No lecture -Diba on travel, watch videos by Michelle Craig)"
 ready: true
 pdfurl: 
 annotatedpdfurl: 
