@@ -12,7 +12,7 @@ lecture_date: 2017-03-09
 Since I will be traveling, there will be no lecture today.
 Instead you are asked to watch the videos 1 through 6 on C-strings at the following link:
 
-[https://mcs.utm.utoronto.ca/~pcrs/C-programming/Strings_and_Files.shtml](C String videos)
+[C String video](shttps://mcs.utm.utoronto.ca/~pcrs/C-programming/Strings_and_Files.shtml)
 
 The videos talk about C-strings in the context of C instead of C++. While the discussion on C-strings applied both to both languages, one key point to note that printing to standard output is different in C vs C++. In the videos, wherever you see "printf" read "cout" to get the equivalent code in C++. 
 
