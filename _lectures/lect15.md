@@ -19,5 +19,5 @@ This is the lecture post midterm 2.
 * How do we know our recursive solution is correct? Proof by induction
 * Is recursive better than iterative?
 * Problems that have a naturally recursive solution
-* Under the hood of recursive functions (special focus on how recursive functions use the stack)
+* Under the hood of recursive functions (how recursive functions use the stack)
 * Helper functions
