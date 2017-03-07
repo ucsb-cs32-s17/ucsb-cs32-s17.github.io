@@ -1,7 +1,7 @@
 ---
 num: "lect15"
-desc: "Intro to lab07, Recursion"
-ready: false
+desc: "Recursion, intro to lab07"
+ready: true
 pdfurl: /lectures/CS16_Lecture15.pdf
 annotatedpdfurl: 
 annotatedready: false
