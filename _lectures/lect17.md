@@ -1,7 +1,7 @@
 ---
 num: "lect17"
-desc: "Data structures- why do we need them, how do we choose them? Drawing memory maps for data structures we have learned"
-ready: false
+desc: "More Strings"
+ready: true
 pdfurl: /lectures/CS16_Lecture17.pdf
 annotatedpdfurl: 
 annotatedready: false
