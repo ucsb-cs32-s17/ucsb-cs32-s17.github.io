@@ -3,7 +3,7 @@ layout: lab
 num: lab08
 ready: false
 desc: "Anagrams, palindromes and histograms: Dynamic arrays and recursion"
-assigned: 2017-03-14 15:30:00.00-7
+assigned: 2017-03-14 23:30:00.00-7
 due: 2017-03-21 23:59:00.00-7
 ---
 <div markdown="1">
@@ -129,10 +129,7 @@ You **MUST** use a recursive function to build this program and you may **not** 
 
 ---
 
-## Step 3: Create a Makefile to compile all the code you have written with the make command
-
-Copy the file provided to you at this URL. This file contains an almost finished file that helps you run "make":
-<http://www.cs.ucsb.edu/~zmatni/cs16/lab09/Lab9_file>
+## Step 3: Create a Makefile to compile all the code you have written with the make command	
 
 
 
