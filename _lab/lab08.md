@@ -21,25 +21,24 @@ This lab will have you do programming exercises with dynamic arrays, recursive f
 
 3. Go to github and create a git repo for this lab following the naming convention specified in previous labs (this step carries style points, see our feedback on previous labs to understand what we are looking for). If you are working with a partner only one of you needs to create the repo.
 
-4. If you are working with a partner and you are the one who created the github repo, add your partner as a collborator on the repo
+4. If you are working with a partner and you are the one who created the github repo, add your partner as a collaborator on the repo
 
-5. Decide on initial navigator and driver.
 
-6. Driver, log on to your CSIL account.
+5. Driver, log on to your CSIL account.
 
-7. Open a terminal window and log into the correct machine.
+6. Open a terminal window and log into the correct machine.
 
-8. Change into your CS 16 directory
+7. Change into your CS 16 directory
 
-9. Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
+8. Clone your github repo in the ~/cs16/ directory. Then cd into your repo directory.
 
 Note: Remember to push your work to github at the end of EVERY work session. That way, both partners always have access to the latest version of the code even if the code is being developed on one partner's CoE account.
 
 
 # Step 2: Writing the programs
-This lab will have you create FIVE (5) programs: anagram.cpp, choose.cpp, histogram.cpp, and palindrome.cpp. Each of the 5 programs is worth 30 points. Each should be solved in its own file and each must be submitted for full assignment credit. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files for style. 
+This lab will have you create three programs: anagram.cpp, choose.cpp, and palindrome.cpp. Each should be solved in its own file and each must be submitted for full assignment credit. You must follow the instructions carefully. It is not enough to pass the submit.cs check as the instructor and the TAs *will* be checking your submitted program files for style. 
 
-NOTE: IF AN ASSIGNMENT BELOW ASKS YOU TO IMPLEMENT A CERTAIN APPROACH (e.g. you must use vectors somewhere, or dynamic arrays somewhere else), YOU **MUST** FOLLOW THOSE INSTRUCTIONS VERY CAREFULLY!!!
+NOTE: IF AN ASSIGNMENT BELOW ASKS YOU TO IMPLEMENT A CERTAIN APPROACH (e.g. you must use dynamic arrays somewhere, YOU **MUST** FOLLOW THOSE INSTRUCTIONS VERY CAREFULLY!!!
 
 ## Program to find if two strings are anagrams
 In your github directory open a file named anagram.cpp (all lowercase). In that file write a function called isAnagram that takes two strings as arguments and returns a boolean true if the two strings are anagrams, otherwise it returns false. The function should not be case sensitive and should disregard any punctuation or spaces. Two strings are anagrams if the letters can be rearranged to form each other. For example, “Eleven plus two” is an anagram of “Twelve plus one”. Each string contains one “v”, three “e’s”, two “l’s”, etc. You may use either the string class or a C-style string. Either way, you may **not** use built-in C++ functions that we have NOT discussed in lecture.
@@ -72,73 +71,6 @@ The strings printed by the program should include a newline at the end, but no o
 
 ---
 
-## Program to output histogram of student grades
-In your github directory open a file named histogram.cpp. Write a program that outputs a histogram of student grades for an assignment. First, the program will input the number of grades and create a dynamic array to store the grades. Then, the program should input each student's grade as an integer and store the grade in the dynamic array.
-
-The program should then scan through the array and compute the histogram. In computing the histogram, the minimum value of a grade is 0 but your program should determine the maximum value entered by the user. Use a dynamic array to store the histogram. Output the histogram to the console.
-
-For example, if the input is:
-
-Enter number of grades:
-6
-Enter grades (each on a new line):
-20
-30
-4
-20
-30
-30
-Then the output histogram should be:
-
- 4 *
-20 **
-30 ***
-
-You must delete all memory allocated to dynamic arrays before the program ends.
-
-You **MUST** use dynamic arrays to build this program and you may **not** use built-in C++ functions that we have NOT discussed in lecture.
-
-The program should print a string of text to the terminal before getting each line of input from the user. A session should look like one of the following examples (including whitespace and formatting), with possibly different numbers and numbers of asterisks in the output:
-
-```
-Enter number of grades:
-6
-Enter grades (each on a new line):
-20
-30
-4
-20
-30
-30
-Histogram:
- 4 *
- 20 **
- 30 ***
-```
-
-OR
-
-```
-Enter number of grades:
-7
-Enter grades (each on a new line):
-1
-1
-100
-100
-100
-99
-50
-Histogram:
-  1 **
- 50 *
- 99 *
-100 ***
-```
-
-The strings printed by the program should include a newline at the end, but no other trailing whitespace (whitespace at the end of the line).
-
-The scores should be right-justified with width 3 (there should be two spaces before a one-digit number, and one space before a two-digit number). So you can assume that the "grades" inputted will not be composed of more than 3 digits. Hint for formatting: remember setw.
 
 ---
 ## Program to check if an input string is a palindrome
