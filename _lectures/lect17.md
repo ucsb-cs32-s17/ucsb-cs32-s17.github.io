@@ -3,8 +3,8 @@ num: "lect17"
 desc: "More Strings"
 ready: true
 pdfurl: /lectures/CS16_Lecture17.pdf
-annotatedpdfurl: 
-annotatedready: false
+annotatedpdfurl: /lectures/CS16_Lecture17_ann.pdf
+annotatedready: true 
 lecture_date: 2017-03-14
 ---
 
