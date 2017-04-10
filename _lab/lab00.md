@@ -3,7 +3,7 @@ layout: lab
 num: lab00	
 ready: true
 desc: "Review of C++ basics, Makefiles, submit.cs"
-assigned: 2017-04-11 15:30:00.00-7
+assigned: 2017-04-12 15:30:00.00-7
 due: 2017-04-17 23:59:00.00-7
 ---
 
