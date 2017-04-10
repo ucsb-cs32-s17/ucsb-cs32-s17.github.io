@@ -2,514 +2,809 @@
 layout: lab
 num: lab00	
 ready: true
-desc: "Getting started with C++ functions and github's web interface"
-assigned: 2017-01-10 15:30:00.00-8
-due: 2017-01-13 23:59:00.00-8
+desc: "Review of C++ basics, Makefiles, submit.cs"
+assigned: 2017-04-11 15:30:00.00-7
+due: 2017-04-17 23:59:00.00-7
 ---
 
-# Introduction
+Goals
+=====
 
-Your first lab for this week is an introduction to programming on CSIL and in the Computer Science lab. You will write your first C++ program that will print a specific text out on your computer display. This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with a programming partner.
+By the time you have finished this lab, you should have demonstrated
+your ability to:
 
-For this first lab, you will do the following:
+-   Use some basic Unix commands, and learn about new Unix commands
+-   Create a basic Makefile from scratch
+-   Do some simple C++ programming as review of C++ basics, and as
+    preliminary work towards understanding sorting algorithms
+-   Learn how to submit work using the submit.cs system
 
-* [Read and sign the academic integrity form](#step0){: data-ajax="false"}
-* [Create a College of Engineering computer account if you don't have one already.](#step1){: data-ajax="false"}
-* [Learn how to open a terminal on a lab or personal computer.](#step2){: data-ajax="false"}
-* [Learn basic unix commands and create your lab00 directory.](#step3){: data-ajax="false"}
-* [Learn how to edit a text file used for writing programming code.](#step4){: data-ajax="false"}
-* [Write an actual program in C++.](#step5){: data-ajax="false"}
-* [Compile your program and see if it runs.](#step6){: data-ajax="false"}
-* [Submit your program for grading.](#step7){: data-ajax="false"}
-* [Check Submission Results](#step8){: data-ajax="false"}
-* [Create a github account and explore its web interface](#step9){: data-ajax="false"}
+Step by Step
+============
 
-## Step 0: Academic Integrity (AI)<a name="step0"></a>
+Step 0: Getting Started
+-----------------------
 
-[Sign this form to indicate you understand the AI policies for CS 16](https://docs.google.com/forms/d/e/1FAIpQLSfHAPcJuULAJH-FtDlJ-FeLiERWvXPuvou1U7w2xdzwSjQHBA/viewform)
+### Step 0a: Make sure you have a CSIL account and know how to use it
 
-## Step 1: Create an Engineering (CoE) Account <a name="step1"></a>
+Ideally, before this lab begins, you will have been instructed to visit
+the link below, and create your "College of Engineering" computer
+account:
 
-To log in to the machines in the Computer Science labs, or to connect remotely, you will need a **College of Engineering account**.
+-   <https://accounts.engr.ucsb.edu/create>
 
-At this point, please go to [THIS LINK](https://ucsb.box.com/s/px12flf8g41m8g0gq4n6zqbbc9phkfrs) and view the important presentation from Engineering Computing Infrastructure on the College of Engineering accounts and computer labs.
+<strong>You should already know the following from CS16 / CS24. If not,
+alert your TA/instructor immediately:</strong>
 
-You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
+-   How to login with your COE/CSIL account
+-   How to use the Linux computers in
+    -   <strong>Phelps 3525</strong> (where your discussion sections are
+        scheduled), and
+    -   <strong>CSIL</strong>, the Computer Science Instructional Lab on
+        the first floor of Harold Frank Hall (accessed through an
+        outside door on the side facing the ocean.), which have an
+        identical setup.
 
-If you are enrolled in <i>any</i> CoE course this quarter (including CS16), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.
+### Q: Can I work on my own computer? A: MAYBE. MAYBE NOT.
 
-<hr>
+It MIGHT, SOMETIMES, be possible to do SOME of the course work on your
+own computer that is connected to the Internet. In lecture, I will give
+VERY brief demonstrations of how to access the CSIL machines over the
+internet using Windows, Mac, and Linux.
 
-## Step 2: Open a Terminal <a name="step2"></a>
+But for some of the assignment, using CSIL is required. You might be
+able to access CSIL over the internet from your own machine rather than
+coming to CSIl in person.
 
-The first step in every assignment will be to open a <b>terminal window</b>, which will be the environment you use to write, compile, and run your programs.
+At the links below, we a "best effort" introduction to "how to do work
+on your own computer", and then YOU ARE ON YOUR OWN.
 
+-   There is no guarantee that this will always work.
+-   There are two many different OS versions, flavors, configurations,
+    etc .for us to know the ins and outs of every single one.
+-   If/when you run into difficulties there, WE CANNOT BE YOUR TECH
+    SUPPORT. If you have a simple question and we know the answer, we'll
+    tell you, but if you don't, our answer will be: "ok, then do your
+    work in CSIL until you figure it out."
 
-* If you are working on a machine in the Phelps 3525
-    please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
+So, please be aware:
 
-* If you are working on a machine in the Computer Science Instruction Lab (CSIL), you'll be working 
-    on one of the following machines: `csil-01.cs.ucsb.edu`, `csil-02.cs.ucsb.edu`, etc. 
-    (though `csil-48.cs.ucsb.edu`).   Please see [Step 2a](#step2a){: data-ajax="false"} for further instructions.
+-   The primary computing environment for this course is the Phelps and
+    CSIL labs.
+-   The CSIL labs are open from early in the morning to late at night
+    every day of the week.
+-   Though many labs can be done from your own computer, there may be
+    some that require you to work on CSIL (either over the internet, or
+    coming in person.)
 
-If you are working on your laptop, whether Windows, Mac or Linux, the instructions below 
-will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect to that server, however in the future please connect to one of the following machines:
+If you are working from your own computer at home or in your dorm, i.e.
+in not in Phelps 3525, or the CSIL Lab, you may need information on:
 
-* `csil-01.cs.ucsb.edu`
-* `csil-02.cs.ucsb.edu`, etc. 
-* etc.
-* through `csil-48.cs.ucsb.edu`
+-   [how to access CSIL from Windows via
+    Putty](http://www.cs.ucsb.edu/~pconrad/topics/CSILviaPutty/) (note
+    that [mobaxterm](http://mobaxterm.mobatek.net/) may be a better
+    choice) OR
+-   [how to access CSIL from Mac or Linux via
+    ssh](http://www.cs.ucsb.edu/~pconrad/topics/CSILFromMacOrLinux/)
 
-You'll get much better performance on those individual machines, because they are much less heavily loaded and have newer hardware, as compared to `csil.cs.ucsb.edu`.
+### Step 0b: Decide: Working solo or pair?
 
-* If you are working on your laptop and it is a Mac or Linux machine, go to [Step 2b](#step2b){: data-ajax="false"}.
-* If you are working on your laptop and it is a Windows machine, go to [Step 2c](#step2c){: data-ajax="false"}.
+Pair programming is OPTIONAL for this lab.
 
+**If working in a pair:** Choose who will be the first driver and who
+will start as navigator, and then remember to switch (at least once)
+during the lab. But you should probably know the long-term goal too:
+each partner should participate in both roles in approximately equal
+parts over the course of the quarter. We realize it is not possible to
+equally split time in every lab, but it's worth trying, and it is
+possible to make up for unequal splits in future labs. We trust you will
+try to meet this goal. Thanks!
 
-### Step 2a: Opening a Terminal on a Phelps or CSIL Lab Machine <a name="step2a"></a>
-<!--
-<h4><i><a name="step2a"></a>Step 2a: Opening a Terminal on a Phelps Lab Machine</i></h4>
--->
+Also: **don't share passwords**. Instead, **use scp or email to share
+files with each other at the end of each work session.**
 
-1. Log in to the machine using your CoE account credentials (i.e. your username and password) created in Step 1.
+-   For information on scp, see: [Unix Commands:
+    scp](Unix_Commands:_scp "wikilink")
+-   Share your work with each other at the end of EVERY work session\*
+-   That way, if your pair partner [gets hit by a
+    bus](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219)
+    you can continue working without him/her—you aren't 'out of luck'.
 
-2. Find the <i>Activities</i> menu, which is in the top-left corner of the screen. Click on it to open the menu.
+### Step 0c: Register on submit.cs for this course, and register pair if working in a pair
 
-3. Next, type "shell" in the search box. Then click the "Terminal" application which appears.
+### Step 0d: Create your \~/cs32/lab00 directory
 
-4. You should now see a terminal window open. You can open more tabs or windows from the Terminal application's menu.
+Create a \~/cs32/lab00 directory and make it your current directory. You
+should already know how to do this from previous courses, but in case
+you need a reminder:
 
-### Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux <a name="step2b"></a>
-<!--
-<h4><i><a name="step2b"></a>Step 2b: Connecting to CSIL via SSH on Mac OS X or Linux</i></h4>
--->
+    mkdir ~/cs32
+    mkdir ~/cs32/lab00
+    cd ~/cs32/lab00
 
-To get started on Mac OS X or Linux, you first need to open a terminal program. This involves slightly different steps on either OS.
+You are responsible for knowing the `mkdir` and `cd` commands—though
+these should be review, so they will not be covered in detail. Questions
+about their use, however, appear on any exam in this course. So if, up
+to this point, you've just "followed the instructions" without really
+understanding what you are doing, the time for that has passed.
 
-*On Ubuntu (an example of a Linux OS):*
+You are responsible for knowing the the "shell" is the program that you
+type Unix commands into—commands such as mkdir, cd, etc.
 
-1. Find the search menu. It appears at the top of the Unity bar:
+You are also responsible for knowing that the tilde symbol (`~`) stands
+for "the user's home directory", but only in the shell. There are many
+contexts where you cannot use the `~` symbol—in fact, almost everywhere
+other than the Unix command line that a filename is needed, you actually
+CANNOT use the tilde.
 
-<img src="ubuntu-menu.png" width="297" alt="Ubuntu Search Menu" />
+Step 1: Copying some programs from my directory
+-----------------------------------------------
 
-2. Click on that icon to open the search menu. Then type "terminal" and click on the "Terminal" application which appears:
+Step 2: Learn how to learn about some basic Linux commands
+----------------------------------------------------------
 
-<img  src="ubuntu-search.png" width="357" alt="Ubuntu Terminal Application" />
+The `man` program can be used to find out details about commands,
+programs, standard library functions, and anything else for which a man
+page has been created. You just used `mkdir` and `cd` without any
+options, so why not learn more about those commands right now. First
+type:
 
+    man mkdir
 
-*On Mac OS X:*
+With `man`, the space key moves to the next page, and `q` quits. Notice
+that `mkdir` is a utility (program) to create directories, and it has
+three options available:
 
-1. Open the "Terminal" application. It is found inside the <em>Applications</em> folder of your main drive, inside the <em>Utilities</em> subfolder. The icon looks like this:
+-   `-m` to set the new directory's permission bits (mode),
+-   `-p` to create any necessary intermediate parent directories on the
+    path
+-   `-v` to be "verbose" about it.
 
-<img src="mac-terminal.png" width="79" alt="Mac OS X Terminal Icon" />
+Try making a directory tree without specifying the -p option, for
+example:
 
-You can also find it using Spotlight by typing "terminal" and pressing ENTER.
+    bash-4.2$ mkdir one/two/three
+    mkdir: cannot create directory `one/two/three': No such file or directory
 
+Oops. Let's try it again with -p, and also use the -v option to hear the
+details:
 
-Once you have a terminal window open on your machine, you next need to **connect to the CSIL server remotely**.
+    bash-4.2$ mkdir -p -v one/two/three
+    mkdir: created directory `one'
+    mkdir: created directory `one/two'
+    mkdir: created directory `one/two/three'
 
-You will do this using a UNIX command (an internet protocol, really) called <em>SSH</em> (short for Secure Shell).
+Aaah ... much better, and so informative!
 
-Type the following command in your terminal, replacing <b>USERNAME</b> with <b>your CoE username</b>:
+Now learn some more about `cd` as follows:
 
+    man cd
+
+Uh oh ... it seems that `cd` is a built-in shell command, not a program,
+and it does not have its own man page. If you spacebar down a ways
+though, you will find a section that starts out as follows:
+
+    cd [-L|-P] [dir]
+           Change  the  current directory to dir. ...
+
+That's all you really need to know in this case, which is a good thing
+since the rest of the text for this command is not very helpful (-L and
+-P both relate to symbolic links). Some built-in commands do have their
+own pages though, and so man is usually a good place to start looking
+for information. By the way, before going to Step 3, learn more about
+man as follows:
+
+    man man
+
+Step 3: Reviewing Makefiles
+---------------------------
+
+We are now going to create a Makefile.
+
+In many previous labs in CS16 and CS24, you may have copied your
+Makefile from the instructors directory. However, for this lab, you are
+going to make it yourself from scratch. This is because now that you are
+in CS32, it is finally time, if you haven't yet, to learn **completely**
+how a Makefile works—every *single part of it*—and to be able to create,
+modify and debug your own Makefiles as needed.
+
+### Step 3a: Specifying which C++ compiler to use
+
+The first thing we should do is edit our Makefile using emacs or vim, or
+whatever text editor you prefer. For example:
+
+-   `emacs Makefile`, OR
+-   `vim Makefile`
+
+On the first line of the file, put this, substituting your name (and
+that of your pair partner(s) if applicable, for YOUR NAME(S) HERE, as
+appropriate:
+
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F15
+
+Then, leave a blank line, and add the following two lines shown here, so
+that you end up with this as the first four lines of your Makefile:
+
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F15
+
+    CXX=clang++
+    # CXX=g++
+
+<div style="margin:5px; border: 8px inset #ccc; padding:3px; font-size:80%;">
+What is a *toolchain*
+
+A *toolchain* refers to a set of tools that you use in some programming
+environment to get your work done. It typically includes a compiler, but
+may also include:
+
+-   an editor
+-   a linker for creating executables
+-   a tool for creating libraries (combining compiled code from multiple
+    files into a single file)
+-   when compiling on one system and running on another (e.g.
+    development for the Arduino, Android, iPhone, etc.), a tool to
+    transfer the compiled software to the target device.
+-   a debugger
+-   a profiler (tool to help find where your program is spending most of
+    its cpu time ("hotspots"), or to find memory leaks).
+
+Both GNU and LLVM provide toolchains for working with C++ on Unix. The
+iOS products (iPhone/iPad/iPod) have their own toolchain, as do
+platforms such as Android and Arduino.
+
+</div>
+There are at least four important concepts about Makefiles to take away
+here:
+
+1.  The pound sign (`#`) is used to start a comment in a Makefile. That
+    comment extends from the pound sign to the end of the line.
+2.  Anytime you have `VARIABLE_NAME=value` in a Makefile, you are
+    defining a variable.
+3.  The variable `CXX` is special—it is the variable that by default,
+    indicates which compiler should be used for compiling C++ programs.
+4.  There are two commonly used C++ compilers that you should be aware
+    of: g++ (the C++ compiler from the GNU *toolchain*) and clang++ (the
+    C++ compiler that is part of the LLVM *toolchain*). For more
+    information on what a toolchain is, see the discussion at the right
+    hand side of the page.
+
+So what these lines of code do is this:
+
+  --------------------------- --------------------------------------------------------------------------------------------------------------------------------
+  `# Makefile for lab00...`   comment documenting what the Makefile is for
+  `CXX=clang++`               The clang++ compiler will be used to compile C++ programs
+  `# CXX=g++`                 If you want to switch to the g++ compiler for some reason, you can uncomment this line and comment out the `CXX=clang++` line.
+  --------------------------- --------------------------------------------------------------------------------------------------------------------------------
+
+### Step 3b: Add a rule to link a helloWorld program
+
+In the step of this lab where you copied files into your directory, one
+of the files you copied in was a simple HelloWorld.cpp program. Take a
+moment to look at the source code of that program, using the Unix `more`
+command:
+
+    -bash-4.2$ more helloWorld.cpp
+
+The only reason this simple program is here is so we can practice
+setting up a rule in the Makefile, from scratch, to compile a simple
+program. Here is what that rule will look like. Add it below the lines
+we already have, as shown here.
+
+Two important things:
+
+-   Note that the first of the two lines that we are adding MUST start
+    in the leftmost column.
+-   The second of the two lines MUST start with a TAB character, NOT
+    spaces.
+-   Because of the TAB vs. Spaces thing, copying and pasting this WILL
+    NOT WORK. At the very least, if you copy and paste, you need to
+    delete the spaces in front of `${CXX}` and replace them with a
+    single TAB character.
+
+<!-- -->
+
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F15
+
+    CXX=clang++
+    # CXX=g++
+
+    helloWorld: helloWorld.o
+            ${CXX} helloWorld.o -o helloWorld
+
+What do these two lines mean?
+
+-   The first part of the first line, `helloWorld: helloWorld.o` defines
+    the start of a <em>target</em>. The part that comes before the
+    colon, `helloWorld` is the name of the target, and is a file that we
+    want to <b>make</b>. We make this file by typing <b>make
+    helloWorld</b> at the Unix command line. The file `helloWorld` is
+    going to be our executable program.
+-   The second part of the second line, the part <em>after</em> the
+    colon, `helloWorld.o`, indicates a list of files that the target
+    depends on. In this case, the executable program `helloWorld`
+    depends only on the file `helloWorld.o`.
+-   `${CXX}` is replace with the name of the C++ compiler (either
+    clang++ or gnu++) by dereferencing the symbol `CXX`. We call this
+    <em>dereferencing</em> because like the `*` operator used with
+    pointers in C/C++, the `$` in a Makefile indicates that instead of
+    using the letters `CXX`, the Makefile should use <em>what they refer
+    to</em>, i.e. the value of the variable `CXX`.
+-   The command `${CXX} helloWorld.o -o helloWorld` therefore turns into
+    either `clang++ helloWorld.o -o helloWorld` or
+    `g++ helloWorld.o -o helloWorld` depending on the value of the
+    symbol `${CXX}`,
+
+### Step 3c: Adding a rule to compile helloWorld.cpp to helloWorld.o
+
+Now it turns out that helloWorld.o is a file we do not have in our
+directory at the moment. The following rule is one that will create
+that, so add this to our Makefile next. Remember that you need to use a
+TAB character on the indented lines, not spaces; so copying and pasting
+this WILL NOT WORK.
+
+Leave a blank line after your rule for the `helloWorld` target, and add
+these two lines to your Makefile:
+
+    helloWorld.o: helloWorld.cpp
+            ${CXX} -c helloWorld.cpp
+
+Now we are ready to test this all out. That's what we'll do in the next
+step.
+
+### Step 3d: Testing our Makefile so far
+
+To test what we have so far:
+
+\(1) Save your Makefile, and return to the Unix prompt.
+
+\(2) At the Unix prompt, type `make helloWorld` and you should see output
+like the following:
+
+    -bash-4.2$ make helloWorld
+    clang++ -c helloWorld.cpp
+    clang++ helloWorld.o -o helloWorld
+    -bash-4.2$ 
+
+\(3) You can now run the helloWorld program by typing `./helloWorld` as
+we have done all along throughout CS16 and CS24. Try that now:
+
+    -bash-4.2$ ./helloWorld
+    Hello, World!
+    -bash-4.2$ 
+
+\(4) Now, if type `make helloWorld` again, we should see the following
+output. Do that now. Notice it is different from before:
+
+    -bash-4.2$ make helloWorld
+    make: `helloWorld' is up to date.
+    -bash-4.2$ 
+
+\(5) Now, edit your helloWorld.cpp program, changing the program by
+adding a comment with your name(s) between the first two comments:
+
+    // helloWorld.cpp  P. Conrad for UCSB CS32 F15
+    // Edited by: YOUR NAME(S) HERE
+    // minimal Hello World! program for testing Makefiles
+
+Save the change.
+
+\(6) Although this change doesn't really affect the program, it is enough
+for the Make utility to see that the file has been changed. If we now
+type `make helloWorld` again, we'll see that the program is recompiled:
+
+    -bash-4.2$ make helloWorld
+    clang++ -c helloWorld.cpp
+    clang++ helloWorld.o -o helloWorld
+    -bash-4.2$ 
+
+\(7) <b>Here is what you need to understand, both to work with make, and
+for your <em>exams</em> in this course:</b>
+
+-   The make utility works from timestamps and dependencies to figure
+    out what does—or does not—need to be relinked and/or compiled.
+
+So, based on the rules:
+
+    helloWorld: helloWorld.o
+            ${CXX} helloWorld.o -o helloWorld
+
+    helloWorld.o: helloWorld.cpp
+            ${CXX} -c helloWorld.cpp
+
+We have this chain of dependencies:
+`helloWorld.cpp`→`helloWorld.o`→`helloWorld`.
+
+-   Here, I'm showing an arrow pointing in the direction in which make
+    needs to make the files.
+-   For example, if the makefile has `b: a` it means b depends on a, and
+    we write a→b to show that we need a's timestamp to be earlier than
+    b's timestamp. If a has a later timestamp than b, it means that b is
+    "out of date" and needs to be remade.
+-   Another case is the case where if b does not exist at all (e.g. if
+    if has never been made at all, or if has been deleted since it was
+    last made.) In that case, we also need to remake b, typically using
+    a as the input file.
+
+After constructing the dependencies, the make program then looks to see
+which files already exist (or not), and what the time stamps are, and
+executes the necessary commands in the order needed.
+
+That is why the result, when we make a change to helloWorld.cpp is that
+the rules are done in this order:
+
+  what we see                            explanation
+  -------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  `-bash-4.2$ make helloWorld`           we type `make helloWorld` to make the executable, and make constructs the dependency chain `helloWorld.cpp`→`helloWorld.o`→`helloWorld`
+  `clang++ -c helloWorld.cpp`            From the dependency chain, this is the first thing that must be done. It must be done because helloWorld.cpp is "newer" than helloWorld.o. The command recompiles `helloWorld.cpp` into `helloWorld.o`—the `-c` flag indicates "compile only; do not link", so we get a helloWorld.o file as the result.
+  `clang++ helloWorld.o -o helloWorld`   This is the link step. It is done because NOW helloWorld.o, which is newly remade from the previous step, is NOW newer than the executable helloWorld. The command relinks the helloWorld.o code (the machine language version of ONLY the code from the helloWorld.cpp file) with the machine language versions of the code in the standard libaries (e.g. the code for the iostream library that provides cout, endl, among other things.) The result of this command is a new version of the executable file `helloWorld`
+  `-bash-4.2$`                           The bash prompt indicates that the command is complete and the shell is ready for our next command.
+
+So what should you know from this for your exams? The next box suggests
+a few of things you might be asked about.
+
+-   Be able to explain the difference between Makefile commands that
+    compile, vs. commands that link.
+-   From this step of this lab, be able to write the syntax of Makefiles
+    commands for compiling and/or linking a simple standalong C++
+    program. (Later we'll also learn how to write Makefiles for complex
+    program consisting of multiple source files.)
+-   Be able to explain how Makefiles construct a chain of dependencies
+    based on timestamps to determine what needs to be recompiled or
+    relinked.
+-   Be able to explain the variables such as `CXX` are dereferenced when
+    the `$` is put in front of them, and they are surrounded by braces.
+
+### Step 3e: Adding a rule for `make clean`
+
+Sometimes we may want to remove all of the executable and .o files from
+our directory. As you may recall from Makefiles that were supplied to
+you in CS16 and CS24, that is traditionally done with a `clean` target
+that allows us to type `make clean`.
+
+Here are some examples of when that is appropriate:
+
+-   When we are switching from one compiler to another, e.g. from
+    clang++ to g++—the .o files produced by one compiler are not
+    compatible with the other.
+-   When we have made signficant changes to the interface between
+    multiple parts of a program that uses separate compilation, i.e.
+    multiple .cpp files (and hence .o files). By "interface", here we
+    typically mean the .h files that specify definitions of structs,
+    classes, and function prototypes. If those have changed, a "make
+    clean" may be a good idea.
+-   If we are about to copy the files to another directory (e.g. to
+    share with a pair partner), or if we are finished with a project and
+    want to save disk space. We really only need the source files (.h,
+    .cpp and Makefile). The .o and executable files can always be remade
+    if/when they are needed.
+
+A clean rule looks like this, and is typically at or near the end of
+your Makefile. Add this to your Makefile now. Note that the second line
+starts with a tab, and that there should be a blank line after your
+rule.
+
+    clean: 
+            /bin/rm -f *.o helloWorld
+
+`make clean` <b>almost</b> always runs the `clean` rule. In general, any
+Makefile target with no files specified after the colon is always run
+when it is invoked. Technically, there is one exception: when there is a
+file that has exactly the same name as the rule in the file. So it is
+best to avoid having any executable or other file with the exact name
+`clean`. In such a case, the `make clean` rule would <em>never</em> be
+invoked. That's what we call a <em>corner case</em>—it rarely happens in
+practice, but is possible in theory, so its good to keep in mind.)
+
+The fact that this rule has `clean:` as the first line with
+<em>nothing</em> after the colon (`:`) means that `clean` does not
+depend on anything. That has a special meaning in a Makefile—it means
+that <em>every</em> time we invoke `make clean`, the commands following
+the first line of the rule will <em>always</em> be executed. (Well,
+almost always. See the note at right for an exception.)
+
+So `make clean` always results in the command
+`/bin/rm -f *.o helloWorld` being executed, which removes all .o files
+(the `*` being a <em>wildcard</em> that matches any filename.
+
+Why`/bin/rm -f` rather than just `rm`?
+
+-   `/bin/rm` specifies exactly what version of the rm program (the Unix
+    delete program) to use. This is generally safer, in case someone has
+    redefined `rm` to do something different than we might expect.
+-   The `-f` option stands for <em>force</em> and says "do this even if
+    there is a problem". A problem might be, for example, that there
+    aren't any .o files or helloWorld files to remove. Without the `-f`
+    option, the `/bin/rm` command might given an error message. With
+    that option, it just works and doesn't complain.
+
+### Step 3f: Testing the `make clean` rule
+
+    -bash-4.2$ make clean
+    /bin/rm -f *.o helloWorld
+    -bash-4.2$ make helloWorld
+    clang++ -c helloWorld.cpp
+    clang++ helloWorld.o -o helloWorld
+    -bash-4.2$ make helloWorld
+    make: `helloWorld' is up to date.
+    -bash-4.2$ 
+
+Now let's test it out. Run `make clean`, then run `make helloWorld`
+twice.
+
+Your output should look like what you see at right.
+
+-   You will see that when we type `make clean`, the
+    `/bin/rm -f *.o helloWorld` command is executed.
+-   When we type `make helloWorld` the <em>first</em> time, the commands
+    to compile and link are executed.
+-   When we type `make helloWorld` the <em>second</em> time, we get a
+    message that `` `helloWorld' is up to date. ``. This is because make
+    examined the whole dependency chain
+    (`helloWorld.cpp`→`helloWorld.o`→`helloWorld`), and found that
+    nothing needed to be done—all of the files needed were present, and
+    all the timestamps were in the correct sequence.
+
+Be able to predict how typing `make clean` will affect what happens when
+make commands are invoked, and be able to explain why.
+
+Step 4: Adding rules to support separate compilation
+----------------------------------------------------
+
+Now that we have practiced a bit on some simple Makefile rules for a
+"Hello, World!" progam, we are ready to put in some Makefile rules for
+something a bit more complex. In this weeks program, we are working with
+some code that is basically review from CS16, but will set us up for
+some of the advanced material we'll be covering in CS32. This code deals
+with simple arrays in C++, finding min and max, and differentiating
+between index and value. So, nothing too complicated.
+
+The code is in the following source files:
+
++-----------------------+-----------------------+-----------------------+
+| Filename              | Purpose               | Do I need\            |
+|                       |                       | to modify\            |
+|                       |                       | this file?            |
++=======================+=======================+=======================+
+|                       | Function definitions  | <b>YES</b>            |
+|                       | for five functions.   |                       |
+|                       | Two are complete,     |                       |
+|                       | three are stubs\      |                       |
+|                       | <b>Your job in this   |                       |
+|                       | lab is to replace the |                       |
+|                       | stubs with working    |                       |
+|                       | code</b>              |                       |
++-----------------------+-----------------------+-----------------------+
+|                       | function prototypes   | NO                    |
+|                       | for five functions    |                       |
+|                       | defined in            |                       |
+|                       | arrayFuncs.cpp        |                       |
++-----------------------+-----------------------+-----------------------+
+|                       | test cases for        | NO                    |
+|                       | functions defined in  |                       |
+|                       | arrayFuncs.cpp\       |                       |
+|                       | <b>This is the only   |                       |
+|                       | file in this lab with |                       |
+|                       | a main()              |                       |
+|                       | function</b>\         |                       |
+|                       | (other than           |                       |
+|                       | helloWorld.cpp)       |                       |
++-----------------------+-----------------------+-----------------------+
+|                       | definitions for       | NO                    |
+|                       | functions that        |                       |
+|                       | support test-driven   |                       |
+|                       | development:\         |                       |
+|                       | assertEquals,         |                       |
+|                       | assertTrue, etc.      |                       |
++-----------------------+-----------------------+-----------------------+
+|                       | function prototypes   | NO                    |
+|                       | for functions defined |                       |
+|                       | in tddFuncs.cpp       |                       |
++-----------------------+-----------------------+-----------------------+
+
+### Step 4a: Adding a rule to link lab00Test
+
+The file lab00Test.cpp is the one with a main function in it. So that is
+the one that we make an executable from.
+
+We make an executable from it by linking its .o version together with
+the .o versions of the other .cpp files. The first line of the rule
+looks like this:
+
+    lab00Test: lab00Test.o tddFuncs.o arrayFuncs.o
+
+That says that the executable for lab00Test <em>depends on</em> the .o
+files lab00Test.o, tddFuncs.o and arrayFuncs.o, which are in turn, the
+compiled machine code versions of lab00Test.cpp, tddFuncs.cpp and
+arrayFuncs.cpp.
+
+The line that follows this one is the command to link these .o files
+into the executable. Remember that the second line here MUST START WITH
+A TAB, not with spaces. You CANNOT JUST COPY AND PASTE FROM THIS WEB
+PAGE.
+
+    lab00Test: lab00Test.o tddFuncs.o arrayFuncs.o
+            ${CXX} lab00Test.o tddFuncs.o arrayFuncs.o -o lab00Test
+
+Put that in your Makefile, and then try running `make lab00Test`
+
+Now, you might think that we need to create a rule such as this one
+next:
+
+    lab00Test.o: lab00Test.cpp
+            ${CXX} -c lab00Test.cpp 
+
+That is what we would do to tell the make utility how to create
+lab00Test.o from lab00Test.cpp, with the -c flag (compile only; don't
+link). The output file is automatically named by removing the .cpp and
+replacing it with .o. BUT WE DON'T HAVE TO DO THAT. (See the tip below
+for an explanation as to why)
+
+Instead, just try typing `make lab00Test` and it should work:
+
+    -bash-4.2$ make lab00Test
+    clang++    -c -o lab00Test.o lab00Test.cpp
+    clang++    -c -o arrayFuncs.o arrayFuncs.cpp
+    clang++    -c -o tddFuncs.o tddFuncs.cpp
+    clang++ lab00Test.o arrayFuncs.o tddFuncs.o -o lab00Test
+    -bash-4.2$ 
+
+So read the tip now to understand why we didn't need those extra rules:
+
+We can actually omit the rules for `lab00Test.o`, etc.
+
+The reason we can omit this rule is that it follows the pattern of a
+default rule that the Make utility already has in place. That default
+rule looks like this—it is NOT important (at this point in the course)
+for you to fully understand all the symbols in this default rule—it is
+only important that you understand the idea that it replaces the
+specific rule for `helloWorld.o`. Later in the course, we will cover the
+meaning of the various symbols (`%`, `$<`, `$@`).
+
+    %.o : %.cpp
+            $(CXX) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+Default rules are explained more in [10 of the GNU Make
+documentation](ftp://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_10.html%7CChapter)
+
+As it turns out, we didn't need the rule for helloWorld.o either. Try
+commenting it out, and doing a `make clean`, then a `make helloWorld`
+and you'll see that everything still works just fine. We typically DO
+needs rules for the linking steps, because Make cannot guess which .o
+files need to be linked together to create an executable. But we often
+do NOT need the rules for compiling, if our compile is following the
+normal naming conventions.
+
+### Step 4b: Adjusting the clean rule
+
+So now, we are <em>almost</em> ready to run our `./lab00Test` program
+and start working on getting test cases to pass. BUT FIRST, we need to
+adjust our make clean rule.
+
+Here's how it looks now:
+
+    clean: 
+            /bin/rm -f *.o helloWorld
+
+Here is how it needs to look instead:
+
+    clean: 
+            /bin/rm -f *.o helloWorld lab00Test
+
+We need to add the lab00Test executable to the make clean rule. In a
+future lab, we'll see how we can factor out parts of this to make
+keeping a Makefile up to date less tedious.
+
+Step 5: Make your the code in arrayFuncs.cpp pass its tests
+-----------------------------------------------------------
+
+Here you need to follow the instructions inside the file arrayFuncs.cpp
+to replace the stubs with working code.
+
+The instructions there should be self-explanatory, and the assignment
+should be super easy—this is essentially review from CS16, laying a
+foundation for a discussion of sorting algorithms.
+
+We need to be sure we understand how to find the index of a minimum and
+maximum element, and how to swap two elements in an array.
+
+With those concepts down, we are ready (next week) to move on to both
+selection sort and insertion sort.
+
+When your code passes the tests, you are ready to try submitting it to
+submit.cs
+
+Step 6: Checking your work before submitting
+--------------------------------------------
+
+When you are finished, you should be able to type `make clean` and then
+`make lab00Test` then `./lab00Test` and see the following output:
+
+``` {.bash}
+-bash-4.2$ ./lab00Test
+arrayToString(a,sizeA)={3,14,15,92,65,35,89}
+PASSED: arrayToString(a,sizeA)
+PASSED: indexOfMin(a,sizeA)
+PASSED: indexOfMax(a,sizeA)
+PASSED: arrayToString(a,sizeA); after swap(a,0,1)
+PASSED: arrayToString(a,sizeA); after swap(a,0,2)
+arrayToString(b,sizeB)={79,32,38,46}
+PASSED: arrayToString(b,sizeB)
+PASSED: indexOfMin(b,sizeB)
+PASSED: indexOfMax(b,sizeB)
+PASSED: arrayToString(b,sizeB); after swap(b,1,3)
+PASSED: arrayToString(b,sizeB); after swap(b,0,2)
+arrayToString(c,sizeC)={40,30,20,10}
+PASSED: arrayToString(c,sizeC)
+PASSED: indexOfMin(c,sizeC)
+PASSED: indexOfMax(c,sizeC)
+arrayToString(d,sizeD)={11,21,22,23}
+PASSED: arrayToString(d,sizeD)
+PASSED: indexOfMin(d,sizeD)
+PASSED: indexOfMax(d,sizeD)
+arrayToString(e,sizeE)={79,32,32,38,46}
+PASSED: arrayToString(e,sizeE)
+PASSED: indexOfMin(e,sizeE)
+PASSED: indexOfMax(e,sizeE)
+arrayToString(f,sizeF)={5,32,32,31,6,4,4}
+PASSED: arrayToString(f,sizeF)
+PASSED: indexOfMin(f,sizeF)
+PASSED: indexOfMax(f,sizeF)
+arrayToString(g,sizeG)={32,32,38,46,46,4,4}
+PASSED: arrayToString(g,sizeG)
+PASSED: indexOfMin(g,sizeG)
+PASSED: indexOfMax(g,sizeG)
+-bash-4.2$
 ```
-$ ssh USERNAME@csil.cs.ucsb.edu
+
+At that point, you are ready to try submitting on the submit.cs system.
+
+### An important word about academic honesty and the submit.cs system
+
+We will test your code against other data files too—not just these. So
+while you might be able to pass the tests on submit.cs now by just doing
+a hard-coded "cout" of the expected output, that will NOT receive
+credit.
+
+To be very clear, code like this will pass on submit.cs, BUT REPRESENTS
+A FORM OF ACADEMIC DISHONESTY since it is an attempt to just "game the
+system", i.e. to get the tests to pass without really solving the
+problem.
+
+I would hope this would be obvious, but I have to say it so that there
+is no ambiguity: hard coding your output is a form of cheating, i.e. a
+form of "academic dishonesty". Submitting a program of this kind would
+be subject not only to a reduced grade, but to possible disciplinary
+penalties. If there is <em>any</em> doubt about this fact, please ask
+your TA and/or your instructor for clarification.
+
+Step 7: Submitting via submit.cs
+--------------------------------
+
+The command to submit this weeks lab is this one:
+
+Here is the command to submit this week's labs:
+
+``` {.bash}
+~submit/submit -p 350 Makefile arrayFuncs.cpp
 ```
 
-SSH will first ask you a question which looks like this:
+Grading Rubric
+==============
 
-```
-The authenticity of host 'csil.cs.ucsb.edu (128.111.43.14)' can't be established.
-RSA key fingerprint is 90:ab:6a:31:0b:81:62:25:9b:11:50:05:18:d3:1a:b5.
-Are you sure you want to continue connecting (yes/no)? 
+This lab is based entirely on the grade assigned by submit.cs. There
+WILL be labs this quarter where code style is assessed, but this is not
+one of those labs.
 
-```
+submit.cs automated
+-------------------
 
-Type <b>yes</b> and then ENTER to continue. It will next ask for your CoE account password. When you type it in, nothing will show on the screen (not even dots). However what you type is still being sent and once you are finished with your password, you can press ENTER to login.
+-   (50 pts) lab00Test passed submit.cs tests
+-   (50 pts) helloWorld passed submit.cs tests
 
-<b>You should now be remotely connected to CSIL!</b> You can make sure by typing the following command (which will tell you what machine you are currently issuing commands to):
+Acknowledgements
+================
 
-```
-$ hostname
+Some material in this lab is based on work originally written by Mike
+Costanzo and edited by Phill Conrad. Other parts are original work of
+Phill Conrad.
 
-```
-
-This should show <b>csil.cs.ucsb.edu</b>. You can now do anything you could normally do in a terminal window in CSIL or the Phelps lab (except run graphical programs).
-
-## Extra Note: Graphical Forwarding
-
-This is not required or necessary to use CSIL remotely, so if you are not interested, go ahead and skip this part.
-
-If you have an X windows system installed you can get graphical applications running by <em>forwarding</em> X from CSIL to your machine. To do this, add the <b>-X</b> option to the SSH command like this:
-
-```
-$ ssh -X USERNAME@csil.cs.ucsb.edu
-```
-
-X windows is almost always installed on graphical Linux, and can be installed on Mac OS X as XQuartz (which can be found at <a href="http://xquartz.macosforge.org/landing/" target="_blank">http://xquartz.macosforge.org/landing/</a>).
-
-### Step 2c: Connecting to CSIL via SSH on Windows with PuTTY <a name="step2c"></a>
-
-<!--
-<h4><i><a name="step2c"></a>Step 2c: Connecting to CSIL via SSH on Windows with PuTTY</i></h4>
--->
-
-To connect remotely on Windows machines, we recommend using a program called <em>PuTTY</em>. This program is a well-known and widely-used SSH client for the Windows OS.
-
-First, download the program from <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" target="_blank">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a>. You only need the executable file <b>putty.exe</b>, but feel free to download any other programs that you want. The page includes portable versions and a version with an installer. <i>Always make sure to download PuTTY from this site</i>, so that you can make sure it is the correct program.
-
-Once downloaded, run PuTTY like you would open other programs. If you just download the <b>putty.exe</b> file, you can open it from your downloads folder directly. You can also move it to any other location on your machine and open it from there. If you used the installer, open PuTTY from the Start Menu.
-
-When PuTTY opens, you should see a window that looks like this:
-
-<img src="putty-empty.png" width="469" alt="Empty PuTTY window" />
-
-Type <b>csil.cs.ucsb.edu</b> into the box labeled "Host Name (or IP address)". Leave the "Port" setting at 22 and leave the "SSH" button checked. The window should now look like this:
-
-<img src="putty-full.png" width="472" alt="Completed PuTTY window" />
-
-Then click on the "Open" button to connect. PuTTY will then show a prompt which looks like this:
-
-<img  src="putty-hostkey.png" width="433" alt="PuTTY Host Key Prompt" />
-
-Click "Yes" to accept and have PuTTY remember CSIL's key.
-
-Once a connection is made, CSIL will ask for both your username and then your password. Type in your CSIL username and password. The password will not be shown on the screen, but the characters you type are being used. This step will look something like this (with your username instead of "username"):
-
-<img src="putty-login.png" width="677" alt="PuTTY Login Prompt" />
-
-Once you have logged in successfully, you should be connected remotely to the CSIL server. Run the following command to make sure (this command shows the full host name of the machine you are logged in to):
-
-```
-$ hostname
-```
-
-This command should output <b>csil.cs.ucsb.edu</b>. You can now do anything in this terminal window that you could do on a CSIL machine or a Phelps lab machine, except run graphical applications.
-
-If you want to run graphical applications, instead of using puTTY, you can use other programs, such as [MobaXterm](http://mobaxterm.mobatek.net/){: target="_blank"}.
-
-
-
-
-<hr>
-
-## Step 3: Create cs16 and lab00 directories<a name="step3"></a>
-
-Now that your environment is set up, you next will need to create a directory (a folder is also called <i>directory</i> in Linux) that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.
-
-To create your CS16 directory, use the <b>mkdir</b> command. Type the following in the terminal and press enter:
-
-```
-$ mkdir cs16
-```
-
-The <b>$</b> represents the terminal prompt; <i>you won't type this character</i>. Whenever you see it, that means that the following command is intended to be typed into the terminal window and run by pressing enter.
-
-You can see list of files and directories in the current directory with <b>ls</b> command. Type the following in the terminal and press enter:
-
-```
-$ ls
-```
-
-You should be able to see the directory you just created i.e. **cs16** 
-
-Now move into that new CS16 directory with the <b>cd</b> command as follows:
-
-```
-$ cd cs16
-```
-
-And create and move into a lab00 directory:
-
-```
-$ mkdir lab00
-$ cd lab00   
-```
-
-At any time, you can check what directory you are current in with the command **pwd**. It will output the full path of the current directory. For example, if you are inside your <b>lab00</b> directory, you might see:
-
-```
-/cs/student/yourcsilname/cs16/lab00
-```
-
-Knowing how to navigate a UNIX environment and issue UNIX commands is VERY valuable to computer scientists and engineers. To learn more UNIX commands, there are lot of cool Web resources and books on the topic. This is one website I found that's a good introductory page: [Useful unix commands](http://mally.stanford.edu/~sr/computing/basic-unix.html)
-<!--This link doesn't seem to work anymore
-<a href="https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html" target="_blank">https://www.tjhsst.edu/~dhyatt/superap/unixcmd.html</a>.
--->
-
-<!--
-<h3>Step 4: Create a C++ File</h3>
-
-<p>Now that we have a directory to contain our work for the assignment, let's start writing our code. Create a file called <b>hello.cpp</b> with the <b>touch</b> command:</p>
-<pre>$ touch hello.cpp</pre>
-
-<p><span class="code">hello.cpp</span> is now a completely empty file that you will use throughout the rest of the assignment to write your C++ code.</p> -->
-
-<hr>
-
-## Step 4: Editing text files for programming <a name="step4"></a>
-
-Let's take a little detour on how to best create and modify text files. These will carry all the code (regardless of computer language) that we want to assemble, compile, and execute.
-
-You are surely all familiar with Microsoft Word as a widely-used "word processor", but please DO <b>NOT</b> USE MS WORD TO WRITE PROGRAMS!!! :)<br>
-Instead, for programming, you have access to a very large number of excellent text editors - most of them are free to use! I will introduce you to just 4 of them below. If you already have a favorite editor and know how to use it well, then you don't have to change and use something else, just for this class.
-
-In fact, <i>AND PLEASE NOTE THIS</i>, no one editor is necessarily "better" than another. It is a matter of your preference. This is a great time for you to explore multiple options and then pick one. Once you pick an editor of choice, STICK WITH IT!
-
-
-As you progress in your Computer Science education and, subsequently, your careers in CS, make sure you end up learning how to use more than one editor. You can still have a "favorite" that you excel at using, but at least have a working familiarity with others.
-
-
-1. <b>emacs</b> for UNIX-based OS
-	
-	emacs is a very popular editor that's available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).
-
-	To run emacs on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:
-
-		
-		$ emacs
-		
-	
-	To edit a file (let's say it's called "filename"), you'd type:
-
-		$ emacs <filename>
-
-	To learn how to use emacs, there is no substitute for PRACTICE!!! Of course, there are multiple online resources that you can look at (especially given emacs' popularity) and here are some of them:
-
-	* <a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a>
-
-	* <a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a>
-
-	* <a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner's guide to emacs</a>
-	
-
-2. <b>vim</b> for UNIX-based OS
-	
-	vim (or sometimes called vi) is another popular editor that's also available on just about every UNIX machine (including the ones that you're using in the CS labs) and UNIX-based machines (like MacOS computers).
-
-	To run vim on a UNIX machine or a MacOS machine, open up a terminal (see above for how to do that on Macs) and type:
-
-		$ vim
-	
-	To edit a file (let's say it's called "filename"), you'd type:
-
-		$ vim <filename>
-
-	To customize your vim environment for a better coding experience with C/C++ copy this .vimrc file from the instructor folder to your home folder using the following command:
-
-	```
-	cp /cs/faculty/dimirza/cs16-wi17/labs/example_dotvimrc/.vimrc ~/
-	``` 
-
-	Again, to learn how to use vim, there is no substitute for PRACTICE!!! Again, there are multiple online resources that you can look at and here are some of them:
-
-	* <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
-
-	* <a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a>
-
-	* <a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a>
-	
-3. <b>Sublime Text 2</b> for Windows OS and MacOS X --- see <a href="https://www.sublimetext.com/" target="_blank">the product website</a> (it's a program that you'd have to download)
-
-4. <b>Notepad++</b> for Windows OS --- see <a href="https://notepad-plus-plus.org/" target="_blank">the product website</a> (it's a program that you'd have to download)
-
-
-
-<hr>
-
-## Step 5: Create and edit a file containing a C++ program <a name="step5"></a>
-
-Now it's time to write the program! If you're comfortable with one of the reviewed text editors, then go ahead and use one. Otherwise, here are some [emacs hints](emacs_hints/) and some [vim hints](vim_hints/).
-
-This assignment only needs you to write a program that prints out two lines on the display, and nothing else. <b>The output should look exactly as follows</b> (no space before or after each line, except the 2 newlines):
-
-```
-Hello, world!
-CS16 Winter 2017.
-```
-
-Start with a "skeleton program" (or template) that contains the necessary structure but that does not do anything:
-
-```cpp
-#include <iostream>
-
-using namespace std;
-
-int main() {
-    // Your printing code should go here
-
-    return 0;
-}
-```
-<p>Go ahead and type this in to the <b>hello.cpp</b> file. Alternatively, you can copy and paste it directly from this page.</p>
-
-<p>Next, you will need to replace the comment with code to print out the expected output. Comments in C++ are lines that start with <b>//</b> or text between <b>/*</b> and <b>*/</b>. The second type can span multiple lines.</p>
-
-<p><em>Important note: For students familiar with Python, remember that lines starting with the <b>#</b> character are not comments in C++. Rather, they are important include lines that allow your program to use the input and output functionality. Make sure to copy those lines in your program as well. Only <b>//</b> or <b>/*</b> create comments in C++.</em></p>
-
-<p>To print out text to the terminal, you can use the <b>cout</b> stream. To output something use the <b>&lt;&lt;</b> operator as shown below:</p>
-<pre>cout &lt;&lt; "This will be printed out to the terminal" &lt;&lt; endl;</pre>
-
-<p>The <b>endl</b> command will cause a newline (i.e. a carriage return) to be printed and the next print to go on the next line.</p>
-
-<p>You can adapt this line to achieve the objective of the assignment. <b>Remember that we need to print two lines, each with a newline at the end.</b> You can do this with one or two statements.</p>
-
-<hr>
-
-## Step 6: Compile the Code <a name="step6"></a>
-
-Now that the code is written, we need to <em>compile</em> it. This will be done using a special program called a <em>compiler</em>.
-
-Before moving on, <b>make sure you save your code</b> and close the text editor. The following step will be done in the terminal.
-
-For C++ code we will use the <b>g++</b> compiler that's built-into many UNIX machines (it even works on most MacOS terminal programs). You can compile the <b>hello.cpp</b> file into an executable called <b>hello</b> with the following command:
-
-	$ g++ -o hello hello.cpp
-
-This will compile your code and make an executable version of it. Specifically, it will tell the compiler to take the source code file <b>hello.cpp</b> and compile and link it to an executable called <b>hello</b>.
-
-If the compilation is successful, you won't see any output from the compiler, but if you issue a UNIX <b>ls</b> command, you should see a new file has appeared: one called <b>hello</b>. You can then use the following command to run your program:
-
-	$ ./hello
-
-Which means "in the current directory, as represented by the <b>.</b> character, run the program <b>hello</b>". You should then see the program output the two expected lines.
-
-The other possibility is that the program may <b>not compile successfully</b>. What to do then?<br>
-If you run the <b>g++</b> command and are unsuccesful with your compilation, then you might see an output that looks like this:
-
-	
-	hello.cpp: In function ‘int main()’:
-	hello.cpp:10:1: error: expected ‘;’ before ‘}’ token
- 	}
- 	
- 		
-The compiler will try to give you hints on the line (in this case, it's complaining about line 10) where the error occurs, and also about what the error is (in this case a missing semicolon). You will also note that, in this case, an output executable file is not produced.
-
-If you encounter an error, use the compiler hints and examine the line in question. If the compiler messsage is not sufficient to identify the error (which happens more than sometimes), you can search online to see when the error occurs in general. Once you have fixed the error, run the compilation command again. De-bugging a program code is a necessary ritual in almost all programs written (even those written by expert coders). More on that in a later class.
-
-<!--
-<p>You can find a list of common C++ errors and possible solutions at <a href="http://charlottehill.com/cpperrors.html">http://charlottehill.com/cpperrors.html</a>.</p>
--->
-
-<hr>
-
-
-## Step 7: Submit your program for grading <a name="step7"></a>
-
-Once you are satisfied that your program is correct, then it's time to submit it.
-
-<strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
-
-In this course we will use the <a href="https://submit.cs.ucsb.edu/" target="_blank">submit.cs.ucsb.edu</a> system. You can make a submission from either the command line on any CS machine, or from a Web browser.
-
-If you don't have a submit.cs account, you will first need to create one. This can be done at 
-<a href="https://submit.cs.ucsb.edu/form/user" target="_blank">https://submit.cs.ucsb.edu/form/user</a>.
-
-Once you have an account created, login at <a href="https://submit.cs.ucsb.edu/session" target="_blank">https://submit.cs.ucsb.edu/session</a>.
-
-Next, you need to join the CS16 course. Look for the "Join Class" link at the top of the page. It is in the top bar, as seen below:
-
-<img src="submit-topbar.png" width="542" alt="submit.cs Top Bar" />
-
-Once you see the list of all courses, click on the <b>"Join CS16_Mirza_w17"</b> button.
-
-You should then see CS16 appear on your homepage when logging in to the submit.cs system. Click on the course now.
-
-Now find "lab00" and click on the "Make Submission" button. It looks like this:
-
-<img src="make-submission-button.png" width="154" alt="Make Submission Button" />
-
-This is the Web interface for submitting your code for the assignment. You can now upload your source file directly on this page. The browser will open a dialog box and you will need to navigate to the directory containing your <b>hello.cpp</b> file and select it.
-	
-Once your file is uploaded, click "Submit 1 File":
-
-<img src="submit-file-button.png" width="129" alt="Submit 1 File Button" />
-
-Once you submit, you should see a page detailing your submission. The system will automatically grade your program and will show you the results on this page after about a 1 minute delay.
-
-You can <em>alternatively</em> submit your code from the command line (i.e. in the terminal) on any CS machine, including the Phelps lab machines or the CSIL server. You can also use this method when logged in remotely. To submit the the <b>hello.cpp</b> file to this assignment by running the command:
-
-	$ ~submit/submit -p 625 hello.cpp
-
-The program will ask you to login <b>with your submit.cs username and password</b>. The password will not be printed to the terminal, but what you type will be used. It will also offer the option to save your credentials, so that you do not have login next time you submit. You may choose to do this or not. After the submission succeeds, you should see the program output something like:
-
-	Results will be available at: https://submit.cs.ucsb.edu/submission/xxxxx
-
-You can copy this URL and paste into a Web browser to reach the same submission result page as described above.
-
-<hr>
-
-## Step 8: Check Submission Results <a name="step8"></a>
-
-After the 1 minute delay, the submit system will show your score and give you feedback on your submission. <em>Refresh the webpage after a minute to see this information.</em> This usually takes one of three forms:
-
-<p>A correct submission with a score of 100. This means that your program passed all the tests for this assignment. Once you get to this point, you are finished with the assignment and will receive full credit. This case will look like this:</p>
-<img src="correct-submission.png" width="233" alt="Correct Submission." />
-
-<p>An incorrect submission with a score of 0 to 99. This means that your program failed 1 or more of the tests. For this assignment, the system will show both the expected output and the output your program generated side-by-side so that you can see what went wrong. You will need to fix your program, and then do Step 7 again to re-submit. This case will look like this:</p>
-<img src="incorrect-submission.png" width="706" alt="Incorrect Submission." />
-
-<p>Or a submission for which compilation failed. This means that your program caused compilation errors when the system tried to compile it. You will need to interpret the compiler output and fix the errors. The system will show you the compilation command that failed along with the full error message. This case will look like this:</p>
-<img src="compilation-failure.png" width="499" alt="Compilation Failure." />
-
-<p>You may submit your program multiple times before the deadline. You should really only submit after local compilation does not produce any errors and runs as expected - that's the most efficient and preferred way to do things. The score of the last submission uploaded before the deadline will be used as your assignment grade.</p>
-
-<hr>
-
-
-## Step 9: Create a github account and explore its web interface <a name="step9"></a>
-
-If you have made it to this step, then you have successfully created a C++ program, tested it on a remote server (csil.cs.ucsb.edu) and made a successful submission. We would however like you to do one more step to get familiarized with git and github. Here is some motivation: When developing large programs, it is very useful to save working versions of your code that you can always revert to. Trying to do this manually often leads to total chaos!! That's why professional programmers use some kind of version control system (VCS). We will use a popular VCS called Git. With Git all versions of your code will be available to you and your collaborators (in later labs this would be your pair-programming partner) anytime, anywhere! It will also help the course staff view your progress as you work on the assignments.
-
-1. Before we begin, read this article to get an overview of git: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/)
-
-2. Create a github account. You can sign up for a free account on [Github](https://github.com/). Use your official ucsb email when signing up. Sign into github with your github account. 
-
-3. Now that you have a github account you can create a git repo. The concept of a repo was explained in the article that you just read. New projects always start with this step. Since Github promotes "open source" projects, repos created under your default github account are *public*. This means that they are visible to everyone on the internet. However, for this class your assignments have to be "closed source", and not open to your classmates and others on the internet. This requires that you create *private* repos. These are repos that are only visible to you, your pair-partner and the instructional staff. You can only create private repos within our class organization on github: ucsb-cs16-wi17. So, the next step is to join our class organization.
-
-4. To join our organization, follow these easy steps:
-
-4a. click on this link:[ https://ucsb-cs16-wi17-signup.herokuapp.com/]( https://ucsb-cs16-wi17-signup.herokuapp.com/). You should see the following welcome message, click on the blue "sign in with Github" button:
-
-![welcome](/lab/lab00/enter-org/pic1.png){:height="500px"}
-
-4b. The next screen asks you to authorize our app to add you to our class organization. Click on the green "authorize application" button.
-
-![authorize](/lab/lab00/enter-org/pic2.png){:height="500px"}
-
-4c. Enter your github and you should see the following screen that shows you were successfully added to our class organization:
-
-![success](/lab/lab00/enter-org/pic4.png){:height="500px"}
-
-
-5. Read this article on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/). Open a browser and navigate to our class organization on github: [ucsb-cs16-wi17](https://github.com/orgs/ucsb-cs16-wi17/dashboard). Click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/) article, to create a PRIVATE repo containing only a README.md and a .gitignore. See screenshot below:
-
-![new-repo](/lab/lab00/enter-org/pic5.png){:height="500px"}
-
-
-
-Your repo name should be lab00_your-github-username. For example if your github username is jgaucho, you should name your repo as lab00_jgaucho. Make sure you select the PRIVATE option when creating your repo.
-
-6. Check to see if you have the files: README.txt and .gitignore in your repo. If you don't see these files, contact an instructor or ask for help on Piazza. To learn more about the .gitignore, read this article: [About gitignore](https://ucsb-cs56-pconrad.github.io/topics/git_gitignore/)
-
-7. Use github's web interface to upload your hello.cpp file. We recommend that you be physically present on a lab machine where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. If your repo name is lab00_jgaucho, the link to the repo is: [https://github.com/ucsb-cs16-wi17/lab00_jgaucho](https://github.com/ucsb-cs16-wi17/lab00_jgaucho). Click on the "Upload files" button as shown below. 
-
-![git-file-upload](/lab/lab00/git-repo-pic_ink-upload.jpg){:height="500px"}
-
-<p>You should see the following screen:</p>
-
-![git-upload-hello](/lab/lab00/upload-hello-cpp.png){:height="500px"}
-
-8. Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. For more practice and fun upload a picture of yourself. Use your name as the file name. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means? 
-
-Congratulations on completing your introductory exercise to github. We will continue to explore git in the subsequent assignments.
-
-
-## Step 10: Done!
-
-<p>You can continue to make submissions on submit.cs until your submission receives a score of 100/100. If you have a perfect score and  have also successfully uploaded your code and picture to your github repo, you are done with this assignment. We will be grading the git part of this assignment manually on github. Congratulations on completing your first C++ program!</p>
-
-<p>If you are in the Phelps lab or in CSIL, <b>make sure to log out of the machine before you leave</b>. Also, make sure to close all open programs before you log out. Some programs will not work next time if they are not closed. Remember to save all your open files before you close your text editor.</p>
-
-<p>If you are logged in remotely, you can log out using the <b>exit</b> command in UNIX:</p>
-<pre>$ exit</pre>
