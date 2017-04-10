@@ -1,30 +1,29 @@
-name: "CS 16 Winter 2017"
-github_url: https://github.com/ucsb-cs16-wi17/ucsb-cs16-wi17.github.io
+name: "CS32 Spring 2017"
+github_url: https://github.com/ucsb-cs32-s17/ucsb-cs32-s17.github.io
 
 on_campus: http://proquest.safaribooksonline.com
 off_campus: http://proquest.safaribooksonline.com.proxy.library.ucsb.edu:2048
 
 start_week: 1
-start_date: 2017-01-08 00:00:00.00-8:00
+start_date: 2017-04-03 00:00:00.00-8:00
 num_weeks: 10
 extra_exam_week: true
 
-instructor_url: https://ucsb-cs16.github.io/instructor
+instructor_url: https://ucsb-cs32.github.io/instructor
 
 cal_dates: >
   [
-  {"label":"First day of classes", "date":"2017-01-09" },
-  {"label":"Univ Holiday", "date":"2017-01-16" },
-  {"label":"Univ Holiday", "date":"2017-02-20" },
-  {"label":"Last day of classes", "date":"2017-03-17" },			
+  {"label":"First day of classes", "date":"2017-04-03" },
+  {"label":"Univ Holiday", "date":"2017-05-29" },
+  {"label":"Last day of classes", "date":"2017-06-09" },			
   ]
 
 
-course: "CS16"
-legacy_wiki_name: 16wiki
-legacy_wiki_url: "https://foo.cs.ucsb.edu/16wiki" 
-qtr: "W17"
-quarter: "Winter 2017"
+course: "CS32"
+legacy_wiki_name: 32wiki
+legacy_wiki_url: "https://foo.cs.ucsb.edu/32wiki" 
+qtr: "S17"
+quarter: "Spring 2017"
 
 kramdown:
    parse_block_html: true
