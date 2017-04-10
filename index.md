@@ -1,10 +1,8 @@
 ---
-title: "CS 16: Problem Solving with Computers -I , Winter 17 Mirza"
+title: "CS32, Object-Oriented Programming and Implementation, Andrew Duncan"
 ---
 
-# CS 16: Problem Solving with Computers -I , Winter 17 
-
-<!--{{site.course}}, {{site.quarter}}-->
+# {{site.course}}, {{site.quarter}}
 
 
 <div id="info" data-role="collapsible" data-collapsed="false">
