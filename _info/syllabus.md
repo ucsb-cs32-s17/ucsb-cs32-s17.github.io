@@ -25,9 +25,9 @@ You must contact the instructor for clarification if you receive information fro
 * Homepage: [http://andrewduncan.net/cs32](http://andrewduncan.net/cs32)
  
 ## Teaching Assistants
-* Lin Chai: linchai@cs.ucsb.edu
-* Harshitha Murthy: harshitha@umail.ucsb.edu
-* Daria Rudneva: drudneva@umail.ucsb.edu
+* Yan Tang: yantang@cs.ucsb.edu
+* Sanjana Shayaraj: sanjana@cs.ucsb.edu
+* Wenhan Xiong: xwhan@cs.ucsb.edu
 
 TA office hours are available on our [course Google Calendar](/info/schedule/)
 
