@@ -3,6 +3,9 @@ title: "Syllabus"
 layout: default
 ready: true
 ---
+<div style='display:none'>
+https://ucsb-cs32-s17.github.io/info/syllabus/
+</div>
 
 # Syllabus <a name="syllabus"></a>
 
