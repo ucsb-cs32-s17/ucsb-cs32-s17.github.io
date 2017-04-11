@@ -92,9 +92,9 @@ in not in Phelps 3525, or the CSIL Lab, you may need information on:
 
 ### Step 0b: Decide: Working solo or pair?
 
-Pair programming is OPTIONAL for this lab.
+Pair programming is MANDATORY for this lab.
 
-**If working in a pair:** Choose who will be the first driver and who
+**If working in a pair (yes you are):** Choose who will be the first driver and who
 will start as navigator, and then remember to switch (at least once)
 during the lab. But you should probably know the long-term goal too:
 each partner should participate in both roles in approximately equal
@@ -113,6 +113,10 @@ files with each other at the end of each work session.**
 
 ### Step 0c: Register on submit.cs for this course, and register pair if working in a pair
 
+1. Go to https://submit.cs.ucsb.edu
+2. Log in with your umail address as your username. If you don't already have an account, click "Create Account" and follow the instruction.
+3. Once you are logged in, click on the Join CS32_s17 button.
+4. Go to the page
 ### Step 0d: Create your \~/cs32/lab00 directory
 
 Create a \~/cs32/lab00 directory and make it your current directory. You
