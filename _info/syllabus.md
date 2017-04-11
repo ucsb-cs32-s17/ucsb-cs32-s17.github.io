@@ -20,7 +20,7 @@ ready: true
 * [Schedule](#schedule){: data-ajax="false"}
 * [Resources](#resources){: data-ajax="false"}
 * [What this course is about](#about){: data-ajax="false"}
-* [Course Policies](#policies)
+* [Course Policies](#policies){: data-ajax="false"}
 * [Graded components](#moreabout){: data-ajax="false"}
 
 
