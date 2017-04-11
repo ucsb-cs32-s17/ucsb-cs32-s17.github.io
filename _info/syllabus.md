@@ -85,18 +85,9 @@ For hw, lab and exam schedule, please check the [assignment calendar](/info/cale
 
 ## Exam Resources
 
-You can find examples of previous quarter's  exams at the following links.
+You can find examples of previous quarters'  exams at the following link.
 
-* http://www.cs.ucsb.edu/~pconrad/cs16/14F/exams/
-
-But BEWARE---offerings of CS16 may vary in terms of their exact pace, and placement of exams. So these exams are a guide to the style of my exams, but NOT necessarily for specific content.
-
-In addition, these exams from prior to F14 used the C programming language rather than C++, and went at a much slower pace, so treat them with even more skepticism.
-
-* http://www.cs.ucsb.edu/~pconrad/cs16/10S/exams/
-* http://www.cs.ucsb.edu/~pconrad/cs16/10W/exams/
-* http://www.cs.ucsb.edu/~pconrad/cs16/09F/exams/
-
+https://ucsb-cs32.github.io/resources/sample_exams/
 
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
