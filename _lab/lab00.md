@@ -103,8 +103,6 @@ try to meet this goal. Thanks!
 Also: **don't share passwords**. Instead, **use scp or email to share
 files with each other at the end of each work session.**
 
--   For information on scp, see: [Unix Commands:
-    scp](Unix_Commands:_scp "wikilink")
 -   Share your work with each other at the end of EVERY work session\*
 -   That way, if your pair partner [gets hit by a
     bus](http://discuss.fogcreek.com/joelonsoftware/default.asp?cmd=show&ixPost=149219)
