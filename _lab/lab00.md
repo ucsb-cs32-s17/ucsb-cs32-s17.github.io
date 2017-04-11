@@ -275,11 +275,11 @@ here:
 
 So what these lines of code do is this:
 
-  --------------------------- --------------------------------------------------------------------------------------------------------------------------------
-  `# Makefile for lab00...`   comment documenting what the Makefile is for
-  `CXX=clang++`               The clang++ compiler will be used to compile C++ programs
-  `# CXX=g++`                 If you want to switch to the g++ compiler for some reason, you can uncomment this line and comment out the `CXX=clang++` line.
-  --------------------------- --------------------------------------------------------------------------------------------------------------------------------
+| Makefile code | Explanation |
+| -- | -- |
+|  `# Makefile for lab00...`   | comment documenting what the Makefile is for |
+| `CXX=clang++`                | The clang++ compiler will be used to compile C++ programs |
+|  `# CXX=g++`                 | If you want to switch to the g++ compiler for some reason, you can uncomment this line and comment out the `CXX=clang++` line. |
 
 ### Step 3b: Add a rule to link a helloWorld program
 
@@ -657,8 +657,8 @@ So read the tip now to understand why we didn't need those extra rules:
 
 We can actually omit the rules for `lab00Test.o`, etc.
 
-The reason we can omit this rule is that it follows the pattern of a
-default rule that the Make utility already has in place. That default
+The reason we can omit this rule is that it follows the pattern of an
+implicit rule that the Make utility already has in place. That default
 rule looks like this—it is NOT important (at this point in the course)
 for you to fully understand all the symbols in this default rule—it is
 only important that you understand the idea that it replaces the
@@ -668,8 +668,8 @@ meaning of the various symbols (`%`, `$<`, `$@`).
     %.o : %.cpp
             $(CXX) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
 
-Default rules are explained more in [10 of the GNU Make
-documentation](ftp://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_10.html%7CChapter)
+Implicit rules are explained more in this section of the [GNU Make
+documentation](ftp://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_toc.html#TOC93)
 
 As it turns out, we didn't need the rule for helloWorld.o either. Try
 commenting it out, and doing a `make clean`, then a `make helloWorld`
