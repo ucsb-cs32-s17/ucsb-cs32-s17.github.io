@@ -7,7 +7,9 @@ pdfurl: http://andrewduncan.net/cs32/lectures/lecture_1.pdf
 ---
 
 
+First lecture of course.
 
+Content is on the slides linked to above.
 
 
 
