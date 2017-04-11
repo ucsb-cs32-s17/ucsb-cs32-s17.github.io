@@ -46,9 +46,14 @@ For hw, lab and exam schedule, please check the [assignment calendar](/info/cale
 
 ## Required Resources
 
-* Textbook: Problem Solving with C++, Walter Savitch, Edition 9. Available for purchase at the UCSB book store
-
-* Peer Instruction : iClickers: The course lectures will follow a Peer Instruction format, a teaching model which places stronger emphasis on classroom discussion and student interaction. As part of this you will need to own an iClicker register it on the [Gauchospace](https://gauchospace.ucsb.edu/courses/course/view.php?id=1524)). Be sure to register your clicker by the end of the first week.
+<ul>
+			<li>The newest editions of the textbook are preferred. Earlier editions are reasonable substitutes, but students then must be responsible for translating any page-specific assignments and other details.</li>
+   <li>The Computer Science 32 Reader is required course reading along with the two textbooks used in CS 16 and CS 24. Get the Reader from SBPrinter in the UCEN. Note there are no substantive changes in the reader since Fall 2011, so any version since then is okay too.</li><br /><br />
+			
+   <li>From CS 16: Walter Savitch (2015), <a href='http://www.mypearsonstore.com/bookstore/problem-solving-with-c-plus-plus-9780133591743'>Problem Solving with C++, 9th Edition.</a> Addison-Wesley. Here are local copies of <a href='http://www.cs.ucsb.edu/~mikec/cs16/misc/demos/savitch9pgms/'>source code and data files</a> from this text.</li><br /><br />
+        	
+   <li>From CS 24: Michael Main and Walter Savitch (2011). <a href='http://www.pearsonhighered.com/educator/product/Data-Structures-and-Other-Objects-Using-C/9780132129480.page'>Data Structures and Other Objects Using C++, 4th edition.</a> Addison-Wesley, 2011. <a href='http://www.cs.colorado.edu/~main/dscode.html'>Source code</a> files from this text, organized by chapter (and a link to other author supplements).</li>
+</ul>
 
 ## Exam Resources
 
