@@ -145,8 +145,21 @@ contexts where you cannot use the `~` symbol—in fact, almost everywhere
 other than the Unix command line that a filename is needed, you actually
 CANNOT use the tilde.
 
-Step 1: Copying some programs from my directory
------------------------------------------------
+Step 1: Copying some programs
+-----------------------------
+
+Visit the following web link—you may want to use "right click" (or "control-click" on Mac) to bring up a window where you can open this in a new window or tab:
+<http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab00/code>
+You should see a listing of several C++ programs. We are going to copy those into your ~/cs32/lab00 directory all at once with the following command:
+```cp ~pconrad/public_html/cs32/15F/labs/lab00/code/* ~/cs32/lab00```
+Note: If you get the error message:
+```cp: target '/cs/student/youruserid/cs32/lab00' is not a directory```
+
+then it probably means you didn't create a `~/cs32/lab00` directory yet. So do that first.
+The `*` symbol in this command is a "wildcard"—it means that we want all of the files from the source directory copy be copied into the destination directory namely `~/cs32/lab00.`
+After doing this command, if you `cd` into `~/cs32/lab00` and use the `ls` command, you should see several files in your `~/cs32/lab00` directory—the same ones that you see if you visit the link <http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab00/code>
+If so, you are ready to move on to the next step.
+If you don't see those files, go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance.
 
 Step 2: Learn how to learn about some basic Linux commands
 ----------------------------------------------------------
