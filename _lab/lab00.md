@@ -113,10 +113,13 @@ files with each other at the end of each work session.**
 
 ### Step 0c: Register on submit.cs for this course, and register pair if working in a pair
 
-1. Go to https://submit.cs.ucsb.edu
+1. Go to <https://submit.cs.ucsb.edu>
 2. Log in with your umail address as your username. If you don't already have an account, click "Create Account" and follow the instruction.
 3. Once you are logged in, click on the Join CS32_s17 button.
-4. Go to the page
+4. Go to the page for Lab 00 and click on Join Group.
+5. Enter the email address of your pair partner.
+6. Your pair partner now should log on to submit.cs, join the class, and accept the invitation.
+
 ### Step 0d: Create your \~/cs32/lab00 directory
 
 Create a \~/cs32/lab00 directory and make it your current directory. You
@@ -437,12 +440,12 @@ executes the necessary commands in the order needed.
 That is why the result, when we make a change to helloWorld.cpp is that
 the rules are done in this order:
 
-  what we see                            explanation
-  -------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  `-bash-4.2$ make helloWorld`           we type `make helloWorld` to make the executable, and make constructs the dependency chain `helloWorld.cpp`→`helloWorld.o`→`helloWorld`
-  `clang++ -c helloWorld.cpp`            From the dependency chain, this is the first thing that must be done. It must be done because helloWorld.cpp is "newer" than helloWorld.o. The command recompiles `helloWorld.cpp` into `helloWorld.o`—the `-c` flag indicates "compile only; do not link", so we get a helloWorld.o file as the result.
-  `clang++ helloWorld.o -o helloWorld`   This is the link step. It is done because NOW helloWorld.o, which is newly remade from the previous step, is NOW newer than the executable helloWorld. The command relinks the helloWorld.o code (the machine language version of ONLY the code from the helloWorld.cpp file) with the machine language versions of the code in the standard libaries (e.g. the code for the iostream library that provides cout, endl, among other things.) The result of this command is a new version of the executable file `helloWorld`
-  `-bash-4.2$`                           The bash prompt indicates that the command is complete and the shell is ready for our next command.
+| what we see |                            explanation |
+| -- | -- |
+|`-bash-4.2$ make helloWorld` |           we type `make helloWorld` to make the executable, and make constructs the dependency chain `helloWorld.cpp`→`helloWorld.o`→`helloWorld` |
+| `clang++ -c helloWorld.cpp`  |          From the dependency chain, this is the first thing that must be done. It must be done because helloWorld.cpp is "newer" than helloWorld.o. The command recompiles `helloWorld.cpp` into `helloWorld.o`—the `-c` flag indicates "compile only; do not link", so we get a helloWorld.o file as the result. |
+| `clang++ helloWorld.o -o helloWorld`  | This is the link step. It is done because NOW helloWorld.o, which is newly remade from the previous step, is NOW newer than the executable helloWorld. The command relinks the helloWorld.o code (the machine language version of ONLY the code from the helloWorld.cpp file) with the machine language versions of the code in the standard libaries (e.g. the code for the iostream library that provides cout, endl, among other things.) The result of this command is a new version of the executable file `helloWorld` |
+ | `-bash-4.2$`                 |          The bash prompt indicates that the command is complete and the shell is ready for our next command.|
 
 So what should you know from this for your exams? The next box suggests
 a few of things you might be asked about.
@@ -565,6 +568,7 @@ between index and value. So, nothing too complicated.
 
 The code is in the following source files:
 
+```
 +-----------------------+-----------------------+-----------------------+
 | Filename              | Purpose               | Do I need\            |
 |                       |                       | to modify\            |
@@ -605,6 +609,7 @@ The code is in the following source files:
 |                       | for functions defined |                       |
 |                       | in tddFuncs.cpp       |                       |
 +-----------------------+-----------------------+-----------------------+
+```
 
 ### Step 4a: Adding a rule to link lab00Test
 
