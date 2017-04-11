@@ -10,10 +10,12 @@ table {
 }
 
 table * th {
+    padding-left:1em;
     border: 1px solid black;
 }
 
 table * td {
+    padding-left:1em;
     border: 1px solid black;
 }
 
