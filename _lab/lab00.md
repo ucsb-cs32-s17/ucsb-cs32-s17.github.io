@@ -591,9 +591,9 @@ The code is in the following source files:
 |                       |                       | to modify\            |
 |                       |                       | this file?            |
 +=======================+=======================+=======================+
-|                       | Function definitions  | <b>YES</b>            |
+|                       | Function definitions  | YES                   |
 |                       | for five functions.   |                       |
-|                       | Two are complete,     |                       |
+|   arrayFuncs.cpp      | Two are complete,     |                       |
 |                       | three are stubs\      |                       |
 |                       | <b>Your job in this   |                       |
 |                       | lab is to replace the |                       |
@@ -601,14 +601,14 @@ The code is in the following source files:
 |                       | code</b>              |                       |
 +-----------------------+-----------------------+-----------------------+
 |                       | function prototypes   | NO                    |
-|                       | for five functions    |                       |
+|    arrayFuncs.h       | for five functions    |                       |
 |                       | defined in            |                       |
 |                       | arrayFuncs.cpp        |                       |
 +-----------------------+-----------------------+-----------------------+
 |                       | test cases for        | NO                    |
 |                       | functions defined in  |                       |
 |                       | arrayFuncs.cpp\       |                       |
-|                       | <b>This is the only   |                       |
+|    lab00Test.cpp      | <b>This is the only   |                       |
 |                       | file in this lab with |                       |
 |                       | a main()              |                       |
 |                       | function</b>\         |                       |
@@ -617,13 +617,13 @@ The code is in the following source files:
 +-----------------------+-----------------------+-----------------------+
 |                       | definitions for       | NO                    |
 |                       | functions that        |                       |
-|                       | support test-driven   |                       |
+|     tddFuncs.cpp      | support test-driven   |                       |
 |                       | development:\         |                       |
 |                       | assertEquals,         |                       |
 |                       | assertTrue, etc.      |                       |
 +-----------------------+-----------------------+-----------------------+
 |                       | function prototypes   | NO                    |
-|                       | for functions defined |                       |
+|    tddFuncs.h         | for functions defined |                       |
 |                       | in tddFuncs.cpp       |                       |
 +-----------------------+-----------------------+-----------------------+
 ```
