@@ -245,12 +245,12 @@ On the first line of the file, put this, substituting your name (and
 that of your pair partner(s) if applicable, for YOUR NAME(S) HERE, as
 appropriate:
 
-    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F15
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, S17
 
 Then, leave a blank line, and add the following two lines shown here, so
 that you end up with this as the first four lines of your Makefile:
 
-    # Makefile for lab00, YOUR NAME(S) HERE, CS32, F15
+    # Makefile for lab00, YOUR NAME(S) HERE, CS32, S17
 
     CXX=clang++
     # CXX=g++
