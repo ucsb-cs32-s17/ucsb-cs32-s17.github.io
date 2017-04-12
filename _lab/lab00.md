@@ -149,10 +149,10 @@ Step 1: Copying some programs
 -----------------------------
 
 Visit the following web link—you may want to use "right click" (or "control-click" on Mac) to bring up a window where you can open this in a new window or tab:
-<http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab00/code>
+<http://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab00/>
 You should see a listing of several C++ programs. We are going to copy those into your ~/cs32/lab00 directory all at once with the following command:
 ```
-cp ~pconrad/public_html/cs32/15F/labs/lab00/code/* ~/cs32/lab00
+cp ~aduncan/public_html/cs32/s17/labs/lab00/* ~/cs32/lab00
 ```
 Note: If you get the error message:
 ```
