@@ -464,7 +464,7 @@ the rules are done in this order:
 | `clang++ helloWorld.o -o helloWorld`  | This is the link step. It is done because NOW helloWorld.o, which is newly remade from the previous step, is NOW newer than the executable helloWorld. The command relinks the helloWorld.o code (the machine language version of ONLY the code from the helloWorld.cpp file) with the machine language versions of the code in the standard libaries (e.g. the code for the iostream library that provides cout, endl, among other things.) The result of this command is a new version of the executable file `helloWorld` |
  | `-bash-4.2$`                 |          The bash prompt indicates that the command is complete and the shell is ready for our next command.|
 
-So what should you know from this for your exams? The next box suggests
+So what should you know from this for your exams? These items suggest
 a few of things you might be asked about.
 
 -   Be able to explain the difference between Makefile commands that
