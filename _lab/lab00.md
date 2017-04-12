@@ -161,7 +161,7 @@ cp: target '/cs/student/youruserid/cs32/lab00' is not a directory
 
 then it probably means you didn't create a `~/cs32/lab00` directory yet. So do that first.
 The `*` symbol in this command is a "wildcard"—it means that we want all of the files from the source directory copy be copied into the destination directory namely `~/cs32/lab00.`
-After doing this command, if you `cd` into `~/cs32/lab00` and use the `ls` command, you should see several files in your `~/cs32/lab00` directory—the same ones that you see if you visit the link <http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab00/code>
+After doing this command, if you `cd` into `~/cs32/lab00` and use the `ls` command, you should see several files in your `~/cs32/lab00` directory—the same ones that you see if you visit the link <http://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab00/>
 If so, you are ready to move on to the next step.
 If you don't see those files, go back through the instructions and make sure you didn't miss a step. If you still have trouble, ask your TA for assistance.
 
