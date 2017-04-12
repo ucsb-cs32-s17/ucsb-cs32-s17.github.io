@@ -812,7 +812,7 @@ The command to submit this weeks lab is this one:
 Here is the command to submit this week's labs:
 
 ``` {.bash}
-~submit/submit -p 690 Makefile arrayFuncs.cpp
+~submit/submit -p 697 Makefile arrayFuncs.cpp
 ```
 
 Grading Rubric
