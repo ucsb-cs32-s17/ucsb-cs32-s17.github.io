@@ -7,7 +7,7 @@ assigned: 2017-04-19 15:30:00.00-7
 due: 2017-04-24 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab01
 code_dir: ~aduncan/cs32/s17/labs/lab01
-submit_cs_project_num: TBD
+submit_cs_project_num: 699
 ---
 
 <div style='display:none'>
