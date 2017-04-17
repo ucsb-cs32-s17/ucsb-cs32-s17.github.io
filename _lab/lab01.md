@@ -40,10 +40,6 @@ Visit the following web link—you may want to use "right click" (or "control-cl
 
 <{{page.code_url}}>
 
-TODO: Copy files from link below into aduncan directory
-
-<http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/{{page.num}}/code>
-
 You should see a listing of several C++ programs. We are going to copy those into your<tt>~/{{site.course}}/{{page.num}}</tt> directory all at once with the following command:
 
 <div>
