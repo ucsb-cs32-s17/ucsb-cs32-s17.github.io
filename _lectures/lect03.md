@@ -2,7 +2,7 @@
 num: "lect03"
 lecture_date: 2017-04-11
 desc: "OO Basics"
-ready: false
+ready: true
 pdfurl: http://andrewduncan.net/cs32/lectures/lecture_3.pdf
 ---
 
