@@ -43,7 +43,7 @@ Visit the following web link—you may want to use "right click" (or "control-cl
 You should see a listing of several C++ programs. We are going to copy those into your<tt>~/{{site.course | downcase}}/{{page.num}}</tt> directory all at once with the following command:
 
 <div>
-<tt>cp {{page.code_dir}}/* ~/{{site.course | downcase}}/{{{page.num}}}}</tt>
+<tt>cp {{page.code_dir}}/* ~/{{site.course | downcase}}/{{{page.num}}</tt>
 </div>
 
 Note: If you get the error message:
