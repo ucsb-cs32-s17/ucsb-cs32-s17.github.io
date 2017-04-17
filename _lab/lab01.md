@@ -40,24 +40,24 @@ Visit the following web link—you may want to use "right click" (or "control-cl
 
 <{{page.code_url}}>
 
-You should see a listing of several C++ programs. We are going to copy those into your<tt>~/{{site.course}}/{{page.num}}</tt> directory all at once with the following command:
+You should see a listing of several C++ programs. We are going to copy those into your<tt>~/{{site.course | downcase}}/{{page.num}}</tt> directory all at once with the following command:
 
 <div>
-<tt>cp {{page.code_dir}}/* ~/{{site.course}}/{{{page.num}}}}</tt>
+<tt>cp {{page.code_dir}}/* ~/{{site.course | downcase}}/{{{page.num}}}}</tt>
 </div>
 
 Note: If you get the error message:
 
 
 <div>
-<tt>cp: target '/cs/student/youruserid/{{site.course}}/{{page.num}}' is not a directory</tt>
+<tt>cp: target '/cs/student/youruserid/{{site.course | downcase}}/{{page.num}}' is not a directory</tt>
 </div>
 
-then it probably means you didn't create a <tt>~/{{site.course}}/{{page.num}}</tt> directory yet. So do that first.
+then it probably means you didn't create a <tt>~/{{site.course | downcase}}/{{page.num}}</tt> directory yet. So do that first.
 
-The `*` symbol in this command is a "wildcard"—it means that we want all of the files from the source directory copy be copied into the destination directory namely <tt>~/{{site.course}}/{{page.num}}</tt>.
+The `*` symbol in this command is a "wildcard"—it means that we want all of the files from the source directory copy be copied into the destination directory namely <tt>~/{{site.course | downcase}}/{{page.num}}</tt>.
 
-After doing this command, if you `cd` into <tt>~/{{site.course}}/{{page.num}}</tt> and use the `ls` command, you should see several files in your <tt>~/{{site.course}}/{{page.num}}</tt> directory&mdash;the same ones that you see if you visit the link <{{page.code_url}}>
+After doing this command, if you `cd` into <tt>~/{{site.course | downcase}}/{{page.num}}</tt> and use the `ls` command, you should see several files in your <tt>~/{{site.course | downcase}}/{{page.num}}</tt> directory&mdash;the same ones that you see if you visit the link <{{page.code_url}}>
 
 
 If so, you are ready to move on to the next step.
