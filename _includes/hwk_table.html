@@ -1,6 +1,14 @@
 <table id="hwk_table" class="asn_table">
-{% include asn_table_header_row.html %}
-{% for asn in site.hwk %}
+<!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_desc" >reading</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+ {% for asn in site.hwk %}
  <tr class={% if asn.ready %}"ready"{% else %}"not-ready"{% endif %} >
   <td class="asn_num"  ><a href="{{asn.url}}" data-ajax="false">{{ asn.num }}</a></td>
   <td class="asn_ready">{{asn.ready}}</td>
