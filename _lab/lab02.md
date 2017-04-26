@@ -2,7 +2,7 @@
 layout: lab
 prev_num: lab01
 num: lab02
-ready: false
+ready: true
 desc: "Selection Sort"
 assigned: 2017-04-26 15:30:00.00-7
 due: 2017-05-01 23:59:00.00-7
@@ -40,10 +40,6 @@ Create a <tt>~/cs32/{{page.num}}</tt> directory and make it your current directo
 Visit the following web link—you may want to use "right click" (or "control-click" on Mac) to bring up a window where you can open this in a new window or tab:
 
 <{{page.code_url}}>
-
-TODO: Copy files from link below into aduncan directory
-
-<http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/{{page.num}}/code>
 
 You should see a listing of several C++ programs. We are going to copy those into your<tt>~/{{site.course | downcase}}/{{page.num}}</tt> directory all at once with the following command:
 
