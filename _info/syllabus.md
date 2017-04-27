@@ -36,7 +36,7 @@ https://ucsb-cs32-s17.github.io/info/syllabus/
  
 ## Teaching Assistants
 * Yan Tang: yantang@cs.ucsb.edu, Section 11,12, office hours Wed 4-5PM
-* Sanjana Shayaraj: sanjana@cs.ucsb.edu, Section 2, office hours Fri 1:30-3:30
+* Sanjana Sahayaraj: sanjana@cs.ucsb.edu, Section 2, office hours Fri 1:30-3:30
 * Wenhan Xiong: xwhan@cs.ucsb.edu, Section 1, office hours Fri 10-12
 
 
