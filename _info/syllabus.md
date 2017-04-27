@@ -35,11 +35,10 @@ https://ucsb-cs32-s17.github.io/info/syllabus/
 * Homepage: [http://andrewduncan.net/cs32](http://andrewduncan.net/cs32)
  
 ## Teaching Assistants
-* Yan Tang: yantang@cs.ucsb.edu
-* Sanjana Shayaraj: sanjana@cs.ucsb.edu
-* Wenhan Xiong: xwhan@cs.ucsb.edu
+* Yan Tang: yantang@cs.ucsb.edu, Section 11,12, office hours Wed 4-5PM
+* Sanjana Shayaraj: sanjana@cs.ucsb.edu, Section 2, office hours Fri 1:30-3:30
+* Wenhan Xiong: xwhan@cs.ucsb.edu, Section 1, office hours Fri 10-12
 
-TA office hours are available on our [course Google Calendar](/info/schedule/)
 
 
 [Back to Syllabus](#syllabus){: data-ajax="false"}
