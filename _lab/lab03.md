@@ -10,6 +10,7 @@ code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab03
 code_dir: ~aduncan/cs32/s17/labs/lab03
 submit_cs_project_num: TBD
 tools_gdb_url: https://ucsb-cs32.github.io/topics/tools_gdb/
+tools_valgrind_url: https://ucsb-cs32.github.io/topics/tools_valgrind/
 ---
 
 <div style='display:none'>
@@ -75,9 +76,9 @@ Later steps in this lab will assume that you really did figure out how to use th
 
 ## Step 2: valgrind 
 
-After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind.  We talked a bit about valgrind in lecture, but there's more to learn, so please now read about valgrind here [tools: valgrind]({{ page.tools_valgrind_url }}
+After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind.  We talked a bit about valgrind in lecture, but there's more to learn, so please now read about valgrind here at the [tools: valgrind]({{page.tools_valgrind_url}}) article on the <https://ucsb-cs32.github.io> website.
 
-Run memcheck on your <tt>{{page.prev_num}}</tt> and ensure that you don't have any memory leaks or errors that were detected by valgrind. You should fix any errors that valgrind reports in <tt>{{page.prev_num}}</tt>.
+Run `memcheck` on your <tt>{{page.prev_num}}</tt> and ensure that you don't have any memory leaks or errors that were detected by valgrind. You should fix any errors that valgrind reports in <tt>{{page.prev_num}}</tt>.
 
 TODO: FIX THE EXECUTABLE BELOW TO BE ONE FOR LAB02...
 
@@ -92,7 +93,7 @@ It's time to put your new skills to the test. You will be given an executable fi
 
 It is possible that you may have a program that calls a library and you won't be given all the source code to the library or the library was built without the -g option. Here we are reversing this a little bit. You are given some code, but the code to the main function is not given to you. You will not be able to step through all of the code. In a sense, you can treat main function like a 'black box', which calls the code you are given. You don't need to know what the main function is doing, but you will have to answer a few questions about how it calls the code you are given.
 
-You MUST do the next section on a csil account because it checks the $USER environment variable. When the assignment is graded the user account will be checked, so it must match even if submit says all your test cases pass.
+You MUST do the next section on a csil account because it checks the `$USER` environment variable. When the assignment is graded the user account will be checked, so it must match even if submit says all your test cases pass.
 
 Download the 4 files from here:
 
@@ -131,12 +132,12 @@ First run the `segProgram`, which is designed to segfault.
 Segmentation fault (core dumped)
 ```
 
-gdb was designed to make handling segfaults trivial. Use gdb to pry into segProgram and discover the reason why it is crashing. When using gdb, make sure you run gdb from the same directory as a the program you are analyzing ( gdb relies on the current working directory as a path to find the source code). 
+`gdb` was designed to make handling segfaults trivial. Use `gdb` to pry into `segProgram` and discover the reason why it is crashing. When using `gdb`, make sure you run gdb from the same directory as a the program you are analyzing ( gdb relies on the current working directory as a path to find the source code). 
 
 
 ### Question 1 (q1a, q1b)
 
-Start up gdb and load in segProgram.
+Start up `gdb` and load in `segProgram`.
 ```
 gdb ./segProgram
 ```
@@ -188,7 +189,7 @@ gdb ./debugProgram
 
 <b>Hints:</b> 
 
-* Use valgrind with --leak-check=full and don't include data lost elsewhere.
+* Use `valgrind` with `--leak-check=full` and don't include data lost elsewhere.
 * Valgrind formats its numerical output with commas. Don't include commas in the answer.
 * Only submit the number. Don't use any units like Bytes.
 
