@@ -6,7 +6,7 @@ ready: true
 desc: "Selection Sort"
 assigned: 2017-04-26 15:30:00.00-7
 due: 2017-05-01 23:59:00.00-7
-prev_code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab02
+prev_code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab01
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab02
 code_dir: ~aduncan/cs32/s17/labs/lab02
 submit_cs_project_num: TBD
@@ -80,8 +80,8 @@ Here are links to the versions of these files from last week and this week:
 
 | lab01 | lab02 |
 |-------|-------|
-| [tddFuncs.h]({{page.code_url}}/tddFuncs.h)] | [http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab02/code/tddFuncs.h tddFuncs.h] |
-| [http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab01/code/tddFuncs.cpp tddFuncs.cpp] | [http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab02/code/tddFuncs.cpp tddFuncs.cpp |
+| [tddFuncs.h]({{page.prev_code_url}}/tddFuncs.h)] | [tddFuncs.h]({{page.code_url}}/tddFuncs.h)] | 
+| [tddFuncs.cpp]({{page.prev_code_url}}/tddFuncs.cpp] | [tddFuncs.cpp]({{page.code_url}}/tddFuncs.cpp] | 
 
 Some things to notice:
 
@@ -155,9 +155,9 @@ The command to submit this weeks lab is this one:
 
 Here is the command to submit this week's labs:
 
-<syntaxhighlight lang="bash">
+```
 ~submit/submit -p 375 Student.cpp Roster.cpp
-</syntaxhighlight>
+```
 
 # Grading Rubric 
 
@@ -166,8 +166,8 @@ Points will be awarded based on submit.cs automatic grading.
 ## submit.cs automated
 
 * submit.cs tests
-** (50 pts) testStudent
-** (50 pts) testRoster1
-** (50 pts) testRoster2
-** (50 pts) testRoster3
+ * (50 pts) testStudent
+ * (50 pts) testRoster1
+ * (50 pts) testRoster2
+ * (50 pts) testRoster3
 
