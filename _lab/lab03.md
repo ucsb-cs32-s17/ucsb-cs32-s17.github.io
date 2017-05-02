@@ -3,7 +3,7 @@ layout: lab
 num: lab03
 prev_num: lab02
 ready: false
-desc: "TBD"
+desc: "Debugging tools: gdb and valgrind"
 assigned: 2017-05-03 15:30:00.00-7
 due: 2017-05-08 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab03
