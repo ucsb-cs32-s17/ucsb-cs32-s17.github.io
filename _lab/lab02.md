@@ -80,8 +80,8 @@ Here are links to the versions of these files from last week and this week:
 
 | lab01 | lab02 |
 |-------|-------|
-| [tddFuncs.h]({{page.prev_code_url}}/tddFuncs.h)] | [tddFuncs.h]({{page.code_url}}/tddFuncs.h)] | 
-| [tddFuncs.cpp]({{page.prev_code_url}}/tddFuncs.cpp] | [tddFuncs.cpp]({{page.code_url}}/tddFuncs.cpp] | 
+| [tddFuncs.h]({{page.prev_code_url}}/tddFuncs.h) | [tddFuncs.h]({{page.code_url}}/tddFuncs.h) | 
+| [tddFuncs.cpp]({{page.prev_code_url}}/tddFuncs.cpp) | [tddFuncs.cpp]({{page.code_url}}/tddFuncs.cpp) | 
 
 Some things to notice:
 
