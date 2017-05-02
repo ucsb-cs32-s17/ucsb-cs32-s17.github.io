@@ -171,7 +171,7 @@ gdb ./debugProgram
 * <b>q4b: </b> What is the value of the string a.debugStr?  Put your answer in <code>q4b</code>.
 
 <b>Hints: </b>
-* Use backtrace, along with conditional breakpoints:  <code>break</code> <em>someplace</em> <code>if </code> <em>condition</em>
+* Use `backtrace` (abbreviated `bt`), along with conditional breakpoints:  <code>break</code> <em>someplace</em> <code>if </code> <em>condition</em>
 * What is the number of stack frames when the last instance of recursiveFunction is created?  You may need to page through them.
 * Then think about  how many of those stack frames are <em>actually</em> for the recursive function, as opposed to other functions that have been put on stack before or after.
 
