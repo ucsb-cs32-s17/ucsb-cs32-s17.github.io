@@ -78,13 +78,15 @@ Later steps in this lab will assume that you really did figure out how to use th
 
 After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind.  We talked a bit about valgrind in lecture, but there's more to learn, so please now read about valgrind here at the [tools: valgrind]({{page.tools_valgrind_url}}) article on the <https://ucsb-cs32.github.io> website.
 
-Run `memcheck` on your <tt>{{page.prev_num}}</tt> and ensure that you don't have any memory leaks or errors that were detected by valgrind. You should fix any errors that valgrind reports in <tt>{{page.prev_num}}</tt>.
+Run `memcheck` on your <tt>{{page.prev_num}}</tt> and ensure that you don't have any memory leaks or errors that were detected by valgrind. You should fix any errors that valgrind reports in <tt>{{page.prev_num}}</tt>.    (Note that if your program doesn't use `new` and/or `delete`, there probably won't be any.)
 
 TODO: FIX THE EXECUTABLE BELOW TO BE ONE FOR LAB02...
 
 Run each test with --leak-check=full 
 <pre>
-valgrind --leak-check=full ./executableNameGoesHere
+valgrind --leak-check=full ./testStudent
+valgrind --leak-check=full ./testRoster1
+etc...
 </pre>
 
 ## Step 3: Debugging someone else's code 
