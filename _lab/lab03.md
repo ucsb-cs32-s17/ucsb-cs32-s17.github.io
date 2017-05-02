@@ -16,7 +16,7 @@ tools_gdb_url: https://ucsb-cs32.github.io/topics/tools_gdb/
 https://ucsb-cs32-s17.github.io/lab/lab03/
 </div>
 
-= Two restrictions: individual (not pair), and ON CSIL (not on your own machine) =
+# Two restrictions: individual (not pair), and ON CSIL (not on your own machine)
 
 <code><b>THIS IS AN INDIVIDUAL LAB</b></code>. Pair programming is not permitted.   
 
