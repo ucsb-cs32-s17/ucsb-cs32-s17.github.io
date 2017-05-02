@@ -45,7 +45,7 @@ The GNU debugger (a.k.a. gdb) is a very powerful tool for analyzing what your pr
 
 First read through the tutorial [tools: gdb]({{ page.tools_gdb_url }}) at the course website (<https://ucsb-cs32.github.io>). <b>The rest of these instructions assume that you already read through that.</b>  So if you continue without first looking over that, you are likely to not know how to proceed.  If you then ask for help, we will first try to figure out: did you actually read through [[Tools: gdb]]?  If you did not, we'll tell you: ok, go read it.
 
-Since you are already familiar with the code in [{{page.prev_num}}](/labs/{{page.prev_num}}/), you should use [{{page.prev_num}}](/labs/{{page.prev_num}}/) to practice using gdb. You will need to recompile [{{page.prev_num}}](/labs/{{page.prev_num}}/) with the `-g` option. Add `-g` to the `CXXFLAGS` in your `Makefile`. 
+Since you are already familiar with the code in [{{page.prev_num}}](/lab/{{page.prev_num}}/), you should use [{{page.prev_num}}](/lab/{{page.prev_num}}/) to practice using gdb. You will need to recompile [{{page.prev_num}}](/lab/{{page.prev_num}}/) with the `-g` option. Add `-g` to the `CXXFLAGS` in your `Makefile`. 
 
 The order of flags on the `CXXFLAGS` line does not matter. You can add it to the end or the beginning.
 
