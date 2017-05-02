@@ -42,9 +42,11 @@ Those files will then be submitted to submit.cs for grading.
 
 The GNU debugger (a.k.a. gdb) is a very powerful tool for analyzing what your program is doing at run-time. 
 
-First read through the tutorial [tools: gdb]({{ page.tools_gdb_url }}) at the course website (<https://ucsb-cs32.github.io).  <b>The rest of these instructions assume that you already read through that.</b>  So if you continue without first looking over that, you are likely to not know how to proceed.  If you then ask for help, we will first try to figure out: did you actually read through [[Tools: gdb]]?  If you did not, we'll tell you: ok, go read it.
+First read through the tutorial [tools: gdb]({{ page.tools_gdb_url }}) at the course website (<https://ucsb-cs32.github.io>). <b>The rest of these instructions assume that you already read through that.</b>  So if you continue without first looking over that, you are likely to not know how to proceed.  If you then ask for help, we will first try to figure out: did you actually read through [[Tools: gdb]]?  If you did not, we'll tell you: ok, go read it.
 
-Since you are already familiar with the code in <tt>{{page.prev_num}}</tt>, you should use <tt>{{page.prev_num}}</tt> to practice using gdb. You will need to recompile <tt>{{page.prev_num}}</tt> with the `-g` option. Add `-g` to your `CXXFLAGS`. The order does not matter. You can add it to the end or the beginning.
+Since you are already familiar with the code in [{{page.prev_num}}](/labs/{{page.prev_num}}/), you should use [{{page.prev_num}}](/labs/{{page.prev_num}}/) to practice using gdb. You will need to recompile [{{page.prev_num}}](/labs/{{page.prev_num}}/) with the `-g` option. Add `-g` to the `CXXFLAGS` in your `Makefile`. 
+
+The order of flags on the `CXXFLAGS` line does not matter. You can add it to the end or the beginning.
 
 ```
 CXXFLAGS = -g -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wno-unused-private-field
