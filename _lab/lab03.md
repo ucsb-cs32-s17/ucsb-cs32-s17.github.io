@@ -146,7 +146,7 @@ gdb ./segProgram
 
 Now run the program so it will stop as soon as it encounters the segfault. 
 
-* <b>q1a: </b>What is the value is the program trying to store in the array when the fault occurred?  Write your answer in <code>q1a</code>
+* <b>q1a: </b>What is the value is the program trying to store in the array when the fault occurred?  Write your answer in <code>q1a</code>. That's q-one-a, not q-L-a.
 * <b>q1b: </b>What index of the array is the program trying to access? Write your answer in file <code>q1b</code>
 
 ### Question 2 (q2)
