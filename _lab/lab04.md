@@ -14,7 +14,7 @@ submit_cs_project_num: TBD
 https://ucsb-cs32-s17.github.io/lab/lab04/
 </div>
 
-= Goals =
+# Goals
 
 By the end of this lab, given a description of a class containing data members that point to structures on the heap, you will be able to:
 
@@ -24,7 +24,7 @@ By the end of this lab, given a description of a class containing data members t
 
 You will also be able to demonstrate that you understand the basics of working with version control using Github, using a very basic "git add; git commit; git push" workflow.
 
-= Background =
+# Background
 
 Being able to use <b>version control</b> is a <b>useful tool</b> and an <b>important job skill</b>.
 
@@ -36,7 +36,7 @@ Therefore, in this lab, we are going to learn a few basic skills for:
 * working with <b>git</b>, an open-source software package for peer-to-peer version control.<br><b>git</b> is open-source, free software that runs on both clients and servers, and is available for Windows, Mac and Unix.   It is what you use to interact with a git repository.
 * working with <b>github.com</b>, a commercial website that provides web-based git repository hosting.<br>
 
-== Benefits of Using Version Control ==
+## Benefits of Using Version Control
 
 * Easier sharing of code with pair partners
     * By adding a pair partner as a collaborator on your repo, your collaborator can directly access the code at any time.  There is no need to email or copy code back and forth. And, you always have a record of which account code was committed under.
@@ -68,9 +68,9 @@ By the time you have completed this lab:
 * You will be able to "clone" a repo with <b>git clone <em>clone-url-goes-here</em></b>, and know what cloning a repo means.
 * You will be able to perform the basic git workflow of:<br><b>git add</b><br><b>git commit -m "message goes here"</b><br><b>git push origin master</b>
 
-= Step-by-Step =
+# Step-by-Step
 
-== Step 0: If you don't already have one, make a public/private SSH key pair ==
+## Step 0: If you don't already have one, make a public/private SSH key pair
 
 Using github.com is much easier if you have a public/private SSH key pair setup.
 
