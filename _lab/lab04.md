@@ -274,7 +274,7 @@ We need to understand the differences between, and the relationships among the f
 * websites called "github.com" and "github.ucsb.edu"
 * repositories (or repos) on either a github web site, in a directory on our CSIL account, on our own own local machine.
 
-=== What is git and what is a repo? ===
+### What is git and what is a repo?
 
 The software package "git" is an example of a "version control system".  (Others include SVN, Mercurial, and in a previous generations, CVS, RCS, and SCCS).
 
@@ -401,7 +401,7 @@ cd ~/cs32/lab04_cgaucho_dslough
 
 After you do that, you'll do three steps to get these into the github.com copy of the repo.  The rest of "step 7" covers the details of that.
 
-== Step 7b: Understanding Workflow: add, commit and push  ==
+## Step 7b: Understanding Workflow: add, commit and push  
 
 The next few steps are related to using git.   They would be the same steps whether you were working with Java, C, C++, Python, or even plain text files.    These are the steps that you'll want to get very accustomed to, because they represent a typical "workflow" in git&mdash;the workflow you'll use when working on an simple, single author, individual project.
 
@@ -421,7 +421,7 @@ This last step, the <b>git push</b> step, is important, because it makes a "back
 * In the case of public repos on github.com, you can share open source code with anyone with internet access.  This is a great way to put "side-projects" on your resume so that potential employers can see your work.
 
 
-=== What's a ''workflow''?  What's a ''commit''? What's a ''push''? ===
+### What's a ''workflow''?  What's a ''commit''? What's a ''push''? 
 
 The word '''workflow''' is often used to describe a typical sequence of steps you go through to interact with a version control system to use it effectively.   In particular, it describes how the use of the tool fits in with the other parts of software development that you are already used to, such as editing code, compiling code, and testing code.
 
@@ -454,11 +454,8 @@ When you "push" that commit, you are updating the REMOTE copy on github.ucsb.edu
 
 Ok, now that we've talked through what we are about to do, let's actually do it.
 
-=== Preview ===
 
-
-
-=== Step 7c: Do a <code>git pull</code> ===
+### Step 7c: Do a <code>git pull</code> 
 
 Normally, if we were working with other people, or perhaps doing work on more than one system (e.g. sometimes working on our laptop, sometimes our desktop machine at home and sometimes on CSIL), the first step before doing a commit is always to do a <code>git pull</code>.    The <code>git pull</code> command ensures that we get the latest updates from elsewhere, in case there are any.  
 
@@ -476,7 +473,7 @@ If you did make changes to the README.md after cloning, this is where you'll upd
 
 <em>Get in the habit of doing a <b>git pull</b> anytime there is a possibility that changes have been made elsewhere.</em>  Otherwise, you may end up with a <em>merge conflict</em> later when trying to push your changes back to github.ucsb.edu.
 
-=== Step 7d:  Do a <code>git status</code> and/or a <code>git diff</code> ===
+### Step 7d:  Do a <code>git status</code> and/or a <code>git diff</code> 
 
 The next step before committing a change is to use the <code>git status</code> command to see what's up.   Specifically, we need to see which files may have changed since the last commit, and decide which of those changes we want to make part of our commit.   
 
@@ -484,7 +481,7 @@ Remember:
 * A commit is typically a LOCAL operation&mdash;it doesn't touch the server.   
 * A pull or a push is typically an operation involving the SERVER, and we have to authenticate either via SSH or with a username/password.
 
-Here is what  a git status looks like:
+Here is what  a `git status` looks like:
 
 ```
 -bash-4.2$ git status
