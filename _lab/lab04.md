@@ -8,6 +8,7 @@ due: 2017-05-15 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab04
 code_dir: ~aduncan/cs32/s17/labs/lab04
 submit_cs_project_num: TBD
+example_repo: lab04_cgaucho_dslough
 ---
 
 <div style='display:none'>
@@ -41,7 +42,7 @@ Therefore, in this lab, we are going to learn a few basic skills for:
 * Easier sharing of code with pair partners
     * By adding a pair partner as a collaborator on your repo, your collaborator can directly access the code at any time.  There is no need to email or copy code back and forth. And, you always have a record of which account code was committed under.
 * Easier moving of code between CSIL and your own laptop/desktop machines.
-    * Just commit code then push to github.ucsb.edu.  Then, you can clone copies of the same repo on another machine, pull from github, make changes and push them back.  You can always be sure of keeping everything in sync.
+    * Just commit code then push to github.com.  Then, you can clone copies of the same repo on another machine, pull from github, make changes and push them back.  You can always be sure of keeping everything in sync.
 * Easier Sharing of code with TAs and Instructors
     * When asking for help from a TA or instructor, you no longer need to email any source code as an attachment.  Just add them as a collaborator on your code, and email them the URL of the repository.
     * The TA/Instructor now can see not only the code you are asking about, but the entire context of that code in your project, and the entire history of the project up to that point.
@@ -129,7 +130,7 @@ The disadvantage of a passphrase on your private key is that you have to type in
 </div>
 
 
-## Step 1: Create your github.ucsb.edu account if you didn't already and log in to it
+## Step 1: Create your github.com account if you didn't already and log in to it
 
 Open a web browser, go to <http://github.com>.  If you already have a github.com account, login. If not, create an account.  
 For your email address, use your UCSB umail address, because:
@@ -189,7 +190,7 @@ Click on that, and you'll be taken to this screen, where you can upload a new pu
 </div>
 
 Once the key is uploaded, you're all set to be able to use
-github.ucsb.edu in the most streamlined way possible.  What you do is
+github.com in the most streamlined way possible.  What you do is
 simply use the SSH version of the URL instead of the https version of
 the URL when you first clone your repository.  We'll see the
 difference later in this lab.
@@ -285,7 +286,7 @@ On the other hand, keeping files in a git repository has many advantages:
 * making it easier to share "works in progress" with TAs and instructors and fellow students to get help during lab, office hours, or by emai
 * making it easier to share "open source" projects with others on the internet.
 
-=== What is github.ucsb.edu and github.com, and how do they differ from git? ===
+### What is github.ucsb.edu and github.com, and how do they differ from git?
 
 A git repository can be local, on your file system, or it can be remote on a server somewhere on the Internet.  (We might say, using terminology that is trendy these days, that a repo on the internet is "in the cloud" if we get to remain blissfully ignorant of exactly how that service is being provided to us&mdash;i,.e. someone else is worrying about all the system management issues like keeping that server up and running, keeping it free of malware and defending from Denial of Service attacks, managing backups, etc.)
 
@@ -410,7 +411,7 @@ These steps are previewed here (the part represented by ... represents additiona
 
 * <b>git add ...</b> which <em>stages</em> files, i.e. indicates they are going to be part of the next <em>commit</em>
 * <b>git commit ... </b> which <em>commits</em> files as a group to the <em>local</em> copy of the repository (the one in your CSIL account)
-* <b>git push ... </b> which <em>pushes</em> the commit(s) in your local repository to the original repository on github.ucsb.edu that you cloned from.  
+* <b>git push ... </b> which <em>pushes</em> the commit(s) in your local repository to the original repository on github.com that you cloned from.  
 
 This last step, the <b>git push</b> step, is important, because it makes a "backup copy" of your work on the github.com server.  This has several benefits over just having the code only in your CSIL account:
 
@@ -433,7 +434,7 @@ It is typically NOT a good practice to commit changes that make the code "worse"
 
 But that's not a hard-and-fast rule.  It depends on the situation.     For now, I'd suggest you err on the side of committing TOO often, rather than the other way around.   The idea of a commit is that it is a checkpoint that you can roll back to if necessary.    Any commit can be "undone".  
 
-And as long as you '''push''' your commits to the github.ucsb.edu server in the cloud, you'll be able to recover every commit you've ever made, even if the system where you are working (e.g. CSIL) is wiped out by a fire, earthquake or tsunami (along with all the CSIL backups.)
+And as long as you '''push''' your commits to the github.com server in the cloud, you'll be able to recover every commit you've ever made, even if the system where you are working (e.g. CSIL) is wiped out by a fire, earthquake or tsunami (along with all the CSIL backups.)
 
 '''The difference between a commit and a push''' is this: 
 * in general, a '''commit is local'''
@@ -441,11 +442,11 @@ And as long as you '''push''' your commits to the github.ucsb.edu server in the 
 
 To understand this, you need to understand what happened when you did the first "git clone" command in this lab.
 
-To start with, the {{labrepo|f15|03}} repository existed in only one place: on the github.ucsb.edu server.        Then you cloned it with "git clone" into a subdirectory of your ~/cs32 directory on your CSIL account.  Now there are TWO repositories, not ONE.
+To start with, the <tt>{{page.example_repo}}</tt> repository existed in only one place: on the github.com server.        Then you cloned it with "git clone" into a subdirectory of your ~/cs32 directory on your CSIL account.  Now there are TWO repositories, not ONE.
 
 That's worth repeating: after you clone a repository, you now have TWO SEPARATE REPOSITORIES. For example, this in case:
-* a REMOTE repository called {{labrepo|f15|03}} that lives on github.ucsb.edu (git calls this the "origin master") 
-* a LOCAL repository called {{labrepo|f15|03}} that lives in your current directory.
+* a REMOTE repository called <tt>{{page.example_repo}}</tt> that lives on github.com (git calls this the "origin master") 
+* a LOCAL repository called <tt>{{page.example_repo}}</tt> that lives in your current directory.
 
 When you "commit" a change, you are committing it in your LOCAL copy of the repository.
 
@@ -477,12 +478,11 @@ If you did make changes to the README.md after cloning, this is where you'll upd
 
 === Step 7d:  Do a <code>git status</code> and/or a <code>git diff</code> ===
 
-The next step before committing a change is to use the <code>git status</code> command to see what's up.   Specifically, we need to see which files may have changed since the last commit, and decide which of those changes we want to make part of our commit.    This command doesn't require us to type our github.ucsb.edu username and password (i.e. our CSIL username/password) because it is ONLY checking the current files in our directory against the "last" commit that we did&mdash;or if we have not done any commits yet, against the version that was in place when we originally cloned the repository.   That's something that can be done ENTIRELY on the local file system.
+The next step before committing a change is to use the <code>git status</code> command to see what's up.   Specifically, we need to see which files may have changed since the last commit, and decide which of those changes we want to make part of our commit.   
 
 Remember:
 * A commit is typically a LOCAL operation&mdash;it doesn't touch the server.   
 * A pull or a push is typically an operation involving the SERVER, and we have to authenticate either via SSH or with a username/password.
-There are exceptions to those rules, and later things may get more complicated, but that explanation is a reasonable starting point.
 
 Here is what  a git status looks like:
 
@@ -500,11 +500,11 @@ nothing added to commit but untracked files present (use "git add" to track)
 -bash-4.2$    
 ```
 
-We can see that we've made a change to some .h, .cpp and the Makefile that haven't been committed.  
+We can see that we've made a change to some `.h`, `.cpp` and the `Makefile`, and these changes haven't been committed.  
 
-To tell git that we want these files to be part of our commit, we use the command "git add", which is the next step.   
+To tell git that we want these files to be part of our commit, we use the command `git add`, which is the next step.   
 
-=== Step 7e:  Use <code>git add</code> to add files into the commit ===
+### Step 7e:  Use <code>git add</code> to add files into the commit 
 
 Nothing goes into a commit unless we specifically tell git we want it to be a part of the commit.    The git status command can be used to tell us what we might want to add to the commit, but ultimately, it is up to us to make this choice.  
 
