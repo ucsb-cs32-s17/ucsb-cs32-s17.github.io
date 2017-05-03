@@ -644,14 +644,24 @@ In this week's lab, you have the following files:
 
 Your job is, as usual, get all the test cases to pass.  This involves implementing the "big three": Copy Constructor, Overloaded Assignment Operator, and Destructor.
 
-In addition to the regular test cases, there are also "leakTests".  This involves running a utility called <code>valgrind</code> on your code to see whether there are any memory leaks, or other problems involving memory management.    You will only pass the tests if your code has proper memory management.
+In addition to the regular test cases, there are also "leakTests".  
+This involves running a utility called <code>valgrind</code> on your code to see whether there are any memory leaks, 
+or other problems involving memory management.    You will only pass the tests if your code has proper memory management.
 
-You will submit only the `student.cpp` and `studentRoll.cpp` files.  As a result, there are two quite annoying things that you'll just have to put up with:
+You will submit only the `student.cpp` and `studentRoll.cpp` files.  
+As a result, there are two quite annoying things that you'll just have to put up with:
 
-* In the Student class, the <code>name</code> attribute is implemented with a C-string that is allocated with dynamic memory on the heap.  This is annoying.  Your might prefer to use the std::string class.  Of course you would.  But, that's not the point of this assignment.  The point of this assignment is to know whether you can manage memory properly.
-* In the StudentRoll class, the list of students is a linked list of structs rather than an <code>std::list&lt;Student&gt;</code> or <code>std::vector&lt;Student&gt;</code> or something.   This is indeed annoying.  Tough.   We are training you for the situation where you don't have any choice, but have to work with the data structures you are given.</p>
+* In the `Student` class, the <code>name</code> attribute is implemented with a C-string that is 
+   allocated with dynamic memory on the heap.  This is annoying.  Your might prefer to use the std::string class.  
+   Of course you would.  But, that's not the point of this assignment.  
+   The point of this assignment is to know whether you can manage memory properly.
 
-<p>In certain later assignments, you will be given the freedom to choose whatever data structure or implementation is appropriate.  You'll be able to decide whether to use std::string, or C-strings, whether to use array or std::vectors, etc. <em>This is not one of those assignments.</em>
+* In the `StudentRoll` class, the list of students is a linked list of structs rather 
+   than an <code>std::list&lt;Student&gt;</code> or <code>std::vector&lt;Student&gt;</code> or something.   
+   This is indeed annoying.  Tough.   We are training you for the situation where you don't have any choice, 
+   but have to work with the data structures you are given.
+
+In certain later assignments, you will be given the freedom to choose whatever data structure or implementation is appropriate.  You'll be able to decide whether to use `std::string`, or C-strings, whether to use array or `std::vector`, etc. <em>This is not one of those assignments.</em>
 
 ### Suggested way to proceed 
 
