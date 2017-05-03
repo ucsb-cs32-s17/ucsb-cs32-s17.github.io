@@ -687,19 +687,21 @@ make leaktests
 = Submission =
 
 To submit, use:
-<pre>
-~submit/submit -p 377 student.cpp studentRoll.cpp
-</pre>
 
-Also, make sure your code is pushed to your {{labrepo|f15|03}} repo on github.ucsb.edu.
 
-= Grading =
+<tt>~submit/submit -p {{page.submit_cs_project_num}} student.cpp studentRoll.cpp</tt>
 
-* (300 pts) lab03a: Test cases on submit.cs, as indicated on that system.
 
-* lab03b: github.ucsb.edu repo created correctly, and github workflow correct:
-** (20 pts) github.ucsb.edu repo exists and is private
-** (20 pts) All four collaborators added (instructor and all TAs), and pair-partner (if applicable)
-** (20 pts) README.md edited as indicated in instructions with additional information
-** (20 pts) Multiple commits, with incremental progress towards final completion
-** (20 pts) Commit messages are meaningful.
+Also, make sure your code is pushed to your repo on github.com
+
+# Grading 
+
+* (300 pts) {{page.num}}a: Test cases on submit.cs, as indicated on that system.
+
+* {{page.num}}b: github.com repo created correctly, and github workflow correct:
+   * (20 pts) github.com repo exists with correct name and is private
+   * (20 pts) repo has correct name, 
+   * (20 pts) pair-partner added as collaborator (if applicable)
+   * (20 pts) README.md edited as indicated in instructions with additional information
+   * (10 pts) Multiple commits, with incremental progress towards final completion
+   * (10 pts) Commit messages are meaningful.
