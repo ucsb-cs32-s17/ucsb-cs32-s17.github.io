@@ -197,7 +197,7 @@ difference later in this lab.
 <div style="clear:both">
 </div>
 
-== Step 3: Create a repository for {{page.num}}  ==
+## Step 3: Create a repository for {{page.num}}
 
 In this step, we will do three things:
 
@@ -207,11 +207,11 @@ In this step, we will do three things:
 * (2) If you are working in a pair, add your pair partner as a collaborator on the repo.
 * (3) Add some text to the README.md file (this can be done directly through the website).
 
-=== Step 3a: Creating the repo ===
+### Step 3a: Creating the repo
 
 TODO: GET THIS TEXT FROM DIBA, FROM SPIS, OR FROM A CS56 assignment.
 
-=== Step 3b: Adding Collaborators (only if working in a pair) ===
+### Step 3b: Adding Collaborators (only if working in a pair)
 
 Once you have created the repo, on the github.com website, look at the menu on the right hand side.    There is a link for <b>Settings</b>.  Click this link.
 
@@ -221,7 +221,7 @@ It may ask you to enter you username/password at this point.  This is a safety f
 
 Then, you are offered the opportunity to invite collaborators to your repo.  Add your pair partner by their github.com id.
 
-=== Step 3c: Editing your README.md ===
+### Step 3c: Editing your README.md
 
 The README.md file can be edited directly in the github.com web interface.  This can be done by clicking on the name README.md, then clicking where it says "edit".
 
@@ -233,13 +233,13 @@ Please enter the following into your README.md:
 
 You will be asked to enter more information in this file later, but for now, this is sufficient.
 
-== Step 4. Configure your CSIL account for using git ==
+## Step 4. Configure your CSIL account for using git
 
 In the github window, click on the Octocat logo upper left to go back to the main github page.  Keep that web window open, because we will need it later.  
 
 But for now, bring up a terminal window.
 
-=== Configuring a few global options ===
+### Configuring a few global options
 
 To set up your CSIL account for using command line git, type the following commands, substituting your real name (e.g. Chris Gaucho) in place of "Your Name" and your email address (e.g. cgaucho@umail.ucsb.edu) in place of "you@example.com".
 
@@ -260,7 +260,7 @@ $ more .gitconfig
 $ 
 </pre>
 
-The ~/.gitconfig file is a plain text file, and the options in it can also be set by just editing this file.    Using the git config command is an alternative to hand editing this file, and is really just a way to be sure that the syntax ends up being right.
+The `~/.gitconfig` file is a plain text file, and the options in it can also be set by just editing this file.    Using the `git config` command is an alternative to hand editing this file, and is really just a way to be sure that the syntax ends up being right.
 
 
 
