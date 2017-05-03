@@ -99,11 +99,11 @@ You MUST do the next section on a csil account because it checks the `$USER` env
 
 Download the 4 files from here:
 
-* http://cs.ucsb.edu/~pconrad/cs32/15F/labs/lab04/code
+* http://cs.ucsb.edu/~aduncan/cs32/s17/labs/lab03/
 
 Or copy from here:
 
-* /cs/faculty/pconrad/public_html/cs32/15F/labs/lab04/code/*
+* /cs/faculty/aduncan/public_html/cs32/15F/labs/lab03/*
 
 ###  Guidelines for Answering 
 
