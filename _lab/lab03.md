@@ -103,7 +103,7 @@ Download the 4 files from here:
 
 Or copy from here:
 
-* /cs/faculty/aduncan/public_html/cs32/15F/labs/lab03/*
+* /cs/faculty/aduncan/public_html/cs32/s17/labs/lab03/*
 
 ###  Guidelines for Answering 
 
