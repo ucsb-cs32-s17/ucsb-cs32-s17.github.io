@@ -175,7 +175,7 @@ Click on the tool icon, and it should take you to a screen like this&mdash;you a
 
 <div style="float:right; width:50%">
 <div style='border:1px solid black;'>
-http://www.cs.ucsb.edu/~pconrad/cs32/15S/labs/lab03c/images/xXESmRI.png
+<img src="http://www.cs.ucsb.edu/~pconrad/cs32/15S/labs/lab03c/images/xXESmRI.png" alt="ssh keys menu item screenshot">
 </div>
 </div>
 
@@ -184,7 +184,7 @@ Click on that, and you'll be taken to this screen, where you can upload a new pu
 
 <div style="float:right; width:50%">
 <div style='border:1px solid black;'>
-http://www.cs.ucsb.edu/~pconrad/cs32/15S/labs/lab03c/images/z8blAzI.png
+<img src="http://www.cs.ucsb.edu/~pconrad/cs32/15S/labs/lab03c/images/z8blAzI.png" alt="upload a new public key screenshot" >
 </div>
 </div>
 
@@ -312,7 +312,7 @@ Open a shell on your CSIL account, and cd into your ~/cs32 directory
 Now you will "clone" your repository.  This creates a copy of your repository&mdash;which is a separate repository in its own right&mdash;in your current directory (which we are assuming for this example is ~/cs32).
 
 On the web page for your repo, look for the big green 
-<span style="background-color: #28a745; color: white; padding: 3px 10px 3px 10px; border: 1px solid rgba(27,31,35,0.2); border-radius: 0.25em;white-space: nowrap; vertical-align:middle;">Clone or download</span>
+<span style="background-color: #28a745; color: white; padding: 3px 10px 3px 10px; border: 1px solid rgba(27,31,35,0.2); border-radius: 0.25em;white-space: nowrap; vertical-align:middle;font-weight: 600;font-size:12px;">Clone or download</span>
 button.
 * Click the pull down menu
 * If it says "Clone with HTTPS", look for the text at upper right that says "Use SSH" and click it so that it changes to say "Clone with SSH".
