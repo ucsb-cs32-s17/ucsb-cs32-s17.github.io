@@ -346,8 +346,8 @@ This should create a new directory called lab04_cgaucho_dslough (or whatever you
 
 ```
 $ ls
-lab00 lab01 lab02 lab03 cs32-f15-lab03
-$ cd cs32-f15-lab03
+lab00 lab01 lab02 lab03 lab04_cgaucho_dslough
+$ cd lab04_cgaucho_dslough
 $ ls
 README.md
 $ 
@@ -382,19 +382,23 @@ In this step, we are going to copy the {{page.num}} starter files from the instr
 
 The files are in the instructors directory at 
 
- /cs/faculty/pconrad/public_html/cs32/15F/labs/lab03/code/*
+<tt>{{page.code_dir}}/*</tt> 
 
-The * here stands in as a "wildcard" that matches "all files".
+The `*` here stands in as a "wildcard" that matches "all files".
 
-You want to copy these files into your repo directory, which is <tt>~/cs32/{{labrepo|f15|03}}</tt>
+You want to copy these files into your repo directory, which is <tt>~/cs32/lab04_cgaucho_dslough</tt> (for example).
 
-So the command needed is: 
+If you `cd` into that directory first...
 
-<pre>
- cp   ~pconrad/public_html/cs32/15F/labs/lab03/code/*  ~/cs32/cs32-f15-lab03 
-</pre>
+```
+cd ~/cs32/lab04_cgaucho_dslough
+```
 
-After you do that, you'll do three steps to get these into the github.ucsb.edu copy of the repo.  The rest of "step 7" covers the details of that.
+... then you can use the period (`.`) to refer to "current directory".  So to copy the files into your repo, you can use this command.  Pay attention to the `.` at the end of the line.    Note that it is separated from the part that comes in front by a space.
+
+<tt>cp {{page.code_dir}}/* .</tt>
+
+After you do that, you'll do three steps to get these into the github.com copy of the repo.  The rest of "step 7" covers the details of that.
 
 == Step 7b: Understanding Workflow: add, commit and push  ==
 
@@ -408,14 +412,12 @@ These steps are previewed here (the part represented by ... represents additiona
 * <b>git commit ... </b> which <em>commits</em> files as a group to the <em>local</em> copy of the repository (the one in your CSIL account)
 * <b>git push ... </b> which <em>pushes</em> the commit(s) in your local repository to the original repository on github.ucsb.edu that you cloned from.  
 
-This last step, the <b>git push</b> step, is important, because it makes a "backup copy" of your work on the github.ucsb.edu server.  This has several benefits over just having the code only in your CSIL account:
+This last step, the <b>git push</b> step, is important, because it makes a "backup copy" of your work on the github.com server.  This has several benefits over just having the code only in your CSIL account:
 
 * It provides a way for you to see the entire history of your project in a convenient web interface
 * It provides a convenient way to move code between and among your CSIL account, your laptop, and your desktop machines, keeping everything in sync.
-* By adding "collaborators" on the github.ucsb.edu, you can share code securely with pair-partners, TAs, and instructors and keep everything in sync.
-* In the case of public repos on github.ucsb.edu, you can share code (read-only) with anyone that has github.ucsb.edu access (i.e. everyone with a CSIL account.)
+* By adding "collaborators" on the github.com, you can share code securely with pair-partners, TAs, and instructors and keep everything in sync.   And, when the repo is part of an "organization" on github.com, anyone that is an "owner" of that organization automatically gets access (this is how your TAs and instructor can see your work.)
 * In the case of public repos on github.com, you can share open source code with anyone with internet access.  This is a great way to put "side-projects" on your resume so that potential employers can see your work.
-
 
 
 === What's a ''workflow''?  What's a ''commit''? What's a ''push''? ===
@@ -461,11 +463,11 @@ Normally, if we were working with other people, or perhaps doing work on more th
 
 In this case, we probably don't need to do that, because we've just been working with this one clone of this one repo, but just because we want to establish a good set of habits, let's start with the <code>git pull</code>.   
 
-<pre>
+```
 -bash-4.2$ git pull
 Already up-to-date.
 -bash-4.2$ 
-</pre>
+```
 
 Unless you made any edits to your README.md  after your did the "git clone" command, there aren't any changes  that you need to pull from the origin repo (the one you cloned from).  So the message "Already up-to-date" is most likely what you will see.
 
@@ -484,7 +486,7 @@ There are exceptions to those rules, and later things may get more complicated, 
 
 Here is what  a git status looks like:
 
-<pre>
+```
 -bash-4.2$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
@@ -496,7 +498,7 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 -bash-4.2$    
-</pre>
+```
 
 We can see that we've made a change to some .h, .cpp and the Makefile that haven't been committed.  
 
@@ -510,14 +512,14 @@ Type the following: <code>git add *.h</code>
 
 It should look like this:
 
-<pre>
+```
 -bash-4.2$ git add *.h
 -bash-4.2$ 
-</pre>
+```
 
 It typical 'unix command" fashion, there is no output, which means "it worked."  But if we want to really see that it worked, we can type "git status" again:
 
-<pre>
+```
 -bash-4.2$ git status
 # On branch master
 # Changes to be committed:
@@ -526,12 +528,12 @@ It typical 'unix command" fashion, there is no output, which means "it worked." 
 #	modified:   (list of .h files will appear here)
 #
 -bash-4.2$ 
-</pre>
+```
 
-Now do the same thing to add the .cpp files and the Makefile into the next commit.  Use the <code>git status</code> command to make sure this worked.
+Now do the same thing to add the `.cpp` files and the `Makefile` into the next commit.  Use the <code>git status</code> command to make sure this worked.
 
 
-=== Step 7f:  Use <code>git commit -m "some message here"</code> ===
+### Step 7f:  Use <code>git commit -m "some message here"</code>
 
 This will to commit these files to the LOCAL repository (the one in our CSIL directory.)
 
@@ -540,26 +542,27 @@ When we commit, we need to add a message that describes what change we made to t
 For example, in this case our message might be:
 
 
-<pre>
+```
 git commit -m "lab03 with first 3 tests passing"
+```
 
 Here's an example:
 
-<pre>
+```
 -bash-4.2$ git commit -m "lab03 with first 3 tests passing"
 [master 7180ef4] Some change goes here @@@
  1 file changed, 7 insertions(+), 1 deletion(-)
 -bash-4.2$ 
-</pre>
+```
 
 Note that there is a hex number that goes with the commit&mdash;in this case, 7180ef4.    That hex number is the first few hex digits of the SHA-1 Hash of the contents of the entire repository, and is the identifier by which this commit is known to the git system.    Those numbers will be important later.  For now, just notice that each time you commit a change, this hex number changes.
 
 {{FloatRightStart|40%}}
-http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab03/images/25/thrown.into.vi.on.commit.png
+<img src="http://www.cs.ucsb.edu/~pconrad/cs32/15F/labs/lab03/images/25/thrown.into.vi.on.commit.png" alt="thrown into vi on commit">
 {{FloatRightEnd}}
 
-{{TipStart}}
-
+<div class="tip">
+<h1>Tip</h1>
 '''Help!  I tried the commit command and my screen went all weird!'''
 
 If you see something like the picture at right when doing a commit command, it means you forgot the -m, or somehow the -m got messed up.
@@ -571,15 +574,16 @@ But if you don't know how to edit in vi, you are likely to be very confused.  To
 Then try your commit again.
 
 A final note: if you set the environment variable GIT_EDITOR to the editor of your choice, then you can use emacs, or whatever in place of vim if/when you forgot to type in a commit message.
-{{TipEnd}}
+</div>
 
-{{ClearBoth}}
+<div style="clear:both;">
+</div>
 
-=== Step 7g:  Use <code>git status</code> to see the status now ===
+### Step 7g:  Use <code>git status</code> to see the status now
 
 It you now type git status, you'll see this message.  Read it carefully (it helps if you read it out loud.)
 
-<pre>
+```
 -bash-4.2$ git status
 # On branch master
 # Your branch is ahead of 'origin/master' by 1 commit.
@@ -587,19 +591,19 @@ It you now type git status, you'll see this message.  Read it carefully (it help
 #
 nothing to commit, working directory clean
 -bash-4.2$ 
-</pre>
+```
 
 The important part here is that you are being told that you need to git push to "publish" your local commits.  That is, your commits are currently only in your local repository.  When you "publish" them, you push the back to the "origin/master" branch of your repository at github.ucsb.edu&mdash;which is the one that your instructor and/or TA will look at to give you a grade.
 
 So, let's push the changes there, because you certainly want your instructor/TA to see the results of all your hard work!
 
-=== Step 7h: Use <code>git push origin master</code> to push the changes to github.ucsb.edu ===
+### Step 7h: Use <code>git push origin master</code> to push the changes to github.com
 
-Type "git push".  In this case, this is short for "git push origin master", which means "push all my local changes up to the master branch at the origin of this repository, the main repo at github.ucsb.edu".
+Type "git push".  In this case, this is short for "git push origin master", which means "push all my local changes up to the master branch at the origin of this repository, the main repo at github.com".
 
-Here's what that should look like.  Note that you'll need to type your github.ucsb.edu username and password again (which again, is your CSIL username/password), since you are updating content on the server.
+Here's what that should look like.  
 
-<pre>
+```
 -bash-4.2$ git push origin master
 Counting objects: 5, done.
 Delta compression using up to 4 threads.
@@ -609,82 +613,80 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.ucsb.edu/username/cs32-f15-lab03.git
    2d598d9..7180ef4  master -> master
 -bash-4.2$ 
-</pre>
+```
 
+### Step 7i: Seeing the effect on github.com
 
-=== Step 7i: Seeing the effect on github.ucsb.edu ===
+Until you do the git push command, if you go to your repo on github.com, the changes you make aren't there.  But now, your changes will be there.
 
-
-Until you do the git push command, if you go to your repo on github.ucsb.edu, the changes you make aren't there.  But now, your changes will be there.
-
-Go to the github.ucsb.edu page for your repo.
+Go to the github.com page for your repo.
 
 You should be able to click on a file name and see the contents, and see the "message" for your commit show up beside each file that was changed.
 
-=== So what's the big deal? ===
+### So what's the big deal? 
 
 This may not seem very exciting at this point---you may wonder what all the fuss is about.   And to be clear, the value of all this isn't really very apparent when we are dealing with one person making one change in one file.   But, as we work with this over the weeks ahead, with much larger projects, the benefits will become clear.  So, be patient and stay tuned.
 
-{{ClearBoth}}
+<div style="clear:both;">
+</div>
 
+## Step 8: Actually starting the work of coding {{page.num}}!
 
-== Step 8: Actually starting the work of coding lab03! ==
-
-Now, we are ready to to actually start working on coding for lab03.
+Now, we are ready to to actually start working on coding for {{page.num}}.
 
 In this week's lab, you have the following files:
 
-* Makefile
-* student.h, student.cpp
-* studentRoll.h, studentRoll.cpp
-* studentTest00.cpp, etc.
-* studentRollTest00.cpp, etc.
+* `Makefile`
+* `student.h`, `student.cpp`
+* `studentRoll.h`, `studentRoll.cpp`
+* `studentTest00.cpp`, etc.
+* `studentRollTest00.cpp`, etc.
 
 Your job is, as usual, get all the test cases to pass.  This involves implementing the "big three": Copy Constructor, Overloaded Assignment Operator, and Destructor.
 
 In addition to the regular test cases, there are also "leakTests".  This involves running a utility called <code>valgrind</code> on your code to see whether there are any memory leaks, or other problems involving memory management.    You will only pass the tests if your code has proper memory management.
 
-You will submit only the student.cpp and studentRoll.cpp files.  As a result, there are two quite annoying things that you'll just have to put up with:
+You will submit only the `student.cpp` and `studentRoll.cpp` files.  As a result, there are two quite annoying things that you'll just have to put up with:
 
 * In the Student class, the <code>name</code> attribute is implemented with a C-string that is allocated with dynamic memory on the heap.  This is annoying.  Your might prefer to use the std::string class.  Of course you would.  But, that's not the point of this assignment.  The point of this assignment is to know whether you can manage memory properly.
 * In the StudentRoll class, the list of students is a linked list of structs rather than an <code>std::list&lt;Student&gt;</code> or <code>std::vector&lt;Student&gt;</code> or something.   This is indeed annoying.  Tough.   We are training you for the situation where you don't have any choice, but have to work with the data structures you are given.</p>
 
 <p>In certain later assignments, you will be given the freedom to choose whatever data structure or implementation is appropriate.  You'll be able to decide whether to use std::string, or C-strings, whether to use array or std::vectors, etc. <em>This is not one of those assignments.</em>
 
-=== Suggested way to proceed ===
+### Suggested way to proceed 
 
 I suggest proceeding in the following steps:
 
-* (1) Work on each test file for student, getting those tests to pass, i.e. testStudent00.cpp, testStudent01.cpp, etc.
-** To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for Student
-** After each increment of progress, do the steps: git add, git commit -m "describe what you did", git push origin master
-* (2) Then, try to get the leak tests to pass as they pertain to Student, i.e. 
-**<code>make lts00</code>
-**<code>make lts01</code>
-**<code>make lts02</code>
-**<code>make lts03</code>
-** This will require implementing the destructor for Student
-** Do a git add, commit, push on your changes when you are successful!  Include a reasonable commit message.
-* (3) Work on each test file for StudentRoll, getting those tests to pass, i.e. testStudentRoll00.cpp, testStudentRoll01.cpp, etc.
-** To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for StudentRoll
-** After each increment of progress, do the steps: git add, git commit -m "describe what you did", git push origin master
+* (1) Work on each test file for student, getting those tests to pass, i.e. `testStudent00.cpp`, `testStudent01.cpp`, etc.
+   * To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for `Student`
+   * After each increment of progress, do the steps: git add, git commit -m "describe what you did", git push origin master
+* (2) Then, try to get the leak tests to pass as they pertain to `Student`, i.e. 
+   * <code>make lts00</code>
+   * <code>make lts01</code>
+   * <code>make lts02</code>
+   * <code>make lts03</code>
+   * This will require implementing the destructor for `Student`
+   * Do a git add, commit, push on your changes when you are successful!  Include a reasonable commit message.
+* (3) Work on each test file for `StudentRoll`, getting those tests to pass, i.e. `testStudentRoll00.cpp`, `testStudentRoll01.cpp`, etc.
+   * To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for `StudentRoll`
+   * After each increment of progress, do the steps: git add, git commit -m "describe what you did", git push origin master
 * (4) Then, try to get the leak tests for StudentRoll to pass, i.e.
-**<code>make ltsr00</code>
-**<code>make ltsr01</code>
-**<code>make ltsr02</code>
-** This will require implementing the destructor for StudentRoll
-** Do a git add, commit, push on your changes when you are successful!  Include a reasonable commit message.
+   * <code>make ltsr00</code>
+   * <code>make ltsr01</code>
+   * <code>make ltsr02</code>
+   * This will require implementing the destructor for `StudentRoll`
+   * Do a git add, commit, push on your changes when you are successful!  Include a reasonable commit message.
 
-=== How do I know if I'm done? ===
+### How do I know if I'm done? 
 
 When you are done, you should be able to do both of the following, and see no error messages:
 
-<pre>
+```
 make tests
 make leaktests
-</pre>
+```
 
-= Submission =
+# Submission
 
 To submit, use:
 
