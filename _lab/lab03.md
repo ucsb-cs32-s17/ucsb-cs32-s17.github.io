@@ -8,7 +8,7 @@ assigned: 2017-05-03 15:30:00.00-7
 due: 2017-05-08 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab03
 code_dir: ~aduncan/cs32/s17/labs/lab03
-submit_cs_project_num: TBD
+submit_cs_project_num: 726
 tools_gdb_url: https://ucsb-cs32.github.io/topics/tools_gdb/
 tools_valgrind_url: https://ucsb-cs32.github.io/topics/tools_valgrind/
 ---
@@ -79,8 +79,6 @@ Later steps in this lab will assume that you really did figure out how to use th
 After you are comfortable using gdb and you have stepped through a few routines in your program now it's time to learn about valgrind.  We talked a bit about valgrind in lecture, but there's more to learn, so please now read about valgrind here at the [tools: valgrind]({{page.tools_valgrind_url}}) article on the <https://ucsb-cs32.github.io> website.
 
 Run `memcheck` on your <tt>{{page.prev_num}}</tt> and ensure that you don't have any memory leaks or errors that were detected by valgrind. You should fix any errors that valgrind reports in <tt>{{page.prev_num}}</tt>.    (Note that if your program doesn't use `new` and/or `delete`, there probably won't be any.)
-
-TODO: FIX THE EXECUTABLE BELOW TO BE ONE FOR LAB02...
 
 Run each test with --leak-check=full 
 <pre>
