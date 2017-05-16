@@ -6,7 +6,7 @@ desc: "C++ Big-Three Review"
 assigned: 2017-05-17 15:30:00.00-7
 due: 2017-05-23 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab04
-code_dir: ~aduncan/cs32/s17/labs/lab04
+code_dir: ~aduncan/public_html/cs32/s17/labs/lab04
 submit_cs_project_num: TBD
 example_repo: lab04_cgaucho_dslough
 ---
