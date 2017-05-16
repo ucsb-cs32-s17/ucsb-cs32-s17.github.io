@@ -80,6 +80,7 @@ In certain later assignments, you will be given the freedom to choose whatever d
 
 I suggest proceeding in the following steps:
 
+* (0) Look at the tests in <{{code_url}}/testStudent00.cpp>. You may want to get the simple tests to pass first, including the test for `toString()`.
 * (1) Work on each test file for student, getting those tests to pass, i.e. `testStudent00.cpp`, `testStudent01.cpp`, etc.
    * To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for `Student`
    * After each increment of progress, do the steps: git add, git commit -m "describe what you did", git push origin master
