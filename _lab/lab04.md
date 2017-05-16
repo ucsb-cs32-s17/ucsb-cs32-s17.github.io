@@ -27,7 +27,7 @@ By the end of this lab, given a description of a class containing data members t
 # Step-by-Step
 
 
-## Step 7: Get the {{page.num}} starter code into your repository directory 
+## Step 1: Get the {{page.num}} starter code into your repository directory 
 
 
 
@@ -43,7 +43,7 @@ You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
 
 By now you should know (or remember) how to copy files; if you need a refresher, see earlier labs.
 
-## Step 8: Getting the test cases to pass for {{page.num}}!
+## Step 2: Getting the test cases to pass for {{page.num}}!
 
 Now, we are ready to to work on {{page.num}}.
 
@@ -107,7 +107,7 @@ make tests
 make leaktests
 ```
 
-# Submission
+# Step 3: Submission
 
 To submit, use:
 
