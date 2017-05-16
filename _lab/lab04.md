@@ -23,51 +23,6 @@ By the end of this lab, given a description of a class containing data members t
 * write a correct destructor for the class
 * write a correct assignment operator for the class
 
-You will also be able to demonstrate that you understand the basics of working with version control using Github, using a very basic "git add; git commit; git push" workflow.
-
-# Background
-
-Being able to use <b>version control</b> is a <b>useful tool</b> and an <b>important job skill</b>.
-
-In the UCSB lower-division curriculum, the main course where version control is taught is CS56.   So, it isn't a core topic of this course.
-
-However, we will be able to do much more interesting projects if we have a few basics of version control in our toolset.
-
-Therefore, in this lab, we are going to learn a few basic skills for:
-* working with <b>git</b>, an open-source software package for peer-to-peer version control.<br><b>git</b> is open-source, free software that runs on both clients and servers, and is available for Windows, Mac and Unix.   It is what you use to interact with a git repository.
-* working with <b>github.com</b>, a commercial website that provides web-based git repository hosting.<br>
-
-## Benefits of Using Version Control
-
-* Easier sharing of code with pair partners
-    * By adding a pair partner as a collaborator on your repo, your collaborator can directly access the code at any time.  There is no need to email or copy code back and forth. And, you always have a record of which account code was committed under.
-* Easier moving of code between CSIL and your own laptop/desktop machines.
-    * Just commit code then push to github.com.  Then, you can clone copies of the same repo on another machine, pull from github, make changes and push them back.  You can always be sure of keeping everything in sync.
-* Easier Sharing of code with TAs and Instructors
-    * When asking for help from a TA or instructor, you no longer need to email any source code as an attachment.  Just add them as a collaborator on your code, and email them the URL of the repository.
-    * The TA/Instructor now can see not only the code you are asking about, but the entire context of that code in your project, and the entire history of the project up to that point.
-    * OR: If the repo is created in a github "organization" where your instructor and TAs have admin access, they can just see your work-in-progress code immediately.
-* Saving intermediate versions
-    * You can be much more fearless about removing commented out code from your source.   Just be sure you "commit" a version of your code before you rip out the commented out stuff.  Then, if you want it back, you can always get it back by visiting the previous version.    
-
-These are just some of the benefits.
-
-
-<b>Why are we using github and not bitbucket.org, or mercurial, or ... </b>
-
-There are many choices for version control.    Everyone has their favorite, and each has its own pros/cons.     This discussion could go on (and on), but at the end of the day, we have to pick one and go with it.    This is the one we've chosen.
-
-# Goals
-
-By the time you have completed this lab:
-
-* You will know how to create a public key/private key pair for use with SSH
-* You will have set up an account on github.com, and installed your SSH public key
-* You will have added and verified your UCSB umail address as one of the email addresses for your account on github.com
-* You will be able to set up private repos on github.com in the organization for this course, ucsb-cs32-s17, and you will be able to add your pair partner (if any) as a collaborator.
-* You will be able to explain a few basic concepts related to git and github, including the difference between git and github
-* You will be able to "clone" a repo with <b>git clone <em>clone-url-goes-here</em></b>, and know what cloning a repo means.
-* You will be able to perform the basic git workflow of:<br><b>git add</b><br><b>git commit -m "message goes here"</b><br><b>git push origin master</b>
 
 # Step-by-Step
 
