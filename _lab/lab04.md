@@ -80,7 +80,7 @@ In certain later assignments, you will be given the freedom to choose whatever d
 
 I suggest proceeding in the following steps:
 
-* (0) Look at the tests in <{{code_url}}/testStudent00.cpp>. You may want to get the simple tests to pass first, including the test for `toString()`. Run `make testStudent00` to compile this file, and then run `./testStudent00` to run the tests. Iterate until the tests for testStudent00 pass.
+* (0) Look at the tests in `testStudent00.cpp`. You may want to get the simple tests to pass first, including the test for `toString()`. Run `make testStudent00` to compile this file, and then run `./testStudent00` to run the tests. Iterate until the tests for testStudent00 pass.
 * (1) Repeat for `testStudent01.cpp`, etc.
    * To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for `Student`
 * (2) Then, try to get the leak tests to pass as they pertain to `Student`, i.e. 
