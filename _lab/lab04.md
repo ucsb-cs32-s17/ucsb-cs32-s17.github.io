@@ -91,7 +91,6 @@ I suggest proceeding in the following steps:
    * This will require implementing the destructor for `Student`
 * (3) Work on each test file for `StudentRoll`, getting those tests to pass, i.e. `testStudentRoll00.cpp`, `testStudentRoll01.cpp`, etc.
    * To get these to pass, you need to implement, possibly among other things, the Copy Constructor and Overloaded Assignment Operator for `StudentRoll`
-   * After each increment of progress, do the steps: git add, git commit -m "describe what you did", git push origin master
 * (4) Then, try to get the leak tests for StudentRoll to pass, i.e.
    * <code>make ltsr00</code>
    * <code>make ltsr01</code>
