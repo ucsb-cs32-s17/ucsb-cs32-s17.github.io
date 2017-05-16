@@ -117,5 +117,5 @@ To submit, use:
 
 # Grading 
 
-* (300 pts) {{page.num}}a: Test cases on submit.cs, as indicated on that system.
+* (300 pts) Test cases on submit.cs, as indicated on that system.
 
