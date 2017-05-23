@@ -2,7 +2,7 @@
 layout: lab
 num: lab05
 ready: false
-desc: "TBD"
+desc: "Hash Table part 1"
 assigned: 2017-05-24 15:30:00.00-7
 due: 2017-05-29 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab05
@@ -16,7 +16,6 @@ https://ucsb-cs32-s17.github.io/lab/lab05/
 
 <p>PA1 must be done individually. In other words, you are not allowed to use
    pair programming for this assignment. </p>
-<ol>
 
 # Goals
 
@@ -35,6 +34,8 @@ and also accessible via the URL
 <tt>{{page.code_url}}/*</tt> 
 
 You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
+
+<ol>
 
   <li>Write <font color="red"><b>table.h</b></font> to define <code>class Table</code> as it is used
   in the demonstration program named <code>tabledemo.cpp</code>. Your Table must hold
