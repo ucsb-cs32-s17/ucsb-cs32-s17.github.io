@@ -17,10 +17,25 @@ https://ucsb-cs32-s17.github.io/lab/lab05/
 <p>PA1 must be done individually. In other words, you are not allowed to use
    pair programming for this assignment. </p>
 <ol>
+
+## Step 1: Get the {{page.num}} starter code into your repository directory 
+
+
+
+In this step, we are going to copy the {{page.num}} starter files from the instructors directory into your <tt>~/cs32/{{page.num}}</tt> directory.
+
+The files are in the instructors directory at 
+
+<tt>{{page.code_dir}}/*</tt> 
+
+The `*` here stands in as a "wildcard" that matches "all files".
+
+You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
+
   <li>Write <font color="red"><b>table.h</b></font> to define <code>class Table</code> as it is used
-  in the demonstration program named <a href="tabledemo.cpp">tabledemo.cpp</a>. Your Table must hold
-  <code>Entry</code> objects as defined in <a href="entry.h">entry.h</a> (and implemented in
-  <a href="entry.cpp">entry.cpp</a>). For the demonstration
+  in the demonstration program named <code>tabledemo.cpp</code>. Your Table must hold
+  <code>Entry</code> objects as defined in <code>entry.h</code> (and implemented in
+  <code>entry.cpp</code>). For the demonstration
   program to compile successfully, your table.h must define at least the following public functions:
       <ul type = "circle">
         <li>One constructor that builds an empty Table designed to hold a maximum number of entries
@@ -29,7 +44,7 @@ https://ucsb-cs32-s17.github.io/lab/lab05/
         <li>Another constructor that builds a Table designed to hold the number of entries
         specified by the first parameter, and puts that many entries into the Table by reading
         them one at a time from the input stream that is the second parameter:
-        <br><code>&nbsp;&nbsp;&nbsp;Table(unsigned int entries, std::istream &input)</code>
+        <br><code>&nbsp;&nbsp;&nbsp;Table(unsigned int entries, std::istream&amp; input)</code>
         <br><em>Do not input more than the specified number of entries.</em> If you always read all of input,
         you will lose points for not satisfying this requirement.</li>
         <li>Two (overloaded) member functions named put, each of which puts a new Entry into the Table:
@@ -47,7 +62,7 @@ https://ucsb-cs32-s17.github.io/lab/lab05/
         <br><code>&nbsp;&nbsp;&nbsp;bool remove(unsigned int key)</code>
         <br>This function returns true if it removes an Entry, or false if the Table has no such Entry.</li>
         <li>A non-member output function that overloads the &lt;&lt; operator to print the Table:
-        <br><code>&nbsp;&nbsp;&nbsp;std::ostream& operator&lt;&lt; (std::ostream &out, const Table &t)</code>
+        <br><code>&nbsp;&nbsp;&nbsp;std::ostream&amp; operator&lt;&lt; (std::ostream&amp; out, const Table&amp; t)</code>
         <br>This function is expected to print each Entry in the Table to a separate line of
         the given output stream <em>in the order of their key values</em>.</li>
       </ul>
@@ -113,7 +128,7 @@ https://ucsb-cs32-s17.github.io/lab/lab05/
       </table>
       From our class page at <a href="https://submit.cs.ucsb.edu/">https://submit.cs.ucsb.edu/</a>,
       click the "Make Submission" button next to PA1, or use the following command from a CS terminal:
-        <pre>~submit/submit -p 466 table.cpp table.h</pre>
+        <pre>~submit/submit -p {{page.submit_cs_project_num}} table.cpp table.h</pre>
         Be sure to wait for the results of all tests. If you score 100/100, and you've
         followed all of the other rules, then you'll earn full credit.
       </li>
