@@ -31,7 +31,7 @@ The files are in the instructors directory at
 
 and also accessible via the URL
 
-<tt>{{page.code_url}}/*</tt> 
+<tt>{{page.code_url}}</tt> 
 
 You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
 
@@ -108,29 +108,16 @@ You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
       you should verify that your implementation compiles and executes correctly with the
       demonstration program too. Use the following command to compile it:
       <pre>g++ -std=c++11 -o tabledemo tabledemo.cpp table.cpp entry.cpp</pre>
-      The demonstration also requires a copy of the file <a href="fips.txt">fips.txt</a>
+      The demonstration also requires a copy of the file <code>fips.txt</code>
       (Federal Information Processing Standard codes for all U.S. counties) to
-      reside in your current working directory. Meanwhile, you can also
+      reside in your current working directory. (This file is provided along with the other ones.) Meanwhile, you can also
       run our solution by typing the following from your CSIL account to know how
       your solution should work:
       <pre>~cs32/pa1/tabledemo</pre>
       Even if you run our version, it is necessary to have a copy of fips.txt in your current
       working directory (or you can just cd into ~cs32/pa1, and run the program from there).</li>
-  <li>You will turn in both table.h and table.cpp<!--, but the procedure for doing so is still being
-            worked out. See this space for further instructions well before the due date-->.
-      <table border="1" cellpadding="3">
-        <tr>
-          <td align="left">
-          <p><b>New students:</b> If you don't already have an account on the submit.cs system, make one now at
-          <a href="https://submit.cs.ucsb.edu/form/user">https://submit.cs.ucsb.edu/form/user</a>.
-          The Create New Account form will insist that you sign up using your umail address, and
-          we insist you <em>enter the name listed on the roster (not a nickname)</em>.</p>
-          <p><b>Everybody:</b> After logging into <a href="https://submit.cs.ucsb.edu/">https://submit.cs.ucsb.edu/</a>,
-          follow the Join Class link, and then click the button 
-          labelled "Join CS32_s16" to join our class for this quarter.</p>
-          </td>
-        </tr>
-      </table>
+  <li>You will turn in both table.h and table.cpp.
+
       From our class page at <a href="https://submit.cs.ucsb.edu/">https://submit.cs.ucsb.edu/</a>,
       click the "Make Submission" button next to PA1, or use the following command from a CS terminal:
         <pre>~submit/submit -p {{page.submit_cs_project_num}} table.cpp table.h</pre>
