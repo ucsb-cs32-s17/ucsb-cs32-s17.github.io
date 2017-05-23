@@ -18,6 +18,8 @@ https://ucsb-cs32-s17.github.io/lab/lab05/
    pair programming for this assignment. </p>
 <ol>
 
+# Goals
+
 ## Step 1: Get the {{page.num}} starter code into your repository directory 
 
 
@@ -28,7 +30,9 @@ The files are in the instructors directory at
 
 <tt>{{page.code_dir}}/*</tt> 
 
-The `*` here stands in as a "wildcard" that matches "all files".
+and also accessible via the URL
+
+<tt>{{page.code_url}}/*</tt> 
 
 You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
 
