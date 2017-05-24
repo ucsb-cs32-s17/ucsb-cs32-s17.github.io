@@ -45,18 +45,18 @@ in the demonstration program named <code>tabledemo.cpp</code>. Your Table must h
 program to compile successfully, your table.h must define at least the following public functions:
 
 <ul type = "circle">
-  <li>One constructor that builds an empty Table designed to hold a maximum number of entries
+  <li style='margin-bottom:2em;'>One constructor that builds an empty Table designed to hold a maximum number of entries
   equal to the only parameter. This parameter should have a default value of 100:
   <br><code>&nbsp;&nbsp;&nbsp;Table(unsigned int max_entries = 100)</code></li>
 
-  <li>Another constructor that builds a Table designed to hold the number of entries
+  <li style='margin-bottom:2em;'>Another constructor that builds a Table designed to hold the number of entries
   specified by the first parameter, and puts that many entries into the Table by reading
   them one at a time from the input stream that is the second parameter:
   <br><code>&nbsp;&nbsp;&nbsp;Table(unsigned int entries, std::istream&amp; input)</code>
   <br><em>Do not input more than the specified number of entries.</em> If you always read all of input,
   you will lose points for not satisfying this requirement.</li>
 
-  <li>Two (overloaded) member functions named put, each of which puts a new Entry into the Table:
+  <li style='margin-bottom:2em;'>Two (overloaded) member functions named put, each of which puts a new Entry into the Table:
   <br><code>&nbsp;&nbsp;&nbsp;void put(unsigned int key, std::string data)</code>
   <br><code>&nbsp;&nbsp;&nbsp;void put(Entry e)</code>
   <br>The first of these functions creates a new Entry to put in the Table. The second
@@ -64,12 +64,12 @@ program to compile successfully, your table.h must define at least the following
   contains an Entry with the given key, these functions act to update the Entry for that key.
   The Table is not allowed to contain duplicate keys.</li>
 
-  <li>A constant member function named get that returns the string associated with the
+  <li style='margin-bottom:2em;'>A constant member function named get that returns the string associated with the
   parameter:
   <br><code>&nbsp;&nbsp;&nbsp;std::string get(unsigned int key) const</code>
   <br>This function returns an empty string if the Table has no Entry with the given key.</li>
 
-  <li>A member function named remove that removes the Entry containing the given key:
+  <li style='margin-bottom:2em;'>A member function named remove that removes the Entry containing the given key:
   <br><code>&nbsp;&nbsp;&nbsp;bool remove(unsigned int key)</code>
   <br>This function returns true if it removes an Entry, or false if the Table has no such Entry.</li>
 
@@ -120,24 +120,29 @@ Compile and test your program at CSIL (by connecting remotely is okay). Create y
 own testing program(s) to do so. After you think that all parts are working properly,
 you should verify that your implementation compiles and executes correctly with the
 demonstration program too. Use the following command to compile it:
+
 <pre>g++ -std=c++11 -o tabledemo tabledemo.cpp table.cpp entry.cpp</pre>
+
 The demonstration also requires a copy of the file <code>fips.txt</code>
 (Federal Information Processing Standard codes for all U.S. counties) to
 reside in your current working directory. (This file is provided along with the other ones.) Meanwhile, you can also
 run our solution by typing the following from your CSIL account to know how
 your solution should work:
+
 <pre>~cs32/pa1/tabledemo</pre>
+
 Even if you run our version, it is necessary to have a copy of fips.txt in your current
 working directory (or you can just cd into ~cs32/pa1, and run the program from there).
       
-  ## Step 5: Submit your work
+## Step 5: Submit your work
   
-  You will turn in both table.h and table.cpp.
+  You will turn in both <code>table.h</code> and <code>table.cpp</code>.
 
 From our class page at <a href="https://submit.cs.ucsb.edu/">https://submit.cs.ucsb.edu/</a>,
 click the "Make Submission" button next to PA1, or use the following command from a CS terminal:
   <pre>~submit/submit -p {{page.submit_cs_project_num}} table.cpp table.h</pre>
-  Be sure to wait for the results of all tests. If you score 100/100, and you've
-  followed all of the other rules, then you'll earn full credit.
+  
+Be sure to wait for the results of all tests. If you score 100/100, and you've
+followed all of the other rules, then you'll earn full credit.
  
 
