@@ -126,7 +126,10 @@ demonstration program too. Use the following command to compile it:
 
 The demonstration also requires a copy of the file <code>fips.txt</code>
 (Federal Information Processing Standard codes for all U.S. counties) to
-reside in your current working directory. (This file is provided along with the other ones.) Meanwhile, you can also
+reside in your current working directory. (This file is provided along with the other ones.) 
+
+<!--
+Meanwhile, you can also
 run our solution by typing the following from your CSIL account to know how
 your solution should work:
 
@@ -134,6 +137,7 @@ your solution should work:
 
 Even if you run our version, it is necessary to have a copy of fips.txt in your current
 working directory (or you can just cd into ~cs32/pa1, and run the program from there).
+-->
       
 ## Step 5: Submit your work
   
