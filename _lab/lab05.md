@@ -77,7 +77,11 @@ program to compile successfully, your table.h must define at least the following
    
 Your class may define other functions too, either public or private ones. In particular, you will
 probably want to add a hashing function to transform the key values - in our version, function hashkey
-is a private function. And of course, your class must define the private data a Table object stores.</li>
+is a private function. And of course, your class must define the private data a Table object stores.
+
+HINT: You will probably want to use chained hashing for this lab. That means that each row in your <code>Table</code>
+will be of type <code>std::vector&lt;Entry&gt;</code>. It is often convenient to typedef that type to some shorter
+name, so your method signatures don't get clunky.
 
 ## Step 3: Write the Table class to implement the header from Step 2
 
