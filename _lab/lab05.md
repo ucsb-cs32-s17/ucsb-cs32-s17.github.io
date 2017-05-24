@@ -6,7 +6,7 @@ desc: "Hash Table part 1"
 assigned: 2017-05-24 15:30:00.00-7
 due: 2017-05-29 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab05
-code_dir: ~aduncan/cs32/s17/labs/lab05
+code_dir: ~aduncan/public_html/cs32/s17/labs/lab05
 submit_cs_project_num: 748
 ---
 
