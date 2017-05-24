@@ -18,10 +18,6 @@ THIS IS AN INDIVIDUAL LAB. Pair programming is not permitted.
 
 Each individual must submit their own individual submission.
 
-# Goals
-
-
-
 ## Step 1: Get the {{page.num}} starter code into your repository directory 
 
 In this step, we are going to copy the {{page.num}} starter files from the instructors directory into your <tt>~/cs32/{{page.num}}</tt> directory.
@@ -110,7 +106,7 @@ and &lt;unordered_set&gt;. In planning your implementations, keep in mind the fo
    that allows an Entry object to be treated like an int when appropriate. So,
    for example, if e1 and e2 are both entry objects, then (e1 &lt; e2) will
    evaluate to true if e1.key() is less than e2.key(). All of the other relational
-   operators work too. Cool, huh?</td>
+   operators work too! The power of overloading.</td>
  </tr>
 </table>
    
