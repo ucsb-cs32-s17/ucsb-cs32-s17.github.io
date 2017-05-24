@@ -83,7 +83,12 @@ is a private function. And of course, your class must define the private data a 
 
 Write <font color="red"><b>table.cpp</b></font> to implement your class Table. You may use
 tools from any of the standard libraries except &lt;map&gt;, &lt;set&gt;, &lt;unordered_map&gt;
-and &lt;unordered_set&gt;. In planning your implementations, keep in mind the following requirements:
+and &lt;unordered_set&gt;. 
+
+Hint: write stub code for each method, and get your class to compile. Then filling in the methods
+is a SMOP (Simple Matter of Programming).
+
+In planning your implementations, keep in mind the following requirements:
 <ul type="circle">
   <li>Each of the functions put, get and remove must execute in constant O(1) time. That means your
   implementation must be a hash table. By the way, you should carefully choose the size of the
