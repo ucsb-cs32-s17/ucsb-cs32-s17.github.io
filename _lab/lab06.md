@@ -2,7 +2,7 @@
 layout: lab
 num: lab06
 ready: false
-desc: "TBD"
+desc: "Hash Table part 2"
 assigned: 2017-05-27 15:30:00.00-7
 due: 2017-06-07 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab06
@@ -38,7 +38,9 @@ You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
 ## Step 2: Update your Table's header file
 
 <ul>
-  <li>Add the <em>declarations</em> (not the definitions) to <code>table.h</code>. Both your copy constructor and 
+<li>Add the <em>declarations</em> (not the definitions) to <code>table.h</code>.</li>
+
+<li>Both your copy constructor and 
   assignment  operator must take a constant reference to a <code>Table</code> object as the only parameter.</li>
   
   <li>Your assignment operator must return the calling object as a reference.</li>
@@ -60,7 +62,7 @@ You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
    <li>Your destructor must release all memory allocated via the operator <code>new</code> or calls 
   to <code>malloc()</code>.</li>
 
-    <li>If your get, remove or output functions did not pass the time tests for PA1, then
+    <li>If your get, remove or output functions did not pass the time tests for h05, then
     you should improve them now. Doing so might require you to change your overall approach
     to the problem: if you are using linear probing with open addressing to implement the
     table, then consider using quadratic probing or double hashing instead, or even consider
@@ -69,7 +71,7 @@ You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
 
 ## Step 4: Testing
 
-  Compile and test your program <u>at CSIL</u></em> (by connecting remotely is okay).
+  Compile and test your program at CSIL (by connecting remotely is okay).
   Create your own testing program(s) to do so. After you think that all parts are working properly,
   you should verify that your implementation compiles and executes correctly with the
   demonstration program from the previous lab.
