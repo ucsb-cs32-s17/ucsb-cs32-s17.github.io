@@ -3,10 +3,10 @@ layout: lab
 num: lab06
 ready: false
 desc: "TBD"
-assigned: 2017-05-17 15:30:00.00-7
-due: 2017-05-22 23:59:00.00-7
+assigned: 2017-05-27 15:30:00.00-7
+due: 2017-06-07 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab06
-code_dir: ~aduncan/cs32/s17/labs/lab06
+code_dir: ~aduncan/public_html/cs32/s17/labs/lab06
 submit_cs_project_num: TBD
 ---
 
@@ -42,49 +42,47 @@ You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
   assignment  operator must take a constant reference to a <code>Table</code> object as the only parameter.</li>
   
   <li>Your assignment operator must return the calling object as a reference.</li>
-  
-  <li>Your destructor must release all memory allocated via the operator <code>new</code> or calls 
-  to <code>malloc()</code>.</li>
-          
-  <li>If your get, remove or output functions did not pass the time tests for PA1, then
-  you should improve them now.</li>
 </ul>
 
 ## Step 3: Update your Tables implementation file
 
-<ul>Add the <em>definitions</em> (not the declarations) to  <code>table.cpp</code>. You may use
-      tools from any of the standard libraries except &lt;map&gt;, &lt;set&gt;, &lt;unordered_map&gt;
-      and &lt;unordered_set&gt;.
-      <ul type="circle">
-        <li>Both the copy constructor and the assignment operator must make completely
-        independent copies of the source Table. In other words, if Table x is a copy of Table y,
-        then future changes to x will not affect y, and future changes to y will not affect x.</li>
-        <li>The destructor must perform its usual role. See either textbook if you are not sure
-        what that role is.</li>
-        <li>If your get, remove or output functions did not pass the time tests for PA1, then
-        you should improve them now. Doing so might require you to change your overall approach
-        to the problem: if you are using linear probing with open addressing to implement the
-        table, then consider using quadratic probing or double hashing instead, or even consider
-        using a chaining approach instead of open addressing. Again you should
-        review the textbook and your lecture notes to learn about these issues.</li>
+<ul>
+
+  <li>Add the <em>definitions</em> (not the declarations) to  <code>table.cpp</code>. You may use
+  tools from any of the standard libraries except &lt;map&gt;, &lt;set&gt;, &lt;unordered_map&gt;
+  and &lt;unordered_set&gt;.</li>
+    
+   <li>Both the copy constructor and the assignment operator must make completely
+   independent copies of the source <code>Table</code>. In other words, if <code>Table x</code> is 
+   a copy of <code>Table y</code>,
+   then future changes to <code>x</code> will not affect <code>y</code>, and vice-versa.</li>
+    
+   <li>Your destructor must release all memory allocated via the operator <code>new</code> or calls 
+  to <code>malloc()</code>.</li>
+
+    <li>If your get, remove or output functions did not pass the time tests for PA1, then
+    you should improve them now. Doing so might require you to change your overall approach
+    to the problem: if you are using linear probing with open addressing to implement the
+    table, then consider using quadratic probing or double hashing instead, or even consider
+    using a chaining approach instead of open addressing.</li>
  </ul>
 
-  <li><em>Compile and test your program <u>at CSIL</u></em> (by connecting remotely is okay).
-      Create your
-      own testing program(s) to do so. After you think that all parts are working properly,
-      you should verify that your implementation compiles and executes correctly with the
-      demonstration program from PA1.</li>
-  <li>You will turn in both table.h and table.cpp<!--, but the procedure for doing so is still being
-            worked out. See this space for further instructions well before the due date-->.
-      From our class page at <a href="https://submit.cs.ucsb.edu/">https://submit.cs.ucsb.edu/</a>,
-      click the "Make Submission" button next to PA2, or use the following command from a CS terminal:
-        <pre>~submit/submit -p 481 table.cpp table.h</pre>
-        Be sure to wait for the results of all tests. If you score 100/100, and you've
-        followed all of the other rules, then you'll earn full credit.
-      </li>
-</ol>
-<hr>
+## Step 4: Testing
 
-<h6>Prepared by Michael Costanzo, 4/29/2016; updated with submit instructions 5/3/2016.</h6>
+  Compile and test your program <u>at CSIL</u></em> (by connecting remotely is okay).
+  Create your own testing program(s) to do so. After you think that all parts are working properly,
+  you should verify that your implementation compiles and executes correctly with the
+  demonstration program from the previous lab.
+  
+  
+## Step 5: Submit your work
 
-</div><!-- id = "container" -->
+   You will turn in both <code>table.h</code> and <code>table.cpp</code>.
+
+From our class page at <a href="https://submit.cs.ucsb.edu/">https://submit.cs.ucsb.edu/</a>,
+click the "Make Submission" button next to h06, or use the following command from a CS terminal:
+  <pre>~submit/submit -p {{page.submit_cs_project_num}} table.cpp table.h</pre>
+  
+Be sure to wait for the results of all tests. If you score 100/100, and you've
+followed all of the other rules, then you'll earn full credit.
+ 
