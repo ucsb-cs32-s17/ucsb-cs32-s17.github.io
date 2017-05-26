@@ -19,7 +19,7 @@ Each individual must submit their own individual submission.
 
 ## Step 0: What up?
 
-This is a <em>continuation</em> of the previous lab. You will add the "Big Three" member functions (copy constructor, assigment operator, and destructor) to your <code>Table</code> class. You will need a slightly revised <code>Entry</code> class, which counts the number of Entry objects that are created and destroyed, so we can test your destructor.
+This is a <em>continuation</em> of the previous lab. You will add the "Big Three" member functions (copy constructor, assigment operator, and destructor) to your <code>Table</code> class. You will need a slightly revised <code>Entry</code> class, which counts the number of <code>Entry</code> objects that are created and destroyed, so we can test your destructor.
 
 ## Step 1: Get the {{page.num}} starter code into your repository directory 
 
