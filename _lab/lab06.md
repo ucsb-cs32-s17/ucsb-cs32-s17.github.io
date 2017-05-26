@@ -13,31 +13,46 @@ submit_cs_project_num: TBD
 <div style='display:none'>
 https://ucsb-cs32-s17.github.io/lab/lab06/
 </div>
-<div id="container">
-<h1>CS 32, Spring 2016</h1>
-<h2>Programming Assignment 2</h2>
+THIS IS AN INDIVIDUAL LAB. Pair programming is not permitted.
 
-<h3><u>Due</u>: Monday May 9, 11:59pm
-<br><u>Worth</u>: 100 points</h3>
+Each individual must submit their own individual submission.
 
-<p>PA2 must be done individually: no pair programming allowed for this assignment. </p>
-<ol>
-  <li>Enhance <font color="red"><b>table.h</b></font>, the definition of <code>class Table</code>
-      that you did for <a href="../pa1/index.html">PA1</a>, by adding the "Big Three" member
-      functions to it: a copy constructor, a destructor and an assignment operator.
-      <ul type = "circle">
-        <li>Download and use these slightly revised <a href="entry.h">entry.h</a> and
-        <a href="entry.cpp">entry.cpp</a> files. They are changed only to allow counting the
-        number of Entry objects that are created and destroyed, so that we may test the
-        effectiveness of your destructor implementation.</li>
-        <li>Both your copy constructor and assignment operator must take a constant reference
-        to a Table object as the only parameter.</li>
-        <li>Your assignment operator must return the calling object as a reference.</li>
-        <li>Refer to the textbooks and your lecture notes to know how these functions and
-        the destructor should be defined.</li>
-      </ul>
-  </li>
-  <li>Update <font color="red"><b>table.cpp</b></font> to implement the new functions. You may use
+## Step 0: What up?
+
+This is a <em>continuation</em> of the previous lab. You will add the "Big Three" member functions (copy constructor, assigment operator, and destructor) to your <code>Table</code> class. You will need a slightly revised <code>Entry</code> class, which counts the number of Entry objects that are created and destroyed, so we can test your destructor.
+
+## Step 1: Get the {{page.num}} starter code into your repository directory 
+
+In this step, we are going to copy the {{page.num}} starter files from the instructors directory into your <tt>~/cs32/{{page.num}}</tt> directory.
+
+The files are in the instructors directory at 
+
+<tt>{{page.code_dir}}/*</tt> 
+
+and also accessible via the URL
+
+<tt>{{page.code_url}}</tt> 
+
+You want to copy these files into your <tt>~/cs32/{{page.num}}</tt> directory.
+
+## Step 2: Update your Table's header file
+
+<ul>
+  <li>Add the <em>declarations</em> (not the definitions) to <code>table.h</code>. Both your copy constructor and 
+  assignment  operator must take a constant reference to a <code>Table</code> object as the only parameter.</li>
+  
+  <li>Your assignment operator must return the calling object as a reference.</li>
+  
+  <li>Your destructor must release all memory allocated via the operator <code>new</code> or calls 
+  to <code>malloc()</code>.</li>
+          
+  <li>If your get, remove or output functions did not pass the time tests for PA1, then
+  you should improve them now.</li>
+</ul>
+
+## Step 3: Update your Tables implementation file
+
+<ul>Add the <em>definitions</em> (not the declarations) to  <code>table.cpp</code>. You may use
       tools from any of the standard libraries except &lt;map&gt;, &lt;set&gt;, &lt;unordered_map&gt;
       and &lt;unordered_set&gt;.
       <ul type="circle">
@@ -52,7 +67,8 @@ https://ucsb-cs32-s17.github.io/lab/lab06/
         table, then consider using quadratic probing or double hashing instead, or even consider
         using a chaining approach instead of open addressing. Again you should
         review the textbook and your lecture notes to learn about these issues.</li>
-      </ul>
+ </ul>
+
   <li><em>Compile and test your program <u>at CSIL</u></em> (by connecting remotely is okay).
       Create your
       own testing program(s) to do so. After you think that all parts are working properly,
