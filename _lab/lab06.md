@@ -1,13 +1,13 @@
 ---
 layout: lab
 num: lab06
-ready: false
+ready: true
 desc: "Hash Table part 2"
 assigned: 2017-05-27 15:30:00.00-7
 due: 2017-06-07 23:59:00.00-7
 code_url: https://www.cs.ucsb.edu/~aduncan/cs32/s17/labs/lab06
 code_dir: ~aduncan/public_html/cs32/s17/labs/lab06
-submit_cs_project_num: TBD
+submit_cs_project_num: 751
 ---
 
 <div style='display:none'>
